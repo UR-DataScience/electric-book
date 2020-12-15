@@ -25,7 +25,7 @@ expressions.
 
 ## **Writing a Simple Program** 
 
-Let\'s examine the following C++ program. We have numbered the lines so
+Let's examine the following C++ program. We have numbered the lines so
 that we can discuss them easily.
 
 ```cpp
@@ -66,8 +66,8 @@ int main()
     adding their namespace into our program. You will probably use these
     in every program this semester.
 
--   Line 8 is what\'s known as a **preprocessor command**. The pound (`#`)
-    sign followed by `include` begins every preprocessor command.
+-   Line 8 is what's known as a **preprocessor command**. The pound (`#`)
+    sign followed by `include`{:.cpp} begins every preprocessor command.
 
 -   Any *built-in* or *user-defined* header files you wish to use in your
     program must follow this same syntax.
@@ -77,7 +77,7 @@ int main()
 marks. Header files you create and bring in to the program are enclosed
 in `""` quotation marks.
 
--   `int main()` is the executable part of our program. The
+-   `int main()`{:.cpp} is the executable part of our program. The
     function name is `main`, and it returns a value that is of type
     integer. The function has no parameters, as indicated by the empty
     parentheses.
@@ -93,7 +93,7 @@ in `""` quotation marks.
 
 -   `cin` - command that receives data from the end user.
 
--   The `<iostream>` file exists in every C++ program, and it is
+-   The `<iostream>`{:.cpp} file exists in every C++ program, and it is
     this file which allows us to use cout and cin.
 
 -   The second cout line prints out `"You entered:
@@ -107,7 +107,7 @@ in `""` quotation marks.
     cursor to stop printing on the current line, and begin on the next
     line.
 
--   `return 0;` - This line is there, since the return value in
+-   `return 0;`{:.cpp} - This line is there, since the return value in
     our main program was designated as an integer. Just prevents the
     compiler from reporting a syntax error.
 
@@ -131,7 +131,7 @@ Here is the table of C++ **basic Input/Output** (I/O) symbols:
 | cin | A special variable  | used along with the extraction operator “>>” to input values from the standard input device such as keyboard to a variable.                                                                                        |
 | >>  | Extraction operator | takes two operands. Its left-hand operand is a stream expression. Its right-hand operand is a variable into which we store the input data. It can be used several times in a single input statement.               |
 
-For instance, for getting `x` (length) and `y` (width) from input we could
+For instance, for getting `x`{:.cpp} (length) and `y`{:.cpp} (width) from input we could
 say:
 ```cpp
 cin >> x;
@@ -904,8 +904,8 @@ Other methodologies include waterfall, prototyping, iterative and
 incremental development, spiral development, rapid application
 development, and extreme programming.
 
-A life-cycle \"model\" is sometimes considered a more general term for a
-category of methodologies and a software development \"process\" a more
+A life-cycle "model" is sometimes considered a more general term for a
+category of methodologies and a software development "process" a more
 specific term to refer to a specific process chosen by a specific
 organization.\[citation needed\] For example, there are many specific
 software development processes that fit the spiral life-cycle model. The
