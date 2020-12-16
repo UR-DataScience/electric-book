@@ -124,12 +124,12 @@ for you program.
 Here is the table of C++ **basic Input/Output** (I/O) symbols:
 
 
-| **Symbole**| **Name**  | **Description**|
-|-----|---------------------|----------|
-| cout  | A special variable  | used along with the insertion operator “<<” to write out the values of variables and expressions to the standard output device such as screen.|
-| <<  | Insertion operator  | takes two operands. Its left-hand operand is a stream expression. Its right-hand operand is an expression which could be as simple as a literal string. It can be used several times in a single output statement. |
-| cin | A special variable  | used along with the extraction operator “>>” to input values from the standard input device such as keyboard to a variable.                                                                                        |
-| >>  | Extraction operator | takes two operands. Its left-hand operand is a stream expression. Its right-hand operand is a variable into which we store the input data. It can be used several times in a single input statement.               |
+ **Symbole** **Name**   **Description**
+------------------------------------
+ cout   A special variable   used along with the insertion operator “<<” to write out the values of variables and expressions to the standard output device such as screen.
+ <<   Insertion operator   takes two operands. Its left-hand operand is a stream expression. Its right-hand operand is an expression which could be as simple as a literal string. It can be used several times in a single output statement. 
+ cin  A special variable   used along with the extraction operator “>>” to input values from the standard input device such as keyboard to a variable.                                                                                        
+ >>   Extraction operator  takes two operands. Its left-hand operand is a stream expression. Its right-hand operand is a variable into which we store the input data. It can be used several times in a single input statement.               
 
 For instance, for getting `x`{:.cpp} (length) and `y`{:.cpp} (width) from input we could
 say:
@@ -282,27 +282,27 @@ storage of variable number.
 
 The following are some fundamental/simple data types:
 
-| Integral Types |              |               |               |
-|----------------|--------------|---------------|---------------|
-| `short`          | `int`             | `long`          | `char `         |
-| `unsigned short` | `unsigned int`      | `unsigned long` | `unsigned char` |
+ Integral Types                                             
+------------------------------------------------------------
+ `short`           `int`              `long`           `char `         
+ `unsigned short`  `unsigned int`       `unsigned long`  `unsigned char` 
 
-| Floating Types |             |               |
-|----------------|-------------|---------------|
-| `float`          | `double `   | `long double`   |   
+ Floating Types                             
+--------------------------------------------
+ `float`           `double `    `long double`      
 \
 The arithmetic operators are listed in the following table:                                                 
-| Operator       | Description                                       |               |               |
-|----------------|---------------------------------------------------|---------------|---------------|
-| **+**          | **Unary plus** needs one operand.                     |               |               |
-| **-**          | **Unary minus** needs one operand.                    |               |               |
-| **+**          | **Addition** needs two operands.                      |               |               |
-| **-**          | **Subtraction** needs two operands.                   |               |               |
-| **\***         | **Multiplication** needs two operands.                |               |               |
-| **/**          | **Division** needs two operands. <br>Floating point operands &rightarrow; floating point result <br> Integer operands &rightarrow; integer quotient <br>  Mixed operands &rightarrow; floating point result                |               |               |
-| **%**          | **Modulus**  <br> Remainder from integer division <br>   Operands must be integral                                      |               |               |
-| **++**         | **Increment by one** <br> Can be prefix or postfix <br> As postfix has highest precedence                            |               |               |
-| **--**         | **Decrement by one** <br> Can be prefix or postfix <br> As postfix has highest precedence                            |               |               |
+ Operator        Description                                                                     
+-------------------------------------------------------------------------------------------------
+ **+**           **Unary plus** needs one operand.                                                   
+ **-**           **Unary minus** needs one operand.                                                  
+ **+**           **Addition** needs two operands.                                                    
+ **-**           **Subtraction** needs two operands.                                                 
+ **\***          **Multiplication** needs two operands.                                              
+ **/**           **Division** needs two operands. <br>Floating point operands &rightarrow; floating point result <br> Integer operands &rightarrow; integer quotient <br>  Mixed operands &rightarrow; floating point result                                              
+ **%**           **Modulus**  <br> Remainder from integer division <br>   Operands must be integral                                                                    
+ **++**          **Increment by one** <br> Can be prefix or postfix <br> As postfix has highest precedence                                                          
+ **--**          **Decrement by one** <br> Can be prefix or postfix <br> As postfix has highest precedence                                                          
 
 
 -   <https://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
@@ -340,46 +340,46 @@ int main ()
     return 0;
 }
 ```
-| Precedence | Operator          | Description                                               | Associativity |
-|------------|-------------------|-----------------------------------------------------------|---------------|
-| 1          | ::                | Scope resolution                                          | Left-to-right |
-| 2          | a++   a--         | Suffix/postfix increment and decrement                    |               |
-|            | type()   type{}   | Functional cast                                           |               |
-|            | a()               | Function call                                             |               |
-|            | a[]               | Subscript                                                 |               |
-|            | .   ->            | Member access                                             |               |
-| 3          | ++a   --a         | Prefix increment and decrement                            | Right-to-left |
-|            | +a   -a           | Unary plus and minus                                      |               |
-|            | !   ~             | Logical NOT and bitwise NOT                               |               |
-|            | (type)            | C-style cast                                              |               |
-|            | *a                | Indirection (dereference)                                 |               |
-|            | &a                | Address-of                                                |               |
-|            | sizeof            | Size-of[note 1]                                           |               |
-|            | co_await          | await-expression (C++20)                                  |               |
-|            | new   new[]       | Dynamic memory allocation                                 |               |
-|            | delete   delete[] | Dynamic memory deallocation                               |               |
-| 4          | .*   ->*          | Pointer-to-member                                         | Left-to-right |
-| 5          | a*b   a/b   a%b   | Multiplication, division, and remainder                   |               |
-| 6          | a+b   a-b         | Addition and subtraction                                  |               |
-| 7          | <<   >>           | Bitwise left shift and right shift                        |               |
-| 8          | <=>               | Three-way comparison operator (since C++20)               |               |
-| 9          | <   <=            | For relational operators < and ≤ respectively             |               |
-|            | >   >=            | For relational operators > and ≥ respectively             |               |
-| 10         | ==   !=           | For relational operators = and ≠ respectively             |               |
-| 11         | &                 | Bitwise AND                                               |               |
-| 12         | ^                 | Bitwise XOR (exclusive or)                                |               |
-| 13         | \|                | Bitwise OR (inclusive or)                                 |               |
-| 14         | &&                | Logical AND                                               |               |
-| 15         | \|\|              | Logical OR                                                |               |
-| 16         | a?b:c             | Ternary conditional[note 2]                               | Right-to-left |
-|            | throw             | throw operator                                            |               |
-|            | co_yield          | yield-expression (C++20)                                  |               |
-|            | =                 | Direct assignment (provided by default for C++ classes)   |               |
-|            | +=   -=           | Compound assignment by sum and difference                 |               |
-|            | *=   /=   %=      | Compound assignment by product, quotient, and remainder   |               |
-|            | <<=   >>=         | Compound assignment by bitwise left shift and right shift |               |
-|            | &=   ^=   \|=     | Compound assignment by bitwise AND, XOR, and OR           |               |
-| 17         | ,                 | Comma                                                     | Left-to-right |
+ Precedence  Operator           Description                                                Associativity 
+---------------------------------------------------------------------------------------------------------
+ 1           ::                 Scope resolution                                           Left-to-right 
+ 2           a++   a--          Suffix/postfix increment and decrement                                   
+             type()   type{}    Functional cast                                                          
+             a()                Function call                                                            
+             a[]                Subscript                                                                
+             .   ->             Member access                                                            
+ 3           ++a   --a          Prefix increment and decrement                             Right-to-left 
+             +a   -a            Unary plus and minus                                                     
+             !   ~              Logical NOT and bitwise NOT                                              
+             (type)             C-style cast                                                             
+             *a                 Indirection (dereference)                                                
+             &a                 Address-of                                                               
+             sizeof             Size-of[note 1]                                                          
+             co_await           await-expression (C++20)                                                 
+             new   new[]        Dynamic memory allocation                                                
+             delete   delete[]  Dynamic memory deallocation                                              
+ 4           .*   ->*           Pointer-to-member                                          Left-to-right 
+ 5           a*b   a/b   a%b    Multiplication, division, and remainder                                  
+ 6           a+b   a-b          Addition and subtraction                                                 
+ 7           <<   >>            Bitwise left shift and right shift                                       
+ 8           <=>                Three-way comparison operator (since C++20)                              
+ 9           <   <=             For relational operators < and ≤ respectively                            
+             >   >=             For relational operators > and ≥ respectively                            
+ 10          ==   !=            For relational operators = and ≠ respectively                            
+ 11          &                  Bitwise AND                                                              
+ 12          ^                  Bitwise XOR (exclusive or)                                               
+ 13          \                 Bitwise OR (inclusive or)                                                
+ 14          &&                 Logical AND                                                              
+ 15          \\               Logical OR                                                               
+ 16          a?b:c              Ternary conditional[note 2]                                Right-to-left 
+             throw              throw operator                                                           
+             co_yield           yield-expression (C++20)                                                 
+             =                  Direct assignment (provided by default for C++ classes)                  
+             +=   -=            Compound assignment by sum and difference                                
+             *=   /=   %=       Compound assignment by product, quotient, and remainder                  
+             <<=   >>=          Compound assignment by bitwise left shift and right shift                
+             &=   ^=   \=      Compound assignment by bitwise AND, XOR, and OR                          
+ 17          ,                  Comma                                                      Left-to-right 
 -------------------------------------------------------------------------------------------------------------- 
  
   <https://en.cppreference.com/w/cpp/language/operator_precedence>
@@ -390,20 +390,20 @@ int main ()
 
 Assignment operators **modify** the value of the object.
 
-|Operatorname  | Syntax  | Over​load​able | Prototype examples (for class T) |                                     |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|--------------|----------------------------------|-------------------------------------|
-|                                                                                                                                                                                                                                                                                              |         |              | Inside class definition          | Outside class definition            |
-| simple assignment                                                                                                                                                                                                                                                                            | a = b   | Yes          | T& T::operator =(const T2& b);   | N/A                                 |
-| addition assignment                                                                                                                                                                                                                                                                          | a += b  | Yes          | T& T::operator +=(const T2& b);  | T& operator +=(T& a, const T2& b);  |
-| subtraction assignment                                                                                                                                                                                                                                                                       | a -= b  | Yes          | T& T::operator -=(const T2& b);  | T& operator -=(T& a, const T2& b);  |
-| multiplication assignment                                                                                                                                                                                                                                                                    | a *= b  | Yes          | T& T::operator *=(const T2& b);  | T& operator *=(T& a, const T2& b);  |
-| division assignment                                                                                                                                                                                                                                                                          | a /= b  | Yes          | T& T::operator /=(const T2& b);  | T& operator /=(T& a, const T2& b);  |
-| modulo assignment                                                                                                                                                                                                                                                                            | a %= b  | Yes          | T& T::operator %=(const T2& b);  | T& operator %=(T& a, const T2& b);  |
-| bitwise AND assignment                                                                                                                                                                                                                                                                       | a &= b  | Yes          | T& T::operator &=(const T2& b);  | T& operator &=(T& a, const T2& b);  |
-| bitwise OR assignment                                                                                                                                                                                                                                                                        | a \|= b | Yes          | T& T::operator \|=(const T2& b); | T& operator \|=(T& a, const T2& b); |
-| bitwise XOR assignment                                                                                                                                                                                                                                                                       | a ^= b  | Yes          | T& T::operator ^=(const T2& b);  | T& operator ^=(T& a, const T2& b);  |
-| bitwise left shift assignment                                                                                                                                                                                                                                                                | a <<= b | Yes          | T& T::operator <<=(const T2& b); | T& operator <<=(T& a, const T2& b); |
-| bitwise right shift assignment                                                                                                                                                                                                                                                               | a >>= b | Yes          | T& T::operator >>=(const T2& b); | T& operator >>=(T& a, const T2& b); |
+Operatorname   Syntax   Over​load​able  Prototype examples (for class T)                                      
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                      Inside class definition           Outside class definition            
+ simple assignment                                                                                                                                                                                                                                                                             a = b    Yes           T& T::operator =(const T2& b);    N/A                                 
+ addition assignment                                                                                                                                                                                                                                                                           a += b   Yes           T& T::operator +=(const T2& b);   T& operator +=(T& a, const T2& b);  
+ subtraction assignment                                                                                                                                                                                                                                                                        a -= b   Yes           T& T::operator -=(const T2& b);   T& operator -=(T& a, const T2& b);  
+ multiplication assignment                                                                                                                                                                                                                                                                     a *= b   Yes           T& T::operator *=(const T2& b);   T& operator *=(T& a, const T2& b);  
+ division assignment                                                                                                                                                                                                                                                                           a /= b   Yes           T& T::operator /=(const T2& b);   T& operator /=(T& a, const T2& b);  
+ modulo assignment                                                                                                                                                                                                                                                                             a %= b   Yes           T& T::operator %=(const T2& b);   T& operator %=(T& a, const T2& b);  
+ bitwise AND assignment                                                                                                                                                                                                                                                                        a &= b   Yes           T& T::operator &=(const T2& b);   T& operator &=(T& a, const T2& b);  
+ bitwise OR assignment                                                                                                                                                                                                                                                                         a \= b  Yes           T& T::operator \=(const T2& b);  T& operator \=(T& a, const T2& b); 
+ bitwise XOR assignment                                                                                                                                                                                                                                                                        a ^= b   Yes           T& T::operator ^=(const T2& b);   T& operator ^=(T& a, const T2& b);  
+ bitwise left shift assignment                                                                                                                                                                                                                                                                 a <<= b  Yes           T& T::operator <<=(const T2& b);  T& operator <<=(T& a, const T2& b); 
+ bitwise right shift assignment                                                                                                                                                                                                                                                                a >>= b  Yes           T& T::operator >>=(const T2& b);  T& operator >>=(T& a, const T2& b); 
 
 >**NOTE**: All built-in assignment operators return *this, and most user-defined overloads also return *this so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type (including void).\
 T2 can be any type including T.  
@@ -535,14 +535,14 @@ int main()
 
 Increment/decrement operators increment or decrement the value of the
 object.
-| Operator name                                                                                                                                                                                                                                                                                                                                           | Syntax | Over​load​able | Prototype examples (for class T) |                          |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------|--------------|----------------------------------|--------------------------|
-|                                                                                                                                                                                                                                                                                                                                                         |        |              | Inside class definition          | Outside class definition |
-| pre-increment                                                                                                                                                                                                                                                                                                                                           | ++a    | Yes          | T& T::operator++();              | T& operator++(T& a);     |
-| pre-decrement                                                                                                                                                                                                                                                                                                                                           | --a    | Yes          | T& T::operator--();              | T& operator--(T& a);     |
-| post-increment                                                                                                                                                                                                                                                                                                                                          | a++    | Yes          | T T::operator++(int);            | T operator++(T& a, int); |
-| post-decrement                                                                                                                                                                                                                                                                                                                                          | a--    | Yes          | T T::operator--(int);            | T operator--(T& a, int); |
-| Notes                                                                                                                                                                                                                                                                                                                                                   |        |              |                                  |                          |
+ Operator name                                                                                                                                                                                                                                                                                                                                            Syntax  Over​load​able  Prototype examples (for class T)                           
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                Inside class definition           Outside class definition 
+ pre-increment                                                                                                                                                                                                                                                                                                                                            ++a     Yes           T& T::operator++();               T& operator++(T& a);     
+ pre-decrement                                                                                                                                                                                                                                                                                                                                            --a     Yes           T& T::operator--();               T& operator--(T& a);     
+ post-increment                                                                                                                                                                                                                                                                                                                                           a++     Yes           T T::operator++(int);             T operator++(T& a, int); 
+ post-decrement                                                                                                                                                                                                                                                                                                                                           a--     Yes           T T::operator--(int);             T operator--(T& a, int); 
+ Notes                                                                                                                                                                                                                                                                                                                                                                                                                                     
 
 -------------------------------------------------------------------------------------------------------------
 Prefix versions of the built-in operators return references and postfix versions return values, and typical user-defined overloads follow the pattern so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type (including void).                      
@@ -907,7 +907,7 @@ development, and extreme programming.
 A life-cycle "model" is sometimes considered a more general term for a
 category of methodologies and a software development "process" a more
 specific term to refer to a specific process chosen by a specific
-organization.\[citation needed\] For example, there are many specific
+organization.[citation needed] For example, there are many specific
 software development processes that fit the spiral life-cycle model. The
 field is often considered a subset of the systems development life
 cycle.

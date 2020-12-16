@@ -13,7 +13,7 @@ functions that you can use to work with these two variable types.
 
 -   abs:
 
-> absolute value of a floating point value (\|x\|)
+> absolute value of a floating point value (\x\)
 >
 > **Parameters**
 >
@@ -21,7 +21,7 @@ functions that you can use to work with these two variable types.
 >
 > **Return value**
 >
-> If successful, returns the absolute value of arg (\|arg\|). The value
+> If successful, returns the absolute value of arg (\arg\). The value
 > returned is exact and does not depend on any rounding modes.
 
 -   <https://en.cppreference.com/w/cpp/numeric/math/fabs>
@@ -181,33 +181,33 @@ functions that you can use to work with these two variable types.
 > size, signedness, and alignment as one of the integer types, but is a
 > distinct type.
 
-+---------------------------------------------------+-----------------+
-| > char16_t - type for UTF-16 character            | > (since C++11) |
-| > representation, required to be large enough to  |                 |
-| > represent any UTF-16 code unit (16 bits). It    |                 |
-| > has the same size, signedness, and alignment    |                 |
-| > as [std::uint_least16_t](                       |                 |
-| https://en.cppreference.com/w/cpp/types/integer), |                 |
-| > but is a distinct type.                         |                 |
-| >                                                 |                 |
-| > char32_t - type for UTF-32 character            |                 |
-| > representation, required to be large enough to  |                 |
-| > represent any UTF-32 code unit (32 bits). It    |                 |
-| > has the same size, signedness, and alignment    |                 |
-| > as [std::uint_least32_t](                       |                 |
-| https://en.cppreference.com/w/cpp/types/integer), |                 |
-| > but is a distinct type.                         |                 |
-+---------------------------------------------------+-----------------+
 
-+---------------------------------------------------+-----------------+
-| > char8_t - type for UTF-8 character              | > (since C++20) |
-| > representation, required to be large enough to  |                 |
-| > represent any UTF-8 code unit (8 bits). It has  |                 |
-| > the same size, signedness, and alignment        |                 |
-| > as unsigned char (and therefore, the same size  |                 |
-| > and alignment as char and signed char), but is  |                 |
-| > a distinct type.                                |                 |
-+---------------------------------------------------+-----------------+
+ > char16_t - type for UTF-16 character             > (since C++11) 
+ > representation, required to be large enough to                   
+ > represent any UTF-16 code unit (16 bits). It                     
+ > has the same size, signedness, and alignment                     
+ > as [std::uint_least16_t](                                        
+ https://en.cppreference.com/w/cpp/types/integer),                  
+ > but is a distinct type.                                          
+ >                                                                  
+ > char32_t - type for UTF-32 character                             
+ > representation, required to be large enough to                   
+ > represent any UTF-32 code unit (32 bits). It                     
+ > has the same size, signedness, and alignment                     
+ > as [std::uint_least32_t](                                        
+ https://en.cppreference.com/w/cpp/types/integer),                  
+ > but is a distinct type.                                          
+
+
+
+ > char8_t - type for UTF-8 character               > (since C++20) 
+ > representation, required to be large enough to                   
+ > represent any UTF-8 code unit (8 bits). It has                   
+ > the same size, signedness, and alignment                         
+ > as unsigned char (and therefore, the same size                   
+ > and alignment as char and signed char), but is                   
+ > a distinct type.                                                 
+
 
 > Besides the minimal bit counts, the C++ Standard guarantees that
 >

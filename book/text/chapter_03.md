@@ -287,7 +287,7 @@ read. Let\'s look at it now:
 >
 > cout \<\< \"Passing work. \" \<\< endl;
 >
-> else if (grade == \'D\' \|\| grade == \'F\')
+> else if (grade == \'D\' \\ grade == \'F\')
 >
 > {
 >
@@ -359,13 +359,13 @@ A typical way to generate trivial pseudo-random numbers in a determined
 range using rand is to use the modulo of the returned value by the range
 span and add the initial value of the range:
 
-+----+-------------------------------------------------------+---+
-| 1\ | v1 = rand() % 100; // v1 in the range 0 to 99         |   |
-| 2\ |                                                       |   |
-| 3  | v2 = rand() % 100 + 1; // v2 in the range 1 to 100    |   |
-|    |                                                       |   |
-|    | v3 = rand() % 30 + 1985; // v3 in the range 1985-2014 |   |
-+----+-------------------------------------------------------+---+
+
+   v1 = rand() % 100; // v1 in the range 0 to 99            
+                                                            
+ 3   v2 = rand() % 100 + 1; // v2 in the range 1 to 100       
+                                                              
+     v3 = rand() % 30 + 1985; // v3 in the range 1985-2014    
+
 
 > Notice though that this modulo operation does not generate uniformly
 > distributed random numbers in the span (since in most cases this
@@ -380,59 +380,59 @@ and [RAND_MAX](http://www.cplusplus.com/RAND_MAX).
 
 ### Example
 
-+-----+------------------------------+------------------------------+
-| 1\  | /\* rand example: guess the  | [ Edit &                     |
-| 2\  | number \*/                   | Run](http://www.cplusplus.   |
-| 3\  |                              | com/reference/cstdlib/rand/) |
-| 4\  | \#include \<stdio.h\> /\*    |                              |
-| 5\  | printf, scanf, puts, NULL    |                              |
-| 6\  | \*/                          |                              |
-| 7\  |                              |                              |
-| 8\  | \#include \<stdlib.h\> /\*   |                              |
-| 9\  | srand, rand \*/              |                              |
-| 10\ |                              |                              |
-| 11\ | \#include \<time.h\> /\*     |                              |
-| 12\ | time \*/                     |                              |
-| 13\ |                              |                              |
-| 14\ | int main ()                  |                              |
-| 15\ |                              |                              |
-| 16\ | {                            |                              |
-| 17\ |                              |                              |
-| 18\ | int iSecret, iGuess;         |                              |
-| 19\ |                              |                              |
-| 20\ | /\* initialize random seed:  |                              |
-| 21\ | \*/                          |                              |
-| 22\ |                              |                              |
-| 23\ | srand (time(NULL));          |                              |
-| 24\ |                              |                              |
-| 25  | /\* generate secret number   |                              |
-|     | between 1 and 10: \*/        |                              |
-|     |                              |                              |
-|     | iSecret = rand() % 10 + 1;   |                              |
-|     |                              |                              |
-|     | do {                         |                              |
-|     |                              |                              |
-|     | printf (\"Guess the number   |                              |
-|     | (1 to 10): \");              |                              |
-|     |                              |                              |
-|     | scanf (\"%d\",&iGuess);      |                              |
-|     |                              |                              |
-|     | if (iSecret\<iGuess) puts    |                              |
-|     | (\"The secret number is      |                              |
-|     | lower\");                    |                              |
-|     |                              |                              |
-|     | else if (iSecret\>iGuess)    |                              |
-|     | puts (\"The secret number is |                              |
-|     | higher\");                   |                              |
-|     |                              |                              |
-|     | } while (iSecret!=iGuess);   |                              |
-|     |                              |                              |
-|     | puts (\"Congratulations!\"); |                              |
-|     |                              |                              |
-|     | return 0;                    |                              |
-|     |                              |                              |
-|     | }                            |                              |
-+-----+------------------------------+------------------------------+
+
+    /\* rand example: guess the   [ Edit &                     
+    number \*/                    Run](http://www.cplusplus.   
+                                  com/reference/cstdlib/rand/) 
+    \#include \<stdio.h\> /\*                                  
+    printf, scanf, puts, NULL                                  
+    \*/                                                        
+                                                               
+    \#include \<stdlib.h\> /\*                                 
+    srand, rand \*/                                            
+ 1                                                             
+ 1  \#include \<time.h\> /\*                                   
+ 1  time \*/                                                   
+ 1                                                             
+ 1  int main ()                                                
+ 1                                                             
+ 16\  {                                                          
+ 17\                                                             
+ 18\  int iSecret, iGuess;                                       
+ 19\                                                             
+ 20\  /\* initialize random seed:                                
+ 21\  \*/                                                        
+ 22\                                                             
+ 23\  srand (time(NULL));                                        
+ 24\                                                             
+ 25   /\* generate secret number                                 
+      between 1 and 10: \*/                                      
+                                                                 
+      iSecret = rand() % 10 + 1;                                 
+                                                                 
+      do {                                                       
+                                                                 
+      printf (\"Guess the number                                 
+      (1 to 10): \");                                            
+                                                                 
+      scanf (\"%d\",&iGuess);                                    
+                                                                 
+      if (iSecret\<iGuess) puts                                  
+      (\"The secret number is                                    
+      lower\");                                                  
+                                                                 
+      else if (iSecret\>iGuess)                                  
+      puts (\"The secret number is                               
+      higher\");                                                 
+                                                                 
+      } while (iSecret!=iGuess);                                 
+                                                                 
+      puts (\"Congratulations!\");                               
+                                                                 
+      return 0;                                                  
+                                                                 
+      }                                                          
+
 
 In this example, the random seed is initialized to a value representing
 the current time (calling [time](http://www.cplusplus.com/time)) to
@@ -440,19 +440,19 @@ generate a different value every time the program is run.\
 \
 Possible output:
 
-+-------------------------------+
-| Guess the number (1 to 10): 5 |
-|                               |
-| The secret number is higher   |
-|                               |
-| Guess the number (1 to 10): 8 |
-|                               |
-| The secret number is lower    |
-|                               |
-| Guess the number (1 to 10): 7 |
-|                               |
-| Congratulations!              |
-+-------------------------------+
+
+ Guess the number (1 to 10): 5 
+                               
+ The secret number is higher   
+                               
+ Guess the number (1 to 10): 8 
+                               
+ The secret number is lower    
+                               
+ Guess the number (1 to 10): 7 
+                               
+ Congratulations!              
+
 
 > <http://www.cplusplus.com/reference/cstdlib/rand/>
 
@@ -464,19 +464,19 @@ inverts it, producing false if its operand is true, and true if its
 operand is false. Basically, it returns the opposite Boolean value of
 evaluating its operand. For example:
 
-+----+-----------------------------------------------------------+---+
-| 1\ | !(5 == 5) // evaluates to false because the expression at |   |
-| 2\ | its right (5 == 5) is true                                |   |
-| 3\ |                                                           |   |
-| 4  | !(6 \<= 4) // evaluates to true because (6 \<= 4) would   |   |
-|    | be false                                                  |   |
-|    |                                                           |   |
-|    | !true // evaluates to false                               |   |
-|    |                                                           |   |
-|    | !false // evaluates to true                               |   |
-+----+-----------------------------------------------------------+---+
 
-The logical operators && and \|\| are used when evaluating two
+ 1\  !(5 == 5) // evaluates to false because the expression at    
+ 2\  its right (5 == 5) is true                                   
+ 3\                                                               
+ 4   !(6 \<= 4) // evaluates to true because (6 \<= 4) would      
+     be false                                                     
+                                                                  
+     !true // evaluates to false                                  
+                                                                  
+     !false // evaluates to true                                  
+
+
+The logical operators && and \\ are used when evaluating two
 expressions to obtain a single relational result. The
 operator && corresponds to the Boolean logical operation AND, which
 yields true if both its operands are true, and false otherwise. The
@@ -491,13 +491,13 @@ expression a&&b:
   false                   true    false
   false                   false   false
 
-The operator \|\| corresponds to the Boolean logical operation OR, which
+The operator \\ corresponds to the Boolean logical operation OR, which
 yields true if either of its operands is true, thus being false only
-when both operands are false. Here are the possible results of a\|\|b:
+when both operands are false. Here are the possible results of a\\b:
 
-  **\|\| OPERATOR (or)**           
+  **\\ OPERATOR (or)**           
   ------------------------ ------- --------------
-  **a**                    **b**   **a \|\| b**
+  **a**                    **b**   **a \\ b**
   true                     true    true
   true                     false   true
   false                    true    true
@@ -505,15 +505,15 @@ when both operands are false. Here are the possible results of a\|\|b:
 
 For example:
 
-+----+---------------------------------------------------------------------+---+
-| 1\ | ( (5 == 5) && (3 \> 6) ) // evaluates to false ( true && false )    |   |
-| 2  |                                                                     |   |
-|    | ( (5 == 5) \|\| (3 \> 6) ) // evaluates to true ( true \|\| false ) |   |
-+----+---------------------------------------------------------------------+---+
+
+ 1\  ( (5 == 5) && (3 \> 6) ) // evaluates to false ( true && false )       
+ 2                                                                          
+     ( (5 == 5) \\ (3 \> 6) ) // evaluates to true ( true \\ false )    
+
 
 When using the logical operators, C++ only evaluates what is necessary
 from left to right to come up with the combined relational result,
-ignoring the rest. Therefore, in the last example ((5==5)\|\|(3\>6)),
+ignoring the rest. Therefore, in the last example ((5==5)\\(3\>6)),
 C++ evaluates first whether 5==5 is true, and if so, it never checks
 whether 3\>6 is true or not. This is known as *short-circuit
 evaluation*, and works like this for these operators:
@@ -521,7 +521,7 @@ evaluation*, and works like this for these operators:
   **operator**   **short-circuit**
   -------------- ------------------------------------------------------------------------------------------------------------------------------
   &&             if the left-hand side expression is false, the combined result is false (the right-hand side expression is never evaluated).
-  \|\|           if the left-hand side expression is true, the combined result is true (the right-hand side expression is never evaluated).
+  \\           if the left-hand side expression is true, the combined result is true (the right-hand side expression is never evaluated).
 
 This is mostly important when the right-hand expression has side
 effects, such as altering values:
@@ -562,78 +562,78 @@ on the value of a condition.
                                                                                                                                     
   -------------------------------------------------------------------------------------------- -- --------------- -- -- -- -- -- -- --
 
-+-----------------------------+------+------------------------------+
-| ***attr*(C++11)**           | \-   | any number                   |
-|                             |      | of [attributes               |
-|                             |      | ](https://en.cppreference.co |
-|                             |      | m/w/cpp/language/attributes) |
+
+ ***attr*(C++11)**            \-    any number                   
+                                    of [attributes               
+                                    ](https://en.cppreference.co 
+                                    m/w/cpp/language/attributes) 
 +=============================+======+==============================+
-| ***condition***             | \-   | any [expression](ht          |
-|                             |      | tps://en.cppreference.com/w/ |
-|                             |      | cpp/language/expressions) of |
-|                             |      | integral or enumeration      |
-|                             |      | type, or of a class          |
-|                             |      | type [contextually           |
-|                             |      | implicitly                   |
-|                             |      | convertible](http            |
-|                             |      | s://en.cppreference.com/w/cp |
-|                             |      | p/language/implicit_cast) to |
-|                             |      | an integral or enumeration   |
-|                             |      | type, or                     |
-|                             |      | a [declaration](htt          |
-|                             |      | ps://en.cppreference.com/w/c |
-|                             |      | pp/language/declarations) of |
-|                             |      | a single non-array variable  |
-|                             |      | of such type with a          |
-|                             |      | brace                        |
-|                             |      | -or-equals [initializer](htt |
-|                             |      | ps://en.cppreference.com/w/c |
-|                             |      | pp/language/initialization). |
-+-----------------------------+------+------------------------------+
-| ***init-statement*(C++17)** | \-   | either                       |
-|                             |      |                              |
-|                             |      | -   an [expression           |
-|                             |      |     > statement]             |
-|                             |      | (https://en.cppreference.com |
-|                             |      | /w/cpp/language/statements#E |
-|                             |      | xpression_statements) (which |
-|                             |      |     > may be a *null         |
-|                             |      |     > statement* \"**;**\")  |
-|                             |      |                              |
-|                             |      | -   a [simple                |
-|                             |      |     > declaration](h         |
-|                             |      | ttps://en.cppreference.com/w |
-|                             |      | /cpp/language/declarations), |
-|                             |      |     > typically a            |
-|                             |      |     > declaration of a       |
-|                             |      |     > variable with          |
-|                             |      |     > initializer, but it    |
-|                             |      |     > may declare            |
-|                             |      |     > arbitrarily many       |
-|                             |      |     > variables or           |
-|                             |      |     > structured bindings    |
-|                             |      |                              |
-|                             |      | > Note that                  |
-|                             |      | > any *init-statement* must  |
-|                             |      | > end with a                 |
-|                             |      | > semicolon **;**, which is  |
-|                             |      | > why it is often described  |
-|                             |      | > informally as an           |
-|                             |      | > expression or a            |
-|                             |      | > declaration followed by a  |
-|                             |      | > semicolon.                 |
-+-----------------------------+------+------------------------------+
-| > ***statement***           | > \- | > any [statement](https://e  |
-|                             |      | n.cppreference.com/w/cpp/lan |
-|                             |      | guage/statements) (typically |
-|                             |      | > a compound                 |
-|                             |      | > statement). **cas          |
-|                             |      | e:** and **default:** labels |
-|                             |      | > are permitted              |
-|                             |      | > in *sta                    |
-|                             |      | tement* and break; statement |
-|                             |      | > has special meaning.       |
-+-----------------------------+------+------------------------------+
+ ***condition***              \-    any [expression](ht          
+                                    tps://en.cppreference.com/w/ 
+                                    cpp/language/expressions) of 
+                                    integral or enumeration      
+                                    type, or of a class          
+                                    type [contextually           
+                                    implicitly                   
+                                    convertible](http            
+                                    s://en.cppreference.com/w/cp 
+                                    p/language/implicit_cast) to 
+                                    an integral or enumeration   
+                                    type, or                     
+                                    a [declaration](htt          
+                                    ps://en.cppreference.com/w/c 
+                                    pp/language/declarations) of 
+                                    a single non-array variable  
+                                    of such type with a          
+                                    brace                        
+                                    -or-equals [initializer](htt 
+                                    ps://en.cppreference.com/w/c 
+                                    pp/language/initialization). 
+
+ ***init-statement*(C++17)**  \-    either                       
+                                                                 
+                                    -   an [expression           
+                                        > statement]             
+                                    (https://en.cppreference.com 
+                                    /w/cpp/language/statements#E 
+                                    xpression_statements) (which 
+                                        > may be a *null         
+                                        > statement* \"**;**\")  
+                                                                 
+                                    -   a [simple                
+                                        > declaration](h         
+                                    ttps://en.cppreference.com/w 
+                                    /cpp/language/declarations), 
+                                        > typically a            
+                                        > declaration of a       
+                                        > variable with          
+                                        > initializer, but it    
+                                        > may declare            
+                                        > arbitrarily many       
+                                        > variables or           
+                                        > structured bindings    
+                                                                 
+                                    > Note that                  
+                                    > any *init-statement* must  
+                                    > end with a                 
+                                    > semicolon **;**, which is  
+                                    > why it is often described  
+                                    > informally as an           
+                                    > expression or a            
+                                    > declaration followed by a  
+                                    > semicolon.                 
+
+ > ***statement***            > \-  > any [statement](https://e  
+                                    n.cppreference.com/w/cpp/lan 
+                                    guage/statements) (typically 
+                                    > a compound                 
+                                    > statement). **cas          
+                                    e:** and **default:** labels 
+                                    > are permitted              
+                                    > in *sta                    
+                                    tement* and break; statement 
+                                    > has special meaning.       
+
 
   ------------------------------------------------------------------- ------- -- -- -- -- -- -- -- --
   *attr*(optional) **case** *constant_expression* **:** *statement*   \(1\)                        
@@ -686,60 +686,60 @@ break;
 
 }
 
-+-----------------------------------------------------+---------------+
-| Compilers may issue warnings on fallthrough         | (since C++17) |
-| (reaching the next case label without a break)      |               |
-| unless the                                          |               |
-| attribute [\[\[fallthrough\]\]](https://en.         |               |
-| cppreference.com/w/cpp/language/attributes) appears |               |
-| immediately before the case label to indicate that  |               |
-| the fallthrough is intentional.                     |               |
-|                                                     |               |
-| If *init-statement* is used, the switch statement   |               |
-| is equivalent to                                    |               |
-|                                                     |               |
-| <table>                                             |               |
-| <tbody>                                             |               |
-| <tr class="odd">                                    |               |
-| <td><p><strong>{</strong></p>                       |               |
-| <blockquote>                                        |               |
-| <p><em>init_statement</em></p>                      |               |
-| <p><                                                |               |
-| strong>switch</strong> <strong>(</strong> <em>condi |               |
-| tion</em> <strong>)</strong> <em>statement</em></p> |               |
-| <p><strong>}</strong></p>                           |               |
-| </blockquote></td>                                  |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| </tr>                                               |               |
-| <tr class="even">                                   |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| <td></td>                                           |               |
-| </tr>                                               |               |
-| </tbody>                                            |               |
-| </table>                                            |               |
-|                                                     |               |
-| Except that names declared by                       |               |
-| the *init-statement* (if *init-statement* is a      |               |
-| declaration) and names declared by *condition* (if  |               |
-| condition is a declaration) are in the same scope,  |               |
-| which is also the scope of *statement*.             |               |
-+-----------------------------------------------------+---------------+
+
+ Compilers may issue warnings on fallthrough          (since C++17) 
+ (reaching the next case label without a break)                     
+ unless the                                                         
+ attribute [[[fallthrough]]](https://en.                        
+ cppreference.com/w/cpp/language/attributes) appears                
+ immediately before the case label to indicate that                 
+ the fallthrough is intentional.                                    
+                                                                    
+ If *init-statement* is used, the switch statement                  
+ is equivalent to                                                   
+                                                                    
+ <table>                                                            
+ <tbody>                                                            
+ <tr class="odd">                                                   
+ <td><p><strong>{</strong></p>                                      
+ <blockquote>                                                       
+ <p><em>init_statement</em></p>                                     
+ <p><                                                               
+ strong>switch</strong> <strong>(</strong> <em>condi                
+ tion</em> <strong>)</strong> <em>statement</em></p>                
+ <p><strong>}</strong></p>                                          
+ </blockquote></td>                                                 
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ </tr>                                                              
+ <tr class="even">                                                  
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ <td></td>                                                          
+ </tr>                                                              
+ </tbody>                                                           
+ </table>                                                           
+                                                                    
+ Except that names declared by                                      
+ the *init-statement* (if *init-statement* is a                     
+ declaration) and names declared by *condition* (if                 
+ condition is a declaration) are in the same scope,                 
+ which is also the scope of *statement*.                            
+
 
 Because transfer of control is [not permitted to enter the
 scope](https://en.cppreference.com/w/cpp/language/goto) of a variable,
@@ -953,45 +953,45 @@ condition ? result1 : result2\
 If condition is true, the entire expression evaluates to result1, and
 otherwise to result2.
 
-+----+-----------------------------------------------------------+---+
-| 1\ | 7==5 ? 4 : 3 // evaluates to 3, since 7 is not equal to   |   |
-| 2\ | 5.                                                        |   |
-| 3\ |                                                           |   |
-| 4  | 7==5+2 ? 4 : 3 // evaluates to 4, since 7 is equal to     |   |
-|    | 5+2.                                                      |   |
-|    |                                                           |   |
-|    | 5\>3 ? a : b // evaluates to the value of a, since 5 is   |   |
-|    | greater than 3.                                           |   |
-|    |                                                           |   |
-|    | a\>b ? a : b // evaluates to whichever is greater, a or   |   |
-|    | b.                                                        |   |
-+----+-----------------------------------------------------------+---+
+
+ 1\  7==5 ? 4 : 3 // evaluates to 3, since 7 is not equal to      
+ 2\  5.                                                           
+ 3\                                                               
+ 4   7==5+2 ? 4 : 3 // evaluates to 4, since 7 is equal to        
+     5+2.                                                         
+                                                                  
+     5\>3 ? a : b // evaluates to the value of a, since 5 is      
+     greater than 3.                                              
+                                                                  
+     a\>b ? a : b // evaluates to whichever is greater, a or      
+     b.                                                           
+
 
 For example:
 
-+-----+---------------------------+---+----------------------------+
-| 1\  | // conditional operator   | 7 | [ Edit &                   |
-| 2\  |                           |   | Ru                         |
-| 3\  | \#include \<iostream\>    |   | n](http://www.cplusplus.co |
-| 4\  |                           |   | m/doc/tutorial/operators/) |
-| 5\  | using namespace std;      |   |                            |
-| 6\  |                           |   |                            |
-| 7\  | int main ()               |   |                            |
-| 8\  |                           |   |                            |
-| 9\  | {                         |   |                            |
-| 10\ |                           |   |                            |
-| 11\ | int a,b,c;                |   |                            |
-| 12\ |                           |   |                            |
-| 13\ | a=2;                      |   |                            |
-| 14  |                           |   |                            |
-|     | b=7;                      |   |                            |
-|     |                           |   |                            |
-|     | c = (a\>b) ? a : b;       |   |                            |
-|     |                           |   |                            |
-|     | cout \<\< c \<\< \'\\n\'; |   |                            |
-|     |                           |   |                            |
-|     | }                         |   |                            |
-+-----+---------------------------+---+----------------------------+
+
+ 1\   // conditional operator    7  [ Edit &                   
+ 2\                                 Ru                         
+ 3\   \#include \<iostream\>        n](http://www.cplusplus.co 
+ 4\                                 m/doc/tutorial/operators/) 
+ 5\   using namespace std;                                     
+ 6\                                                            
+ 7\   int main ()                                              
+ 8\                                                            
+ 9\   {                                                        
+ 10\                                                           
+ 11\  int a,b,c;                                               
+ 12\                                                           
+ 13\  a=2;                                                     
+ 14                                                            
+      b=7;                                                     
+                                                               
+      c = (a\>b) ? a : b;                                      
+                                                               
+      cout \<\< c \<\< \'\\n\';                                
+                                                               
+      }                                                        
+
 
 In this example, a was 2, and b was 7, so the expression being evaluated
 (a\>b) was not true, thus the first value specified after the question
@@ -1003,7 +1003,7 @@ colon) which was b (with a value of 7).
 []{#_Hlk56070027 .anchor}If relational operators and Boolean operators
 are combined in the same expression in C++, the Boolean operator NOT (!)
 has the highest precedence, the relational operators have the next
-highest precedence, and the Boolean operators AND (&&) and OR (\|\|)
+highest precedence, and the Boolean operators AND (&&) and OR (\\)
 have the lowest. Expressions in parentheses are always evaluated first.
 
 A single expression may have multiple operators. For example:
@@ -1018,11 +1018,11 @@ evaluated before. Parts of the expressions can be enclosed in
 parenthesis to override this precedence order, or to make explicitly
 clear the intended effect. Notice the difference:
 
-+----+---------------------------------------------------------+---+
-| 1\ | x = 5 + (7 % 2); // x = 6 (same as without parenthesis) |   |
-| 2  |                                                         |   |
-|    | x = (5 + 7) % 2; // x = 0                               |   |
-+----+---------------------------------------------------------+---+
+
+ 1\  x = 5 + (7 % 2); // x = 6 (same as without parenthesis)    
+ 2                                                              
+     x = (5 + 7) % 2; // x = 0                                  
+
 
 From greatest to smallest priority, C++ operators are evaluated in the
 following order:
@@ -1036,7 +1036,7 @@ following order:
 
                                              ()                       functional forms                   
 
-                                             \[\]                     subscript                          
+                                             []                     subscript                          
 
                                              . -\>                    member access                      
 
@@ -1070,14 +1070,14 @@ following order:
 
   11          Exclusive or                   \^                       bitwise XOR                        Left-to-right
 
-  12          Inclusive or                   \|                       bitwise OR                         Left-to-right
+  12          Inclusive or                   \                       bitwise OR                         Left-to-right
 
   13          Conjunction                    &&                       logical AND                        Left-to-right
 
-  14          Disjunction                    \|\|                     logical OR                         Left-to-right
+  14          Disjunction                    \\                     logical OR                         Left-to-right
 
   15          Assignment-level expressions   = \*= /= %= += -=\       assignment / compound assignment   Right-to-left
-                                             \>\>= \<\<= &= \^= \|=                                      
+                                             \>\>= \<\<= &= \^= \=                                      
 
                                              ?:                       conditional operator               
 

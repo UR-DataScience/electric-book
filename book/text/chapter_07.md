@@ -16,7 +16,7 @@ the position of a component with a single index value.
 
 Here is the syntax template of a one-dimensional array declaration:
 
-> DataType ArrayName \[ConstIntExpression\];
+> DataType ArrayName [ConstIntExpression];
 
 In the syntax template, DataType describes what is stored in each
 component of the array. Array components may be of any type, but for now
@@ -26,7 +26,7 @@ That is, it specifies the number of array components in the array. It
 must have a value greater than 0. If the value is n, the range of the
 index values is 0 to n-1. For example, the declaration
 
-> int number\[50\];
+> int number[50];
 
 creates the number array which has 50 components, each capable of
 holding one int value. In other words, the number array has a total of
@@ -37,31 +37,31 @@ holding one int value. In other words, the number array has a total of
 Now let\'s look at how to access individual components of an array. The
 syntax template for accessing an array component is
 
-> **ArrayName**\[ IndexExpression \]
+> **ArrayName**[ IndexExpression ]
 
 The index expression must result in an integer value. It can be of type
 char, short, int, long, or bool value because these are all integral
 types. The simplest form of index expression is a constant. For example:
 
-> number\[0\] specifies the 1st compnent of the number array
+> number[0] specifies the 1st compnent of the number array
 >
-> number\[1\] specifies the 2nd compnent of the number array
+> number[1] specifies the 2nd compnent of the number array
 >
-> number\[2\] specifies the 3rd compnent of the number array
+> number[2] specifies the 3rd compnent of the number array
 >
-> number\[3\] specifies the 4th compnent of the number array
+> number[3] specifies the 4th compnent of the number array
 >
-> number\[4\] specifies the 5th compnent of the number array
->
-> .
+> number[4] specifies the 5th compnent of the number array
 >
 > .
 >
 > .
 >
-> number\[48\] specifies the 2nd last component of the number array
+> .
 >
-> number\[49\] specifies the last component of the number array
+> number[48] specifies the 2nd last component of the number array
+>
+> number[49] specifies the last component of the number array
 
 To store values in the number array, we can do the following:
 
@@ -69,9 +69,9 @@ To store values in the number array, we can do the following:
 >
 > {
 >
-> number\[i\]=i; //store a number in each array element
+> number[i]=i; //store a number in each array element
 >
-> cout \<\< \"number\[\" \<\< i \<\< \"\] = \" \<\< number\[i\] \<\<
+> cout \<\< \"number[\" \<\< i \<\< \"] = \" \<\< number[i] \<\<
 > endl;
 >
 > }
@@ -87,11 +87,11 @@ element as a simple variable of data type int. For example:
 >
 > {
 >
-> number\[i\]=2\*number\[i\]; //double the value in each array element
+> number[i]=2\*number[i]; //double the value in each array element
 >
 > //and store it in the array element
 >
-> cout \<\< \"number\[\" \<\< i \<\< \"\] = \" \<\< number\[i\] \<\<
+> cout \<\< \"number[\" \<\< i \<\< \"] = \" \<\< number[i] \<\<
 > endl;
 >
 > }
@@ -99,7 +99,7 @@ element as a simple variable of data type int. For example:
 For the number array, the valid index range is from 0 to 49. If the
 IndexExpression results in a value less than 0 or greater than the
 array_size minus 1, then the index is considered to be out-of-bounds.
-For instance, number\[50\] is trying to access a memory location outside
+For instance, number[50] is trying to access a memory location outside
 of the number array.
 
 **Array Initialization in its Declaration**
@@ -113,9 +113,9 @@ initialized in its declaration. A list of initial values for array
 elements can be specified. They are separated with commas and enclosed
 within braces. For example:
 
-> int age\[5\] = {23, 56, 87, 92, 38};
+> int age[5] = {23, 56, 87, 92, 38};
 
-In this declaration, age\[0\] is initialized to 23, age\[1\] is
+In this declaration, age[0] is initialized to 23, age[1] is
 initialized to 56, and so on. There must be at least one initial value
 between braces. If too many initial values are specified, a syntax error
 will occur. If the number of initial values is less than the array size,
@@ -124,7 +124,7 @@ the remaining array elements will be initialized to zero.\
 In C++, the array size can be omitted when it is initialized in the
 declaration. For example:
 
-> int age\[\] = {23, 56, 87, 92, 38, 12, 15, 6, 3};
+> int age[] = {23, 56, 87, 92, 38, 12, 15, 6, 3};
 
 The compiler determines the size of the age array according to how many
 initial values are listed. Here, the size of the age array is 9.
@@ -147,15 +147,15 @@ This program adds two integer arrays and displays the arrays.
 >
 > const int MAX_ARRAY = 5;
 >
-> int a\[MAX_ARRAY\];
+> int a[MAX_ARRAY];
 >
-> int b\[MAX_ARRAY\];
+> int b[MAX_ARRAY];
 >
-> int c\[MAX_ARRAY\];
+> int c[MAX_ARRAY];
 >
 > int index;
 >
-> // Ask users to enter values for array a\[\].
+> // Ask users to enter values for array a[].
 >
 > for (index = 0; index \< MAX_ARRAY; index++)
 >
@@ -163,11 +163,11 @@ This program adds two integer arrays and displays the arrays.
 >
 > cout \<\< \"Please input a number for the array element: \";
 >
-> cin \>\>a\[index\];
+> cin \>\>a[index];
 >
 > }
 >
-> // Ask users to enters value for array b\[\].
+> // Ask users to enters value for array b[].
 >
 > for (index = 0; index \< MAX_ARRAY; index++)
 >
@@ -175,17 +175,17 @@ This program adds two integer arrays and displays the arrays.
 >
 > cout \<\< \"Please input a number for the array element: \";
 >
-> cin \>\>b\[index\];
+> cin \>\>b[index];
 >
 > }
 >
-> // Store the sum of array a\[\] and array b\[\] to array c\[\].
+> // Store the sum of array a[] and array b[] to array c[].
 >
 > for (index = 0; index \< MAX_ARRAY; index++)
 >
 > {
 >
-> c\[index\] = a\[index\]+ b\[index\];
+> c[index] = a[index]+ b[index];
 >
 > }
 >
@@ -195,11 +195,11 @@ This program adds two integer arrays and displays the arrays.
 >
 > {
 >
-> cout \<\< \"array a is \" \<\< a\[index\] \<\< endl;
+> cout \<\< \"array a is \" \<\< a[index] \<\< endl;
 >
-> cout \<\< \"array b is \" \<\< b\[index\] \<\< endl;
+> cout \<\< \"array b is \" \<\< b[index] \<\< endl;
 >
-> cout \<\< \"array c is \" \<\< c\[index\] \<\< endl;
+> cout \<\< \"array c is \" \<\< c[index] \<\< endl;
 >
 > cout \<\< endl;
 >
@@ -242,7 +242,7 @@ functions.
 >
 > // function prototypes go here
 >
-> // e.g. int getMax( int \[\], int );
+> // e.g. int getMax( int [], int );
 >
 > int main()
 >
@@ -262,13 +262,13 @@ functions.
 >
 > // function_return_type function_name(*parameter_list*)
 >
-> // e.g. int getMax(int ary\[\], int len)
+> // e.g. int getMax(int ary[], int len)
 >
 > {
 >
 > // code for function
 >
-> // e.g. max = ary\[i\];
+> // e.g. max = ary[i];
 >
 > } // end function
 
@@ -282,7 +282,7 @@ For example, suppose you had made the following declarations:
 
 > const int size=10;
 >
-> int ary\[size\];
+> int ary[size];
 
 Further suppose you wanted to pass this array to a function
 called getMax which expected the array reference as a parameter. The
@@ -305,7 +305,7 @@ This program adds two integer arrays and displays the arrays.
 >
 > using namespace std;
 >
-> void add_arrays(int \[\], int \[\], int \[\], int);
+> void add_arrays(int [], int [], int [], int);
 >
 > int main ()
 >
@@ -313,15 +313,15 @@ This program adds two integer arrays and displays the arrays.
 >
 > const int MAX_ARRAY = 5;
 >
-> int a\[MAX_ARRAY\];
+> int a[MAX_ARRAY];
 >
-> int b\[MAX_ARRAY\];
+> int b[MAX_ARRAY];
 >
-> int c\[MAX_ARRAY\];
+> int c[MAX_ARRAY];
 >
 > int index;
 >
-> // Ask users to enter values for array a\[\].
+> // Ask users to enter values for array a[].
 >
 > cout \<\< \"Please input 5 values for a array.\" \<\< endl;
 >
@@ -331,11 +331,11 @@ This program adds two integer arrays and displays the arrays.
 >
 > cout \<\< index+1 \<\< \": \";
 >
-> cin \>\>a\[index\];
+> cin \>\>a[index];
 >
 > }
 >
-> // Ask users to enters value for array b\[\].
+> // Ask users to enters value for array b[].
 >
 > cout \<\< \"Please input 5 values for b array.\" \<\< endl;;
 >
@@ -345,17 +345,17 @@ This program adds two integer arrays and displays the arrays.
 >
 > cout \<\< index+1 \<\< \": \";
 >
-> cin \>\>b\[index\];
+> cin \>\>b[index];
 >
 > }
 >
-> // Store the sum of array a\[\] and array b\[\] to array c\[\].
+> // Store the sum of array a[] and array b[] to array c[].
 >
 > // for (index = 0; index \< MAX_ARRAY; index++)
 >
 > // {
 >
-> // c\[index\] = a\[index\]+ b\[index\];
+> // c[index] = a[index]+ b[index];
 >
 > // }
 >
@@ -373,11 +373,11 @@ This program adds two integer arrays and displays the arrays.
 >
 > {
 >
-> cout \<\< \"a\[\" \<\< index \<\< \"\] = \" \<\< a\[index\] \<\< endl;
+> cout \<\< \"a[\" \<\< index \<\< \"] = \" \<\< a[index] \<\< endl;
 >
-> cout \<\< \"b\[\" \<\< index \<\< \"\] = \" \<\< b\[index\] \<\< endl;
+> cout \<\< \"b[\" \<\< index \<\< \"] = \" \<\< b[index] \<\< endl;
 >
-> cout \<\< \"c\[\" \<\< index \<\< \"\] = \" \<\< c\[index\] \<\< endl;
+> cout \<\< \"c[\" \<\< index \<\< \"] = \" \<\< c[index] \<\< endl;
 >
 > cout \<\< endl;
 >
@@ -389,7 +389,7 @@ This program adds two integer arrays and displays the arrays.
 >
 > // a function adds two arrays
 >
-> void add_arrays(int x\[\], int y\[\], int z\[\], int len)
+> void add_arrays(int x[], int y[], int z[], int len)
 >
 > {
 >
@@ -397,7 +397,7 @@ This program adds two integer arrays and displays the arrays.
 >
 > {
 >
-> z\[i\] = x\[i\] + y\[i\];
+> z[i] = x[i] + y[i];
 >
 > }
 >
@@ -420,13 +420,13 @@ For instance, if we have:
 
 using namespace std;
 
-void changeArray(const int array\[\]);
+void changeArray(const int array[]);
 
 int main()
 
 {
 
-    int myArray\[\] = { 1, 2, 3, 4 };
+    int myArray[] = { 1, 2, 3, 4 };
 
     changeArray(myArray);
 
@@ -434,11 +434,11 @@ int main()
 
 }
 
-void changeArray(const int array\[\])
+void changeArray(const int array[])
 
 {
 
-    array\[0\] += 2; // Compile Error!
+    array[0] += 2; // Compile Error!
 
 }
 
@@ -450,7 +450,7 @@ constant value which is impossible.
 You may try to return an array in you function. For example, you would
 write:
 
-float\[\] calculateAreas(int x, int y)
+float[] calculateAreas(int x, int y)
 
 However, it is not a valid statement in C++.
 
@@ -475,7 +475,7 @@ int main()
 
 {
 
-    char myArray\[\] = { \'A\', \'b\', \'E\', \'e\', \'c\' };
+    char myArray[] = { \'A\', \'b\', \'E\', \'e\', \'c\' };
 
     int index;
 
@@ -483,7 +483,7 @@ int main()
 
     {
 
-        if (myArray\[i\] == \'E\')
+        if (myArray[i] == \'E\')
 
         {
 
@@ -583,7 +583,7 @@ Parameter 2 myvector.end() \~ The second parameter is almost like the
 first but instead of putting a iterator to the first element to sort you
 will be putting a iterator to the last element. One very important
 difference is that the search won't include the element that this
-iterator points to. It is \[First,Last) meaning it includes the first
+iterator points to. It is [First,Last) meaning it includes the first
 parameter in the sort but it doesn't include the second parameter in the
 sort.
 
@@ -600,39 +600,39 @@ alters the container directly through iterators(Pointers).
 
 Array Example:
 
-+-----+--------------------------------------------------------+
-| 1\  | // sort() Example using arrays.                        |
-| 2\  |                                                        |
-| 3\  | // By Zereo 04/22/13                                   |
-| 4\  |                                                        |
-| 5\  | \#include \<iostream\>                                 |
-| 6\  |                                                        |
-| 7\  | \#include \<algorithm\>                                |
-| 8\  |                                                        |
-| 9\  | using namespace std;                                   |
-| 10\ |                                                        |
-| 11\ | const int SIZE = 7;                                    |
-| 12\ |                                                        |
-| 13\ | int main()                                             |
-| 14\ |                                                        |
-| 15\ | {                                                      |
-| 16\ |                                                        |
-| 17\ | int intArray\[SIZE\] = {5, 3, 32, -1, 1, 104, 53};     |
-| 18\ |                                                        |
-| 19\ | //Now we call the sort function                        |
-| 20\ |                                                        |
-| 21\ | sort(intArray, intArray + SIZE);                       |
-| 22  |                                                        |
-|     | cout \<\< \"Sorted Array looks like this.\" \<\< endl; |
-|     |                                                        |
-|     | for (size_t i = 0; i != SIZE; ++i)                     |
-|     |                                                        |
-|     | cout \<\< intArray\[i\] \<\< \" \";                    |
-|     |                                                        |
-|     | return 0;                                              |
-|     |                                                        |
-|     | }                                                      |
-+-----+--------------------------------------------------------+
+
+ 1\   // sort() Example using arrays.                        
+ 2\                                                          
+ 3\   // By Zereo 04/22/13                                   
+ 4\                                                          
+ 5\   \#include \<iostream\>                                 
+ 6\                                                          
+ 7\   \#include \<algorithm\>                                
+ 8\                                                          
+ 9\   using namespace std;                                   
+ 10\                                                         
+ 11\  const int SIZE = 7;                                    
+ 12\                                                         
+ 13\  int main()                                             
+ 14\                                                         
+ 15\  {                                                      
+ 16\                                                         
+ 17\  int intArray[SIZE] = {5, 3, 32, -1, 1, 104, 53};     
+ 18\                                                         
+ 19\  //Now we call the sort function                        
+ 20\                                                         
+ 21\  sort(intArray, intArray + SIZE);                       
+ 22                                                          
+      cout \<\< \"Sorted Array looks like this.\" \<\< endl; 
+                                                             
+      for (size_t i = 0; i != SIZE; ++i)                     
+                                                             
+      cout \<\< intArray[i] \<\< \" \";                    
+                                                             
+      return 0;                                              
+                                                             
+      }                                                      
+
 
 -   <https://www.cplusplus.com/articles/NhA0RXSz/>
 
@@ -658,61 +658,61 @@ object\'s value.
 
 Example:
 
-+-----+---------------------------------------------------------------+
-| 1\  | // strings and c-strings                                      |
-| 2\  |                                                               |
-| 3\  | \#include \<iostream\>                                        |
-| 4\  |                                                               |
-| 5\  | \#include \<cstring\>                                         |
-| 6\  |                                                               |
-| 7\  | \#include \<string\>                                          |
-| 8\  |                                                               |
-| 9\  | int main ()                                                   |
-| 10\ |                                                               |
-| 11\ | {                                                             |
-| 12\ |                                                               |
-| 13\ | std::string str (\"Please split this sentence into tokens\"); |
-| 14\ |                                                               |
-| 15\ | char \* cstr = new char \[str.length()+1\];                   |
-| 16\ |                                                               |
-| 17\ | std::strcpy (cstr, str.c_str());                              |
-| 18\ |                                                               |
-| 19\ | // cstr now contains a c-string copy of str                   |
-| 20\ |                                                               |
-| 21\ | char \* p = std::strtok (cstr,\" \");                         |
-| 22\ |                                                               |
-| 23\ | while (p!=0)                                                  |
-| 24  |                                                               |
-|     | {                                                             |
-|     |                                                               |
-|     | std::cout \<\< p \<\< \'\\n\';                                |
-|     |                                                               |
-|     | p = std::strtok(NULL,\" \");                                  |
-|     |                                                               |
-|     | }                                                             |
-|     |                                                               |
-|     | delete\[\] cstr;                                              |
-|     |                                                               |
-|     | return 0;                                                     |
-|     |                                                               |
-|     | }                                                             |
-+-----+---------------------------------------------------------------+
+
+ 1\   // strings and c-strings                                      
+ 2\                                                                 
+ 3\   \#include \<iostream\>                                        
+ 4\                                                                 
+ 5\   \#include \<cstring\>                                         
+ 6\                                                                 
+ 7\   \#include \<string\>                                          
+ 8\                                                                 
+ 9\   int main ()                                                   
+ 10\                                                                
+ 11\  {                                                             
+ 12\                                                                
+ 13\  std::string str (\"Please split this sentence into tokens\"); 
+ 14\                                                                
+ 15\  char \* cstr = new char [str.length()+1];                   
+ 16\                                                                
+ 17\  std::strcpy (cstr, str.c_str());                              
+ 18\                                                                
+ 19\  // cstr now contains a c-string copy of str                   
+ 20\                                                                
+ 21\  char \* p = std::strtok (cstr,\" \");                         
+ 22\                                                                
+ 23\  while (p!=0)                                                  
+ 24                                                                 
+      {                                                             
+                                                                    
+      std::cout \<\< p \<\< \'\\n\';                                
+                                                                    
+      p = std::strtok(NULL,\" \");                                  
+                                                                    
+      }                                                             
+                                                                    
+      delete[] cstr;                                              
+                                                                    
+      return 0;                                                     
+                                                                    
+      }                                                             
+
 
 Output:
 
-+----------+
-| Please   |
-|          |
-| split    |
-|          |
-| this     |
-|          |
-| sentence |
-|          |
-| into     |
-|          |
-| tokens   |
-+----------+
+
+ Please   
+          
+ split    
+          
+ this     
+          
+ sentence 
+          
+ into     
+          
+ tokens   
+
 
 -   <http://www.cplusplus.com/reference/string/string/c_str/>
 

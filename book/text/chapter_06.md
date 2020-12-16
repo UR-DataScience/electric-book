@@ -31,44 +31,44 @@ surrounded by braces { } that specify what the function actually does.\
 \
 Let\'s have a look at an example:
 
-+-----+-------------------+-----------------+-------------------+
-| 1\  | // function       | The result is 8 | [ Edit &          |
-| 2\  | example           |                 | Run               |
-| 3\  |                   |                 | ](http://www.cplu |
-| 4\  | \#include         |                 | splus.com/doc/tut |
-| 5\  | \<iostream\>      |                 | orial/functions/) |
-| 6\  |                   |                 |                   |
-| 7\  | using namespace   |                 |                   |
-| 8\  | std;              |                 |                   |
-| 9\  |                   |                 |                   |
-| 10\ | int addition (int |                 |                   |
-| 11\ | a, int b)         |                 |                   |
-| 12\ |                   |                 |                   |
-| 13\ | {                 |                 |                   |
-| 14\ |                   |                 |                   |
-| 15\ | int r;            |                 |                   |
-| 16\ |                   |                 |                   |
-| 17  | r=a+b;            |                 |                   |
-|     |                   |                 |                   |
-|     | return r;         |                 |                   |
-|     |                   |                 |                   |
-|     | }                 |                 |                   |
-|     |                   |                 |                   |
-|     | int main ()       |                 |                   |
-|     |                   |                 |                   |
-|     | {                 |                 |                   |
-|     |                   |                 |                   |
-|     | int z;            |                 |                   |
-|     |                   |                 |                   |
-|     | z = addition      |                 |                   |
-|     | (5,3);            |                 |                   |
-|     |                   |                 |                   |
-|     | cout \<\< \"The   |                 |                   |
-|     | result is \" \<\< |                 |                   |
-|     | z;                |                 |                   |
-|     |                   |                 |                   |
-|     | }                 |                 |                   |
-+-----+-------------------+-----------------+-------------------+
+
+ 1\   // function        The result is 8  [ Edit &          
+ 2\   example                             Run               
+ 3\                                       ](http://www.cplu 
+ 4\   \#include                           splus.com/doc/tut 
+ 5\   \<iostream\>                        orial/functions/) 
+ 6\                                                         
+ 7\   using namespace                                       
+ 8\   std;                                                  
+ 9\                                                         
+ 10\  int addition (int                                     
+ 11\  a, int b)                                             
+ 12\                                                        
+ 13\  {                                                     
+ 14\                                                        
+ 15\  int r;                                                
+ 16\                                                        
+ 17   r=a+b;                                                
+                                                            
+      return r;                                             
+                                                            
+      }                                                     
+                                                            
+      int main ()                                           
+                                                            
+      {                                                     
+                                                            
+      int z;                                                
+                                                            
+      z = addition                                          
+      (5,3);                                                
+                                                            
+      cout \<\< \"The                                       
+      result is \" \<\<                                     
+      z;                                                    
+                                                            
+      }                                                     
+
 
 This program is divided in two functions: addition and main. Remember
 that no matter the order in which they are defined, a C++ program always
@@ -130,66 +130,66 @@ Then main simply prints this value by calling:
 A function can actually be called multiple times within a program, and
 its argument is naturally not limited just to literals:
 
-+-----+-------------------+-------------------+-------------------+
-| 1\  | // function       | The first result  | [ Edit &          |
-| 2\  | example           | is 5              | Run               |
-| 3\  |                   |                   | ](http://www.cplu |
-| 4\  | \#include         | The second result | splus.com/doc/tut |
-| 5\  | \<iostream\>      | is 5              | orial/functions/) |
-| 6\  |                   |                   |                   |
-| 7\  | using namespace   | The third result  |                   |
-| 8\  | std;              | is 2              |                   |
-| 9\  |                   |                   |                   |
-| 10\ | int subtraction   | The fourth result |                   |
-| 11\ | (int a, int b)    | is 6              |                   |
-| 12\ |                   |                   |                   |
-| 13\ | {                 |                   |                   |
-| 14\ |                   |                   |                   |
-| 15\ | int r;            |                   |                   |
-| 16\ |                   |                   |                   |
-| 17\ | r=a-b;            |                   |                   |
-| 18\ |                   |                   |                   |
-| 19\ | return r;         |                   |                   |
-| 20\ |                   |                   |                   |
-| 21  | }                 |                   |                   |
-|     |                   |                   |                   |
-|     | int main ()       |                   |                   |
-|     |                   |                   |                   |
-|     | {                 |                   |                   |
-|     |                   |                   |                   |
-|     | int x=5, y=3, z;  |                   |                   |
-|     |                   |                   |                   |
-|     | z = subtraction   |                   |                   |
-|     | (7,2);            |                   |                   |
-|     |                   |                   |                   |
-|     | cout \<\< \"The   |                   |                   |
-|     | first result is   |                   |                   |
-|     | \" \<\< z \<\<    |                   |                   |
-|     | \'\\n\';          |                   |                   |
-|     |                   |                   |                   |
-|     | cout \<\< \"The   |                   |                   |
-|     | second result is  |                   |                   |
-|     | \" \<\<           |                   |                   |
-|     | subtraction (7,2) |                   |                   |
-|     | \<\< \'\\n\';     |                   |                   |
-|     |                   |                   |                   |
-|     | cout \<\< \"The   |                   |                   |
-|     | third result is   |                   |                   |
-|     | \" \<\<           |                   |                   |
-|     | subtraction (x,y) |                   |                   |
-|     | \<\< \'\\n\';     |                   |                   |
-|     |                   |                   |                   |
-|     | z= 4 +            |                   |                   |
-|     | subtraction       |                   |                   |
-|     | (x,y);            |                   |                   |
-|     |                   |                   |                   |
-|     | cout \<\< \"The   |                   |                   |
-|     | fourth result is  |                   |                   |
-|     | \" \<\< z \<\<    |                   |                   |
-|     | \'\\n\';          |                   |                   |
-|     |                   |                   |                   |
-|     | }                 |                   |                   |
-+-----+-------------------+-------------------+-------------------+
+
+ 1\   // function        The first result   [ Edit &          
+ 2\   example            is 5               Run               
+ 3\                                         ](http://www.cplu 
+ 4\   \#include          The second result  splus.com/doc/tut 
+ 5\   \<iostream\>       is 5               orial/functions/) 
+ 6\                                                           
+ 7\   using namespace    The third result                     
+ 8\   std;               is 2                                 
+ 9\                                                           
+ 10\  int subtraction    The fourth result                    
+ 11\  (int a, int b)     is 6                                 
+ 12\                                                          
+ 13\  {                                                       
+ 14\                                                          
+ 15\  int r;                                                  
+ 16\                                                          
+ 17\  r=a-b;                                                  
+ 18\                                                          
+ 19\  return r;                                               
+ 20\                                                          
+ 21   }                                                       
+                                                              
+      int main ()                                             
+                                                              
+      {                                                       
+                                                              
+      int x=5, y=3, z;                                        
+                                                              
+      z = subtraction                                         
+      (7,2);                                                  
+                                                              
+      cout \<\< \"The                                         
+      first result is                                         
+      \" \<\< z \<\<                                          
+      \'\\n\';                                                
+                                                              
+      cout \<\< \"The                                         
+      second result is                                        
+      \" \<\<                                                 
+      subtraction (7,2)                                       
+      \<\< \'\\n\';                                           
+                                                              
+      cout \<\< \"The                                         
+      third result is                                         
+      \" \<\<                                                 
+      subtraction (x,y)                                       
+      \<\< \'\\n\';                                           
+                                                              
+      z= 4 +                                                  
+      subtraction                                             
+      (x,y);                                                  
+                                                              
+      cout \<\< \"The                                         
+      fourth result is                                        
+      \" \<\< z \<\<                                          
+      \'\\n\';                                                
+                                                              
+      }                                                       
+
 
 Similar to the addition function in the previous example, this example
 defines a subtract function, that simply returns the difference between
@@ -201,20 +201,20 @@ call is itself an expression that is evaluated as the value it returns.
 Again, you can think of it as if the function call was itself replaced
 by the returned value:
 
-+----+--------------------------------------------+---+
-| 1\ | z = subtraction (7,2);                     |   |
-| 2  |                                            |   |
-|    | cout \<\< \"The first result is \" \<\< z; |   |
-+----+--------------------------------------------+---+
+
+ 1\  z = subtraction (7,2);                        
+ 2                                                 
+     cout \<\< \"The first result is \" \<\< z;    
+
 
 If we replace the function call by the value it returns (i.e., 5), we
 would have:
 
-+----+--------------------------------------------+---+
-| 1\ | z = 5;                                     |   |
-| 2  |                                            |   |
-|    | cout \<\< \"The first result is \" \<\< z; |   |
-+----+--------------------------------------------+---+
+
+ 1\  z = 5;                                        
+ 2                                                 
+     cout \<\< \"The first result is \" \<\< z;    
+
 
 With the same procedure, we could interpret:
 
@@ -261,11 +261,11 @@ necessarily go after the function call, but, as always, at the end of
 the whole statement. Again, the logic behind may be easily seen again by
 replacing the function calls by their returned value:
 
-+----+--------------------------------------------------+
-| 1\ | z = 4 + 2; // same as z = 4 + subtraction (x,y); |
-| 2  |                                                  |
-|    | z = 2 + 4; // same as z = subtraction (x,y) + 4; |
-+----+--------------------------------------------------+
+
+ 1\  z = 4 + 2; // same as z = 4 + subtraction (x,y); 
+ 2                                                    
+     z = 2 + 4; // same as z = subtraction (x,y) + 4; 
+
 
 ## void Functions
 
@@ -279,48 +279,48 @@ to return a value? In this case, the type to be used is void, which is a
 special type to represent the absence of value. For example, a function
 that simply prints a message may not need to return any value:
 
-+-----+-------------------+------------------+-------------------+
-| 1\  | // void function  | I\'m a function! | [ Edit &          |
-| 2\  | example           |                  | Run               |
-| 3\  |                   |                  | ](http://www.cplu |
-| 4\  | \#include         |                  | splus.com/doc/tut |
-| 5\  | \<iostream\>      |                  | orial/functions/) |
-| 6\  |                   |                  |                   |
-| 7\  | using namespace   |                  |                   |
-| 8\  | std;              |                  |                   |
-| 9\  |                   |                  |                   |
-| 10\ | void printmessage |                  |                   |
-| 11\ | ()                |                  |                   |
-| 12\ |                   |                  |                   |
-| 13  | {                 |                  |                   |
-|     |                   |                  |                   |
-|     | cout \<\< \"I\'m  |                  |                   |
-|     | a function!\";    |                  |                   |
-|     |                   |                  |                   |
-|     | }                 |                  |                   |
-|     |                   |                  |                   |
-|     | int main ()       |                  |                   |
-|     |                   |                  |                   |
-|     | {                 |                  |                   |
-|     |                   |                  |                   |
-|     | printmessage ();  |                  |                   |
-|     |                   |                  |                   |
-|     | }                 |                  |                   |
-+-----+-------------------+------------------+-------------------+
+
+ 1\   // void function   I\'m a function!  [ Edit &          
+ 2\   example                              Run               
+ 3\                                        ](http://www.cplu 
+ 4\   \#include                            splus.com/doc/tut 
+ 5\   \<iostream\>                         orial/functions/) 
+ 6\                                                          
+ 7\   using namespace                                        
+ 8\   std;                                                   
+ 9\                                                          
+ 10\  void printmessage                                      
+ 11\  ()                                                     
+ 12\                                                         
+ 13   {                                                      
+                                                             
+      cout \<\< \"I\'m                                       
+      a function!\";                                         
+                                                             
+      }                                                      
+                                                             
+      int main ()                                            
+                                                             
+      {                                                      
+                                                             
+      printmessage ();                                       
+                                                             
+      }                                                      
+
 
 void can also be used in the function\'s parameter list to explicitly
 specify that the function takes no actual parameters when called. For
 example, printmessage could have been declared as:
 
-+----+---------------------------------+---+
-| 1\ | void printmessage (void)        |   |
-| 2\ |                                 |   |
-| 3\ | {                               |   |
-| 4  |                                 |   |
-|    | cout \<\< \"I\'m a function!\"; |   |
-|    |                                 |   |
-|    | }                               |   |
-+----+---------------------------------+---+
+
+ 1\  void printmessage (void)           
+ 2\                                     
+ 3\  {                                  
+ 4                                      
+     cout \<\< \"I\'m a function!\";    
+                                        
+     }                                  
+
 
 In C++, an empty parameter list can be used instead of void with same
 meaning, but the use of void in the argument list was popularized by the
@@ -353,11 +353,11 @@ function are the values of these arguments on the moment of the call,
 which are copied into the variables represented by the function
 parameters. For example, take:
 
-+----+------------------------+---+
-| 1\ | int x=5, y=3, z;       |   |
-| 2  |                        |   |
-|    | z = addition ( x, y ); |   |
-+----+------------------------+---+
+
+ 1\  int x=5, y=3, z;          
+ 2                             
+     z = addition ( x, y );    
+
 
 In this case, function addition is passed 5 and 3, which are copies of
 the values of x and y, respectively. These values (5 and 3) are used to
@@ -375,50 +375,50 @@ function duplicate in this code duplicates the value of its three
 arguments, causing the variables used as arguments to actually be
 modified by the call:
 
-+-----+-------------------+----------------+-------------------+
-| 1\  | // passing        | x=2, y=6, z=14 | [ Edit &          |
-| 2\  | parameters by     |                | Run               |
-| 3\  | reference         |                | ](http://www.cplu |
-| 4\  |                   |                | splus.com/doc/tut |
-| 5\  | \#include         |                | orial/functions/) |
-| 6\  | \<iostream\>      |                |                   |
-| 7\  |                   |                |                   |
-| 8\  | using namespace   |                |                   |
-| 9\  | std;              |                |                   |
-| 10\ |                   |                |                   |
-| 11\ | void duplicate    |                |                   |
-| 12\ | (int& a, int& b,  |                |                   |
-| 13\ | int& c)           |                |                   |
-| 14\ |                   |                |                   |
-| 15\ | {                 |                |                   |
-| 16\ |                   |                |                   |
-| 17\ | a\*=2;            |                |                   |
-| 18  |                   |                |                   |
-|     | b\*=2;            |                |                   |
-|     |                   |                |                   |
-|     | c\*=2;            |                |                   |
-|     |                   |                |                   |
-|     | }                 |                |                   |
-|     |                   |                |                   |
-|     | int main ()       |                |                   |
-|     |                   |                |                   |
-|     | {                 |                |                   |
-|     |                   |                |                   |
-|     | int x=1, y=3,     |                |                   |
-|     | z=7;              |                |                   |
-|     |                   |                |                   |
-|     | duplicate (x, y,  |                |                   |
-|     | z);               |                |                   |
-|     |                   |                |                   |
-|     | cout \<\< \"x=\"  |                |                   |
-|     | \<\< x \<\< \",   |                |                   |
-|     | y=\" \<\< y \<\<  |                |                   |
-|     | \", z=\" \<\< z;  |                |                   |
-|     |                   |                |                   |
-|     | return 0;         |                |                   |
-|     |                   |                |                   |
-|     | }                 |                |                   |
-+-----+-------------------+----------------+-------------------+
+
+ 1\   // passing         x=2, y=6, z=14  [ Edit &          
+ 2\   parameters by                      Run               
+ 3\   reference                          ](http://www.cplu 
+ 4\                                      splus.com/doc/tut 
+ 5\   \#include                          orial/functions/) 
+ 6\   \<iostream\>                                         
+ 7\                                                        
+ 8\   using namespace                                      
+ 9\   std;                                                 
+ 10\                                                       
+ 11\  void duplicate                                       
+ 12\  (int& a, int& b,                                     
+ 13\  int& c)                                              
+ 14\                                                       
+ 15\  {                                                    
+ 16\                                                       
+ 17\  a\*=2;                                               
+ 18                                                        
+      b\*=2;                                               
+                                                           
+      c\*=2;                                               
+                                                           
+      }                                                    
+                                                           
+      int main ()                                          
+                                                           
+      {                                                    
+                                                           
+      int x=1, y=3,                                        
+      z=7;                                                 
+                                                           
+      duplicate (x, y,                                     
+      z);                                                  
+                                                           
+      cout \<\< \"x=\"                                     
+      \<\< x \<\< \",                                      
+      y=\" \<\< y \<\<                                     
+      \", z=\" \<\< z;                                     
+                                                           
+      return 0;                                            
+                                                           
+      }                                                    
+
 
 > <http://www.cs.uregina.ca/Links/class-info/110/functions/index-val-008_ggg.html>
 
@@ -457,49 +457,49 @@ parameters are different; either because they have a different number of
 parameters, or because any of their parameters are of a different type.
 For example:
 
-+-----+---------------------------+-----+---------------------------+
-| 1\  | // overloading functions  | 10  | [ Edit &                  |
-| 2\  |                           |     | Run](                     |
-| 3\  | \#include \<iostream\>    | 2.5 | http://www.cplusplus.com/ |
-| 4\  |                           |     | doc/tutorial/functions2/) |
-| 5\  | using namespace std;      |     |                           |
-| 6\  |                           |     |                           |
-| 7\  | int operate (int a, int   |     |                           |
-| 8\  | b)                        |     |                           |
-| 9\  |                           |     |                           |
-| 10\ | {                         |     |                           |
-| 11\ |                           |     |                           |
-| 12\ | return (a\*b);            |     |                           |
-| 13\ |                           |     |                           |
-| 14\ | }                         |     |                           |
-| 15\ |                           |     |                           |
-| 16\ | double operate (double a, |     |                           |
-| 17\ | double b)                 |     |                           |
-| 18\ |                           |     |                           |
-| 19\ | {                         |     |                           |
-| 20\ |                           |     |                           |
-| 21\ | return (a/b);             |     |                           |
-| 22  |                           |     |                           |
-|     | }                         |     |                           |
-|     |                           |     |                           |
-|     | int main ()               |     |                           |
-|     |                           |     |                           |
-|     | {                         |     |                           |
-|     |                           |     |                           |
-|     | int x=5,y=2;              |     |                           |
-|     |                           |     |                           |
-|     | double n=5.0,m=2.0;       |     |                           |
-|     |                           |     |                           |
-|     | cout \<\< operate (x,y)   |     |                           |
-|     | \<\< \'\\n\';             |     |                           |
-|     |                           |     |                           |
-|     | cout \<\< operate (n,m)   |     |                           |
-|     | \<\< \'\\n\';             |     |                           |
-|     |                           |     |                           |
-|     | return 0;                 |     |                           |
-|     |                           |     |                           |
-|     | }                         |     |                           |
-+-----+---------------------------+-----+---------------------------+
+
+ 1\   // overloading functions   10   [ Edit &                  
+ 2\                                   Run](                     
+ 3\   \#include \<iostream\>     2.5  http://www.cplusplus.com/ 
+ 4\                                   doc/tutorial/functions2/) 
+ 5\   using namespace std;                                      
+ 6\                                                             
+ 7\   int operate (int a, int                                   
+ 8\   b)                                                        
+ 9\                                                             
+ 10\  {                                                         
+ 11\                                                            
+ 12\  return (a\*b);                                            
+ 13\                                                            
+ 14\  }                                                         
+ 15\                                                            
+ 16\  double operate (double a,                                 
+ 17\  double b)                                                 
+ 18\                                                            
+ 19\  {                                                         
+ 20\                                                            
+ 21\  return (a/b);                                             
+ 22                                                             
+      }                                                         
+                                                                
+      int main ()                                               
+                                                                
+      {                                                         
+                                                                
+      int x=5,y=2;                                              
+                                                                
+      double n=5.0,m=2.0;                                       
+                                                                
+      cout \<\< operate (x,y)                                   
+      \<\< \'\\n\';                                             
+                                                                
+      cout \<\< operate (n,m)                                   
+      \<\< \'\\n\';                                             
+                                                                
+      return 0;                                                 
+                                                                
+      }                                                         
+
 
 In this example, there are two functions called operate, but one of them
 has two parameters of type int, while the other has them of type double.
@@ -525,44 +525,44 @@ least one of its parameters must have a different type.
 
 Overloaded functions may have the same definition. For example:
 
-+-----+---------------------------+-----+---------------------------+
-| 1\  | // overloaded functions   | 30  | [ Edit &                  |
-| 2\  |                           |     | Run](                     |
-| 3\  | \#include \<iostream\>    | 2.5 | http://www.cplusplus.com/ |
-| 4\  |                           |     | doc/tutorial/functions2/) |
-| 5\  | using namespace std;      |     |                           |
-| 6\  |                           |     |                           |
-| 7\  | int sum (int a, int b)    |     |                           |
-| 8\  |                           |     |                           |
-| 9\  | {                         |     |                           |
-| 10\ |                           |     |                           |
-| 11\ | return a+b;               |     |                           |
-| 12\ |                           |     |                           |
-| 13\ | }                         |     |                           |
-| 14\ |                           |     |                           |
-| 15\ | double sum (double a,     |     |                           |
-| 16\ | double b)                 |     |                           |
-| 17\ |                           |     |                           |
-| 18\ | {                         |     |                           |
-| 19\ |                           |     |                           |
-| 20  | return a+b;               |     |                           |
-|     |                           |     |                           |
-|     | }                         |     |                           |
-|     |                           |     |                           |
-|     | int main ()               |     |                           |
-|     |                           |     |                           |
-|     | {                         |     |                           |
-|     |                           |     |                           |
-|     | cout \<\< sum (10,20)     |     |                           |
-|     | \<\< \'\\n\';             |     |                           |
-|     |                           |     |                           |
-|     | cout \<\< sum (1.0,1.5)   |     |                           |
-|     | \<\< \'\\n\';             |     |                           |
-|     |                           |     |                           |
-|     | return 0;                 |     |                           |
-|     |                           |     |                           |
-|     | }                         |     |                           |
-+-----+---------------------------+-----+---------------------------+
+
+ 1\   // overloaded functions    30   [ Edit &                  
+ 2\                                   Run](                     
+ 3\   \#include \<iostream\>     2.5  http://www.cplusplus.com/ 
+ 4\                                   doc/tutorial/functions2/) 
+ 5\   using namespace std;                                      
+ 6\                                                             
+ 7\   int sum (int a, int b)                                    
+ 8\                                                             
+ 9\   {                                                         
+ 10\                                                            
+ 11\  return a+b;                                               
+ 12\                                                            
+ 13\  }                                                         
+ 14\                                                            
+ 15\  double sum (double a,                                     
+ 16\  double b)                                                 
+ 17\                                                            
+ 18\  {                                                         
+ 19\                                                            
+ 20   return a+b;                                               
+                                                                
+      }                                                         
+                                                                
+      int main ()                                               
+                                                                
+      {                                                         
+                                                                
+      cout \<\< sum (10,20)                                     
+      \<\< \'\\n\';                                             
+                                                                
+      cout \<\< sum (1.0,1.5)                                   
+      \<\< \'\\n\';                                             
+                                                                
+      return 0;                                                 
+                                                                
+      }                                                         
+
 
 Here, sum is overloaded with different parameter types, but with the
 exact same body.\
@@ -582,17 +582,17 @@ the class or typename keyword followed by an identifier. This identifier
 can then be used in the function declaration as if it was a regular
 type. For example, a generic sum function could be defined as:
 
-+----+---------------------------------------+---+
-| 1\ | template \<class SomeType\>           |   |
-| 2\ |                                       |   |
-| 3\ | SomeType sum (SomeType a, SomeType b) |   |
-| 4\ |                                       |   |
-| 5  | {                                     |   |
-|    |                                       |   |
-|    | return a+b;                           |   |
-|    |                                       |   |
-|    | }                                     |   |
-+----+---------------------------------------+---+
+
+ 1\  template \<class SomeType\>              
+ 2\                                           
+ 3\  SomeType sum (SomeType a, SomeType b)    
+ 4\                                           
+ 5   {                                        
+                                              
+     return a+b;                              
+                                              
+     }                                        
+
 
 It makes no difference whether the generic type is specified with
 keyword class or keyword typename in the template argument list (they
@@ -624,57 +624,57 @@ in the call, the compiler automatically instantiates a version
 of sum where each occurrence of SomeType is replaced by int, as if it
 was defined as:
 
-+----+------------------------+---+
-| 1\ | int sum (int a, int b) |   |
-| 2\ |                        |   |
-| 3\ | {                      |   |
-| 4  |                        |   |
-|    | return a+b;            |   |
-|    |                        |   |
-|    | }                      |   |
-+----+------------------------+---+
+
+ 1\  int sum (int a, int b)    
+ 2\                            
+ 3\  {                         
+ 4                             
+     return a+b;               
+                               
+     }                         
+
 
 Let\'s see an actual example:
 
-+-----+---------------------------+-----+---------------------------+
-| 1\  | // function template      | 11  | [ Edit &                  |
-| 2\  |                           |     | Run](                     |
-| 3\  | \#include \<iostream\>    | 2.5 | http://www.cplusplus.com/ |
-| 4\  |                           |     | doc/tutorial/functions2/) |
-| 5\  | using namespace std;      |     |                           |
-| 6\  |                           |     |                           |
-| 7\  | template \<class T\>      |     |                           |
-| 8\  |                           |     |                           |
-| 9\  | T sum (T a, T b)          |     |                           |
-| 10\ |                           |     |                           |
-| 11\ | {                         |     |                           |
-| 12\ |                           |     |                           |
-| 13\ | T result;                 |     |                           |
-| 14\ |                           |     |                           |
-| 15\ | result = a + b;           |     |                           |
-| 16\ |                           |     |                           |
-| 17\ | return result;            |     |                           |
-| 18\ |                           |     |                           |
-| 19\ | }                         |     |                           |
-| 20\ |                           |     |                           |
-| 21  | int main () {             |     |                           |
-|     |                           |     |                           |
-|     | int i=5, j=6, k;          |     |                           |
-|     |                           |     |                           |
-|     | double f=2.0, g=0.5, h;   |     |                           |
-|     |                           |     |                           |
-|     | k=sum\<int\>(i,j);        |     |                           |
-|     |                           |     |                           |
-|     | h=sum\<double\>(f,g);     |     |                           |
-|     |                           |     |                           |
-|     | cout \<\< k \<\< \'\\n\'; |     |                           |
-|     |                           |     |                           |
-|     | cout \<\< h \<\< \'\\n\'; |     |                           |
-|     |                           |     |                           |
-|     | return 0;                 |     |                           |
-|     |                           |     |                           |
-|     | }                         |     |                           |
-+-----+---------------------------+-----+---------------------------+
+
+ 1\   // function template       11   [ Edit &                  
+ 2\                                   Run](                     
+ 3\   \#include \<iostream\>     2.5  http://www.cplusplus.com/ 
+ 4\                                   doc/tutorial/functions2/) 
+ 5\   using namespace std;                                      
+ 6\                                                             
+ 7\   template \<class T\>                                      
+ 8\                                                             
+ 9\   T sum (T a, T b)                                          
+ 10\                                                            
+ 11\  {                                                         
+ 12\                                                            
+ 13\  T result;                                                 
+ 14\                                                            
+ 15\  result = a + b;                                           
+ 16\                                                            
+ 17\  return result;                                            
+ 18\                                                            
+ 19\  }                                                         
+ 20\                                                            
+ 21   int main () {                                             
+                                                                
+      int i=5, j=6, k;                                          
+                                                                
+      double f=2.0, g=0.5, h;                                   
+                                                                
+      k=sum\<int\>(i,j);                                        
+                                                                
+      h=sum\<double\>(f,g);                                     
+                                                                
+      cout \<\< k \<\< \'\\n\';                                 
+                                                                
+      cout \<\< h \<\< \'\\n\';                                 
+                                                                
+      return 0;                                                 
+                                                                
+      }                                                         
+
 
 In this case, we have used T as the template parameter name, instead
 of SomeType. It makes no difference, and T is actually a quite common
@@ -699,19 +699,19 @@ for sum, the compiler is even able to deduce the data type automatically
 without having to explicitly specify it within angle brackets.
 Therefore, instead of explicitly specifying the template arguments with:
 
-+----+--------------------------+---+
-| 1\ | k = sum\<int\> (i,j);    |   |
-| 2  |                          |   |
-|    | h = sum\<double\> (f,g); |   |
-+----+--------------------------+---+
+
+ 1\  k = sum\<int\> (i,j);       
+ 2                               
+     h = sum\<double\> (f,g);    
+
 
 It is possible to instead simply write:
 
-+----+----------------+---+
-| 1\ | k = sum (i,j); |   |
-| 2  |                |   |
-|    | h = sum (f,g); |   |
-+----+----------------+---+
+
+ 1\  k = sum (i,j);    
+ 2                     
+     h = sum (f,g);    
+
 
 without the type enclosed in angle brackets. Naturally, for that, the
 type shall be unambiguous. If sum is called with arguments of different
@@ -722,49 +722,49 @@ Templates are a powerful and versatile feature. They can have multiple
 template parameters, and the function can still use regular
 non-templated types. For example:
 
-+-----+-------------------+-------------------+-------------------+
-| 1\  | // function       | x and y are equal | [ Edit &          |
-| 2\  | templates         |                   | Run]              |
-| 3\  |                   |                   | (http://www.cplus |
-| 4\  | \#include         |                   | plus.com/doc/tuto |
-| 5\  | \<iostream\>      |                   | rial/functions2/) |
-| 6\  |                   |                   |                   |
-| 7\  | using namespace   |                   |                   |
-| 8\  | std;              |                   |                   |
-| 9\  |                   |                   |                   |
-| 10\ | template \<class  |                   |                   |
-| 11\ | T, class U\>      |                   |                   |
-| 12\ |                   |                   |                   |
-| 13\ | bool are_equal (T |                   |                   |
-| 14\ | a, U b)           |                   |                   |
-| 15\ |                   |                   |                   |
-| 16\ | {                 |                   |                   |
-| 17\ |                   |                   |                   |
-| 18  | return (a==b);    |                   |                   |
-|     |                   |                   |                   |
-|     | }                 |                   |                   |
-|     |                   |                   |                   |
-|     | int main ()       |                   |                   |
-|     |                   |                   |                   |
-|     | {                 |                   |                   |
-|     |                   |                   |                   |
-|     | if                |                   |                   |
-|     | (ar               |                   |                   |
-|     | e_equal(10,10.0)) |                   |                   |
-|     |                   |                   |                   |
-|     | cout \<\< \"x and |                   |                   |
-|     | y are equal\\n\"; |                   |                   |
-|     |                   |                   |                   |
-|     | else              |                   |                   |
-|     |                   |                   |                   |
-|     | cout \<\< \"x and |                   |                   |
-|     | y are not         |                   |                   |
-|     | equal\\n\";       |                   |                   |
-|     |                   |                   |                   |
-|     | return 0;         |                   |                   |
-|     |                   |                   |                   |
-|     | }                 |                   |                   |
-+-----+-------------------+-------------------+-------------------+
+
+ 1\   // function        x and y are equal  [ Edit &          
+ 2\   templates                             Run]              
+ 3\                                         (http://www.cplus 
+ 4\   \#include                             plus.com/doc/tuto 
+ 5\   \<iostream\>                          rial/functions2/) 
+ 6\                                                           
+ 7\   using namespace                                         
+ 8\   std;                                                    
+ 9\                                                           
+ 10\  template \<class                                        
+ 11\  T, class U\>                                            
+ 12\                                                          
+ 13\  bool are_equal (T                                       
+ 14\  a, U b)                                                 
+ 15\                                                          
+ 16\  {                                                       
+ 17\                                                          
+ 18   return (a==b);                                          
+                                                              
+      }                                                       
+                                                              
+      int main ()                                             
+                                                              
+      {                                                       
+                                                              
+      if                                                      
+      (ar                                                     
+      e_equal(10,10.0))                                       
+                                                              
+      cout \<\< \"x and                                       
+      y are equal\\n\";                                       
+                                                              
+      else                                                    
+                                                              
+      cout \<\< \"x and                                       
+      y are not                                               
+      equal\\n\";                                             
+                                                              
+      return 0;                                               
+                                                              
+      }                                                       
+
 
 Note that this example uses automatic template parameter deduction in
 the call to are_equal:
@@ -791,38 +791,38 @@ The template parameters can not only include types introduced
 by class or typename, but can also include expressions of a particular
 type:
 
-+-----+---------------------------+----+---------------------------+
-| 1\  | // template arguments     | 20 | [ Edit &                  |
-| 2\  |                           |    | Run](                     |
-| 3\  | \#include \<iostream\>    | 30 | http://www.cplusplus.com/ |
-| 4\  |                           |    | doc/tutorial/functions2/) |
-| 5\  | using namespace std;      |    |                           |
-| 6\  |                           |    |                           |
-| 7\  | template \<class T, int   |    |                           |
-| 8\  | N\>                       |    |                           |
-| 9\  |                           |    |                           |
-| 10\ | T fixed_multiply (T val)  |    |                           |
-| 11\ |                           |    |                           |
-| 12\ | {                         |    |                           |
-| 13\ |                           |    |                           |
-| 14  | return val \* N;          |    |                           |
-|     |                           |    |                           |
-|     | }                         |    |                           |
-|     |                           |    |                           |
-|     | int main() {              |    |                           |
-|     |                           |    |                           |
-|     | std::cout \<\<            |    |                           |
-|     | fi                        |    |                           |
-|     | xed_multiply\<int,2\>(10) |    |                           |
-|     | \<\< \'\\n\';             |    |                           |
-|     |                           |    |                           |
-|     | std::cout \<\<            |    |                           |
-|     | fi                        |    |                           |
-|     | xed_multiply\<int,3\>(10) |    |                           |
-|     | \<\< \'\\n\';             |    |                           |
-|     |                           |    |                           |
-|     | }                         |    |                           |
-+-----+---------------------------+----+---------------------------+
+
+ 1\   // template arguments      20  [ Edit &                  
+ 2\                                  Run](                     
+ 3\   \#include \<iostream\>     30  http://www.cplusplus.com/ 
+ 4\                                  doc/tutorial/functions2/) 
+ 5\   using namespace std;                                     
+ 6\                                                            
+ 7\   template \<class T, int                                  
+ 8\   N\>                                                      
+ 9\                                                            
+ 10\  T fixed_multiply (T val)                                 
+ 11\                                                           
+ 12\  {                                                        
+ 13\                                                           
+ 14   return val \* N;                                         
+                                                               
+      }                                                        
+                                                               
+      int main() {                                             
+                                                               
+      std::cout \<\<                                           
+      fi                                                       
+      xed_multiply\<int,2\>(10)                                
+      \<\< \'\\n\';                                            
+                                                               
+      std::cout \<\<                                           
+      fi                                                       
+      xed_multiply\<int,3\>(10)                                
+      \<\< \'\\n\';                                            
+                                                               
+      }                                                        
+
 
 The second argument of the fixed_multiply function template is of
 type int. It just looks like a regular function parameter, and can
@@ -876,13 +876,13 @@ introduced, is visible within the scope from the point at which it is
 declared to the end of that scope. A declarations merely tells the
 compiler how to use something, it does not actually create anything.
 
-+----+-----------------------------------------------------------+---+
-| 1\ | extern int y; // declares y, but does not define it. y is |   |
-| 2  | defined elsewhere,                                        |   |
-|    |                                                           |   |
-|    | // but the program can now use it since it knows what it  |   |
-|    | is (an integer)                                           |   |
-+----+-----------------------------------------------------------+---+
+
+ 1\  extern int y; // declares y, but does not define it. y is    
+ 2   defined elsewhere,                                           
+                                                                  
+     // but the program can now use it since it knows what it     
+     is (an integer)                                              
+
 
 **PROTOTYPES:** A prototype is just another name for
 a **declaration** of a function.
@@ -904,44 +904,44 @@ definitions.
 a **definition** of a function. That is, the implementation is the
 actual code of the function itself.
 
-+----+----------------------------------------+---+
-| 1\ | double someFunction( double x, int y ) |   |
-| 2\ |                                        |   |
-| 3\ | {                                      |   |
-| 4  |                                        |   |
-|    | return x \* y;                         |   |
-|    |                                        |   |
-|    | }                                      |   |
-+----+----------------------------------------+---+
+
+ 1\  double someFunction( double x, int y )    
+ 2\                                            
+ 3\  {                                         
+ 4                                             
+     return x \* y;                            
+                                               
+     }                                         
+
 
 Any entity can be declared multiple times, but can only be defined once.
 
 ### Why all this matters to you
 
-+-----+------------------------------+------------------------------+
-| 1\  | int main()                   | [ Edit &                     |
-| 2\  |                              | Run](http://www.cplus        |
-| 3\  | {                            | plus.com/articles/yAqpX9L8/) |
-| 4\  |                              |                              |
-| 5\  | double a = 3.5;              |                              |
-| 6\  |                              |                              |
-| 7\  | int b = 2;                   |                              |
-| 8\  |                              |                              |
-| 9\  | double c;                    |                              |
-| 10\ |                              |                              |
-| 11\ | c = someFunction( a, b );    |                              |
-| 12\ |                              |                              |
-| 13  | }                            |                              |
-|     |                              |                              |
-|     | double someFunction( double  |                              |
-|     | x, int y )                   |                              |
-|     |                              |                              |
-|     | {                            |                              |
-|     |                              |                              |
-|     | return x \* y;               |                              |
-|     |                              |                              |
-|     | }                            |                              |
-+-----+------------------------------+------------------------------+
+
+ 1\   int main()                    [ Edit &                     
+ 2\                                 Run](http://www.cplus        
+ 3\   {                             plus.com/articles/yAqpX9L8/) 
+ 4\                                                              
+ 5\   double a = 3.5;                                            
+ 6\                                                              
+ 7\   int b = 2;                                                 
+ 8\                                                              
+ 9\   double c;                                                  
+ 10\                                                             
+ 11\  c = someFunction( a, b );                                  
+ 12\                                                             
+ 13   }                                                          
+                                                                 
+      double someFunction( double                                
+      x, int y )                                                 
+                                                                 
+      {                                                          
+                                                                 
+      return x \* y;                                             
+                                                                 
+      }                                                          
+
 
 Recall that compilation is a single pass top-down process. Because of
 this, the above code can not work because the compiler gets to the \"c =
@@ -949,58 +949,58 @@ someFunction( a, b );\" line and doesn\'t know how to handle
 someFunction(). The solution is to have someFunction() declared before
 this.
 
-+-----+------------------------------+------------------------------+
-| 1\  | double someFunction( double, | [ Edit &                     |
-| 2\  | int );                       | Run](http://www.cplus        |
-| 3\  |                              | plus.com/articles/yAqpX9L8/) |
-| 4\  | int main()                   |                              |
-| 5\  |                              |                              |
-| 6\  | {                            |                              |
-| 7\  |                              |                              |
-| 8\  | double a = 3.5;              |                              |
-| 9\  |                              |                              |
-| 10\ | int b = 2;                   |                              |
-| 11\ |                              |                              |
-| 12\ | double c;                    |                              |
-| 13\ |                              |                              |
-| 14\ | c = someFunction( a, b );    |                              |
-| 15  |                              |                              |
-|     | }                            |                              |
-|     |                              |                              |
-|     | double someFunction( double  |                              |
-|     | x, int y )                   |                              |
-|     |                              |                              |
-|     | {                            |                              |
-|     |                              |                              |
-|     | return x \* y;               |                              |
-|     |                              |                              |
-|     | }                            |                              |
-+-----+------------------------------+------------------------------+
 
-+-----+------------------------------+------------------------------+
-| 1\  | double someFunction( double  | [ Edit &                     |
-| 2\  | x, int y )                   | Run](http://www.cplus        |
-| 3\  |                              | plus.com/articles/yAqpX9L8/) |
-| 4\  | {                            |                              |
-| 5\  |                              |                              |
-| 6\  | return x \* y;               |                              |
-| 7\  |                              |                              |
-| 8\  | }                            |                              |
-| 9\  |                              |                              |
-| 10\ | int main()                   |                              |
-| 11\ |                              |                              |
-| 12\ | {                            |                              |
-| 13  |                              |                              |
-|     | double a = 3.5;              |                              |
-|     |                              |                              |
-|     | int b = 2;                   |                              |
-|     |                              |                              |
-|     | double c;                    |                              |
-|     |                              |                              |
-|     | c = someFunction( a, b );    |                              |
-|     |                              |                              |
-|     | }                            |                              |
-+-----+------------------------------+------------------------------+
+ 1\   double someFunction( double,  [ Edit &                     
+ 2\   int );                        Run](http://www.cplus        
+ 3\                                 plus.com/articles/yAqpX9L8/) 
+ 4\   int main()                                                 
+ 5\                                                              
+ 6\   {                                                          
+ 7\                                                              
+ 8\   double a = 3.5;                                            
+ 9\                                                              
+ 10\  int b = 2;                                                 
+ 11\                                                             
+ 12\  double c;                                                  
+ 13\                                                             
+ 14\  c = someFunction( a, b );                                  
+ 15                                                              
+      }                                                          
+                                                                 
+      double someFunction( double                                
+      x, int y )                                                 
+                                                                 
+      {                                                          
+                                                                 
+      return x \* y;                                             
+                                                                 
+      }                                                          
+
+
+
+ 1\   double someFunction( double   [ Edit &                     
+ 2\   x, int y )                    Run](http://www.cplus        
+ 3\                                 plus.com/articles/yAqpX9L8/) 
+ 4\   {                                                          
+ 5\                                                              
+ 6\   return x \* y;                                             
+ 7\                                                              
+ 8\   }                                                          
+ 9\                                                              
+ 10\  int main()                                                 
+ 11\                                                             
+ 12\  {                                                          
+ 13                                                              
+      double a = 3.5;                                            
+                                                                 
+      int b = 2;                                                 
+                                                                 
+      double c;                                                  
+                                                                 
+      c = someFunction( a, b );                                  
+                                                                 
+      }                                                          
+
 
 Since a definition is also a declaration, either of the above approaches
 works. The first uses a prototype, while the second just moved the
@@ -1011,43 +1011,43 @@ up as you read it) and prevents errors being introduced if code is
 reorganized. Also, consider a set of recursive functions in which each
 calls the other.
 
-+-----+-----------------+---+
-| 1\  | funcA()         |   |
-| 2\  |                 |   |
-| 3\  | {               |   |
-| 4\  |                 |   |
-| 5\  | if( condition ) |   |
-| 6\  |                 |   |
-| 7\  | funcB();        |   |
-| 8\  |                 |   |
-| 9\  | return;         |   |
-| 10\ |                 |   |
-| 11\ | }               |   |
-| 12\ |                 |   |
-| 13\ | funcB()         |   |
-| 14\ |                 |   |
-| 15\ | {               |   |
-| 16\ |                 |   |
-| 17\ | if( condition ) |   |
-| 18\ |                 |   |
-| 19\ | funcC();        |   |
-| 20  |                 |   |
-|     | return;         |   |
-|     |                 |   |
-|     | }               |   |
-|     |                 |   |
-|     | funcC()         |   |
-|     |                 |   |
-|     | {               |   |
-|     |                 |   |
-|     | if( condition ) |   |
-|     |                 |   |
-|     | funcA();        |   |
-|     |                 |   |
-|     | return;         |   |
-|     |                 |   |
-|     | }               |   |
-+-----+-----------------+---+
+
+ 1\   funcA()            
+ 2\                      
+ 3\   {                  
+ 4\                      
+ 5\   if( condition )    
+ 6\                      
+ 7\   funcB();           
+ 8\                      
+ 9\   return;            
+ 10\                     
+ 11\  }                  
+ 12\                     
+ 13\  funcB()            
+ 14\                     
+ 15\  {                  
+ 16\                     
+ 17\  if( condition )    
+ 18\                     
+ 19\  funcC();           
+ 20                      
+      return;            
+                         
+      }                  
+                         
+      funcC()            
+                         
+      {                  
+                         
+      if( condition )    
+                         
+      funcA();           
+                         
+      return;            
+                         
+      }                  
+
 
 This may sound bizarre to new students, but it is rather common in
 certain types of algorithms like sorting and grammar parsing. The thing
@@ -1080,41 +1080,41 @@ function with three parameters may be called with only two. For this,
 the function shall include a default value for its last parameter, which
 is used by the function when called with fewer arguments. For example:
 
-+-----+----------------------------+---+----------------------------+
-| 1\  | // default values in       | 6 | [ Edit &                   |
-| 2\  | functions                  |   | Ru                         |
-| 3\  |                            | 5 | n](http://www.cplusplus.co |
-| 4\  | \#include \<iostream\>     |   | m/doc/tutorial/functions/) |
-| 5\  |                            |   |                            |
-| 6\  | using namespace std;       |   |                            |
-| 7\  |                            |   |                            |
-| 8\  | int divide (int a, int     |   |                            |
-| 9\  | b=2)                       |   |                            |
-| 10\ |                            |   |                            |
-| 11\ | {                          |   |                            |
-| 12\ |                            |   |                            |
-| 13\ | int r;                     |   |                            |
-| 14\ |                            |   |                            |
-| 15\ | r=a/b;                     |   |                            |
-| 16\ |                            |   |                            |
-| 17  | return (r);                |   |                            |
-|     |                            |   |                            |
-|     | }                          |   |                            |
-|     |                            |   |                            |
-|     | int main ()                |   |                            |
-|     |                            |   |                            |
-|     | {                          |   |                            |
-|     |                            |   |                            |
-|     | cout \<\< divide (12) \<\< |   |                            |
-|     | \'\\n\';                   |   |                            |
-|     |                            |   |                            |
-|     | cout \<\< divide (20,4)    |   |                            |
-|     | \<\< \'\\n\';              |   |                            |
-|     |                            |   |                            |
-|     | return 0;                  |   |                            |
-|     |                            |   |                            |
-|     | }                          |   |                            |
-+-----+----------------------------+---+----------------------------+
+
+ 1\   // default values in        6  [ Edit &                   
+ 2\   functions                      Ru                         
+ 3\                               5  n](http://www.cplusplus.co 
+ 4\   \#include \<iostream\>         m/doc/tutorial/functions/) 
+ 5\                                                             
+ 6\   using namespace std;                                      
+ 7\                                                             
+ 8\   int divide (int a, int                                    
+ 9\   b=2)                                                      
+ 10\                                                            
+ 11\  {                                                         
+ 12\                                                            
+ 13\  int r;                                                    
+ 14\                                                            
+ 15\  r=a/b;                                                    
+ 16\                                                            
+ 17   return (r);                                               
+                                                                
+      }                                                         
+                                                                
+      int main ()                                               
+                                                                
+      {                                                         
+                                                                
+      cout \<\< divide (12) \<\<                                
+      \'\\n\';                                                  
+                                                                
+      cout \<\< divide (20,4)                                   
+      \<\< \'\\n\';                                             
+                                                                
+      return 0;                                                 
+                                                                
+      }                                                         
+
 
 In this example, there are two calls to function divide. In the first
 one:
@@ -1165,41 +1165,41 @@ To make any function as inline, start its definitions with the keyword
 \
 Example --
 
-+-----+---------------------------------+---+
-| 1\  | Class A                         |   |
-| 2\  |                                 |   |
-| 3\  | {                               |   |
-| 4\  |                                 |   |
-| 5\  | Public:                         |   |
-| 6\  |                                 |   |
-| 7\  | inline int add(int a, int b)    |   |
-| 8\  |                                 |   |
-| 9\  | {                               |   |
-| 10\ |                                 |   |
-| 11\ | return (a + b);                 |   |
-| 12\ |                                 |   |
-| 13\ | };                              |   |
-| 14\ |                                 |   |
-| 15\ | }                               |   |
-| 16\ |                                 |   |
-| 17\ | Class A                         |   |
-| 18\ |                                 |   |
-| 19  | {                               |   |
-|     |                                 |   |
-|     | Public:                         |   |
-|     |                                 |   |
-|     | int add(int a, int b);          |   |
-|     |                                 |   |
-|     | };                              |   |
-|     |                                 |   |
-|     | inline int A::add(int a, int b) |   |
-|     |                                 |   |
-|     | {                               |   |
-|     |                                 |   |
-|     | return (a + b);                 |   |
-|     |                                 |   |
-|     | }                               |   |
-+-----+---------------------------------+---+
+
+ 1\   Class A                            
+ 2\                                      
+ 3\   {                                  
+ 4\                                      
+ 5\   Public:                            
+ 6\                                      
+ 7\   inline int add(int a, int b)       
+ 8\                                      
+ 9\   {                                  
+ 10\                                     
+ 11\  return (a + b);                    
+ 12\                                     
+ 13\  };                                 
+ 14\                                     
+ 15\  }                                  
+ 16\                                     
+ 17\  Class A                            
+ 18\                                     
+ 19   {                                  
+                                         
+      Public:                            
+                                         
+      int add(int a, int b);             
+                                         
+      };                                 
+                                         
+      inline int A::add(int a, int b)    
+                                         
+      {                                  
+                                         
+      return (a + b);                    
+                                         
+      }                                  
+
 
 > **Why to use --**\
 > In many places we create the functions for small work/functionality
@@ -1502,66 +1502,66 @@ References used as function parameters can also be const. This allows us
 to access the argument without making a copy of it, while guaranteeing
 that the function will not change the value being referenced.
 
-+---+-------------------------------------------------------------------+
-| 1 | // ref is a const reference to the argument passed in, not a copy |
-|   |                                                                   |
-| 2 | void changeN(const int& ref)                                      |
-|   |                                                                   |
-| 3 | {                                                                 |
-|   |                                                                   |
-| 4 | ref = 6; // not allowed, ref is const                             |
-|   |                                                                   |
-| 5 | }                                                                 |
-+---+-------------------------------------------------------------------+
+
+ 1  // ref is a const reference to the argument passed in, not a copy 
+                                                                      
+ 2  void changeN(const int& ref)                                      
+                                                                      
+ 3  {                                                                 
+                                                                      
+ 4  ref = 6; // not allowed, ref is const                             
+                                                                      
+ 5  }                                                                 
+
 
 References to const values are particularly useful as function
 parameters because of their versatility. A const reference parameter
 allows you to pass in a non-const l-value argument, a const l-value
 argument, a literal, or the result of an expression:
 
-+----+-----------------------------------------+
-| 1  | \#include \<iostream\>                  |
-|    |                                         |
-| 2  |                                         |
-|    |                                         |
-| 3  | void printIt(const int& x)              |
-|    |                                         |
-| 4  | {                                       |
-|    |                                         |
-| 5  |     std::cout \<\< x;                   |
-|    |                                         |
-| 6  | }                                       |
-|    |                                         |
-| 7  |                                         |
-|    |                                         |
-| 8  | int main()                              |
-|    |                                         |
-| 9  | {                                       |
-|    |                                         |
-| 10 |     int a{ 1 };                         |
-|    |                                         |
-| 11 |     printIt(a); // non-const l-value    |
-|    |                                         |
-| 12 |                                         |
-|    |                                         |
-| 13 |     const int b{ 2 };                   |
-|    |                                         |
-| 14 |     printIt(b); // const l-value        |
-|    |                                         |
-| 15 |                                         |
-|    |                                         |
-| 16 |     printIt(3); // literal r-value      |
-|    |                                         |
-| 17 |                                         |
-|    |                                         |
-| 18 |     printIt(2+b); // expression r-value |
-|    |                                         |
-| 19 |                                         |
-|    |                                         |
-| 20 |     return 0;                           |
-|    |                                         |
-| 21 | }                                       |
-+----+-----------------------------------------+
+
+ 1   \#include \<iostream\>                  
+                                             
+ 2                                           
+                                             
+ 3   void printIt(const int& x)              
+                                             
+ 4   {                                       
+                                             
+ 5       std::cout \<\< x;                   
+                                             
+ 6   }                                       
+                                             
+ 7                                           
+                                             
+ 8   int main()                              
+                                             
+ 9   {                                       
+                                             
+ 10      int a{ 1 };                         
+                                             
+ 11      printIt(a); // non-const l-value    
+                                             
+ 12                                          
+                                             
+ 13      const int b{ 2 };                   
+                                             
+ 14      printIt(b); // const l-value        
+                                             
+ 15                                          
+                                             
+ 16      printIt(3); // literal r-value      
+                                             
+ 17                                          
+                                             
+ 18      printIt(2+b); // expression r-value 
+                                             
+ 19                                          
+                                             
+ 20      return 0;                           
+                                             
+ 21  }                                       
+
 
 The above prints
 
@@ -1626,7 +1626,7 @@ Start
 
 Step 1-\> declare function to convert hexadecimal to decimal
 
-   int convert(char num\[\])
+   int convert(char num[])
 
       Set int len = strlen(num)
 
@@ -1636,17 +1636,17 @@ Step 1-\> declare function to convert hexadecimal to decimal
 
       Loop For int i=len-1 and i\>=0 and i---
 
-         IF (num\[i\]\>=\'0\' && num\[i\]\<=\'9\')
+         IF (num[i]\>=\'0\' && num[i]\<=\'9\')
 
-            Set temp += (num\[i\] - 48)\*base
+            Set temp += (num[i] - 48)\*base
 
             Set base = base \* 16
 
          End
 
-         Else If (num\[i\]\>=\'A\' && num\[i\]\<=\'F\')
+         Else If (num[i]\>=\'A\' && num[i]\<=\'F\')
 
-            Set temp += (num\[i\] - 55)\*base
+            Set temp += (num[i] - 55)\*base
 
             Set base = base\*16
 
@@ -1656,7 +1656,7 @@ Step 1-\> declare function to convert hexadecimal to decimal
 
 step 2-\> In main()
 
-   declare char num\[\] = \"3F456A\"
+   declare char num[] = \"3F456A\"
 
    Call convert(num)
 
@@ -1674,7 +1674,7 @@ using namespace std;
 
 //convert hexadecimal to decimal
 
-int convert(char num\[\]) {
+int convert(char num[]) {
 
    int len = strlen(num);
 
@@ -1684,17 +1684,17 @@ int convert(char num\[\]) {
 
    for (int i=len-1; i\>=0; i\--) {
 
-      if (num\[i\]\>=\'0\' && num\[i\]\<=\'9\') {
+      if (num[i]\>=\'0\' && num[i]\<=\'9\') {
 
-         temp += (num\[i\] - 48)\*base;
+         temp += (num[i] - 48)\*base;
 
          base = base \* 16;
 
       }
 
-      else if (num\[i\]\>=\'A\' && num\[i\]\<=\'F\') {
+      else if (num[i]\>=\'A\' && num[i]\<=\'F\') {
 
-         temp += (num\[i\] - 55)\*base;
+         temp += (num[i] - 55)\*base;
 
          base = base\*16;
 
@@ -1708,7 +1708,7 @@ int convert(char num\[\]) {
 
 int main() {
 
-   char num\[\] = \"3F456A\";
+   char num[] = \"3F456A\";
 
    cout\<\<num\<\<\" after converting to deciaml becomes :
 \"\<\<convert(num)\<\<endl;

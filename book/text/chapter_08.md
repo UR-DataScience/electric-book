@@ -1,6 +1,6 @@
 ---
 subtitle: "*Dr. Alireza Manashty*"
-title: |
+title: 
 
   ![C++ - Wikipedia](media/image1.png){width="1.7680347769028872in"
   height="1.9880949256342957in"}
@@ -45,40 +45,40 @@ much harder to do.\
 \
 A simple 2D Array with vectors:
 
-+-----+------------------------------+------------------------------+
-| 1\  | \#include \<vector\>         | [ Edit &                     |
-| 2\  |                              | Run](http://www.cplus        |
-| 3\  | using std::vector;           | plus.com/articles/NAUq5Di1/) |
-| 4\  |                              |                              |
-| 5\  | \#define HEIGHT 5            |                              |
-| 6\  |                              |                              |
-| 7\  | \#define WIDTH 3             |                              |
-| 8\  |                              |                              |
-| 9\  | int main() {                 |                              |
-| 10\ |                              |                              |
-| 11\ | vector\<vector\<double\> \>  |                              |
-| 12\ | array2D;                     |                              |
-| 13\ |                              |                              |
-| 14\ | // Set up sizes. (HEIGHT x   |                              |
-| 15\ | WIDTH)                       |                              |
-| 16\ |                              |                              |
-| 17\ | array2D.resize(HEIGHT);      |                              |
-| 18\ |                              |                              |
-| 19\ | for (int i = 0; i \< HEIGHT; |                              |
-| 20  | ++i)                         |                              |
-|     |                              |                              |
-|     | array2D\<i\>.resize(WIDTH);  |                              |
-|     |                              |                              |
-|     | // Put some values in        |                              |
-|     |                              |                              |
-|     | array2D\[1\]\[2\] = 6.0;     |                              |
-|     |                              |                              |
-|     | array2D\[3\]\[1\] = 5.5;     |                              |
-|     |                              |                              |
-|     | return 0;                    |                              |
-|     |                              |                              |
-|     | }                            |                              |
-+-----+------------------------------+------------------------------+
+
+    \#include \<vector\>          [ Edit &                     
+                                  Run](http://www.cplus        
+    using std::vector;            plus.com/articles/NAUq5Di1/) 
+                                                               
+    \#define HEIGHT 5                                          
+                                                               
+    \#define WIDTH 3                                           
+                                                               
+    int main() {                                               
+                                                              
+   vector\<vector\<double\> \>                                
+   array2D;                                                   
+                                                              
+   // Set up sizes. (HEIGHT x                                 
+   WIDTH)                                                     
+                                                              
+   array2D.resize(HEIGHT);                                    
+                                                              
+   for (int i = 0; i \< HEIGHT;                               
+ 20   ++i)                                                       
+                                                                 
+      array2D\<i\>.resize(WIDTH);                                
+                                                                 
+      // Put some values in                                      
+                                                                 
+      array2D[1][2] = 6.0;                                   
+                                                                 
+      array2D[3][1] = 5.5;                                   
+                                                                 
+      return 0;                                                  
+                                                                 
+      }                                                          
+
 
 **Pointer based multi-dimensional arrays** Pointer based
 multi-dimensional arrays provide you with a more raw access to the
@@ -92,41 +92,41 @@ this topic.\
 \
 A simple 2D Array:
 
-+-----+----------------------------------------------+---+
-| 1\  | \#define HEIGHT 5                            |   |
-| 2\  |                                              |   |
-| 3\  | \#define WIDTH 3                             |   |
-| 4\  |                                              |   |
-| 5\  | int main() {                                 |   |
-| 6\  |                                              |   |
-| 7\  | double \*\*p2DArray;                         |   |
-| 8\  |                                              |   |
-| 9\  | // Allocate memory                           |   |
-| 10\ |                                              |   |
-| 11\ | p2DArray = new double\*\[HEIGHT\];           |   |
-| 12\ |                                              |   |
-| 13\ | for (int i = 0; i \< HEIGHT; ++i)            |   |
-| 14\ |                                              |   |
-| 15\ | p2DArray\<i\> = new double\[WIDTH\];         |   |
-| 16\ |                                              |   |
-| 17\ | // Assign values                             |   |
-| 18\ |                                              |   |
-| 19\ | p2DArray\[0\]\[0\] = 3.6;                    |   |
-| 20\ |                                              |   |
-| 21\ | p2DArray\[1\]\[2\] = 4.0;                    |   |
-| 22  |                                              |   |
-|     | // De-Allocate memory to prevent memory leak |   |
-|     |                                              |   |
-|     | for (int i = 0; i \< HEIGHT; ++i)            |   |
-|     |                                              |   |
-|     | delete \[\] p2DArray\<i\>;                   |   |
-|     |                                              |   |
-|     | delete \[\] p2DArray;                        |   |
-|     |                                              |   |
-|     | return 0;                                    |   |
-|     |                                              |   |
-|     | }                                            |   |
-+-----+----------------------------------------------+---+
+
+    \#define HEIGHT 5                               
+                                                    
+    \#define WIDTH 3                                
+                                                    
+    int main() {                                    
+                                                    
+    double \*\*p2DArray;                            
+                                                    
+    // Allocate memory                              
+                                                   
+   p2DArray = new double\*[HEIGHT];              
+                                                   
+   for (int i = 0; i \< HEIGHT; ++i)               
+                                                   
+   p2DArray\<i\> = new double[WIDTH];            
+                                                   
+   // Assign values                                
+                                                   
+   p2DArray[0][0] = 3.6;                       
+                                                   
+   p2DArray[1][2] = 4.0;                       
+ 22                                                   
+      // De-Allocate memory to prevent memory leak    
+                                                      
+      for (int i = 0; i \< HEIGHT; ++i)               
+                                                      
+      delete [] p2DArray\<i\>;                      
+                                                      
+      delete [] p2DArray;                           
+                                                      
+      return 0;                                       
+                                                      
+      }                                               
+
 
 ## Processing Two-Dimensional Arrays
 
@@ -142,108 +142,108 @@ voud doSomethingWith2D(vector\<vector\<double\> \> &Array);
 
 A 3D Array with vectors.
 
-+-----+-------------------------------------------------+
-| 1\  | \#include \<vector\>                            |
-| 2\  |                                                 |
-| 3\  | using std::vector;                              |
-| 4\  |                                                 |
-| 5\  | \#define HEIGHT 5                               |
-| 6\  |                                                 |
-| 7\  | \#define WIDTH 3                                |
-| 8\  |                                                 |
-| 9\  | \#define DEPTH 7                                |
-| 10\ |                                                 |
-| 11\ | int main() {                                    |
-| 12\ |                                                 |
-| 13\ | vector\<vector\<vector\<double\> \> \> array3D; |
-| 14\ |                                                 |
-| 15\ | // Set up sizes. (HEIGHT x WIDTH)               |
-| 16\ |                                                 |
-| 17\ | array3D.resize(HEIGHT);                         |
-| 18\ |                                                 |
-| 19\ | for (int i = 0; i \< HEIGHT; ++i) {             |
-| 20\ |                                                 |
-| 21\ | array3D\<i\>.resize(WIDTH);                     |
-| 22\ |                                                 |
-| 23\ | for (int j = 0; j \< WIDTH; ++j)                |
-| 24\ |                                                 |
-| 25  | array3D\<i\>\[j\].resize(DEPTH);                |
-|     |                                                 |
-|     | }                                               |
-|     |                                                 |
-|     | // Put some values in                           |
-|     |                                                 |
-|     | array3D\[1\]\[2\]\[5\] = 6.0;                   |
-|     |                                                 |
-|     | array3D\[3\]\[1\]\[4\] = 5.5;                   |
-|     |                                                 |
-|     | return 0;                                       |
-|     |                                                 |
-|     | }                                               |
-+-----+-------------------------------------------------+
+
+    \#include \<vector\>                            
+                                                    
+    using std::vector;                              
+                                                    
+    \#define HEIGHT 5                               
+                                                    
+    \#define WIDTH 3                                
+                                                    
+    \#define DEPTH 7                                
+                                                   
+   int main() {                                    
+                                                   
+   vector\<vector\<vector\<double\> \> \> array3D; 
+                                                   
+   // Set up sizes. (HEIGHT x WIDTH)               
+                                                   
+   array3D.resize(HEIGHT);                         
+ 18\                                                  
+ 19\  for (int i = 0; i \< HEIGHT; ++i) {             
+ 20\                                                  
+ 21\  array3D\<i\>.resize(WIDTH);                     
+ 22\                                                  
+ 23\  for (int j = 0; j \< WIDTH; ++j)                
+ 24\                                                  
+ 25   array3D\<i\>[j].resize(DEPTH);                
+                                                      
+      }                                               
+                                                      
+      // Put some values in                           
+                                                      
+      array3D[1][2][5] = 6.0;                   
+                                                      
+      array3D[3][1][4] = 5.5;                   
+                                                      
+      return 0;                                       
+                                                      
+      }                                               
+
 
 A 3D Array with pointer:
 
-+-----+------------------------------+------------------------------+
-| 1\  | \#define HEIGHT 5            | [ Edit &                     |
-| 2\  |                              | Run](http://www.cplus        |
-| 3\  | \#define WIDTH 3             | plus.com/articles/NAUq5Di1/) |
-| 4\  |                              |                              |
-| 5\  | \#define DEPTH 7             |                              |
-| 6\  |                              |                              |
-| 7\  | int main() {                 |                              |
-| 8\  |                              |                              |
-| 9\  | double \*\*\*p2DArray;       |                              |
-| 10\ |                              |                              |
-| 11\ | // Allocate memory           |                              |
-| 12\ |                              |                              |
-| 13\ | p2DArray = new               |                              |
-| 14\ | double\*\*\[HEIGHT\];        |                              |
-| 15\ |                              |                              |
-| 16\ | for (int i = 0; i \< HEIGHT; |                              |
-| 17\ | ++i) {                       |                              |
-| 18\ |                              |                              |
-| 19\ | p2DArray\<i\> = new          |                              |
-| 20\ | double\*\[WIDTH\];           |                              |
-| 21\ |                              |                              |
-| 22\ | for (int j = 0; j \< WIDTH;  |                              |
-| 23\ | ++j)                         |                              |
-| 24\ |                              |                              |
-| 25\ | p2DArray\<i\>\[j\] = new     |                              |
-| 26\ | double\[DEPTH\];             |                              |
-| 27\ |                              |                              |
-| 28\ | }                            |                              |
-| 29\ |                              |                              |
-| 30\ | // Assign values             |                              |
-| 31  |                              |                              |
-|     | p2DArray\[0\]\[0\]\[0\] =    |                              |
-|     | 3.6;                         |                              |
-|     |                              |                              |
-|     | p2DArray\[1\]\[2\]\[4\] =    |                              |
-|     | 4.0;                         |                              |
-|     |                              |                              |
-|     | // De-Allocate memory to     |                              |
-|     | prevent memory leak          |                              |
-|     |                              |                              |
-|     | for (int i = 0; i \< HEIGHT; |                              |
-|     | ++i) {                       |                              |
-|     |                              |                              |
-|     | for (int j = 0; j \< WIDTH;  |                              |
-|     | ++j)                         |                              |
-|     |                              |                              |
-|     | delete \[\]                  |                              |
-|     | p2DArray\<i\>\[j\];          |                              |
-|     |                              |                              |
-|     | delete \[\] p2DArray\<i\>;   |                              |
-|     |                              |                              |
-|     | }                            |                              |
-|     |                              |                              |
-|     | delete \[\] p2DArray;        |                              |
-|     |                              |                              |
-|     | return 0;                    |                              |
-|     |                              |                              |
-|     | }                            |                              |
-+-----+------------------------------+------------------------------+
+
+ 1\   \#define HEIGHT 5             [ Edit &                     
+ 2\                                 Run](http://www.cplus        
+ 3\   \#define WIDTH 3              plus.com/articles/NAUq5Di1/) 
+ 4\                                                              
+ 5\   \#define DEPTH 7                                           
+ 6\                                                              
+ 7\   int main() {                                               
+ 8\                                                              
+ 9\   double \*\*\*p2DArray;                                     
+ 10\                                                             
+ 11\  // Allocate memory                                         
+ 12\                                                             
+ 13\  p2DArray = new                                             
+ 14\  double\*\*[HEIGHT];                                      
+ 15\                                                             
+ 16\  for (int i = 0; i \< HEIGHT;                               
+ 17\  ++i) {                                                     
+ 18\                                                             
+ 19\  p2DArray\<i\> = new                                        
+ 20\  double\*[WIDTH];                                         
+ 21\                                                             
+ 22\  for (int j = 0; j \< WIDTH;                                
+ 23\  ++j)                                                       
+ 24\                                                             
+ 25\  p2DArray\<i\>[j] = new                                   
+ 26\  double[DEPTH];                                           
+ 27\                                                             
+ 28\  }                                                          
+ 29\                                                             
+ 30\  // Assign values                                           
+ 31                                                              
+      p2DArray[0][0][0] =                                  
+      3.6;                                                       
+                                                                 
+      p2DArray[1][2][4] =                                  
+      4.0;                                                       
+                                                                 
+      // De-Allocate memory to                                   
+      prevent memory leak                                        
+                                                                 
+      for (int i = 0; i \< HEIGHT;                               
+      ++i) {                                                     
+                                                                 
+      for (int j = 0; j \< WIDTH;                                
+      ++j)                                                       
+                                                                 
+      delete []                                                
+      p2DArray\<i\>[j];                                        
+                                                                 
+      delete [] p2DArray\<i\>;                                 
+                                                                 
+      }                                                          
+                                                                 
+      delete [] p2DArray;                                      
+                                                                 
+      return 0;                                                  
+                                                                 
+      }                                                          
+
 
 ## Defining Classes for Objects
 
@@ -257,21 +257,21 @@ class would be the type, and an object would be the variable.\
 Classes are defined using either keyword class or keyword struct, with
 the following syntax:
 
-+---------------------+
-| class class_name {  |
-|                     |
-| access_specifier_1: |
-|                     |
-| member1;            |
-|                     |
-| access_specifier_2: |
-|                     |
-| member2;            |
-|                     |
-| \...                |
-|                     |
-| } object_names;     |
-+---------------------+
+
+ class class_name {  
+                     
+ access_specifier_1: 
+                     
+ member1;            
+                     
+ access_specifier_2: 
+                     
+ member2;            
+                     
+ \...                
+                     
+ } object_names;     
+
 
 Where class_name is a valid identifier for the class, object_names is an
 optional list of names for objects of this class. The body of the
@@ -299,19 +299,19 @@ private access for all its members. Therefore, any member that is
 declared before any other *access specifier* has private access
 automatically. For example:
 
-+----+----------------------------+---+
-| 1\ | class Rectangle {          |   |
-| 2\ |                            |   |
-| 3\ | int width, height;         |   |
-| 4\ |                            |   |
-| 5\ | public:                    |   |
-| 6  |                            |   |
-|    | void set_values (int,int); |   |
-|    |                            |   |
-|    | int area (void);           |   |
-|    |                            |   |
-|    | } rect;                    |   |
-+----+----------------------------+---+
+
+ 1\  class Rectangle {             
+ 2\                                
+ 3\  int width, height;            
+ 4\                                
+ 5\  public:                       
+ 6                                 
+     void set_values (int,int);    
+                                   
+     int area (void);              
+                                   
+     } rect;                       
+
 
 Declares a class (i.e., a type) called Rectangle and an object (i.e., a
 variable) of this class, called rect. This class contains four members:
@@ -339,11 +339,11 @@ normal variables, by simply inserting a dot (.) between *object
 name* and *member name*. This follows the same syntax as accessing the
 members of plain data structures. For example:
 
-+----+------------------------+---+
-| 1\ | rect.set_values (3,4); |   |
-| 2  |                        |   |
-|    | myarea = rect.area();  |   |
-+----+------------------------+---+
+
+ 1\  rect.set_values (3,4);    
+ 2                             
+     myarea = rect.area();     
+
 
 The only members of rect that cannot be accessed from outside the class
 are width and height, since they have private access and they can only
@@ -351,50 +351,50 @@ be referred to from within other members of that same class.\
 \
 Here is the complete example of class Rectangle:
 
-+-----+------------------------+----------+------------------------+
-| 1\  | // classes example     | area: 12 | [ Edit &               |
-| 2\  |                        |          | Run](htt               |
-| 3\  | \#include \<iostream\> |          | p://www.cplusplus.com/ |
-| 4\  |                        |          | doc/tutorial/classes/) |
-| 5\  | using namespace std;   |          |                        |
-| 6\  |                        |          |                        |
-| 7\  | class Rectangle {      |          |                        |
-| 8\  |                        |          |                        |
-| 9\  | int width, height;     |          |                        |
-| 10\ |                        |          |                        |
-| 11\ | public:                |          |                        |
-| 12\ |                        |          |                        |
-| 13\ | void set_values        |          |                        |
-| 14\ | (int,int);             |          |                        |
-| 15\ |                        |          |                        |
-| 16\ | int area() {return     |          |                        |
-| 17\ | width\*height;}        |          |                        |
-| 18\ |                        |          |                        |
-| 19\ | };                     |          |                        |
-| 20\ |                        |          |                        |
-| 21\ | void                   |          |                        |
-| 22  | Rectangle::set_values  |          |                        |
-|     | (int x, int y) {       |          |                        |
-|     |                        |          |                        |
-|     | width = x;             |          |                        |
-|     |                        |          |                        |
-|     | height = y;            |          |                        |
-|     |                        |          |                        |
-|     | }                      |          |                        |
-|     |                        |          |                        |
-|     | int main () {          |          |                        |
-|     |                        |          |                        |
-|     | Rectangle rect;        |          |                        |
-|     |                        |          |                        |
-|     | rect.set_values (3,4); |          |                        |
-|     |                        |          |                        |
-|     | cout \<\< \"area: \"   |          |                        |
-|     | \<\< rect.area();      |          |                        |
-|     |                        |          |                        |
-|     | return 0;              |          |                        |
-|     |                        |          |                        |
-|     | }                      |          |                        |
-+-----+------------------------+----------+------------------------+
+
+ 1\   // classes example      area: 12  [ Edit &               
+ 2\                                     Run](htt               
+ 3\   \#include \<iostream\>            p://www.cplusplus.com/ 
+ 4\                                     doc/tutorial/classes/) 
+ 5\   using namespace std;                                     
+ 6\                                                            
+ 7\   class Rectangle {                                        
+ 8\                                                            
+ 9\   int width, height;                                       
+ 10\                                                           
+ 11\  public:                                                  
+ 12\                                                           
+ 13\  void set_values                                          
+ 14\  (int,int);                                               
+ 15\                                                           
+ 16\  int area() {return                                       
+ 17\  width\*height;}                                          
+ 18\                                                           
+ 19\  };                                                       
+ 20\                                                           
+ 21\  void                                                     
+ 22   Rectangle::set_values                                    
+      (int x, int y) {                                         
+                                                               
+      width = x;                                               
+                                                               
+      height = y;                                              
+                                                               
+      }                                                        
+                                                               
+      int main () {                                            
+                                                               
+      Rectangle rect;                                          
+                                                               
+      rect.set_values (3,4);                                   
+                                                               
+      cout \<\< \"area: \"                                     
+      \<\< rect.area();                                        
+                                                               
+      return 0;                                                
+                                                               
+      }                                                        
+
 
 This example reintroduces the *scope operator* (::, two colons), seen in
 earlier chapters in relation to namespaces. Here it is used in the
@@ -442,69 +442,69 @@ such, we can declare multiple objects of it. For example, following with
 the previous example of class Rectangle, we could have declared the
 object rectb in addition to object rect:
 
-+-----+-------------------+----------------+-------------------+
-| 1\  | // example: one   | rect area: 12  | [ Edit &          |
-| 2\  | class, two        |                | R                 |
-| 3\  | objects           | rectb area: 30 | un](http://www.cp |
-| 4\  |                   |                | lusplus.com/doc/t |
-| 5\  | \#include         |                | utorial/classes/) |
-| 6\  | \<iostream\>      |                |                   |
-| 7\  |                   |                |                   |
-| 8\  | using namespace   |                |                   |
-| 9\  | std;              |                |                   |
-| 10\ |                   |                |                   |
-| 11\ | class Rectangle { |                |                   |
-| 12\ |                   |                |                   |
-| 13\ | int width,        |                |                   |
-| 14\ | height;           |                |                   |
-| 15\ |                   |                |                   |
-| 16\ | public:           |                |                   |
-| 17\ |                   |                |                   |
-| 18\ | void set_values   |                |                   |
-| 19\ | (int,int);        |                |                   |
-| 20\ |                   |                |                   |
-| 21\ | int area ()       |                |                   |
-| 22\ | {return           |                |                   |
-| 23\ | width\*height;}   |                |                   |
-| 24  |                   |                |                   |
-|     | };                |                |                   |
-|     |                   |                |                   |
-|     | void              |                |                   |
-|     | Rect              |                |                   |
-|     | angle::set_values |                |                   |
-|     | (int x, int y) {  |                |                   |
-|     |                   |                |                   |
-|     | width = x;        |                |                   |
-|     |                   |                |                   |
-|     | height = y;       |                |                   |
-|     |                   |                |                   |
-|     | }                 |                |                   |
-|     |                   |                |                   |
-|     | int main () {     |                |                   |
-|     |                   |                |                   |
-|     | Rectangle rect,   |                |                   |
-|     | rectb;            |                |                   |
-|     |                   |                |                   |
-|     | rect.set_values   |                |                   |
-|     | (3,4);            |                |                   |
-|     |                   |                |                   |
-|     | rectb.set_values  |                |                   |
-|     | (5,6);            |                |                   |
-|     |                   |                |                   |
-|     | cout \<\< \"rect  |                |                   |
-|     | area: \" \<\<     |                |                   |
-|     | rect.area() \<\<  |                |                   |
-|     | endl;             |                |                   |
-|     |                   |                |                   |
-|     | cout \<\< \"rectb |                |                   |
-|     | area: \" \<\<     |                |                   |
-|     | rectb.area() \<\< |                |                   |
-|     | endl;             |                |                   |
-|     |                   |                |                   |
-|     | return 0;         |                |                   |
-|     |                   |                |                   |
-|     | }                 |                |                   |
-+-----+-------------------+----------------+-------------------+
+
+ 1\   // example: one    rect area: 12   [ Edit &          
+ 2\   class, two                         R                 
+ 3\   objects            rectb area: 30  un](http://www.cp 
+ 4\                                      lusplus.com/doc/t 
+ 5\   \#include                          utorial/classes/) 
+ 6\   \<iostream\>                                         
+ 7\                                                        
+ 8\   using namespace                                      
+ 9\   std;                                                 
+ 10\                                                       
+ 11\  class Rectangle {                                    
+ 12\                                                       
+ 13\  int width,                                           
+ 14\  height;                                              
+ 15\                                                       
+ 16\  public:                                              
+ 17\                                                       
+ 18\  void set_values                                      
+ 19\  (int,int);                                           
+ 20\                                                       
+ 21\  int area ()                                          
+ 22\  {return                                              
+ 23\  width\*height;}                                      
+ 24                                                        
+      };                                                   
+                                                           
+      void                                                 
+      Rect                                                 
+      angle::set_values                                    
+      (int x, int y) {                                     
+                                                           
+      width = x;                                           
+                                                           
+      height = y;                                          
+                                                           
+      }                                                    
+                                                           
+      int main () {                                        
+                                                           
+      Rectangle rect,                                      
+      rectb;                                               
+                                                           
+      rect.set_values                                      
+      (3,4);                                               
+                                                           
+      rectb.set_values                                     
+      (5,6);                                               
+                                                           
+      cout \<\< \"rect                                     
+      area: \" \<\<                                        
+      rect.area() \<\<                                     
+      endl;                                                
+                                                           
+      cout \<\< \"rectb                                    
+      area: \" \<\<                                        
+      rectb.area() \<\<                                    
+      endl;                                                
+                                                           
+      return 0;                                            
+                                                           
+      }                                                    
+
 
 In this particular case, the class (type of the objects) is Rectangle,
 of which there are two instances (i.e., objects): rect and rectb. Each
@@ -546,64 +546,64 @@ return type; not even void.\
 The Rectangle class above can easily be improved by implementing a
 constructor:
 
-+-----+-------------------+----------------+-------------------+
-| 1\  | // example: class | rect area: 12  | [ Edit &          |
-| 2\  | constructor       |                | R                 |
-| 3\  |                   | rectb area: 30 | un](http://www.cp |
-| 4\  | \#include         |                | lusplus.com/doc/t |
-| 5\  | \<iostream\>      |                | utorial/classes/) |
-| 6\  |                   |                |                   |
-| 7\  | using namespace   |                |                   |
-| 8\  | std;              |                |                   |
-| 9\  |                   |                |                   |
-| 10\ | class Rectangle { |                |                   |
-| 11\ |                   |                |                   |
-| 12\ | int width,        |                |                   |
-| 13\ | height;           |                |                   |
-| 14\ |                   |                |                   |
-| 15\ | public:           |                |                   |
-| 16\ |                   |                |                   |
-| 17\ | Rectangle         |                |                   |
-| 18\ | (int,int);        |                |                   |
-| 19\ |                   |                |                   |
-| 20\ | int area ()       |                |                   |
-| 21\ | {return           |                |                   |
-| 22\ | (width\*height);} |                |                   |
-| 23  |                   |                |                   |
-|     | };                |                |                   |
-|     |                   |                |                   |
-|     | Rec               |                |                   |
-|     | tangle::Rectangle |                |                   |
-|     | (int a, int b) {  |                |                   |
-|     |                   |                |                   |
-|     | width = a;        |                |                   |
-|     |                   |                |                   |
-|     | height = b;       |                |                   |
-|     |                   |                |                   |
-|     | }                 |                |                   |
-|     |                   |                |                   |
-|     | int main () {     |                |                   |
-|     |                   |                |                   |
-|     | Rectangle rect    |                |                   |
-|     | (3,4);            |                |                   |
-|     |                   |                |                   |
-|     | Rectangle rectb   |                |                   |
-|     | (5,6);            |                |                   |
-|     |                   |                |                   |
-|     | cout \<\< \"rect  |                |                   |
-|     | area: \" \<\<     |                |                   |
-|     | rect.area() \<\<  |                |                   |
-|     | endl;             |                |                   |
-|     |                   |                |                   |
-|     | cout \<\< \"rectb |                |                   |
-|     | area: \" \<\<     |                |                   |
-|     | rectb.area() \<\< |                |                   |
-|     | endl;             |                |                   |
-|     |                   |                |                   |
-|     | return 0;         |                |                   |
-|     |                   |                |                   |
-|     | }                 |                |                   |
-+-----+-------------------+----------------+-------------------+
+
+ 1\   // example: class  rect area: 12   [ Edit &          
+ 2\   constructor                        R                 
+ 3\                      rectb area: 30  un](http://www.cp 
+ 4\   \#include                          lusplus.com/doc/t 
+ 5\   \<iostream\>                       utorial/classes/) 
+ 6\                                                        
+ 7\   using namespace                                      
+ 8\   std;                                                 
+ 9\                                                        
+ 10\  class Rectangle {                                    
+ 11\                                                       
+ 12\  int width,                                           
+ 13\  height;                                              
+ 14\                                                       
+ 15\  public:                                              
+ 16\                                                       
+ 17\  Rectangle                                            
+ 18\  (int,int);                                           
+ 19\                                                       
+ 20\  int area ()                                          
+ 21\  {return                                              
+ 22\  (width\*height);}                                    
+ 23                                                        
+      };                                                   
+                                                           
+      Rec                                                  
+      tangle::Rectangle                                    
+      (int a, int b) {                                     
+                                                           
+      width = a;                                           
+                                                           
+      height = b;                                          
+                                                           
+      }                                                    
+                                                           
+      int main () {                                        
+                                                           
+      Rectangle rect                                       
+      (3,4);                                               
+                                                           
+      Rectangle rectb                                      
+      (5,6);                                               
+                                                           
+      cout \<\< \"rect                                     
+      area: \" \<\<                                        
+      rect.area() \<\<                                     
+      endl;                                                
+                                                           
+      cout \<\< \"rectb                                    
+      area: \" \<\<                                        
+      rectb.area() \<\<                                    
+      endl;                                                
+                                                           
+      return 0;                                            
+                                                           
+      }                                                    
+
 
 The results of this example are identical to those of the previous
 example. But now, class Rectangle has no member function set_values, and
@@ -613,11 +613,11 @@ the values of width and height with the arguments passed to it.\
 Notice how these arguments are passed to the constructor at the moment
 at which the objects of this class are created:
 
-+----+------------------------+---+
-| 1\ | Rectangle rect (3,4);  |   |
-| 2  |                        |   |
-|    | Rectangle rectb (5,6); |   |
-+----+------------------------+---+
+
+ 1\  Rectangle rect (3,4);     
+ 2                             
+     Rectangle rectb (5,6);    
+
 
 Constructors cannot be called explicitly as if they were regular member
 functions. They are only executed once, when a new object of that class
@@ -635,76 +635,76 @@ different versions taking different parameters: with a different number
 of parameters and/or parameters of different types. The compiler will
 automatically call the one whose parameters match the arguments:
 
-+-----+-------------------+----------------+-------------------+
-| 1\  | // overloading    | rect area: 12  | [ Edit &          |
-| 2\  | class             |                | R                 |
-| 3\  | constructors      | rectb area: 25 | un](http://www.cp |
-| 4\  |                   |                | lusplus.com/doc/t |
-| 5\  | \#include         |                | utorial/classes/) |
-| 6\  | \<iostream\>      |                |                   |
-| 7\  |                   |                |                   |
-| 8\  | using namespace   |                |                   |
-| 9\  | std;              |                |                   |
-| 10\ |                   |                |                   |
-| 11\ | class Rectangle { |                |                   |
-| 12\ |                   |                |                   |
-| 13\ | int width,        |                |                   |
-| 14\ | height;           |                |                   |
-| 15\ |                   |                |                   |
-| 16\ | public:           |                |                   |
-| 17\ |                   |                |                   |
-| 18\ | Rectangle ();     |                |                   |
-| 19\ |                   |                |                   |
-| 20\ | Rectangle         |                |                   |
-| 21\ | (int,int);        |                |                   |
-| 22\ |                   |                |                   |
-| 23\ | int area (void)   |                |                   |
-| 24\ | {return           |                |                   |
-| 25\ | (width\*height);} |                |                   |
-| 26\ |                   |                |                   |
-| 27\ | };                |                |                   |
-| 28\ |                   |                |                   |
-| 29  | Rec               |                |                   |
-|     | tangle::Rectangle |                |                   |
-|     | () {              |                |                   |
-|     |                   |                |                   |
-|     | width = 5;        |                |                   |
-|     |                   |                |                   |
-|     | height = 5;       |                |                   |
-|     |                   |                |                   |
-|     | }                 |                |                   |
-|     |                   |                |                   |
-|     | Rec               |                |                   |
-|     | tangle::Rectangle |                |                   |
-|     | (int a, int b) {  |                |                   |
-|     |                   |                |                   |
-|     | width = a;        |                |                   |
-|     |                   |                |                   |
-|     | height = b;       |                |                   |
-|     |                   |                |                   |
-|     | }                 |                |                   |
-|     |                   |                |                   |
-|     | int main () {     |                |                   |
-|     |                   |                |                   |
-|     | Rectangle rect    |                |                   |
-|     | (3,4);            |                |                   |
-|     |                   |                |                   |
-|     | Rectangle rectb;  |                |                   |
-|     |                   |                |                   |
-|     | cout \<\< \"rect  |                |                   |
-|     | area: \" \<\<     |                |                   |
-|     | rect.area() \<\<  |                |                   |
-|     | endl;             |                |                   |
-|     |                   |                |                   |
-|     | cout \<\< \"rectb |                |                   |
-|     | area: \" \<\<     |                |                   |
-|     | rectb.area() \<\< |                |                   |
-|     | endl;             |                |                   |
-|     |                   |                |                   |
-|     | return 0;         |                |                   |
-|     |                   |                |                   |
-|     | }                 |                |                   |
-+-----+-------------------+----------------+-------------------+
+
+ 1\   // overloading     rect area: 12   [ Edit &          
+ 2\   class                              R                 
+ 3\   constructors       rectb area: 25  un](http://www.cp 
+ 4\                                      lusplus.com/doc/t 
+ 5\   \#include                          utorial/classes/) 
+ 6\   \<iostream\>                                         
+ 7\                                                        
+ 8\   using namespace                                      
+ 9\   std;                                                 
+ 10\                                                       
+ 11\  class Rectangle {                                    
+ 12\                                                       
+ 13\  int width,                                           
+ 14\  height;                                              
+ 15\                                                       
+ 16\  public:                                              
+ 17\                                                       
+ 18\  Rectangle ();                                        
+ 19\                                                       
+ 20\  Rectangle                                            
+ 21\  (int,int);                                           
+ 22\                                                       
+ 23\  int area (void)                                      
+ 24\  {return                                              
+ 25\  (width\*height);}                                    
+ 26\                                                       
+ 27\  };                                                   
+ 28\                                                       
+ 29   Rec                                                  
+      tangle::Rectangle                                    
+      () {                                                 
+                                                           
+      width = 5;                                           
+                                                           
+      height = 5;                                          
+                                                           
+      }                                                    
+                                                           
+      Rec                                                  
+      tangle::Rectangle                                    
+      (int a, int b) {                                     
+                                                           
+      width = a;                                           
+                                                           
+      height = b;                                          
+                                                           
+      }                                                    
+                                                           
+      int main () {                                        
+                                                           
+      Rectangle rect                                       
+      (3,4);                                               
+                                                           
+      Rectangle rectb;                                     
+                                                           
+      cout \<\< \"rect                                     
+      area: \" \<\<                                        
+      rect.area() \<\<                                     
+      endl;                                                
+                                                           
+      cout \<\< \"rectb                                    
+      area: \" \<\<                                        
+      rectb.area() \<\<                                    
+      endl;                                                
+                                                           
+      return 0;                                            
+                                                           
+      }                                                    
+
 
 In the above example, two objects of class Rectangle are
 constructed: rect and rectb. rect is constructed with two arguments,
@@ -718,11 +718,11 @@ example above, the *default constructor* is called for rectb. Note
 how rectb is not even constructed with an empty set of parentheses - in
 fact, empty parentheses cannot be used to call the default constructor:
 
-+----+------------------------------------------------------------+---+
-| 1\ | Rectangle rectb; // ok, default constructor called         |   |
-| 2  |                                                            |   |
-|    | Rectangle rectc(); // oops, default constructor NOT called |   |
-+----+------------------------------------------------------------+---+
+
+ 1\  Rectangle rectb; // ok, default constructor called            
+ 2                                                                 
+     Rectangle rectc(); // oops, default constructor NOT called    
+
 
 This is because the empty set of parentheses would make of rectc a
 function declaration instead of an object declaration: It would be a
@@ -752,75 +752,75 @@ braces.\
 Here is an example with four ways to construct objects of a class whose
 constructor takes a single parameter:
 
-+-----+-------------------+-------------------+-------------------+
-| 1\  | // classes and    | foo\'s            | [ Edit &          |
-| 2\  | uniform           | circumference:    | R                 |
-| 3\  | initialization    | 62.8319           | un](http://www.cp |
-| 4\  |                   |                   | lusplus.com/doc/t |
-| 5\  | \#include         |                   | utorial/classes/) |
-| 6\  | \<iostream\>      |                   |                   |
-| 7\  |                   |                   |                   |
-| 8\  | using namespace   |                   |                   |
-| 9\  | std;              |                   |                   |
-| 10\ |                   |                   |                   |
-| 11\ | class Circle {    |                   |                   |
-| 12\ |                   |                   |                   |
-| 13\ | double radius;    |                   |                   |
-| 14\ |                   |                   |                   |
-| 15\ | public:           |                   |                   |
-| 16\ |                   |                   |                   |
-| 17\ | Circle(double r)  |                   |                   |
-| 18\ | { radius = r; }   |                   |                   |
-| 19\ |                   |                   |                   |
-| 20  | double circum()   |                   |                   |
-|     | {return           |                   |                   |
-|     | 2\*rad            |                   |                   |
-|     | ius\*3.14159265;} |                   |                   |
-|     |                   |                   |                   |
-|     | };                |                   |                   |
-|     |                   |                   |                   |
-|     | int main () {     |                   |                   |
-|     |                   |                   |                   |
-|     | Circle foo        |                   |                   |
-|     | (10.0); //        |                   |                   |
-|     | functional form   |                   |                   |
-|     |                   |                   |                   |
-|     | Circle bar =      |                   |                   |
-|     | 20.0; //          |                   |                   |
-|     | assignment init.  |                   |                   |
-|     |                   |                   |                   |
-|     | Circle baz        |                   |                   |
-|     | {30.0}; //        |                   |                   |
-|     | uniform init.     |                   |                   |
-|     |                   |                   |                   |
-|     | Circle qux =      |                   |                   |
-|     | {40.0}; //        |                   |                   |
-|     | POD-like          |                   |                   |
-|     |                   |                   |                   |
-|     | cout \<\<         |                   |                   |
-|     | \"foo\'s          |                   |                   |
-|     | circumference: \" |                   |                   |
-|     | \<\< foo.circum() |                   |                   |
-|     | \<\< \'\\n\';     |                   |                   |
-|     |                   |                   |                   |
-|     | return 0;         |                   |                   |
-|     |                   |                   |                   |
-|     | }                 |                   |                   |
-+-----+-------------------+-------------------+-------------------+
+
+ 1\   // classes and     foo\'s             [ Edit &          
+ 2\   uniform            circumference:     R                 
+ 3\   initialization     62.8319            un](http://www.cp 
+ 4\                                         lusplus.com/doc/t 
+ 5\   \#include                             utorial/classes/) 
+ 6\   \<iostream\>                                            
+ 7\                                                           
+ 8\   using namespace                                         
+ 9\   std;                                                    
+ 10\                                                          
+ 11\  class Circle {                                          
+ 12\                                                          
+ 13\  double radius;                                          
+ 14\                                                          
+ 15\  public:                                                 
+ 16\                                                          
+ 17\  Circle(double r)                                        
+ 18\  { radius = r; }                                         
+ 19\                                                          
+ 20   double circum()                                         
+      {return                                                 
+      2\*rad                                                  
+      ius\*3.14159265;}                                       
+                                                              
+      };                                                      
+                                                              
+      int main () {                                           
+                                                              
+      Circle foo                                              
+      (10.0); //                                              
+      functional form                                         
+                                                              
+      Circle bar =                                            
+      20.0; //                                                
+      assignment init.                                        
+                                                              
+      Circle baz                                              
+      {30.0}; //                                              
+      uniform init.                                           
+                                                              
+      Circle qux =                                            
+      {40.0}; //                                              
+      POD-like                                                
+                                                              
+      cout \<\<                                               
+      \"foo\'s                                                
+      circumference: \"                                       
+      \<\< foo.circum()                                       
+      \<\< \'\\n\';                                           
+                                                              
+      return 0;                                               
+                                                              
+      }                                                       
+
 
 An advantage of uniform initialization over functional form is that,
 unlike parentheses, braces cannot be confused with function
 declarations, and thus can be used to explicitly call default
 constructors:
 
-+----+-----------------------------------------------------------+---+
-| 1\ | Rectangle rectb; // default constructor called            |   |
-| 2\ |                                                           |   |
-| 3  | Rectangle rectc(); // function declaration (default       |   |
-|    | constructor NOT called)                                   |   |
-|    |                                                           |   |
-|    | Rectangle rectd{}; // default constructor called          |   |
-+----+-----------------------------------------------------------+---+
+
+ 1\  Rectangle rectb; // default constructor called               
+ 2\                                                               
+ 3   Rectangle rectc(); // function declaration (default          
+     constructor NOT called)                                      
+                                                                  
+     Rectangle rectd{}; // default constructor called             
+
 
 The choice of syntax to call constructors is largely a matter of style.
 Most existing code currently uses functional form, and some newer style
@@ -837,19 +837,19 @@ its body. This is done by inserting, before the constructor\'s body, a
 colon (:) and a list of initializations for class members. For example,
 consider a class with the following declaration:
 
-+----+------------------------------------+---+
-| 1\ | class Rectangle {                  |   |
-| 2\ |                                    |   |
-| 3\ | int width,height;                  |   |
-| 4\ |                                    |   |
-| 5\ | public:                            |   |
-| 6  |                                    |   |
-|    | Rectangle(int,int);                |   |
-|    |                                    |   |
-|    | int area() {return width\*height;} |   |
-|    |                                    |   |
-|    | };                                 |   |
-+----+------------------------------------+---+
+
+ 1\  class Rectangle {                     
+ 2\                                        
+ 3\  int width,height;                     
+ 4\                                        
+ 5\  public:                               
+ 6                                         
+     Rectangle(int,int);                   
+                                           
+     int area() {return width\*height;}    
+                                           
+     };                                    
+
 
 The constructor for this class could be defined, as usual, as:
 
@@ -884,67 +884,67 @@ default-construction is not even possible (when the class does not have
 a default constructor). In these cases, members shall be initialized in
 the member initialization list. For example:
 
-+-----+-------------------+-------------------+-------------------+
-| 1\  | // member         | foo\'s volume:    | [ Edit &          |
-| 2\  | initialization    | 6283.19           | R                 |
-| 3\  |                   |                   | un](http://www.cp |
-| 4\  | \#include         |                   | lusplus.com/doc/t |
-| 5\  | \<iostream\>      |                   | utorial/classes/) |
-| 6\  |                   |                   |                   |
-| 7\  | using namespace   |                   |                   |
-| 8\  | std;              |                   |                   |
-| 9\  |                   |                   |                   |
-| 10\ | class Circle {    |                   |                   |
-| 11\ |                   |                   |                   |
-| 12\ | double radius;    |                   |                   |
-| 13\ |                   |                   |                   |
-| 14\ | public:           |                   |                   |
-| 15\ |                   |                   |                   |
-| 16\ | Circle(double r)  |                   |                   |
-| 17\ | : radius(r) { }   |                   |                   |
-| 18\ |                   |                   |                   |
-| 19\ | double area()     |                   |                   |
-| 20\ | {return           |                   |                   |
-| 21\ | radius\*rad       |                   |                   |
-| 22\ | ius\*3.14159265;} |                   |                   |
-| 23\ |                   |                   |                   |
-| 24\ | };                |                   |                   |
-| 25  |                   |                   |                   |
-|     | class Cylinder {  |                   |                   |
-|     |                   |                   |                   |
-|     | Circle base;      |                   |                   |
-|     |                   |                   |                   |
-|     | double height;    |                   |                   |
-|     |                   |                   |                   |
-|     | public:           |                   |                   |
-|     |                   |                   |                   |
-|     | Cylinder(double   |                   |                   |
-|     | r, double h) :    |                   |                   |
-|     | base (r),         |                   |                   |
-|     | height(h) {}      |                   |                   |
-|     |                   |                   |                   |
-|     | double volume()   |                   |                   |
-|     | {return           |                   |                   |
-|     | base.area() \*    |                   |                   |
-|     | height;}          |                   |                   |
-|     |                   |                   |                   |
-|     | };                |                   |                   |
-|     |                   |                   |                   |
-|     | int main () {     |                   |                   |
-|     |                   |                   |                   |
-|     | Cylinder foo      |                   |                   |
-|     | (10,20);          |                   |                   |
-|     |                   |                   |                   |
-|     | cout \<\<         |                   |                   |
-|     | \"foo\'s volume:  |                   |                   |
-|     | \" \<\<           |                   |                   |
-|     | foo.volume() \<\< |                   |                   |
-|     | \'\\n\';          |                   |                   |
-|     |                   |                   |                   |
-|     | return 0;         |                   |                   |
-|     |                   |                   |                   |
-|     | }                 |                   |                   |
-+-----+-------------------+-------------------+-------------------+
+
+ 1\   // member          foo\'s volume:     [ Edit &          
+ 2\   initialization     6283.19            R                 
+ 3\                                         un](http://www.cp 
+ 4\   \#include                             lusplus.com/doc/t 
+ 5\   \<iostream\>                          utorial/classes/) 
+ 6\                                                           
+ 7\   using namespace                                         
+ 8\   std;                                                    
+ 9\                                                           
+ 10\  class Circle {                                          
+ 11\                                                          
+ 12\  double radius;                                          
+ 13\                                                          
+ 14\  public:                                                 
+ 15\                                                          
+ 16\  Circle(double r)                                        
+ 17\  : radius(r) { }                                         
+ 18\                                                          
+ 19\  double area()                                           
+ 20\  {return                                                 
+ 21\  radius\*rad                                             
+ 22\  ius\*3.14159265;}                                       
+ 23\                                                          
+ 24\  };                                                      
+ 25                                                           
+      class Cylinder {                                        
+                                                              
+      Circle base;                                            
+                                                              
+      double height;                                          
+                                                              
+      public:                                                 
+                                                              
+      Cylinder(double                                         
+      r, double h) :                                          
+      base (r),                                               
+      height(h) {}                                            
+                                                              
+      double volume()                                         
+      {return                                                 
+      base.area() \*                                          
+      height;}                                                
+                                                              
+      };                                                      
+                                                              
+      int main () {                                           
+                                                              
+      Cylinder foo                                            
+      (10,20);                                                
+                                                              
+      cout \<\<                                               
+      \"foo\'s volume:                                        
+      \" \<\<                                                 
+      foo.volume() \<\<                                       
+      \'\\n\';                                                
+                                                              
+      return 0;                                               
+                                                              
+      }                                                       
+
 
 In this example, class Cylinder has a member object whose type is
 another class (base\'s type is Circle). Because objects of
@@ -975,73 +975,73 @@ Similarly as with plain data structures, the members of an object can be
 accessed directly from a pointer by using the arrow operator (-\>). Here
 is an example with some possible combinations:
 
-+-----+------------------------------+------------------------------+
-| 1\  | // pointer to classes        | [ Edit &                     |
-| 2\  | example                      | Run](http://www.cplusplu     |
-| 3\  |                              | s.com/doc/tutorial/classes/) |
-| 4\  | \#include \<iostream\>       |                              |
-| 5\  |                              |                              |
-| 6\  | using namespace std;         |                              |
-| 7\  |                              |                              |
-| 8\  | class Rectangle {            |                              |
-| 9\  |                              |                              |
-| 10\ | int width, height;           |                              |
-| 11\ |                              |                              |
-| 12\ | public:                      |                              |
-| 13\ |                              |                              |
-| 14\ | Rectangle(int x, int y) :    |                              |
-| 15\ | width(x), height(y) {}       |                              |
-| 16\ |                              |                              |
-| 17\ | int area(void) { return      |                              |
-| 18\ | width \* height; }           |                              |
-| 19\ |                              |                              |
-| 20\ | };                           |                              |
-| 21\ |                              |                              |
-| 22\ | int main() {                 |                              |
-| 23\ |                              |                              |
-| 24\ | Rectangle obj (3, 4);        |                              |
-| 25\ |                              |                              |
-| 26\ | Rectangle \* foo, \* bar, \* |                              |
-| 27  | baz;                         |                              |
-|     |                              |                              |
-|     | foo = &obj;                  |                              |
-|     |                              |                              |
-|     | bar = new Rectangle (5, 6);  |                              |
-|     |                              |                              |
-|     | baz = new Rectangle\[2\] {   |                              |
-|     | {2,5}, {3,6} };              |                              |
-|     |                              |                              |
-|     | cout \<\< \"obj\'s area: \"  |                              |
-|     | \<\< obj.area() \<\<         |                              |
-|     | \'\\n\';                     |                              |
-|     |                              |                              |
-|     | cout \<\< \"\*foo\'s area:   |                              |
-|     | \" \<\< foo-\>area() \<\<    |                              |
-|     | \'\\n\';                     |                              |
-|     |                              |                              |
-|     | cout \<\< \"\*bar\'s area:   |                              |
-|     | \" \<\< bar-\>area() \<\<    |                              |
-|     | \'\\n\';                     |                              |
-|     |                              |                              |
-|     | cout \<\< \"baz\[0\]\'s      |                              |
-|     | area:\" \<\< baz\[0\].area() |                              |
-|     | \<\< \'\\n\';                |                              |
-|     |                              |                              |
-|     | cout \<\< \"baz\[1\]\'s      |                              |
-|     | area:\" \<\< baz\[1\].area() |                              |
-|     | \<\< \'\\n\';                |                              |
-|     |                              |                              |
-|     | delete bar;                  |                              |
-|     |                              |                              |
-|     | delete\[\] baz;              |                              |
-|     |                              |                              |
-|     | return 0;                    |                              |
-|     |                              |                              |
-|     | }                            |                              |
-+-----+------------------------------+------------------------------+
+
+ 1\   // pointer to classes         [ Edit &                     
+ 2\   example                       Run](http://www.cplusplu     
+ 3\                                 s.com/doc/tutorial/classes/) 
+ 4\   \#include \<iostream\>                                     
+ 5\                                                              
+ 6\   using namespace std;                                       
+ 7\                                                              
+ 8\   class Rectangle {                                          
+ 9\                                                              
+ 10\  int width, height;                                         
+ 11\                                                             
+ 12\  public:                                                    
+ 13\                                                             
+ 14\  Rectangle(int x, int y) :                                  
+ 15\  width(x), height(y) {}                                     
+ 16\                                                             
+ 17\  int area(void) { return                                    
+ 18\  width \* height; }                                         
+ 19\                                                             
+ 20\  };                                                         
+ 21\                                                             
+ 22\  int main() {                                               
+ 23\                                                             
+ 24\  Rectangle obj (3, 4);                                      
+ 25\                                                             
+ 26\  Rectangle \* foo, \* bar, \*                               
+ 27   baz;                                                       
+                                                                 
+      foo = &obj;                                                
+                                                                 
+      bar = new Rectangle (5, 6);                                
+                                                                 
+      baz = new Rectangle[2] {                                 
+      {2,5}, {3,6} };                                            
+                                                                 
+      cout \<\< \"obj\'s area: \"                                
+      \<\< obj.area() \<\<                                       
+      \'\\n\';                                                   
+                                                                 
+      cout \<\< \"\*foo\'s area:                                 
+      \" \<\< foo-\>area() \<\<                                  
+      \'\\n\';                                                   
+                                                                 
+      cout \<\< \"\*bar\'s area:                                 
+      \" \<\< bar-\>area() \<\<                                  
+      \'\\n\';                                                   
+                                                                 
+      cout \<\< \"baz[0]\'s                                    
+      area:\" \<\< baz[0].area()                               
+      \<\< \'\\n\';                                              
+                                                                 
+      cout \<\< \"baz[1]\'s                                    
+      area:\" \<\< baz[1].area()                               
+      \<\< \'\\n\';                                              
+                                                                 
+      delete bar;                                                
+                                                                 
+      delete[] baz;                                            
+                                                                 
+      return 0;                                                  
+                                                                 
+      }                                                          
+
 
 This example makes use of several operators to operate on objects and
-pointers (operators \*, &, ., -\>, \[\]). They can be interpreted as:
+pointers (operators \*, &, ., -\>, []). They can be interpreted as:
 
   **expression**   **can be read as**
   ---------------- ---------------------------------------------------------------------
@@ -1050,12 +1050,12 @@ pointers (operators \*, &, ., -\>, \[\]). They can be interpreted as:
   x.y              member y of object x
   x-\>y            member y of object pointed to by x
   (\*x).y          member y of object pointed to by x (equivalent to the previous one)
-  x\[0\]           first object pointed to by x
-  x\[1\]           second object pointed to by x
-  x\[n\]           (n+1)th object pointed to by x
+  x[0]           first object pointed to by x
+  x[1]           second object pointed to by x
+  x[n]           (n+1)th object pointed to by x
 
 Most of these expressions have been introduced in earlier chapters. Most
-notably, the chapter about arrays introduced the offset operator (\[\])
+notably, the chapter about arrays introduced the offset operator ([])
 and the chapter about plain data structures introduced the arrow
 operator (-\>).
 
@@ -1078,41 +1078,41 @@ To make any function as inline, start its definitions with the keyword
 \
 Example --
 
-+-----+---------------------------------+---+
-| 1\  | Class A                         |   |
-| 2\  |                                 |   |
-| 3\  | {                               |   |
-| 4\  |                                 |   |
-| 5\  | Public:                         |   |
-| 6\  |                                 |   |
-| 7\  | inline int add(int a, int b)    |   |
-| 8\  |                                 |   |
-| 9\  | {                               |   |
-| 10\ |                                 |   |
-| 11\ | return (a + b);                 |   |
-| 12\ |                                 |   |
-| 13\ | };                              |   |
-| 14\ |                                 |   |
-| 15\ | }                               |   |
-| 16\ |                                 |   |
-| 17\ | Class A                         |   |
-| 18\ |                                 |   |
-| 19  | {                               |   |
-|     |                                 |   |
-|     | Public:                         |   |
-|     |                                 |   |
-|     | int add(int a, int b);          |   |
-|     |                                 |   |
-|     | };                              |   |
-|     |                                 |   |
-|     | inline int A::add(int a, int b) |   |
-|     |                                 |   |
-|     | {                               |   |
-|     |                                 |   |
-|     | return (a + b);                 |   |
-|     |                                 |   |
-|     | }                               |   |
-+-----+---------------------------------+---+
+
+ 1\   Class A                            
+ 2\                                      
+ 3\   {                                  
+ 4\                                      
+ 5\   Public:                            
+ 6\                                      
+ 7\   inline int add(int a, int b)       
+ 8\                                      
+ 9\   {                                  
+ 10\                                     
+ 11\  return (a + b);                    
+ 12\                                     
+ 13\  };                                 
+ 14\                                     
+ 15\  }                                  
+ 16\                                     
+ 17\  Class A                            
+ 18\                                     
+ 19   {                                  
+                                         
+      Public:                            
+                                         
+      int add(int a, int b);             
+                                         
+      };                                 
+                                         
+      inline int A::add(int a, int b)    
+                                         
+      {                                  
+                                         
+      return (a + b);                    
+                                         
+      }                                  
+
 
 **Why to use --**\
 In many places we create the functions for small work/functionality
