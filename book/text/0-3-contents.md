@@ -53,8 +53,8 @@ int main()
 -   By convention, every single C++ program should have this kind of
     comment block at the beginning of the program.
 
--   Usually, a comment that carries over several lines begins with `\*`
-    and ends with `\*`
+-   Usually, a comment that carries over several lines begins with `*`
+    and ends with `*`
 
 -   A comment on just one line - or part of the line - begins with `//`
 
@@ -370,7 +370,7 @@ int main ()
  12          ^                  Bitwise XOR (exclusive or)                                               
  13          \                 Bitwise OR (inclusive or)                                                
  14          &&                 Logical AND                                                              
- 15          \\               Logical OR                                                               
+ 15          ^               Logical OR                                                               
  16          a?b:c              Ternary conditional[note 2]                                Right-to-left 
              throw              throw operator                                                           
              co_yield           yield-expression (C++20)                                                 
@@ -405,7 +405,7 @@ Operatorname   Syntax   Over​load​able  Prototype examples (for class T)
  bitwise left shift assignment                                                                                                                                                                                                                                                                 a <<= b  Yes           T& T::operator <<=(const T2& b);  T& operator <<=(T& a, const T2& b); 
  bitwise right shift assignment                                                                                                                                                                                                                                                                a >>= b  Yes           T& T::operator >>=(const T2& b);  T& operator >>=(T& a, const T2& b); 
 
->**NOTE**: All built-in assignment operators return *this, and most user-defined overloads also return *this so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type (including void).\
+>**NOTE**: All built-in assignment operators return *this, and most user-defined overloads also return *this so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type (including void).
 T2 can be any type including T.  
 
 ### **Explanation** 
@@ -481,9 +481,9 @@ expression. (since C++20)
 In overload resolution against user-defined operators, for every type T,
 the following function signatures participate in overload resolution:
 
-T\*& operator=(T\*&, T\*);
+T*& operator=(T*&, T*);
 
-T\*volatile & operator=(T\*volatile &, T\*);
+T*volatile & operator=(T*volatile &, T*);
 
 For every enumeration or pointer to member type T, optionally
 volatile-qualified, the following function signature participates in
@@ -575,7 +575,7 @@ The operand ``expr`` of a built-in prefix increment or decrement operator
 must be a modifiable (non-const) value of non-boolean (since C++17)
 arithmetic type or pointer to completely-defined object type. For
 non-boolean operands, the expression ++x is exactly equivalent to x +=
-1, and the expression \--x is exactly equivalent to x -= 1, that is, the
+1, and the expression .-x is exactly equivalent to x -= 1, that is, the
 prefix increment or decrement is an lvalue expression that identifies
 the modified operand. All arithmetic conversion rules and pointer
 arithmetic rules defined for arithmetic operators apply and determine
@@ -599,9 +599,9 @@ bool& operator++(bool&)
 
 P& operator++(P&)
 
-A& operator\--(A&)
+A& operator.-(A&)
 
-P& operator\--(P&)
+P& operator.-(P&)
 
 Built-in postfix operators
 
@@ -609,18 +609,18 @@ The postfix increment and decrement expressions have the form
 
 expr ++
 
-expr \--
+expr .-
 
-1\) postfix increment (post-increment)
+) postfix increment (post-increment)
 
-2\) postfix decrement (post-decrement)
+) postfix decrement (post-decrement)
 
 The operand expr of a built-in postfix increment or decrement operator
 must be a modifiable (non-const) lvalue of non-boolean (since C++17)
 arithmetic type or pointer to completely-defined object type. The result
 is prvalue copy of the original value of the operand. As a side-effect,
 for non-boolean operands, the expression x++ modifies the value of its
-operand as if by evaluating x += 1, and the expression x\-- modifies the
+operand as if by evaluating x += 1, and the expression x.- modifies the
 value of its operand as if by evaluating x -= 1. All arithmetic
 conversion rules and pointer arithmetic rules defined for arithmetic
 operators apply and determine the implicit conversion (if any) applied
@@ -643,9 +643,9 @@ bool operator++(bool&, int)
 
 P operator++(P&, int)
 
-A operator\--(A&, int)
+A operator.-(A&, int)
 
-P operator\--(P&, int)
+P operator.-(P&, int)
 --->
 ```cpp
 #include <iostream>
@@ -815,7 +815,7 @@ To t2 = f; // copy-initialization: ambiguous
 // From::operator To();, it will be selected instead of the ctor in this
 case)
 
-To t3 = static_cast\<To\>(f); // direct-initialization: calls the
+To t3 = static_cast<To>(f); // direct-initialization: calls the
 constructor
 
 const To& r = f; // reference-initialization: ambiguous
@@ -866,7 +866,7 @@ struct B {};
 
 struct X : B {
 
-operator B&() { return \*this; };
+operator B&() { return *this; };
 
 };
 

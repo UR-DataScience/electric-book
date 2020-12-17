@@ -9,11 +9,11 @@ functions that you can use to work with these two variable types.
 
 ## Mathematical Functions
 
-\#include \<cmath\>
+#include <cmath>
 
 -   abs:
 
-> absolute value of a floating point value (\x\)
+> absolute value of a floating point value (x)
 >
 > **Parameters**
 >
@@ -21,7 +21,7 @@ functions that you can use to work with these two variable types.
 >
 > **Return value**
 >
-> If successful, returns the absolute value of arg (\arg\). The value
+> If successful, returns the absolute value of arg (arg). The value
 > returned is exact and does not depend on any rounding modes.
 
 -   <https://en.cppreference.com/w/cpp/numeric/math/fabs>
@@ -211,7 +211,7 @@ functions that you can use to work with these two variable types.
 
 > Besides the minimal bit counts, the C++ Standard guarantees that
 >
-> 1 == sizeof(char) \<= sizeof(short) \<= sizeof(int) \<= sizeof(long) \<= sizeof(long long).
+> 1 == sizeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long) <= sizeof(long long).
 >
 > Note: this allows the extreme case in
 > which [bytes](https://en.wikipedia.org/wiki/Byte) are sized 64 bits,
@@ -226,7 +226,7 @@ functions that you can use to work with these two variable types.
 
 ## Character Functions
 
-\<cctype\> (ctype.h)
+<cctype> (ctype.h)
 
 These functions take the int equivalent of one character as parameter
 and return an int that can either be another character or a value
@@ -282,9 +282,9 @@ Two functions that convert between letter cases:
 >
 > //a character string literal:
 >
-> string str2 = \"Hello there\";
+> string str2 = "Hello there";
 >
-> string str3 (\"Goodbye\"); // Alternate form
+> string str3 ("Goodbye"); // Alternate form
 >
 > //A string variable/object may also be initialized with
 >
@@ -298,11 +298,11 @@ Two functions that convert between letter cases:
 >
 > //a substring of another string object:
 >
-> string str6 = \"ABCDEFGHIJKL\";
+> string str6 = "ABCDEFGHIJKL";
 >
-> // Initialize str7 as \"CDEFG\"
+> // Initialize str7 as "CDEFG"
 >
-> // Starts at character 2 (\'C\')
+> // Starts at character 2 ('C')
 >
 > // with a length of 5
 >
@@ -319,7 +319,7 @@ Two functions that convert between letter cases:
 > size_type is otherwise hidden inside the definition of the string
 > type.
 >
-> string str8 = \"Hello\";
+> string str8 = "Hello";
 >
 > string::size_type len;
 >
@@ -327,15 +327,15 @@ Two functions that convert between letter cases:
 >
 > len = str8.length();
 >
-> cout \<\< len \<\< endl; // prints 5
+> cout << len << endl; // prints 5
 >
 > len = str8.size();
 >
-> cout \<\< len \<\< endl; // also prints 5
+> cout << len << endl; // also prints 5
 >
 > // OR just use them directly:
 >
-> cout \<\< str8.length() \<\< endl;
+> cout << str8.length() << endl;
 >
 > **The find( ) and substr( ) Functions**
 >
@@ -359,35 +359,35 @@ Two functions that convert between letter cases:
 >
 > For example:
 >
-> string str16 = \"abcdefghi\";
+> string str16 = "abcdefghi";
 >
-> string str17 = \"def\";
+> string str17 = "def";
 >
 > // Search from the beginning of str16
 >
 > string::size_type pos = str16.find(str17);
 >
-> cout \<\< pos \<\< endl; // prints 3
+> cout << pos << endl; // prints 3
 >
 > // Search from the beginning of str16
 >
 > pos = str16.find(str17,0);
 >
-> cout \<\< pos \<\< endl; // prints 3
+> cout << pos << endl; // prints 3
 >
 > // Search from the fifth position of str16
 >
 > pos = str16.find(str17,5);
 >
-> cout \<\< pos \<\< endl; // prints a REALLY BIG number!!
+> cout << pos << endl; // prints a REALLY BIG number!!
 >
-> pos = str16.find (\"AB\");
+> pos = str16.find ("AB");
 >
 > if (pos == string::npos)
 >
 > {
 >
-> cout \<\< \"Not found.\" \<\< endl;
+> cout << "Not found." << endl;
 >
 > return 1;
 >
@@ -407,15 +407,15 @@ Two functions that convert between letter cases:
 >
 > For example:
 >
-> string str18 = \"abcdefghi\"
+> string str18 = "abcdefghi"
 >
 > string str19 = str18.substr(5,2);
 >
-> cout \<\< str19 \<\< endl; // prints \"fg\"
+> cout << str19 << endl; // prints "fg"
 >
 > string str20 = str18.substr(5);
 >
-> cout \<\< str20 \<\< endl; // prints \"fghi\"
+> cout << str20 << endl; // prints "fghi"
 >
 > Operators
 >
@@ -423,9 +423,9 @@ Two functions that convert between letter cases:
 >
 > The assignment operator = may be used in several ways:
 >
-> //Assigning one string\'s value to another string
+> //Assigning one string's value to another string
 >
-> string string_one = \"Hello\";
+> string string_one = "Hello";
 >
 > string string_two;
 >
@@ -435,35 +435,35 @@ Two functions that convert between letter cases:
 >
 > string string_four;
 >
-> char ch = \'A\';
+> char ch = 'A';
 >
 > string_four = ch;
 >
-> string_four = \'Z\';
+> string_four = 'Z';
 >
-> The \"plus\" operator concatenates:
+> The "plus" operator concatenates:
 >
 > // two strings
 >
-> string str1 = \"Hello \";
+> string str1 = "Hello ";
 >
-> string str2 = \"there\";
+> string str2 = "there";
 >
-> string str3 = str1 + str2; // \"Hello there\"
+> string str3 = str1 + str2; // "Hello there"
 >
 > // a string and a character string literal
 >
-> string str1 = \"Hello \";
+> string str1 = "Hello ";
 >
-> string str4 = str1 + \"there\";
+> string str4 = str1 + "there";
 >
 > // a string and a single character
 >
-> string str5 = \"The End\";
+> string str5 = "The End";
 >
-> string str6 = str5 + \'!\';
+> string str6 = str5 + '!';
 >
-> The \"+=\" operator appends:
+> The "+=" operator appends:
 >
 > ie: it combines the assignment and concatenation operations in the way
 > that you would expect.
@@ -471,9 +471,9 @@ Two functions that convert between letter cases:
 > The right-hand sice must be a string object, a string literal, or a
 > single character.
 >
-> string str1 = \"Hello \";
+> string str1 = "Hello ";
 >
-> str1 += \"there\";
+> str1 += "there";
 >
 > <https://www.tutorialspoint.com/cplusplus/cpp_strings.htm>
 >
@@ -482,13 +482,13 @@ Two functions that convert between letter cases:
 ## Formatting Console Output
 
 There are two ways to get input into our programs. First, we use istream
-variable cin together with the extraction operator \>\> to get data from
+variable cin together with the extraction operator >> to get data from
 the standard input device --- the keyboard. The other way is to get data
 from a file to the program. We will talk about that next lab.
 
 Here is the syntax template for an input statement
 
-> **cin \>\>** Variable \>\> Variable \...;
+> **cin >>** Variable >> Variable \...;
 
 When you enter data at the keyboard, you must be sure that each value is
 appropriate for the data type of the variable in the input statement. If
@@ -496,11 +496,11 @@ nothing can be read for a variable then input will fail and, unless you
 take special action, nothing more can be read by your program. This will
 cause unexpected behaviour.
 
-The \>\> operator skips any leading white space characters when it is
+The >> operator skips any leading white space characters when it is
 looking for the next input value in the stream. Whitespace characters
 are blanks and certain nonprintable characters such as the character
 that marks the end of a line (new line character). After skipping any
-whitespace characters, \>\> operator proceeds to extract the desired
+whitespace characters, >> operator proceeds to extract the desired
 data value from the input stream. If the data value is int or float,
 input of the number stops at the first character that is inappropriate
 for the data type, such as a whitespace character or letter. If the data
@@ -510,7 +510,7 @@ The get input function works a little differently. It inputs the next
 character in the stream regardless of what it is, even if it is a
 whitespace character or new line character.
 
-Whether you use get or \>\>, when input is finished for one variable,
+Whether you use get or >>, when input is finished for one variable,
 input continues to the next one until all input requests are satisfied.
 If there is not enough input, the program will wait for the user to type
 more and press enter. If there is too much input it will be remembered
@@ -531,13 +531,13 @@ two tests with the same set of the input data. e.g.
 
 Examine the results carefully.
 
-> //This program demonstrates input with \>\> and get for characters
+> //This program demonstrates input with >> and get for characters
 >
-> //and with \>\> for other data types.
+> //and with >> for other data types.
 >
-> \#include \<iostream\>
+#include <iostream>
 >
-> \#include \<string\>
+#include <string>
 >
 > using namespace std;
 >
@@ -553,21 +553,21 @@ Examine the results carefully.
 >
 > char char4;
 >
-> cout \<\< \"\*\*\*\*\*\*Extraction operator \>\> test\*\*\*\*\*\*\"
-> \<\< endl;
+> cout << "\*\*\*\*\*\*Extraction operator >> test\*\*\*\*\*\*"
+> << endl;
 >
-> cout \<\< \"Input four characters. Press Return.\" \<\< endl;
+> cout << "Input four characters. Press Return." << endl;
 >
-> cin \>\> char1 \>\> char2 \>\> char3 \>\> char4;
+> cin >> char1 >> char2 >> char3 >> char4;
 >
-> cout \<\< char1 \<\< char2 \<\< char3 \<\< char4 \<\< endl;
+> cout << char1 << char2 << char3 << char4 << endl;
 >
-> cin.ignore(100,\'\\n\');
+> cin.ignore(100,'\\n');
 >
-> cout \<\< endl \<\< \"\*\*\*\*\*\*get() function test\*\*\*\*\*\*\"
-> \<\< endl;
+> cout << endl << "\*\*\*\*\*\*get() function test\*\*\*\*\*\*"
+> << endl;
 >
-> cout \<\< \"Input four characters. Press Return.\" \<\< endl;
+> cout << "Input four characters. Press Return." << endl;
 >
 > cin.get(char1);
 >
@@ -577,7 +577,7 @@ Examine the results carefully.
 >
 > cin.get(char4);
 >
-> cout \<\< char1 \<\< char2 \<\< char3 \<\< char4 \<\< endl;
+> cout << char1 << char2 << char3 << char4 << endl;
 >
 > return 0;
 >
@@ -586,15 +586,15 @@ Examine the results carefully.
 This next program demonstrates reading mixed datatypes with one cin.Try
 the mixed type test with this input:
 
-> 3.1416Huh? What\'s going on?
+> 3.1416Huh? What's going on?
 >
-> //This program demonstrates input with \>\> and get for characters
+> //This program demonstrates input with >> and get for characters
 >
-> //and with \>\> for other data types.
+> //and with >> for other data types.
 >
-> \#include \<iostream\>
+#include <iostream>
 >
-> \#include \<string\>
+#include <string>
 >
 > using namespace std;
 >
@@ -608,19 +608,19 @@ the mixed type test with this input:
 >
 > string string1;
 >
-> cout \<\< \"Mixed type test\" \<\< endl;
+> cout << "Mixed type test" << endl;
 >
-> cin \>\> int1 \>\> float1 \>\> string1;
+> cin >> int1 >> float1 >> string1;
 >
-> cout \<\< string1 \<\< \" \" \<\< float1 \<\< \" \" \<\< int1 \<\<
+> cout << string1 << " " << float1 << " " << int1 <<
 > endl;
 >
-> cout \<\< endl \<\< \"\*\*\*\*\*using getline() function
-> below\*\*\*\*\*\*\" \<\< endl \<\< endl;
+> cout << endl << "\*\*\*\*\*using getline() function
+> below\*\*\*\*\*\*" << endl << endl;
 >
 > getline(cin,string1);
 >
-> cout \<\< string1 \<\< endl;
+> cout << string1 << endl;
 >
 > return 0;
 >
@@ -629,7 +629,7 @@ the mixed type test with this input:
 Notice the neat trick to get more than one word into a string? For a
 string variable, say inputStr, the statement
 
-> cin \>\> inputStr;
+> cin >> inputStr;
 
 skips leading whitespace and it stops as soon as it encounters a
 whitespace character. The statement
@@ -637,7 +637,7 @@ whitespace character. The statement
 > getline(cin, inputStr);
 
 does not skip the leading whitespace character(s). It stops when a new
-line character \'\\n\' is encountered. getline is a function from C++
+line character '\\n' is encountered. getline is a function from C++
 standard library.
 
 > <http://www.cs.uregina.ca/Links/class-info/110/strings/index_oldtext.html>
@@ -669,9 +669,9 @@ from a file and writes to another file in the reverse order.
 
 > // Program IODemo demonstrates how to use files
 >
-> \#include \<iostream\>
+#include <iostream>
 >
-> \#include \<fstream\>
+#include <fstream>
 >
 > using namespace std;
 >
@@ -679,7 +679,7 @@ from a file and writes to another file in the reverse order.
 >
 > {
 >
-> cout \<\< fixed;
+> cout << fixed;
 >
 > //sets all printout in decimal format with decimal points appearing
 >
@@ -689,24 +689,24 @@ from a file and writes to another file in the reverse order.
 >
 > ofstream outData; // declares output stream
 >
-> inData.open(\"inputfile.txt\");
+> inData.open("inputfile.txt");
 >
-> // binds program variable inData to the input file \"inputfile.txt\"
+> // binds program variable inData to the input file "inputfile.txt"
 >
-> outData.open(\"outputfile.txt\");
+> outData.open("outputfile.txt");
 >
 > // binds program variable outData to the output file
-> \"outputfile.txt\"
+> "outputfile.txt"
 >
-> inData \>\> val1 \>\> val2 \>\> val3 \>\> val4; // inputs 4 values
+> inData >> val1 >> val2 >> val3 >> val4; // inputs 4 values
 >
-> outData \<\< val4 \<\< endl;
+> outData << val4 << endl;
 >
-> outData \<\< val3 \<\< endl;
+> outData << val3 << endl;
 >
-> outData \<\< val2 \<\< endl;
+> outData << val2 << endl;
 >
-> outData \<\< val1 \<\< endl; // outputs 4 values
+> outData << val1 << endl; // outputs 4 values
 >
 > inData.close();
 >
@@ -721,8 +721,8 @@ name. The internal name is what you call it in your program; the
 external name is the name the operating system knows it by. Somehow,
 these two names must be associated with one another. This association is
 called binding and is done in function open. Notice that inData and
-outData are identifiers in the program; \"inputfile.txt\" and
-\"outputfile.txt\" are character strings. inputfile.txt is the name that
+outData are identifiers in the program; "inputfile.txt" and
+"outputfile.txt" are character strings. inputfile.txt is the name that
 was used when the input data file was created; outputfile.txt is the
 name of the file where the answers are stored.
 
@@ -731,7 +731,7 @@ file according the requirement of the data type and format in your
 program. The input data file must exist and contain correct data.
 Otherwise, the input will fail.
 
-You can also create a data file by selcting \"Add New Item\" to a
+You can also create a data file by selcting "Add New Item" to a
 project as a text file in the Visual C++.
 
 For example, in the preceding IODemo program, the input file should look
@@ -764,9 +764,9 @@ the reverse order.
 
 > // Program IODemo demonstrates how to use files
 >
-> \#include \<iostream\>
+#include <iostream>
 >
-> \#include \<fstream\>
+#include <fstream>
 >
 > using namespace std;
 >
@@ -774,7 +774,7 @@ the reverse order.
 >
 > {
 >
-> cout \<\< fixed;
+> cout << fixed;
 >
 > float val1, val2, val3, val4; // declares 4 variables
 >
@@ -782,9 +782,9 @@ the reverse order.
 >
 > ofstream outData; // declares output stream
 >
-> // binds program variable inData to file \"inputfile.txt\"
+> // binds program variable inData to file "inputfile.txt"
 >
-> inData.open(\"inputfile.txt\");
+> inData.open("inputfile.txt");
 >
 > //Testing the state of the stream
 >
@@ -796,15 +796,15 @@ the reverse order.
 >
 > {
 >
-> cout \<\< \"Can\'t open the input file successfuly.\" \<\< endl;
+> cout << "Can't open the input file successfuly." << endl;
 >
 > return 1;
 >
 > }
 >
-> // binds program variable outData to file \"outputfile.txt\"
+> // binds program variable outData to file "outputfile.txt"
 >
-> outData.open(\"outputfile.txt\");
+> outData.open("outputfile.txt");
 >
 > //Testing the state of the stream
 >
@@ -812,21 +812,21 @@ the reverse order.
 >
 > {
 >
-> cout \<\< \"Can\'t open the output file successfuly.\" \<\< endl;
+> cout << "Can't open the output file successfuly." << endl;
 >
 > return 2;
 >
 > }
 >
-> inData \>\> val1 \>\> val2 \>\> val3 \>\> val4; // inputs 4 values
+> inData >> val1 >> val2 >> val3 >> val4; // inputs 4 values
 >
-> outData \<\< val4 \<\< endl;
+> outData << val4 << endl;
 >
-> outData \<\< val3 \<\< endl;
+> outData << val3 << endl;
 >
-> outData \<\< val2 \<\< endl;
+> outData << val2 << endl;
 >
-> outData \<\< val1 \<\< endl; // outputs 4 values
+> outData << val1 << endl; // outputs 4 values
 >
 > inData.close();
 >
@@ -837,7 +837,7 @@ the reverse order.
 > }
 
 Note that inData and outData are two varibales in the program;
-\"inputfile.txt\" and \"outputfile.txt\" are character strings.
+"inputfile.txt" and "outputfile.txt" are character strings.
 inputfile.txt is the name of the input data file that we have created;
 outputfile.txt is the name of the output data file where the answers are
 stored.

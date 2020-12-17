@@ -222,7 +222,7 @@ It works in the following way:
     the loop ends, and statement is skipped, going directly to step 5.
 
 3.  statement is executed. As usual, it can be either a single statement
-    or a block enclosed in curly braces { }.
+    or a block enclosed in curly braces `{ }`.
 
 4.  increase is executed, and the loop gets back to step 2.
 
@@ -231,38 +231,30 @@ It works in the following way:
 Here is the countdown example using a for loop:
 
 ```cpp
- 1   *// countdown      10, 9, 8, 7, 6,    [ Edit &          
- 2   using a for loop*  5, 4, 3, 2, 1,     R                 
- 3                      liftoff!           un](http://www.cp 
- 4   *#include                            lusplus.com/doc/t 
- 5   <iostream>*                         utorial/control/) 
- 6                                                           
- 7   *using*                                                 
- 8   *namespace* std;                                        
- 9                                                           
- 10  *int* main ()                                           
- 11                                                           
-      {                                                       
-                                                              
-      *for* (*int*                                            
-      n=10; n>0; n--)                                       
-      {                                                       
-                                                              
-      cout << n <<                                        
-      ", ";                                                 
-                                                              
-      }                                                       
-                                                              
-      cout <<                                               
-      "liftoff!\n";                                        
-                                                              
-      }
+*/
+    countdown using a for loop
+    10, 9, 8, 7, 6, 5, 4, 3, 2, 1, liftoff!
+    [](http://www.cplusplus.com/doc/tutorial/control/)
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+    for (int n=10; n>0; n--)                                       
+    {
+        cout << n << ", ";                                         
+    }                                    
+    cout << "liftoff!\n";                                        
+}
 ```
 The three fields in a for-loop are optional. They can be left empty, but
 in all cases the semicolon signs between them are required. For
-example, for (;n<10;) is a loop
+example, `for (;n<10;)` is a loop
 without *initialization* or *increase* (equivalent to a while-loop);
-and for (;n<10;++n) is a loop with *increase*, but
+and `for (;n<10;++n)` is a loop with *increase*, but
 no *initialization* (maybe because the variable was already initialized
 before the loop). A loop with no *condition* is equivalent to a loop
 with true as condition (i.e., an infinite loop).
@@ -285,7 +277,7 @@ for ( n=0, i=100 ; n!=i ; ++n, --i )
 }                                          
 ```
 
-This loop will execute 50 times if neither n or i are modified within
+This loop will execute 50 times if neither `n` or `i` are modified within
 the loop:
 
 ![alt-image](media/image3.png)
@@ -369,7 +361,7 @@ statements until the end condition is met and loop is terminated. But
 here are some rules that you can follow to make the program efficient
 
 Use For loop when you know the number of iterations. E.g. iterate
-through an array of size 'N'.
+through an array of size `N`.
 
 Use While loop when you do not know how many iterations it will take to
 satisfy the condition(make sure you give a valid terminating condition
@@ -391,16 +383,18 @@ loop such as a While loop, a Do-while loop, or a For loop. A loop inside
 another loop is called a nested loop.
 
 The following program counts the number of characters on each line in a
-file. We know that the I/O manipulator endl forces the next character
+file. We know that the I/O manipulator `endl` forces the next character
 sent to the output stream to begin a new line. How can we recognize a
 new line in the input stream? A new line begins following the symbol
-'\n'. We must be sure to use function get defined in iostream, not
+`\n`. We must be sure to use function get defined in `iostream`, not
 the extraction operator, to input each character.
 ```
-// Program LineCt counts the number of characters per line
-// and the number of lines in a file.
-
-// Assumption: There is a '\n' before the EOF.
+/* 
+    Program LineCt counts the number of characters per line
+    and the number of lines in a file.
+    
+    Assumption: There is a '\n' before the EOF.
+*/
 
 #include <iostream>
 #include <fstream>
@@ -417,60 +411,39 @@ int main()
 
     // bind the input stream name *inData* to the file "Input.txt"
     inData.open("Input.txt");
->
-> if (!inData)
->
-> {
->
-> cout \<\< \"Can\'t open the input file successfully.\" \<\< endl;
->
-> return 1;
->
-> }
->
-> lineNo = 0;
->
-> //Use get function to read data from file \"Input.txt\"
->
-> inData.get(character);
->
-> //while the input stream is not in the fail state
->
-> //e.g. while not EOF, go into the loop
->
-> while (inData)
->
-> {
->
-> lineNo++;
->
-> number = 0;
->
-> //while not \"end of line\", go into the loop
->
- while (character != \'\\n\')
 
- {
+    if (!inData)
+    {
+        cout << "Can't open the input file successfully." << endl;
+        return 1;
+    }
 
- number++;
+    lineNo = 0;
+    
+    //Use get function to read data from file "Input.txt"
+    inData.get(character);
 
- inData.get(character);
+    //while the input stream is not in the fail state
+    //e.g. while not EOF, go into the loop
+    while (inData)
+    {
+        lineNo++;
+        number = 0;
 
- }
+        //while not "end of line", go into the loop
+        while (character != '\n')
+        {
+            number++;
+            inData.get(character);
+        }
+        cout << "Line " << lineNo << " contains " << number << " characters." << endl;
+    
+    inData.get(character);
+    }
 
- cout \<\< \"Line \" \<\< lineNo \<\< \" contains \"
-
- \<\< number \<\< \" characters.\" \<\< endl;
-
- inData.get(character);
-
- }
-
- inData.close();
-
- return 0;
-
- }
+    inData.close();
+    return 0;
+}
 ```
 > <http://www.cs.uregina.ca/Links/class-info/110/loops/index.html>
 
@@ -484,43 +457,35 @@ cause numeric errors.
 • This section provides an example showing you how to minimize such
 errors.
 
-The following program sums a series that starts with 0.01 and ends with
-1.0. The numbers in the series will increment by 0.01, as follows: 0.01
-+ 0.02 + 0.03 and so on.
+The following program sums a series that starts with `0.01` and ends with
+`1.0`. The numbers in the series will increment by `0.01`, as follows: 
+`0.01 + 0.02 + 0.03` and so on.
 
 LISTING 5.7 Sum.cpp
-
+```cpp
 //Initialize sum
 
-\#include \<iostream\>
+#include <iostream>
 
 Using namespace std;
 
 int main()
-
 {
+    Float sum = 0;
+    # Add 0.01, 0.02, \..., 0.99, 1 to sum
+    float i = 0.01;
+    
+    while( i <= 1.0)
+    { 
+        sum += i;
+        i = i + 0.01;
+    }
 
-Float sum = 0;
-
-\# Add 0.01, 0.02, \..., 0.99, 1 to sum
-
-float i = 0.01;
-
-while( i \<= 1.0)
-
-{ sum += i;
-
-i = i + 0.01;
-
+    //Display result
+    cout << "The sum is" << sum;
 }
-
-//Display result
-
-cout\<\<\"The sum is\"\<\< sum;
-
-}
-
-Output: The sum is 49.50000000000003
+```
+Output: `The sum is 49.50000000000003`
 
 Here the Actual output should be 50.5, but when the iteration ends the
 value of i is slightly greater than 1 but not exactly one (1.01) so the
@@ -537,86 +502,62 @@ to specific locations.
 
 break leaves a loop, even if the condition for its end is not fulfilled.
 It can be used to end an infinite loop, or to force it to end before its
-natural end. For example, let\'s stop the countdown before its natural
+natural end. For example, let's stop the countdown before its natural
 end:
 
+```cpp
+*/
+    break loop example
+    10, 9, 8, 7, 6, 5, 4, 3, countdown aborted!
+    [url](http://www.cplusplus.com/doc/tutorial/control/)
+ 
+#include <iostream>
 
- 1\   *// break loop     10, 9, 8, 7, 6,    [ Edit &          
- 2\   example*           5, 4, 3,           R                 
- 3\                      countdown          un](http://www.cp 
- 4\   *\#include         aborted!           lusplus.com/doc/t 
- 5\   \<iostream\>*                         utorial/control/) 
- 6\                                                           
- 7\   *using*                                                 
- 8\   *namespace* std;                                        
- 9\                                                           
- 10\  *int* main ()                                           
- 11\                                                          
- 12\  {                                                       
- 13\                                                          
- 14\  *for* (*int*                                            
- 15\  n=10; n\>0; n\--)                                       
- 16                                                           
-      {                                                       
-                                                              
-      cout \<\< n \<\<                                        
-      \", \";                                                 
-                                                              
-      *if* (n==3)                                             
-                                                              
-      {                                                       
-                                                              
-      cout \<\<                                               
-      \"countdown                                             
-      aborted!\";                                             
-                                                              
-      *break*;                                                
-                                                              
-      }                                                       
-                                                              
-      }                                                       
-                                                              
-      }                                                       
+using namespace std;
 
+int main ()
+{
+    for (int n=10; n>0; n--)
+    {   
+        cout << n << ", ";
+        if (n==3)
+        {
+            cout << "countdown aborted!";
+            break;
+        }                                                       
+    }
+}                                                       
+```
 
 #### The continue statement
 
 The continue statement causes the program to skip the rest of the loop
 in the current iteration, as if the end of the statement block had been
 reached, causing it to jump to the start of the following iteration. For
-example, let\'s skip number 5 in our countdown:
+example, let's skip number 5 in our countdown:
 
+```cpp
+*/ 
+    continue loop example
+    10, 9, 8, 7, 6, 4, 3, 2, 1, liftoff!
+    [url](http://www.cplusplus.com/doc/tutorial/control/)
+*/
 
- 1\   *// continue loop  10, 9, 8, 7, 6,    [ Edit &          
- 2\   example*           4, 3, 2, 1,        R                 
- 3\                      liftoff!           un](http://www.cp 
- 4\   *\#include                            lusplus.com/doc/t 
- 5\   \<iostream\>*                         utorial/control/) 
- 6\                                                           
- 7\   *using*                                                 
- 8\   *namespace* std;                                        
- 9\                                                           
- 10\  *int* main ()                                           
- 11\                                                          
- 12   {                                                       
-                                                              
-      *for* (*int*                                            
-      n=10; n\>0; n\--)                                       
-      {                                                       
-                                                              
-      *if* (n==5)                                             
-      *continue*;                                             
-                                                              
-      cout \<\< n \<\<                                        
-      \", \";                                                 
-                                                              
-      }                                                       
-                                                              
-      cout \<\<                                               
-      \"liftoff!\\n\";                                        
-                                                              
-      }                                                       
+#include <iostream>
 
+using namespace std;
+
+int main ()
+{
+    for (int n=10; n>0; n--)
+    {
+        if (n==5) continue;
+        cout << n << ", ";
+    }
+    
+    cout << "liftoff!\n";
+}                                                       
+```
 
 #### The goto statement
 
@@ -628,7 +569,7 @@ presence of local variables.
 
 The destination point is identified by a *label*, which is then used as
 an argument for the goto statement. A *label* is made of a valid
-identifier followed by a colon (:).
+identifier followed by a colon (`:`).
 
 goto is generally deemed a low-level feature, with no particular use
 cases in modern higher-level programming paradigms generally used with
@@ -643,11 +584,13 @@ using namespace std;
 
 int main()
 {
-int n=10;
-mylabel:
-    cout << n << ", ";
-    n--;
-    if(n>0) goto mylabel;
+    int n=10;
+    
+    mylabel:
+        cout << n << ", ";
+        n--;
+        if(n>0) goto mylabel;
+    
     cout << "liftoff!\n";
 ```
 > <https://www.w3schools.com/cpp/cpp_break.asp> (optional)
@@ -657,4 +600,3 @@ mylabel:
 In this chapter, you have learned how to use loops, jump statements and
 where to use the loops with the error making possibilities and solutions
 for them.
-

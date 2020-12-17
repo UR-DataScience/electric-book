@@ -34,7 +34,7 @@ holding one int value. In other words, the number array has a total of
 
 **Fundamental Operations on a One-dimensional Array:**
 
-Now let\'s look at how to access individual components of an array. The
+Now let's look at how to access individual components of an array. The
 syntax template for accessing an array component is
 
 > **ArrayName**[ IndexExpression ]
@@ -65,13 +65,13 @@ types. The simplest form of index expression is a constant. For example:
 
 To store values in the number array, we can do the following:
 
-> for (int i=0; i \< 50; i++)
+> for (int i=0; i < 50; i++)
 >
 > {
 >
 > number[i]=i; //store a number in each array element
 >
-> cout \<\< \"number[\" \<\< i \<\< \"] = \" \<\< number[i] \<\<
+> cout << "number[" << i << "] = " << number[i] <<
 > endl;
 >
 > }
@@ -83,15 +83,15 @@ data type int.
 To use the values stored in the number array, we can treat each array
 element as a simple variable of data type int. For example:
 
-> for (int i=0; i \< 50; i++)
+> for (int i=0; i < 50; i++)
 >
 > {
 >
-> number[i]=2\*number[i]; //double the value in each array element
+> number[i]=2*number[i]; //double the value in each array element
 >
 > //and store it in the array element
 >
-> cout \<\< \"number[\" \<\< i \<\< \"] = \" \<\< number[i] \<\<
+> cout << "number[" << i << "] = " << number[i] <<
 > endl;
 >
 > }
@@ -119,7 +119,7 @@ In this declaration, age[0] is initialized to 23, age[1] is
 initialized to 56, and so on. There must be at least one initial value
 between braces. If too many initial values are specified, a syntax error
 will occur. If the number of initial values is less than the array size,
-the remaining array elements will be initialized to zero.\
+the remaining array elements will be initialized to zero.
 \
 In C++, the array size can be omitted when it is initialized in the
 declaration. For example:
@@ -137,7 +137,7 @@ This program adds two integer arrays and displays the arrays.
 >
 > // in the third array. Print them all out to the screen.
 >
-> \#include \<iostream\>
+#include <iostream>
 >
 > using namespace std;
 >
@@ -157,31 +157,31 @@ This program adds two integer arrays and displays the arrays.
 >
 > // Ask users to enter values for array a[].
 >
-> for (index = 0; index \< MAX_ARRAY; index++)
+> for (index = 0; index < MAX_ARRAY; index++)
 >
 > {
 >
-> cout \<\< \"Please input a number for the array element: \";
+> cout << "Please input a number for the array element: ";
 >
-> cin \>\>a[index];
+> cin >>a[index];
 >
 > }
 >
 > // Ask users to enters value for array b[].
 >
-> for (index = 0; index \< MAX_ARRAY; index++)
+> for (index = 0; index < MAX_ARRAY; index++)
 >
 > {
 >
-> cout \<\< \"Please input a number for the array element: \";
+> cout << "Please input a number for the array element: ";
 >
-> cin \>\>b[index];
+> cin >>b[index];
 >
 > }
 >
 > // Store the sum of array a[] and array b[] to array c[].
 >
-> for (index = 0; index \< MAX_ARRAY; index++)
+> for (index = 0; index < MAX_ARRAY; index++)
 >
 > {
 >
@@ -191,17 +191,17 @@ This program adds two integer arrays and displays the arrays.
 >
 > // Add code to print out each of the arrays
 >
-> for (index = 0; index \< MAX_ARRAY; index++)
+> for (index = 0; index < MAX_ARRAY; index++)
 >
 > {
 >
-> cout \<\< \"array a is \" \<\< a[index] \<\< endl;
+> cout << "array a is " << a[index] << endl;
 >
-> cout \<\< \"array b is \" \<\< b[index] \<\< endl;
+> cout << "array b is " << b[index] << endl;
 >
-> cout \<\< \"array c is \" \<\< c[index] \<\< endl;
+> cout << "array c is " << c[index] << endl;
 >
-> cout \<\< endl;
+> cout << endl;
 >
 > }
 >
@@ -233,10 +233,10 @@ An array can also be used as a tuple of N elements of the same type.
 
 ## Passing Arrays to Functions
 
-Before we get into passing arrays, let\'s review the format for using
+Before we get into passing arrays, let's review the format for using
 functions.
 
-> \#include \<iostream\>
+#include <iostream>
 >
 > using namespace std;
 >
@@ -272,7 +272,7 @@ functions.
 >
 > } // end function
 
-Now, let\'s take a closer look at how those arrays are passed. In C++,
+Now, let's take a closer look at how those arrays are passed. In C++,
 arrays are not passed by value to functions, they are passed
 by reference. Because of this, you do not have to use the & reference
 character. You simply pass the base address of an array to a function.
@@ -301,7 +301,7 @@ This program adds two integer arrays and displays the arrays.
 >
 > // in the third array. Print them all out to the screen.
 >
-> \#include \<iostream\>
+#include <iostream>
 >
 > using namespace std;
 >
@@ -323,35 +323,35 @@ This program adds two integer arrays and displays the arrays.
 >
 > // Ask users to enter values for array a[].
 >
-> cout \<\< \"Please input 5 values for a array.\" \<\< endl;
+> cout << "Please input 5 values for a array." << endl;
 >
-> for (index = 0; index \< MAX_ARRAY; index++)
+> for (index = 0; index < MAX_ARRAY; index++)
 >
 > {
 >
-> cout \<\< index+1 \<\< \": \";
+> cout << index+1 << ": ";
 >
-> cin \>\>a[index];
+> cin >>a[index];
 >
 > }
 >
 > // Ask users to enters value for array b[].
 >
-> cout \<\< \"Please input 5 values for b array.\" \<\< endl;;
+> cout << "Please input 5 values for b array." << endl;;
 >
-> for (index = 0; index \< MAX_ARRAY; index++)
+> for (index = 0; index < MAX_ARRAY; index++)
 >
 > {
 >
-> cout \<\< index+1 \<\< \": \";
+> cout << index+1 << ": ";
 >
-> cin \>\>b[index];
+> cin >>b[index];
 >
 > }
 >
 > // Store the sum of array a[] and array b[] to array c[].
 >
-> // for (index = 0; index \< MAX_ARRAY; index++)
+> // for (index = 0; index < MAX_ARRAY; index++)
 >
 > // {
 >
@@ -365,21 +365,21 @@ This program adds two integer arrays and displays the arrays.
 >
 > //To separate the output from other stuff
 >
-> cout \<\< endl;
+> cout << endl;
 >
 > // Add code to print out each of the arrays
 >
-> for (index = 0; index \< MAX_ARRAY; index++)
+> for (index = 0; index < MAX_ARRAY; index++)
 >
 > {
 >
-> cout \<\< \"a[\" \<\< index \<\< \"] = \" \<\< a[index] \<\< endl;
+> cout << "a[" << index << "] = " << a[index] << endl;
 >
-> cout \<\< \"b[\" \<\< index \<\< \"] = \" \<\< b[index] \<\< endl;
+> cout << "b[" << index << "] = " << b[index] << endl;
 >
-> cout \<\< \"c[\" \<\< index \<\< \"] = \" \<\< c[index] \<\< endl;
+> cout << "c[" << index << "] = " << c[index] << endl;
 >
-> cout \<\< endl;
+> cout << endl;
 >
 > }
 >
@@ -393,7 +393,7 @@ This program adds two integer arrays and displays the arrays.
 >
 > {
 >
-> for ( int i = 0; i \< len; i++)
+> for ( int i = 0; i < len; i++)
 >
 > {
 >
@@ -416,7 +416,7 @@ the function.
 
 For instance, if we have:
 
-\#include \<iostream\>
+#include <iostream>
 
 using namespace std;
 
@@ -467,7 +467,7 @@ For instance, if we have an array of characters and we are looking for
 the index of character 'E' in the array, one of the possible solutions
 would be:
 
-\#include \<iostream\>
+#include <iostream>
 
 using namespace std;
 
@@ -475,15 +475,15 @@ int main()
 
 {
 
-    char myArray[] = { \'A\', \'b\', \'E\', \'e\', \'c\' };
+    char myArray[] = { 'A', 'b', 'E', 'e', 'c' };
 
     int index;
 
-    for (int i = 0; i \< 5; i++)
+    for (int i = 0; i < 5; i++)
 
     {
 
-        if (myArray[i] == \'E\')
+        if (myArray[i] == 'E')
 
         {
 
@@ -495,7 +495,7 @@ int main()
 
     }
 
-    cout \<\< \"The index of letter \'E\' is \" \<\< index \<\< endl;
+    cout << "The index of letter 'E' is " << index << endl;
 
     return 0;
 
@@ -521,14 +521,14 @@ of the array. For example, at this stage 19 will be compared with 12.
   1   4   6   9   12   15   19   20   22
   --- --- --- --- ---- ---- ---- ---- ----
 
--   If X \< middle value, it means that the value is in the first half
+-   If X < middle value, it means that the value is in the first half
     of the array.
 
   --- --- --- --- ---- ---- ---- ---- ----
   1   4   6   9   12   15   19   20   22
   --- --- --- --- ---- ---- ---- ---- ----
 
--   If X \> middle value, it means that the value is in the second half
+-   If X > middle value, it means that the value is in the second half
     of the array.
 
   --- --- --- --- ---- ---- ---- ---- ----
@@ -541,7 +541,7 @@ of the array. For example, at this stage 19 will be compared with 12.
   1   4   6   9   12   15   19   20   22
   --- --- --- --- ---- ---- ---- ---- ----
 
-In our example 19 \> 12 so we need to search the second half of the
+In our example 19 > 12 so we need to search the second half of the
 array.
 
   ---- ---- ---- ----
@@ -565,14 +565,14 @@ a simple way to sort an array using sort() function which is available
 in C++11 and higher compilers.
 
 The corresponding library to sort() function is "algorithm". So, you
-would have \#include \<algorithm\> at the top of your code.
+would have #include <algorithm> at the top of your code.
 
 **About The Function**
 
 So let's go dig into these and figure out what each does and why it does
 it.
 
-Found in \~ \#include \<algorithm\>
+Found in \~ #include <algorithm>
 
 Parameter 1 myvector.begin() \~ The first parameter is where you will be
 putting a iterator(Pointer) to the first element in the range that you
@@ -601,33 +601,33 @@ alters the container directly through iterators(Pointers).
 Array Example:
 
 
- 1\   // sort() Example using arrays.                        
- 2\                                                          
- 3\   // By Zereo 04/22/13                                   
- 4\                                                          
- 5\   \#include \<iostream\>                                 
- 6\                                                          
- 7\   \#include \<algorithm\>                                
- 8\                                                          
- 9\   using namespace std;                                   
- 10\                                                         
- 11\  const int SIZE = 7;                                    
- 12\                                                         
- 13\  int main()                                             
- 14\                                                         
- 15\  {                                                      
- 16\                                                         
- 17\  int intArray[SIZE] = {5, 3, 32, -1, 1, 104, 53};     
- 18\                                                         
- 19\  //Now we call the sort function                        
- 20\                                                         
- 21\  sort(intArray, intArray + SIZE);                       
+    // sort() Example using arrays.                        
+                                                           
+    // By Zereo 04/22/13                                   
+                                                           
+    #include <iostream>                                 
+                                                           
+    #include <algorithm>                                
+                                                           
+    using namespace std;                                   
+                                                          
+   const int SIZE = 7;                                    
+                                                          
+   int main()                                             
+                                                          
+   {                                                      
+                                                          
+   int intArray[SIZE] = {5, 3, 32, -1, 1, 104, 53};     
+                                                          
+   //Now we call the sort function                        
+                                                          
+   sort(intArray, intArray + SIZE);                       
  22                                                          
-      cout \<\< \"Sorted Array looks like this.\" \<\< endl; 
+      cout << "Sorted Array looks like this." << endl; 
                                                              
       for (size_t i = 0; i != SIZE; ++i)                     
                                                              
-      cout \<\< intArray[i] \<\< \" \";                    
+      cout << intArray[i] << " ";                    
                                                              
       return 0;                                              
                                                              
@@ -638,7 +638,7 @@ Array Example:
 
 ## C-Strings
 
-const char\* c_str() const. Get C string equivalent.
+const char* c_str() const. Get C string equivalent.
 
 Returns a pointer to an array that contains a null-terminated sequence
 of characters (i.e., a C-string) representing the current value of the
@@ -646,7 +646,7 @@ string object.
 
 This array includes the same sequence of characters that make up the
 value of the string object plus an additional terminating null-character
-(\'\\0\') at the end.
+('\\0') at the end.
 
 The pointer returned may be invalidated by further calls to other member
 functions that modify the object.
@@ -654,40 +654,40 @@ functions that modify the object.
 Parameters: None
 
 Return value: A pointer to the c-string representation of the string
-object\'s value.
+object's value.
 
 Example:
 
 
- 1\   // strings and c-strings                                      
- 2\                                                                 
- 3\   \#include \<iostream\>                                        
- 4\                                                                 
- 5\   \#include \<cstring\>                                         
- 6\                                                                 
- 7\   \#include \<string\>                                          
- 8\                                                                 
- 9\   int main ()                                                   
- 10\                                                                
- 11\  {                                                             
- 12\                                                                
- 13\  std::string str (\"Please split this sentence into tokens\"); 
- 14\                                                                
- 15\  char \* cstr = new char [str.length()+1];                   
- 16\                                                                
- 17\  std::strcpy (cstr, str.c_str());                              
- 18\                                                                
- 19\  // cstr now contains a c-string copy of str                   
- 20\                                                                
- 21\  char \* p = std::strtok (cstr,\" \");                         
- 22\                                                                
- 23\  while (p!=0)                                                  
+    // strings and c-strings                                      
+                                                                  
+    #include <iostream>                                        
+                                                                  
+    #include <cstring>                                         
+                                                                  
+    #include <string>                                          
+                                                                  
+    int main ()                                                   
+                                                                 
+   {                                                             
+                                                                 
+   std::string str ("Please split this sentence into tokens"); 
+                                                                 
+   char * cstr = new char [str.length()+1];                   
+                                                                 
+   std::strcpy (cstr, str.c_str());                              
+                                                                 
+   // cstr now contains a c-string copy of str                   
+                                                                 
+   char * p = std::strtok (cstr," ");                         
+                                                                 
+   while (p!=0)                                                  
  24                                                                 
       {                                                             
                                                                     
-      std::cout \<\< p \<\< \'\\n\';                                
+      std::cout << p << '\\n';                                
                                                                     
-      p = std::strtok(NULL,\" \");                                  
+      p = std::strtok(NULL," ");                                  
                                                                     
       }                                                             
                                                                     
@@ -721,7 +721,7 @@ Output:
 Convert numerical value to string
 
 Returns a [string](http://www.cplusplus.com/string) with the
-representation of val.\
+representation of val.
 \
 The format used is the same
 that [printf](http://www.cplusplus.com/printf) would print for the
@@ -730,34 +730,34 @@ corresponding type:
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **type of *val***    **printf equivalent**   **description**
   -------------------- ----------------------- ---------------------------------------------------------------------------------------------------------------------------------------
-  int                  \"%d\"                  Decimal-base representation of *val*.\
+  int                  "%d"                  Decimal-base representation of *val*.
                                                The representations of negative values are preceded with a minus sign (-).
 
-  long                 \"%ld                   
+  long                 "%ld                   
 
-  long long            \"%lld                  
+  long long            "%lld                  
 
-  unsigned             \"%u\"                  Decimal-base representation of *val*.
+  unsigned             "%u"                  Decimal-base representation of *val*.
 
-  unsigned long        \"%lu                   
+  unsigned long        "%lu                   
 
-  unsigned long long   \"%llu                  
+  unsigned long long   "%llu                  
 
-  float                \"%f\"                  As many digits are written as needed to represent the integral part, followed by the decimal-point character and six decimal digits.\
-                                               inf (or infinity) is used to represent *infinity*.\
-                                               nan (followed by an optional sequence of characters) to represent NaNs (*Not-a-Number*).\
+  float                "%f"                  As many digits are written as needed to represent the integral part, followed by the decimal-point character and six decimal digits.
+                                               inf (or infinity) is used to represent *infinity*.
+                                               nan (followed by an optional sequence of characters) to represent NaNs (*Not-a-Number*).
                                                The representations of negative values are preceded with a minus sign (-).
 
-  double               \"%f                    
+  double               "%f                    
 
-  long double          \"%Lf                   
+  long double          "%Lf                   
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Parameters
 
-Val =\> Numerical value.
+Val => Numerical value.
 
-Return Value =\> A [string](http://www.cplusplus.com/string) object
+Return Value => A [string](http://www.cplusplus.com/string) object
 containing the representation of val as a sequence of characters.
 
 -   <http://www.cplusplus.com/reference/string/to_string/>
