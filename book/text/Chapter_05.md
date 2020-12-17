@@ -14,9 +14,9 @@ keywords while, do, and for.
 ## The while Loop
 
 The simplest kind of loop is the while-loop. Its syntax is:
-
+```cpp
 while (expression) statement
-
+```
 The while-loop simply repeats statement while expression is true. If,
 after any execution of statement, expression is no longer true, the loop
 ends, and the program continues right after the loop.
@@ -68,7 +68,7 @@ to the following script (beginning in main):
     
     `--n;`
 
-    (prints the value of n and decreases n by 1)
+    (prints the value of `n` and decreases `n` by `1`)
 
 4.  End of block. Return automatically to step 2.
 
@@ -87,9 +87,9 @@ no longer true, and ending the while-loop.
 
 Note that the complexity of this loop is trivial for a computer, and so
 the whole countdown is performed instantly, without any practical delay
-between elements of the count (if interested,
-see [sleep_for](http://www.cplusplus.com/sleep_for) for a countdown
-example with delays).
+between elements of the count
+(if interested, see [sleep_for](http://www.cplusplus.com/sleep_for) 
+for a countdown example with delays).
 
 > <http://www.cs.uregina.ca/Links/class-info/110/loops/index.html>
 >
@@ -103,7 +103,7 @@ are 3 steps to follow when writing the loop.
 
 ◦ Identify the statements that need to be repeated in a program.
 
-Statement1, statement2 ...
+`Statement1`, `statement2`, ...
 
 ◦ Place these statements in a loop (Infinite loop) as below:
 ```
