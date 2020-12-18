@@ -296,7 +296,7 @@ The following are some fundamental/simple data types:
  Floating Types                             
 --------------------------------------------
  `float`           `double `    `long double`      
-\
+
 The arithmetic operators are listed in the following table:                                                 
  Operator        Description                                                                     
 -------------------------------------------------------------------------------------------------
@@ -346,6 +346,11 @@ int main ()
     return 0;
 }
 ```
+
+<div>
+<iframe height="600px" width="100%" src="https://repl.it/@YazdanRa/cpp-book?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</div>
+
  Precedence  Operator           Description                                                Associativity 
 ---------------------------------------------------------------------------------------------------------
  1           ::                 Scope resolution                                           Left-to-right 
