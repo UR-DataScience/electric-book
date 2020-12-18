@@ -413,17 +413,17 @@ Assignment operators **modify** the value of the object.
 
 | Operator name                       | Syntax     | Over​load​able  | Prototype examples (for class T)
 |----------------                     |--------    |-------------- |-----------------------------------
-| simple assignment                   | `a = b`    | Yes           | `T& T::operator =(const T2& b);`, `N/A`
-| addition assignment                 | `a += b`   | Yes           | `T& T::operator +=(const T2& b);`, `T& operator +=(T& a, const T2& b);`
-| subtraction assignment              | `a -= b`   | Yes           | `T& T::operator -=(const T2& b);`, `T& operator -=(T& a, const T2& b);`
-| multiplication assignment           | `a *= b`   | Yes           | `T& T::operator *=(const T2& b);`, `T& operator *=(T& a, const T2& b);`
-| division assignment                 | `a /= b`   | Yes           | `T& T::operator /=(const T2& b);`, `T& operator /=(T& a, const T2& b);`
-| modulo assignment                   | `a %= b`   | Yes           | `T& T::operator %=(const T2& b);`, `T& operator %=(T& a, const T2& b);`
-| bitwise AND assignment              | `a &= b`   | Yes           | `T& T::operator &=(const T2& b);`, `T& operator &=(T& a, const T2& b);`  
-| bitwise OR assignment               | `a \= b`   | Yes           | `T& T::operator \=(const T2& b);`, `T& operator \=(T& a, const T2& b);` 
-| bitwise XOR assignment              | `a ^= b`   | Yes           | `T& T::operator ^=(const T2& b);`, `T& operator ^=(T& a, const T2& b);`  
-| bitwise left shift assignment       | `a <<= b`  | Yes           | `T& T::operator <<=(const T2& b);`, `T& operator <<=(T& a, const T2& b);` 
-| bitwise right shift assignment      | `a >>= b`  | Yes           | `T& T::operator >>=(const T2& b);`, `T& operator >>=(T& a, const T2& b);`
+| simple assignment                   | `a = b`    | Yes           | `T& T::operator =(const T2& b);`<br> `N/A`
+| addition assignment                 | `a += b`   | Yes           | `T& T::operator +=(const T2& b);`<br> `T& operator +=(T& a, const T2& b);`
+| subtraction assignment              | `a -= b`   | Yes           | `T& T::operator -=(const T2& b);`<br> `T& operator -=(T& a, const T2& b);`
+| multiplication assignment           | `a *= b`   | Yes           | `T& T::operator *=(const T2& b);`<br> `T& operator *=(T& a, const T2& b);`
+| division assignment                 | `a /= b`   | Yes           | `T& T::operator /=(const T2& b);`<br> `T& operator /=(T& a, const T2& b);`
+| modulo assignment                   | `a %= b`   | Yes           | `T& T::operator %=(const T2& b);`<br> `T& operator %=(T& a, const T2& b);`
+| bitwise AND assignment              | `a &= b`   | Yes           | `T& T::operator &=(const T2& b);`<br> `T& operator &=(T& a, const T2& b);`  
+| bitwise OR assignment               | `a \= b`   | Yes           | `T& T::operator \=(const T2& b);`<br> `T& operator \=(T& a, const T2& b);` 
+| bitwise XOR assignment              | `a ^= b`   | Yes           | `T& T::operator ^=(const T2& b);`<br> `T& operator ^=(T& a, const T2& b);`  
+| bitwise left shift assignment       | `a <<= b`  | Yes           | `T& T::operator <<=(const T2& b);`<br> `T& operator <<=(T& a, const T2& b);` 
+| bitwise right shift assignment      | `a >>= b`  | Yes           | `T& T::operator >>=(const T2& b);`<br> `T& operator >>=(T& a, const T2& b);`
 
 > Examples are **Inside class definition** and **Outside class definition** respectively.
 
@@ -577,12 +577,12 @@ Try it Yourself:
 
 Increment/decrement operators increment or decrement the value of the object.
 
-| **Operator name**   | Syntax     |Over​load​able   | Prototype examples (for class T)                           
-|-------------------  |---------   |-------------  |------------------------------------                                                                                                                                                                                                                                                                                                                                                                       Inside class definition           Outside class definition 
-| pre-increment       | `++a`      | Yes           | `T& T::operator++();`, `T& operator++(T& a);`     
-| pre-decrement       | `--a`      | Yes           | `T& T::operator--();`, `T& operator--(T& a);`
-| post-increment      | `a++`      | Yes           | `T T::operator++(int);`, `T operator++(T& a, int);` 
-| post-decrement      | `a--`      | Yes           | `T T::operator--(int);`, `T operator--(T& a, int);` 
+| **Operator name**   | Syntax     | Over​load​able  | Prototype examples (for class T)                           
+|-------------------  |---------   |-------------  |------------------------------------
+| pre-increment       | `++a`      | Yes           | `T& T::operator++();`<br> `T& operator++(T& a);`     
+| pre-decrement       | `--a`      | Yes           | `T& T::operator--();`<br> `T& operator--(T& a);`
+| post-increment      | `a++`      | Yes           | `T T::operator++(int);`<br> `T operator++(T& a, int);` 
+| post-decrement      | `a--`      | Yes           | `T T::operator--(int);`<br> `T operator--(T& a, int);` 
 
 > Examples are **Inside class definition** and **Outside class definition** respectively.
 
