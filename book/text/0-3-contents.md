@@ -47,6 +47,12 @@ int main()
 }                                                            
 // end program                                               
 ```
+
+Try it yourself on Repl.it
+<div>
+<iframe height="400px" width="100%" src="https://repl.it/@AlirezaManashty/SampleExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+</div>
+
 -   The first 6 lines of code is a comment block that gives a brief introduction to the
     C++ program.
 
