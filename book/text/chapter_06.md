@@ -76,7 +76,7 @@ calls addition. The call to a function follows a structure very similar
 to its declaration. In the example above, the call to addition can be
 compared to its definition just a few lines earlier:
 
-![](media/image4.png){width="2.40625in" height="0.6666666666666666in"}
+![](media/image4.png)
 
 The parameters in the function declaration have a clear correspondence
 to the arguments passed in the function call. The call passes two
@@ -110,7 +110,7 @@ statement that ended addition: in this particular case, the value of the
 local variable `r`, which at the moment of the return statement had a
 value of `8`.
 
-![](media/image5.png){width="2.40625in" height="0.6666666666666666in"}
+![](media/image5.png)
 
 Therefore, the call to addition is an expression with the value returned
 by the function, and in this case, that value, `8`, is assigned to `z`. It
@@ -339,7 +339,7 @@ has no effect on the values of the variables `x` and `y` outside it, because
 `x` and `y` were themselves not passed to the function on the call, but only
 copies of their values at that moment.
 
-![](media/image4.png){width="2.40625in" height="0.6666666666666666in"}
+![](media/image4.png)
 
 In certain cases, though, it may be useful to access an external
 variable from within a function. To do that, arguments can be passed *by reference*, 
@@ -767,7 +767,7 @@ Especially concerning functions or classes. To understand why all this
 seemingly pedantic and repetitive stuff is necessary, let's review the
 build process.
 
-![](media/image6.png){width="3.3333333333333335in" height="3.7604166666666665in"}
+![](media/image6.png)
 
 First, each .cpp file is compiled independently. During this process any
 `#include` directives will first insert the included file into the `.cpp`.

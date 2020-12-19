@@ -1,19 +1,12 @@
 ---
-title: Contents
+title: Programming and Problem Solving
+subtitle: "**Dr. Alireza Manashty**"
 style: contents-page
 ---
-
-# Contents
----
-subtitle: "**Dr. Alireza Manashty**"
-title: Programming and Problem Solving
-
-  
----
-
-*University of Regina*
+**University of Regina**
 
 
+# **Chapter 2**
 
 # **Elementary Programming**
 
