@@ -1,4 +1,10 @@
-# Loops
+---
+title: Programming and Problem Solving - Chapter 5
+subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
+style: chapter page-5
+---
+
+# **Loops**
 
 ## Introduction and Objectives
 

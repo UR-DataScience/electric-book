@@ -1,10 +1,8 @@
 ---
-title: Programming and Problem Solving
-subtitle: "**Dr. Alireza Manashty**"
-style: contents-page
+title: Programming and Problem Solving Chapter 2
+subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
+style: chapter page-2
 ---
-**University of Regina**
-
 
 # **Chapter 2**
 

@@ -1,6 +1,13 @@
+---
+title: Programming and Problem Solving - Chapter 3
+subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
+style: chapter page-3
+---
 
 # **Chapter 3**
+
 # **Selections**
+
 ## **3.1 Introduction and Objectives**
 
 In the chapters 1,2 you have learned the fundamentals to start

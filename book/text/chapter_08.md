@@ -1,5 +1,12 @@
+---
+title: Programming and Problem Solving - Chapter 8
+subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
+style: chapter page-8
+---
 
-#  **8 Advance Topics**
+# **Chapter 8**
+
+# **8 Advance Topics**
 
 ## **8.1 Introduction and Objectives**
 From chapter 1-7, you have learned the basics of the programming which will give you basic intuition on how programming logics are written using various concepts. In this chapter, you will learn some advanced topics like 2D arrays, object oriented programming concepts etc. This is to get you an understanding of real world problems we solve using programming. So, Lets start with 2D arrays.

@@ -1,6 +1,12 @@
+---
+title: Programming and Problem Solving Chapter 4
+subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
+style: chapter page-4
+---
 
-# Chapter 4
-# Mathematical Functions, Characters, and Strings
+# **Chapter 4**
+
+# **Mathematical Functions, Characters, and Strings**
 
 ## 4.1 Introduction and Objectives
 

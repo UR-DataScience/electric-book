@@ -1,3 +1,9 @@
+---
+title: Programming and Problem Solving - Chapter 6 
+subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
+style: chapter page-6
+---
+
 # Functions
 
 ## Introduction and Objectives
