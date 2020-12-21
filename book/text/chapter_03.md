@@ -350,21 +350,22 @@ Possible output:
  Congratulations!              
 ```
 
-<http://www.cplusplus.com/reference/cstdlib/rand/>
+> <http://www.cplusplus.com/reference/cstdlib/rand/>
 
 ## **3.9 Logical Operators**
 
-The operator``` !``` is the C++ operator for the
-Boolean operation ```NOT```. It has only one operand, to its right, and
+The operator `!` is the C++ operator for the
+Boolean operation `NOT`. It has only one operand, to its right, and
 inverts it, producing false if its operand is true, and true if its
 operand is false. Basically, it returns the opposite Boolean value of
 evaluating its operand. For example:
 
-```cpp
-!(5 == 5)   // evaluates to false because the expression at its right (5 == 5) is true
-!(6 <= 4)   // evaluates to true because (6 <= 4) would be false
-!true       // evaluates to false
-!false      // evaluates to true 
+| Syntax         |  Description
+|------------    |----------------
+| `!(5 == 5)`    | evaluates to false because the expression at its right (5 == 5) is true
+| `!(6 <= 4)`    | evaluates to true because (6 <= 4) would be false
+| `!true`        | evaluates to false
+| `!false`       | evaluates to true 
                                  
 ```
 The logical operators && and  are used when evaluating two
@@ -468,6 +469,7 @@ evaluation*, and works like this for these operators:
 
 This is mostly important when the right-hand expression has side
 effects, such as altering values:
+
 ```cpp
       if ( (i<10) && (++i<n) ) { /*...*/ } // note that the condition increments i   
 ```
@@ -593,6 +595,7 @@ transferred to the statement labeled with the default: label.
 
 The [break](https://en.cppreference.com/w/cpp/language/break) statement,
 when encountered in *statement* exits the switch statement:
+
 ```cpp
 switch(1) {
 
@@ -615,23 +618,24 @@ break;
 }
 ```
 
-Compilers may issue warnings on fall through (reaching the next case label without a break) unless the attribute [[fall through]] appears immediately before the case label to indicate that the fall through is intentional                       
-                                                                    
+Compilers may issue warnings on fall through (reaching the next case label without a break) unless the attribute 
+[[fall through]] appears immediately before the case label to indicate that the fall through is intentional                                                         
  If init-statement is used, the switch statement is equivalent to
-```                                                  
+
+```cpp                                                  
 {
-**init_statement*
-switch ( *condition* ) *statement*
+    **init_statement*
+    switch ( *condition* ) *statement*
 }
 ```                                                         
                                                                     
  Except that names declared by the *init-statement* (if *init-statement* is a declaration) and names declared by *condition* (if condition is a declaration) are in the same scope, which is also the scope of *statement*.                      
 
 
-Because transfer of control is [not permitted to enter the
-scope](https://en.cppreference.com/w/cpp/language/goto) of a variable,
-if a declaration statement is encountered inside the *statement*, it has
-to be scoped in its own compound statement:
+Because transfer of control is 
+[not permitted to enter the scope](https://en.cppreference.com/w/cpp/language/goto) 
+of a variable, if a declaration statement is encountered inside the **statement**, 
+it has to be scoped in its own compound statement:
 ```cpp
 switch(1) {
 
@@ -661,13 +665,16 @@ break;
 ```
 ### *3.10.3 Keywords*
 
-[switch](https://en.cppreference.com/w/cpp/keyword/switch), [case](https://en.cppreference.com/w/cpp/keyword/case), [default](https://en.cppreference.com/w/cpp/keyword/default)
+[switch](https://en.cppreference.com/w/cpp/keyword/switch), 
+[case](https://en.cppreference.com/w/cpp/keyword/case), 
+[default](https://en.cppreference.com/w/cpp/keyword/default)
 
 ### Example
 
 The following code shows several usage cases of the *switch* statement
 
 **Run this code**
+
 ```cpp
 #include <iostream>
 int main()
@@ -775,27 +782,30 @@ case 1: std::cout << n << '**n**';
 
 }
 ```
-```cpp
+
 Output:
+
+```text
 2345
 d
 red
 1
 ```
-<http://www.cs.uregina.ca/Links/class-info/110/loops/write-p1.html>
+> <http://www.cs.uregina.ca/Links/class-info/110/loops/write-p1.html>
 
-<https://en.cppreference.com/w/cpp/language/switch>
+> <https://en.cppreference.com/w/cpp/language/switch>
 
 ## **3.11 Conditional Operators**
 
 The conditional operator evaluates an expression, returning one value if
 that expression evaluates to true, and a different one if the expression
 evaluates as false. Its syntax is:
+
 ```cpp
 condition ? result1 : result2
 ```
-If condition is ```true```, the entire expression evaluates to ```result1``, and
-otherwise to ```result2```.
+
+If condition is `true`, the entire expression evaluates to `result1`, and otherwise to `result2`.
 
 ```cpp
 7==5 ? 4 : 3     // evaluates to 3, since 7 is not equal to 5.

@@ -4,8 +4,6 @@ subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-4
 ---
 
-# **Chapter 4**
-
 # **Mathematical Functions, Characters, and Strings**
 
 ## 4.1 Introduction and Objectives
@@ -15,7 +13,7 @@ mathematical functions that you could use, characters, strings, and the
 functions that you can use to work with these two variable types.
 
 ## 4.2 Mathematical Functions
-```
+```cpp
 #include <cmath>
 ```
 -   **abs**: absolute value of a floating point value (|x|)
@@ -100,23 +98,23 @@ computes cubic root ($sqrt{x}$)
  - ```char``` - type for character representation which can be most efficiently processed on the target system (has the same representation and alignment as either ```signed char``` or ```unsigned char```, but is always a distinct type). [Multibyte characters  strings](https://en.cppreference.com/w/cpp/string/multibyte) use this type to represent code units. The character types are large enough to represent any UTF-8 eight-bit code unit (since C++14). The signedness of char depends on the compiler and the target platform: the defaults for ARM and PowerPC are typically unsigned, the defaults for x86 and x64 are typically signed.
  - ```wchar_t``` - type for wide character representation (see [wide strings (https://en.cppreference.com/w/cpp/string/wide). Required to be large enough to represent any supported character code point (32 bits on systems that support Unicode. A notable exception is Windows, where wchar_t is 16 bits and holds UTF-16 code units) It has the same size, signedness, and alignment as one of the integer types, but is a distinct type.
 
-+---------------------------------------------------+-----------------+
-|  char16_t - type for UTF-16 character            |  (since C++11) |
-|  representation, required to be large enough to  |                 |
-|  represent any UTF-16 code unit (16 bits). It    |                 |
-|  has the same size, signedness, and alignment    |                 |
-|  as [std::uint_least16_t](                       |                 |
-| https://en.cppreference.com/w/cpp/types/integer), |                 |
-|  but is a distinct type.                         |                 |
-|                                                  |                 |
-|  char32_t - type for UTF-32 character            |                 |
-|  representation, required to be large enough to  |                 |
-|  represent any UTF-32 code unit (32 bits). It    |                 |
-|  has the same size, signedness, and alignment    |                 |
-|  as [std::uint_least32_t](                       |                 |
-| https://en.cppreference.com/w/cpp/types/integer), |                 |
-|  but is a distinct type.                         |                 |
-+---------------------------------------------------+-----------------+
+|----------------------------------------------------|-----------------|
+|  char16_t - type for UTF-16 character              |  (since C++11)  |
+|  representation, required to be large enough to    |                 |
+|  represent any UTF-16 code unit (16 bits). It      |                 |
+|  has the same size, signedness, and alignment      |                 |
+|  as [std::uint_least16_t](                         |                 |
+| https://en.cppreference.com/w/cpp/types/integer),  |                 |
+|  but is a distinct type.                           |                 |
+|----------------------------------------------------|-----------------|
+|  char32_t - type for UTF-32 character              |                 |
+|  representation, required to be large enough to    |                 |
+|  represent any UTF-32 code unit (32 bits). It      |                 |
+|  has the same size, signedness, and alignment      |                 |
+|  as [std::uint_least32_t](                         |                 |
+| https://en.cppreference.com/w/cpp/types/integer),  |                 |
+|  but is a distinct type.                           |                 |
+|----------------------------------------------------|-----------------|
 
 +---------------------------------------------------+-----------------+
 |  char8_t - type for UTF-8 character              |  (since C++20) |
