@@ -4,7 +4,7 @@ subtitle: '**Dr. Alireza Manashty**<br>**University of Regina**'
 style: chapter page-8
 ---
 
-# 8 Advance Topics
+# Advance Topics
 
 ## **8.1 Introduction and Objectives**
 

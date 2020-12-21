@@ -123,7 +123,7 @@
     * [Loops](book/text/chapter_05.md)
     * [Functions](book/text/chapter_06.md)
     * [Single-Dimensional Arrays and C-Strings](book/text/chapter_07.md)
-    * [8 Advance Topics](book/text/chapter_08.md)
+    * [Advance Topics](book/text/chapter_08.md)
   * [index](book/index.md)
 * [Contact](contact.md)
 * [\_app](_app/README.md)
