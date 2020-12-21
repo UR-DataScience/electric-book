@@ -32,35 +32,26 @@ much harder to do.
 A simple 2D Array with vectors:
 
 ```cpp
-   
-   #include <vector>                
-   using std::vector;         
-                                                              
-   #define HEIGHT 5                                          
-                                                              
-   #define WIDTH 3                                           
-                                                              
-   int main() {                                               
-                                                             
-  vector<vector<double> > array2D;                                                   
-                                                             
-  // Set up sizes. (HEIGHT x WIDTH)                                                     
-                                                             
-  array2D.resize(HEIGHT);                                    
-                                                             
-  for (int i = 0; i < HEIGHT; ++i)                                                       
-                                                                 
-      array2D<i>.resize(WIDTH);                                
-                                                                 
-      // Put some values in                                      
-                                                                 
-      array2D[1][2] = 6.0;                                   
-                                                                 
-      array2D[3][1] = 5.5;                                   
-                                                                 
-      return 0;                                                  
-                                                                 
-      }                                                          
+#include <vector>
+using std::vector;
+
+#define HEIGHT 5
+#define WIDTH 3
+
+int main()
+{
+    vector<vector<double> > array2D;
+
+    // Set up sizes. (HEIGHT x WIDTH)
+    array2D.resize(HEIGHT);
+    for (int i = 0; i < HEIGHT; ++i)
+        array2D<i>.resize(WIDTH);
+
+    // Put some values in
+    array2D[1][2] = 6.0;
+    array2D[3][1] = 5.5;
+    return 0;
+}
 ```
 
 **Pointer based multi-dimensional arrays** Pointer based
@@ -69,38 +60,36 @@ objects. The benefits can be added speed and you can apply custom
 optimizations to them.
 
 Note: There are ways you can optimize this by combining the 2 dimensions
-into a single dimension ```(HEIGHTxWIDTH)```. I leave the discussion of this
+into a single dimension `(HEIGHTxWIDTH)`. I leave the discussion of this
 out, as it's a more advanced topic for people already familiar with
 this topic.
 
 A simple 2D Array:
 
 ```cpp
-   #define HEIGHT 5                                                                             
-   #define WIDTH 3   
+#define HEIGHT 5
+#define WIDTH 3   
 
-   int main() 
-   {                                                                                 
-   double **p2DArray;                                                                           
-   // Allocate memory                                                                           
-  p2DArray = new double*[HEIGHT];                                                            
-  for (int i = 0; i < HEIGHT; ++i)               
-   {                                               
-     p2DArray<i> = new double[WIDTH];            
-   }                                              
-  // Assign values                                                                             
-  p2DArray[0][0] = 3.6;                                                                    
-  p2DArray[1][2] = 4.0;                                                                  
-  // De-Allocate memory to prevent memory leak                                                      
-  for (int i = 0; i < HEIGHT; ++i)               
-  {                                                    
-      delete [] p2DArray<i>;                      
-  }                                                  
-      delete [] p2DArray;                           
-                                                      
-      return 0;                                       
-                                                      
-  }                                               
+int main()
+{
+    double **p2DArray;
+    // Allocate memory
+    p2DArray = new double*[HEIGHT];
+    for (int i = 0; i < HEIGHT; ++i)
+    {
+        p2DArray<i> = new double[WIDTH];
+    }
+    // Assign values
+    p2DArray[0][0] = 3.6;
+    p2DArray[1][2] = 4.0;
+    // De-Allocate memory to prevent memory leak
+    for (int i = 0; i < HEIGHT; ++i)
+    {
+        delete [] p2DArray<i>;
+    }
+    delete [] p2DArray;
+    return 0;
+}
 ```
 
 ## **8.3 Processing Two-Dimensional Arrays**
@@ -110,78 +99,80 @@ A simple 2D Array:
 You can pass them by pointer.
 
 e.g
+
 ```cpp
 void doSomethingWith2D(double **Array); or
 voud doSomethingWith2D(vector<vector<double> > &Array);
 ```
+
 ## **8.5 Multidimensional Arrays**
 
 A 3D Array with vectors.
-```cpp
-   #include <vector>                                                                            
-   using std::vector;                                                                              
-   #define HEIGHT 5                                                                               
-   #define WIDTH 3                                                                               
-   #define DEPTH 7                                
-                                                  
-  int main() {                                                                                   
-  vector<vector<vector<double> > > array3D;                                                 
-  // Set up sizes. (HEIGHT x WIDTH)                                                               
-  array3D.resize(HEIGHT);                                                                         
-  for (int i = 0; i < HEIGHT; ++i)
-   {             
-        array3D<i>.resize(WIDTH);                     
-                                              
-       for (int j = 0; j < WIDTH; ++j)                
-      {                                               
-         array3D<i>[j].resize(DEPTH);                                                               
-      }                                                                                             
-   }  // Put some values in                                                                           
-  array3D[1][2][5] = 6.0;                                                                  
-  array3D[3][1][4] = 5.5;                                                                
- return 0;                                                                                     
- }                                               
 
+```cpp
+#include <vector>
+using std::vector;
+
+#define HEIGHT 5
+#define WIDTH 3
+#define DEPTH 7
+
+int main()
+{
+    vector<vector<vector<double> > > array3D;                                                 
+    // Set up sizes. (HEIGHT x WIDTH)
+    array3D.resize(HEIGHT);
+    for (int i = 0; i < HEIGHT; ++i)
+    {
+        array3D<i>.resize(WIDTH);
+
+        for (int j = 0; j < WIDTH; ++j)
+        {
+            array3D<i>[j].resize(DEPTH);
+        }
+    }  // Put some values in
+    array3D[1][2][5] = 6.0;
+    array3D[3][1][4] = 5.5;
+    return 0;
+}
 ```
+
 A 3D Array with pointer:
 
 ```cpp
-   #define HEIGHT 5                   
-   #define WIDTH 3                                                                        
-   #define DEPTH 7                                           
-                                                              
-   int main() {                                               
-                                                              
-   double ***p2DArray;                           
-   // Allocate memory
-  p2DArray = new double**[HEIGHT];
+#define HEIGHT 5
+#define WIDTH 3
+#define DEPTH 7
+
+int main()
+{
+    double ***p2DArray;                           
+    // Allocate memory
+    p2DArray = new double**[HEIGHT];
                                                                               
-  for (int i = 0; i < HEIGHT; ++i)
-  {                                                                                                            
-  p2DArray<i> = new double*[WIDTH];                                         
+    for (int i = 0; i < HEIGHT; ++i)
+    {
+        p2DArray<i> = new double*[WIDTH];
+        for (int j = 0; j < WIDTH; ++j)
+            p2DArray<i>[j] = new double[DEPTH];
+    }
+
+    // Assign values
+    p2DArray[0][0][0] =3.6;
+    p2DArray[1][2][4] =4.0;
                                                              
-     for (int j = 0; j < WIDTH; ++j)                                                       
-         p2DArray<i>[j] = new double[DEPTH];                                           
-                                                           
-  }                                                          
-                                                          
-  // Assign values                                                                                    
-      p2DArray[0][0][0] =3.6;                                                                                
-      p2DArray[1][2][4] =4.0;                                                       
-                                                                 
-  // De-Allocate memory to prevent memory leak                                        
-                                                                 
-      for (int i = 0; i < HEIGHT; ++i) {                                                     
-                                                                 
-           for (int j = 0; j < WIDTH;++j)                                                                       
-             { 
-               delete [] p2DArray<i>[j];                                        
-             }                                                         
-    delete [] p2DArray<i>;                                                                                      
-      }                                                                                                 
-      delete [] p2DArray;                                                                                     
-      return 0;                                                                                                 
-  }                                                          
+    // De-Allocate memory to prevent memory leak
+    for (int i = 0; i < HEIGHT; ++i)
+    {
+        for (int j = 0; j < WIDTH;++j)
+        {
+            delete [] p2DArray<i>[j];
+        }                                                         
+        delete [] p2DArray<i>;
+    }
+    delete [] p2DArray;
+    return 0;
+}
 ```
 
 ## **8.6 Defining Classes for Objects**
