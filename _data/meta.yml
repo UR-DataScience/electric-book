@@ -39,9 +39,9 @@ project:
 
 works:
   - directory: "book"
-    title: "Template"
-    subtitle: ""
-    creator: "A. N. Author" # E.g. the author
+    title: "Programming and Problem Solving with C++"
+    subtitle: "University of Regina"
+    creator: "Dr. Alireza Manashty" # E.g. the author
     contributor: "" # E.g. other contributors
     subject: "Fiction" # E.g. BISAC terms (https://bisg.org/page/BISACEdition) or BIC (http://editeur.dyndns.org/bic_categories)
     description: "The Electric Book's blank template." # E.g. the blurb
