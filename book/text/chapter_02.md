@@ -4,8 +4,6 @@ subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-2
 ---
 
-# **Chapter 2**
-
 # **Elementary Programming**
 
 ## Introduction and Objectives
