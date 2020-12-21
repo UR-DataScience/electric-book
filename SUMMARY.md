@@ -113,7 +113,7 @@
   * [index](samples/index.md)
 * [book](book/README.md)
   * [text](book/text/README.md)
-    * [0-0-cover](book/text/0-0-cover.md)
+    * [Book Cover](book/text/0-0-cover.md)
     * [index](book/text/index.md)
     * [0-2-copyright](book/text/0-2-copyright.md)
     * [0-1-titlepage](book/text/0-1-titlepage.md)
