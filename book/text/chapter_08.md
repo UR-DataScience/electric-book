@@ -2,6 +2,7 @@
 title: Programming and Problem Solving - Chapter 8
 subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-8
+order: 8
 ---
 
 # **8 Advance Topics**

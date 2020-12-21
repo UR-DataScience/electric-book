@@ -2,6 +2,7 @@
 title: Programming and Problem Solving - Chapter 5
 subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-5
+order: 5
 ---
 
 # **Loops**

@@ -2,6 +2,7 @@
 title: Programming and Problem Solving Chapter 2
 subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-2
+order: 2
 ---
 
 # **Elementary Programming**

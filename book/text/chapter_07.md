@@ -2,6 +2,7 @@
 title: Programming and Problem Solving - Chapter 7
 subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-7
+order: 7
 ---
 # **Chapter 7**
 
