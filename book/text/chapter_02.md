@@ -139,7 +139,7 @@ cin >> x >> y;
 
 > <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
-## **2,4 Identifiers**
+## **2.4 Identifiers**
 
 There are two main parts in a C++ program:
 
