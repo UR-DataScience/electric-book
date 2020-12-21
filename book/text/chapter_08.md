@@ -4,7 +4,6 @@ subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-8
 ---
 
-# **Chapter 8**
 
 # **8 Advance Topics**
 
