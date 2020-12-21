@@ -15,25 +15,25 @@ programming. In this chapter we will learn how to write a program that
 gives output to the input if satisfies some conditions provided.
 
 ## **3.2 The bool Data Type**
- ----------------------------------------------------------------------------------------------------------------
- In C++, data type **bool** is used to represent Boolean data.
 
- Each **bool** constant or variable contains one of two values:
+In C++, data type **bool** is used to represent Boolean data.
 
- **true** or **false**.
+Each **bool** constant or variable contains one of two values:
 
- **true** and **false** are two C++ constants.
+**true** or **false**.
 
- **true** has the value 1.
+**true** and **false** are two C++ constants.
 
- **false** has the value 0.
+**true** has the value 1.
 
- - If a testing expression is not of **bool** type, it is coerced to **bool** type automatically when it is evaluated.
- - A nonzero value is coerced to **true** and a zero value is coerced to **false**.
- --------------------------------------------------------------------------------------------------------------
- <http://www.cplusplus.com/doc/boolean/>
+**false** has the value 0.
 
-<http://www.cs.uregina.ca/Links/class-info/110/selections/index.html>
+-   If a testing expression is not of **bool** type, it is coerced to **bool** type automatically when it is evaluated.
+-   A nonzero value is coerced to **true** and a zero value is coerced to **false**.
+
+> <http://www.cplusplus.com/doc/boolean/>
+
+> <http://www.cs.uregina.ca/Links/class-info/110/selections/index.html>
 
 ## **3.3 if Statements**
 
@@ -45,207 +45,224 @@ differ from the order in which they are listed in the program.
 
 The If-Then statement uses a Boolean expression to determine whether to
 execute a statement or to skip it. Here is the syntax template:
+
 ```cpp
- if (Expression)
- {
- Statement
- }
+if (Expression)
+{
+    Statement
+}
 ```
+
 The expression in parentheses can be of any simple data type. Almost
 without exception, this will be a logical (Boolean) expression; if not,
-its value is implicitly coerced to type ```bool```(nonzero value means true,
+its value is implicitly coerced to type `bool`(nonzero value means true,
 zero value means false).
 
 Now let's look at the following statement:
+
 ```cpp
 int number, sum;
 sum = 10;
 cout << "Please enter an integer value: " << endl;
 cin >> number;
- if (number < 0)
+if(number < 0)
 {
- number = 0;
+    number = 0;
 }
 sum = sum + number;
 cout << "The sum is " << sum << endl;
 ```
-The expression (number < 0) is evaluated. If the result is true, the
-statement number = 0; is executed. If the result is false, the statement
-is skipped. In either case, the next statement to be executed is sum = sum + number;.
+
+The expression (`number < 0`) is evaluated. If the result is true, the
+statement `number = 0;` is executed. If the result is false, the statement
+is skipped. In either case, the next statement to be executed is `sum = sum + number;`.
 
 ### **3.3.2 If-Then-Else Statement**
+
 If-Then-Else statement uses a Boolean expression to determine which one
 of the two statements to execute. Here is the syntax template:
+
 ```cpp
-if (Expression)
+if(Expression)
 {
- Statement_A
+    Statement_A
 }
- else
+else
 {
- Statement_B
- }
+    Statement_B
+}
 ```
+
 The expression in parentheses will be evaluated with the result of true
 or false. Here is an example:
+
 ```cpp
 cout << "You are ";
- if (age >= 65)
-     cout << "a senior ";
- else
-     cout << "not a senior ";
+if(age >= 65)
+    cout << "a senior ";
+else
+    cout << "not a senior ";
 cout << "citizen." << endl;
 ```
+
 The characters "You are " are sent to the output stream. The
-expression age >= 65 is evaluated. If the result is true, the
+expression `age >= 65` is evaluated. If the result is true, the
 characters "a senior " are sent to the output stream. If the result
 is false, the characters "not a senior " is sent to the output stream.
 In either case, the next statement to be executed sends the the
 characters "citizen." to the output stream.
 
-There is one thing to point out here: any statement in an ```IF``` or ```ELSE```
+There is one thing to point out here: any statement in an `IF` or `ELSE`
 statement could be a block or a compound statement. If so, they must be
 enclosed in a pair of braces. Here is an example which also shows a
 compound expression:
+
 ```cpp
- if ( (age > 65) && (gender == 'f') )
+if(age > 65 && gender == 'f')
 {
- cout << "Quilting group meets:"; 
- cout << "Thursday afternoons at 4:00 p.m.";
+    cout << "Quilting group meets:"; 
+    cout << "Thursday afternoons at 4:00 p.m.";
 }
 ```
-<http://www.cplusplus.com/doc/tutorial/control/>
-<http://www.cs.uregina.ca/Links/class-info/110/selections/index.html>
+> <http://www.cplusplus.com/doc/tutorial/control/>
+
+> <http://www.cs.uregina.ca/Links/class-info/110/selections/index.html>
 
 ## **3.4 Two-Way if-else Statements**
 
 ## **3.5 Nested if and Multi-Way if-else Statements**
 
-An ```If-Then``` statemeent uses Boolean expression to determine whether to
-execute or skip a statemenet. An ```If-Then-Else``` statement uses a Boolean
+An `If-Then` statemeent uses Boolean expression to determine whether to
+execute or skip a statemenet. An `If-Then-Else` statement uses a Boolean
 expression to determine which one of the two statements to execute. The
 statements to be executed or skipped could be simple statements or
 compound statements (blocks). They also can be an If Statement. An If
-statement within another If statement is called a ```nested If``` statement.
+statement within another If statement is called a `nested If` statement.
 
 A look-ahead: You will soon be learning about the C++ SWITCH statement.
 For very complex if/else constructs, it is preferable to use the switch
 instead.
 
 The following example is a nested If statement.
+
 ```cpp
 cout << "You are ";
- if (age >= 65)
-   cout << "a senior." << endl;
- else
-    if (age >= 19)
-      cout << "an adult." << endl;
-
+if(age >= 65)
+    cout << "a senior." << endl;
+else
+    if(age >= 19)
+        cout << "an adult." << endl;
     else
-      if (age >= 13)
-        cout << "a teenager." << endl;
-      else
-       cout << "a child." << endl;
-
+        if (age >= 13)
+            cout << "a teenager." << endl;
+        else
+            cout << "a child." << endl;
 cout << "You are a great person." << endl;
 ```
+
 The characters "You are " are sent to the output stream. The
-expression age >= 65 is evaluated. If the result is true, the
+expression `age >= 65` is evaluated. If the result is true, the
 characters "a senior." are sent to the output stream. If the result
 is false, the expression age >= 19 is evaluated. If the result
 is true,the characters "an adult." are sent to the output stream. If
 the result is false, the expression age >= 13 is evaluated. If the
-result is true,the characters "a teeneager." are sent to the output
+result is true,the characters "a teenager." are sent to the output
 stream. If the result is false, the expression "a child. is sent to the
 output stream. In any case above, the next statement to be executed
 sends the the characters "You are a great person." to the output
 stream.
-Notice: once age has a value, only one statement is selected to be
+
+**Notice:** once age has a value, only one statement is selected to be
 executed. If we add braces to the program segment, it would be easy to
-read. Let's look at it now:
+read. 
+Let's look at it now:
+
 ```cpp
- cout << "You are ";
- if (age >= 65) 
- {
-     cout << "a senior." << endl;
-     cout << "*****" << endl;
- }
+cout << "You are ";
+if (age >= 65)
+{
+    cout << "a senior." << endl;
+    cout << "*****" << endl;
+}
 else
- {
-    if (age >= 19)
+{
+    if(age >= 19)
     {
-      cout << "an adult." << endl;
-      cout << "*****" << endl;
+        cout << "an adult." << endl;
+        cout << "*****" << endl;
     }
     else
     {
         if (age >= 13)
         {
-          cout << "a teenager." << endl;
-          cout << "*****" << endl;
+            cout << "a teenager." << endl;
+            cout << "*****" << endl;
         }
         else
         {
-         cout << "a child." << endl;
-         cout << "*****" << endl;
+            cout << "a child." << endl;
+            cout << "*****" << endl;
         }
-   }
+    }
 }
- cout << "You are a great person." << endl;
- ```
- <http://www.cplusplus.com/forum/beginner/186223/>
+cout << "You are a great person." << endl;
+```
+
+> <http://www.cplusplus.com/forum/beginner/186223/>
 
 ## **3.6 Another Example**
+
 ```cpp
 #include <iostream>
 using namespace std;
 int main()
 {
-char grade;
-cout << "Please enter a letter grade (A, B, C, D, or F): " <<
-endl;
-cin >> grade;
-if (grade == 'A')
-cout << "Great work. " << endl;
-else if (grade == 'B')
-cout << "Good work. " << endl;
-else if (grade == 'C')
-cout << "Passing work. " << endl;
-else if (grade == 'D' || grade == 'F')
-{
-cout << "Unsatisfictory work. " << endl;
-cout << "See your instructor." << endl;
+    char grade;
+    cout << "Please enter a letter grade (A, B, C, D, or F): " << endl;
+    cin >> grade;
+    if(grade == 'A')
+        cout << "Great work. " << endl;
+    else if(grade == 'B')
+        cout << "Good work. " << endl;
+    else if(grade == 'C')
+        cout << "Passing work. " << endl;
+    else if(grade == 'D' || grade == 'F')
+    {
+        cout << "Unsatisfictory work. " << endl;
+        cout << "See your instructor." << endl;
+    }
+    else
+        cout << grade << " is not a legal grade." << endl;
+    
+    cout << endl;
+    return 0;
 }
-else
-cout << grade << " is not a legal grade." << endl;
-cout << endl;
-return 0;
-} // end main
 ```
-<http://www.cplusplus.com/forum/beginner/186223/>
+
+> <http://www.cplusplus.com/forum/beginner/186223/>
 
 ## **3.7 Common Errors and Pitfalls**
 
 The most common errors beginners make in this chapter are the syntax
 errors. First check the syntax errors if you get any error such as
-spellings of the identifiers (it should be ```if``` and ```else``` instead IF, If,
-Else, ELSE).
+spellings of the identifiers 
+(it should be `if` and `else` instead IF, If, Else, ELSE).
 
 The other most common error to check for is the usage of semicolon after
 the if statement, below example will explain you the usage.
+
 ```cpp
 if(x>5);
-cout<<"x is greater than 5";
+    cout << "x is greater than 5";
 else
-cout<<"x is less than 5";
+    cout << "x is less than 5";
 ```
 It is absolutely fine not to use braces after the if and else statement
 if there is only one statement inside the block. But here the error is
 we should not use the semicolon after if statement which will end the
-execution at that line and you will get "**unexpected else statement
-found**" error. So, use of semicolon after the **if** or **else** or
-**if else** statement is not preferred if you want to continue the
-execution inside the block or after the block.
+execution at that line and you will get "**unexpected else statement found**" error. 
+So, use of semicolon after the **if** or **else** or **if else** statement is not preferred
+if you want to continue the execution inside the block or after the block.
 
 ## **3.8 Generating Random Numbers**
 
@@ -293,61 +310,54 @@ and [RAND_MAX](http://www.cplusplus.com/RAND_MAX).
 ### ***3.8.1 Example***
 
 ```cpp
-  /* rand example: guess the number */                                                      
-                                                             
-#include <stdlib.h> 
-  /*srand, rand */                                            
-                                                                                                               
-#include <iostream>
-using namespace std;
-int main()                                                           
-  {                                                          
-     int iSecret, iGuess;                                       
-                                                              
-   /* initialize random seed:                              */                                                                                                               srand (time(NULL));                                        
-                                                          
-    /* generate secret number                                 
-      between 1 and 10: */                                      
-                                                           
-iSecret = rand() % 10 + 1;                                 
-                                                                 
-      do 
-      {                                                                                                  
-      cout<<"Guess the number(1 to 10): ";                                            
-      cin>>"%d",&iGuess;                                    
-                                                                 
-      if (iSecret<iGuess) 
-      cout << "The secret number is lower";                                                                              
-                                                                 
-      else if (iSecret>iGuess)                                  
-      cout <<"The secret number is higher";                                                 
-                                                                 
-      } while (iSecret!=iGuess);                                 
-                                                                 
-     cout <<"Congratulations!";                               
-                                                                 
-      return 0;                                                  
-                                                                 
-      }                                                          
+//  rand example: guess the number
 
+#include <stdlib.h>
+
+// srand, rand
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int iSecret, iGuess;
+
+    //  initialize random seed:                           
+    // generate secret number between 1 and 10:
+
+    iSecret = rand() % 10 + 1;                                 
+    
+    do
+    {
+        cout << "Guess the number(1 to 10): ";
+        cin >> "%d", &iGuess;
+        
+        if(iSecret<iGuess)
+            cout << "The secret number is lower" << endl;
+        else if(iSecret>iGuess)
+            cout << "The secret number is higher" << endl;
+    } while(iSecret!=iGuess);
+
+    cout << "Congratulations!";
+    return 0;
+}
 ```
+
 In this example, the random seed is initialized to a value representing
 the current time (calling [time](http://www.cplusplus.com/time)) to
 generate a different value every time the program is run.
-```cpp
 
 Possible output:
- Guess the number (1 to 10): 5 
-                               
- The secret number is higher   
-                               
- Guess the number (1 to 10): 8 
-                               
- The secret number is lower    
-                               
- Guess the number (1 to 10): 7 
-                               
- Congratulations!              
+
+```text
+Guess the number (1 to 10): 5 
+The secret number is higher   
+Guess the number (1 to 10): 8 
+The secret number is lower    
+Guess the number (1 to 10): 7 
+Congratulations!             
 ```
 
 > <http://www.cplusplus.com/reference/cstdlib/rand/>
@@ -362,18 +372,19 @@ evaluating its operand. For example:
 
 | Syntax         |  Description
 |------------    |----------------
-| `!(5 == 5)`    | evaluates to false because the expression at its right (5 == 5) is true
-| `!(6 <= 4)`    | evaluates to true because (6 <= 4) would be false
+| `!(5 == 5)`    | evaluates to false because the expression at its right `(5 == 5)` is true
+| `!(6 <= 4)`    | evaluates to true because `(6 <= 4)` would be false
 | `!true`        | evaluates to false
 | `!false`       | evaluates to true 
                                  
-```
+
 The logical operators && and  are used when evaluating two
 expressions to obtain a single relational result. The
 operator && corresponds to the Boolean logical operation AND, which
 yields true if both its operands are true, and false otherwise. The
 following panel shows the result of operator && evaluating the
 expression a&&b:
+
  <dl><style type="text/css">
 	table.tableizer-table {
 		font-size: 12px;
@@ -400,9 +411,11 @@ expression a&&b:
  <tr><td>false</td><td>false</td><td>false</td></tr>
 </tbody></table>
 </dl>
+
 The operator  corresponds to the Boolean logical operation OR, which
 yields true if either of its operands is true, thus being false only
 when both operands are false. Here are the possible results of ab:
+
 <dl><style type="text/css">
 	table.tableizer-table {
 		font-size: 12px;
@@ -429,20 +442,23 @@ when both operands are false. Here are the possible results of ab:
  <tr><td>false</td><td>false</td><td>false</td></tr>
 </tbody></table>
 </dl>
+
 For example:
 
 ```cpp
- ( (5 == 5) && (3 > 6) ) // evaluates to false ( true && false )       
+( (5 == 5) && (3 > 6) ) // evaluates to false ( true && false )       
                                                                        
- ( (5 == 5) || (3 > 6) ) // evaluates to true ( true || false )    
+( (5 == 5) || (3 > 6) ) // evaluates to true ( true || false )    
 ```
 
 When using the logical operators, C++ only evaluates what is necessary
 from left to right to come up with the combined relational result,
-ignoring the rest. Therefore, in the last example ((5==5)||(3>6)),
-C++ evaluates first whether 5==5 is ```true```, and if so, it never checks
-whether 3>6 is true or not. This is known as *short-circuit
-evaluation*, and works like this for these operators:
+ignoring the rest. Therefore, in the last example `((5==5)||(3>6))`,
+C++ evaluates first whether `5==5` is `true`, and if so, it never checks
+whether `3>6` is true or not. This is known as 
+*short-circuit evaluation*, 
+and works like this for these operators:
+
 <dl>
 <style type="text/css">
 	table.tableizer-table {
@@ -471,14 +487,14 @@ This is mostly important when the right-hand expression has side
 effects, such as altering values:
 
 ```cpp
-      if ( (i<10) && (++i<n) ) { /*...*/ } // note that the condition increments i   
+if( (i<10) && (++i<n) ) { /*...*/ } // note that the condition increments i   
 ```
 
 Here, the combined conditional expression would increase i by one, but
 only if the condition on the left of && is true, because otherwise,
-the condition on the right-hand side (++i<\n) is never evaluated.
+the condition on the right-hand side (`++i<n`) is never evaluated.
 
-<http://www.cplusplus.com/doc/tutorial/operators/>
+> <http://www.cplusplus.com/doc/tutorial/operators/>
 
 ## **3.10 switch Statements**
 
@@ -499,82 +515,23 @@ on the value of a condition.
 
 ### *3.10.1 Syntax*
 
-  -------------------------------------------------------------------------------------------- -- --------------- -- -- -- -- -- -- --
-  *attr*(optional) **switch** **(** *condition* **)** *statement*                                 (until C++17)                     
-                                                                                                                                    
-  *attr*(optional) **switch** **(** *init-statement*(optional) *condition* **)** *statement*      (since C++17)                     
-                                                                                                                                    
-  -------------------------------------------------------------------------------------------- -- --------------- -- -- -- -- -- -- --
+
+| Syntax                                                                    | Since
+|---------------------------------------------------------------------------|--------------
+| `attr(optional) switch(condition) statement`                              | (until C++17)                     
+| `attr(optional) switch(init-statement(optional) condition) statement`     | (since C++17)
 
 
- ***attr*(C++11)**            -    any number                   
-                                    of [attributes               
-                                    ](https://en.cppreference.co 
-                                    m/w/cpp/language/attributes) 
-+=============================+======+==============================+
- ***condition***              -    any expression of 
-                                    integral or enumeration      
-                                    type, or of a class          
-                                    type contextually           
-                                    implicitly                   
-                                    convertible to 
-                                    an integral or enumeration   
-                                    type, or                     
-                                    a declaration of 
-                                    a single non-array variable  
-                                    of such type with a          
-                                    brace                        
-                                    -or-equals initializer. 
+| Syntax | A | Description
+|--------------------------------------------------------|-----|-------------
+| `attr(C++11)`                                          |  -  |  any number of [attributes ](https://en.cppreference.com/w/cpp/language/attributes)                  
+| `condition`                                            |  -  |  any expression of integral or enumeration type, or of a class type contextually implicitly convertible to an integral or enumeration type, or a declaration of a single non-array variable of such type with a brace-or-equals initializer.
+| `init-statement(C++17)`                                |  -  |  either<br> &emsp; (1) an expression statement (which may be a **null statement** `;`)<br> &emsp; (2) a simple declaration, typically a declaration of a variable with initializer, but it may declare arbitrarily many variables or structured bindings.<br><br>Note that any *init-statement* must end with a semicolon `;`, which is why it is often described informally as an expression or a declaration followed by a semicolon.
+| `statement`                                            |  -  |  any statement(typically a compound statement). **case:** and **default:** labels are permitted in *statement* and break; statement has special meaning.
+| `attr(optional) case constant_expression : statement`  | (1) |
+| `attr(optional) default : statement`                   | (2) |                        
+| `constant_expression`                                  |  -  | a constant expression of the same type as the type of *condition* after conversions and integral promotions
 
- ***init-statement*(C++17)**  -    either                       
-                                                                 
-                                    -   an expression           
-                                        statement             
-                                        (which 
-                                        may be a *null         
-                                        statement* "**;**")  
-                                                                 
-                                    -   a simple                
-                                        declaration, 
-                                        typically a            
-                                        declaration of a       
-                                        variable with          
-                                        initializer, but it    
-                                        may declare            
-                                        arbitrarily many       
-                                        variables or           
-                                        structured bindings    
-                                                                 
-                                    Note that                  
-                                    any *init-statement* must  
-                                    end with a                 
-                                    semicolon **;**, which is  
-                                    why it is often described  
-                                    informally as an           
-                                    expression or a            
-                                    declaration followed by a  
-                                    semicolon.                 
-
- ***statement***            -  any statement(typically 
-                                    a compound                 
-                                    statement). **cas          
-                                    e:** and **default:** labels 
-                                    are permitted              
-                                    in *sta                    
-                                    tement* and break; statement 
-                                    has special meaning.       
-
-
-  ------------------------------------------------------------------- ------- -- -- -- -- -- -- -- --
-  *attr*(optional) **case** *constant_expression* **:** *statement*   (1)                        
-                                                                                                   
-  *attr*(optional) **default** **:** *statement*                      (2)                        
-                                                                                                   
-  ------------------------------------------------------------------- ------- -- -- -- -- -- -- -- --
-
-  --------------------------- ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ***constant_expression***   -   a constant expression of the same type as the type of *condition* after conversions and integral promotions
-  --------------------------- ---- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### *3.10.2 Explanation*
 
@@ -597,24 +554,18 @@ The [break](https://en.cppreference.com/w/cpp/language/break) statement,
 when encountered in *statement* exits the switch statement:
 
 ```cpp
-switch(1) {
-
-case 1 : cout << '1'; // prints "1",
-
-case 2 : cout << '2'; // then prints "2"
-
+switch(1) 
+{
+    case 1 : cout << '1'; // prints "1",
+    case 2 : cout << '2'; // then prints "2"
 }
 
-switch(1) {
-
-case 1 : cout << '1'; // prints "1"
-
-break; // and exits the switch
-
-case 2 : cout << '2';
-
-break;
-
+switch(1) 
+{
+    case 1 : cout << '1'; // prints "1"
+    break; // and exits the switch
+    case 2 : cout << '2';
+    break;
 }
 ```
 
@@ -622,48 +573,51 @@ Compilers may issue warnings on fall through (reaching the next case label witho
 [[fall through]] appears immediately before the case label to indicate that the fall through is intentional                                                         
  If init-statement is used, the switch statement is equivalent to
 
-```cpp                                                  
+```cpp
 {
-    **init_statement*
-    switch ( *condition* ) *statement*
+    init_statement
+    switch ( condition ) statement
 }
 ```                                                         
                                                                     
- Except that names declared by the *init-statement* (if *init-statement* is a declaration) and names declared by *condition* (if condition is a declaration) are in the same scope, which is also the scope of *statement*.                      
+Except that names declared by the *init-statement* (if *init-statement* is a declaration) and names declared by *condition* (if condition is a declaration) are in the same scope, which is also the scope of *statement*.                      
 
 
 Because transfer of control is 
 [not permitted to enter the scope](https://en.cppreference.com/w/cpp/language/goto) 
 of a variable, if a declaration statement is encountered inside the **statement**, 
 it has to be scoped in its own compound statement:
+
 ```cpp
-switch(1) {
-
-case 1: int x = 0; // initialization
-
-std::cout<< x <<'**n**';
-break;
-default: // compilation error: jump to default: would enter the scope of 'x'
-// without initializing it
-std::cout<<"default**n**";
-break;
-
-}
-```
-```cpp
-switch(1) {
-
-case 1: { int x = 0; 
-    std::cout << x <<'**n**';
+switch(1)
+{
+    case 1: int x = 0; // initialization
+    std::cout << x << '\n';
     break;
-} // scope of 'x' ends here
-
-default:
- std::cout<<"default**n**"; // no error
-break;
+    default: // compilation error: jump to default: would enter the scope of 'x'
+             // without initializing it
+    std::cout << "default\n";
+    break;
 }
 ```
-### *3.10.3 Keywords*
+
+```cpp
+switch(1)
+{
+    case 1: 
+    {
+        int x = 0; 
+        std::cout << x << '\n';
+        break;
+    } // scope of 'x' ends here
+
+    default:
+        std::cout << "default\n"; // no error
+    break;
+}
+```
+
+### **3.10.3 Keywords**
 
 [switch](https://en.cppreference.com/w/cpp/keyword/switch), 
 [case](https://en.cppreference.com/w/cpp/keyword/case), 
@@ -677,109 +631,101 @@ The following code shows several usage cases of the *switch* statement
 
 ```cpp
 #include <iostream>
+
 int main()
 {
-int i = 2;
-switch (i) {
-case 1: std::cout <<"1";
+    int i = 2;
+    switch(i) 
+    {
+        case 1: 
+            std::cout << "1";
 
-case 2: std::cout <<"2"; //execution starts at this case label
+        case 2: 
+            std::cout << "2"; //execution starts at this case label
 
-case 3: std::cout <<"3";
+        case 3: 
+            std::cout << "3";
 
-case 4:
+        case 4:
+        
+        case 5: 
+            std::cout << "45";
+            break; //execution of subsequent statements is terminated
 
-case 5: std::cout <<"45";
+        case 6: 
+            std::cout << "6";
+    }
 
-break; //execution of subsequent statements is terminated
+    std::cout << '\n';
 
-case 6: std::cout <<"6";
+    switch(i)
+    {
+        case 4: 
+            std::cout << "a";
 
-}
+        default: 
+            std::cout << "d"; //there are no applicable constant_expressions
 
+        //therefore default is executed
+    }
+
+    std::cout << '\n';
  
+    switch(i)
+    {
+        case 4:  
+            std::cout << "a"; //nothing is executed
+    }
 
-std::cout << '\n';
+    // when enumerations are used in a switch statement, many compilers
+    // issue warnings if one of the enumerators is not handled
+    enum color {RED, GREEN, BLUE};
 
- 
+    switch(RED)
+    {
+        case RED: 
+            std::cout << "red\n";
+            break;
 
-switch (i) {
+        case GREEN: 
+            std::cout << "green\n";
+            break;
 
-case 4: std::cout <<"a";
+        case BLUE: 
+            std::cout << "blue\n"; 
+            break;
+    }
 
-default: std::cout <<"d"; //there are no applicable constant_expressions
+    // the C++17 init-statement syntax can be helpful when there is
+    // no implicit conversion to integral or enumeration type
 
-//therefore default is executed
+    switch (Device dev = get_device(); dev.state())
+    {
+        case SLEEP: 
+            /*...*/ 
+            break;
 
-}
+        case READY: 
+            /*...*/
+            break;
 
- 
+        case BAD: 
+            /*...*/ 
+            break;
+    }
 
-std::cout << '\n';
+    // pathological examples
+    // the statement doesn't have to be a compound statement
 
- 
+    switch(0)
 
-switch (i) {
+    std::cout << "this does nothing\n";
 
-case 4:  std::cout <<"a"; //nothing is executed
-
-}
-
- 
-
-// when enumerations are used in a switch statement, many compilers
-
-// issue warnings if one of the enumerators is not handled
-
-enum color {RED, GREEN, BLUE};
-
-switch(RED) {
-
-case RED: std::cout <<"red\n";
-break;
-
-case GREEN: 
-std::cout <<"green\n";
-break;
-
-case BLUE: std::cout <<"blue\n"; 
-break;
-
-}
-
- 
-
-// the C++17 init-statement syntax can be helpful when there is
-
-// no implicit conversion to integral or enumeration type
-
-switch (Device dev = get_device(); dev.state())
-{
-case SLEEP: */*...*/* 
-break;
-
-case READY: */*...*/*
- break;
-
-case BAD: */*...*/* 
-break;
-
-}
-
-
-// pathological examples
-// the statement doesn't have to be a compound statement
-
-switch(0)
-
-std::cout << "this does nothing\n";
-
-// labels don't require a compound statement either
-switch(int n = 1)
-case 0:
-case 1: std::cout << n << '**n**';
-// Duff's Device: http://en.wikipedia.org/wiki/Duff's_device
-
+    // labels don't require a compound statement either
+    switch(int n = 1)
+    case 0:
+    case 1: std::cout << n << '**n**';
+    // Duff's Device: <http://en.wikipedia.org/wiki/Duff's_device>
 }
 ```
 
@@ -816,109 +762,78 @@ a>b ? a : b      // evaluates to whichever is greater, a or b.
 For example:
 
 ```cpp
-   // conditional operator                         
-   #include <iostream>       
-  using namespace std;                                     
-  int main ()                                              
-   {                                                        
-    int a,b,c;                                               
-     a=2;                                                     
-     b=7;                                                     
-     c = (a>b) ? a : b;                                      
-   cout <<c<<'\n';                                                                                           
-   }                                                        
+// conditional operator
+
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int a, b, c;
+    a=2;
+    b=7;
+    c = (a>b) ? a : b;
+    cout <<c<<'\n';
+}
 ```
 
 In this example, a was 2, and b was 7, so the expression being evaluated
-(a>b) was not true, thus the first value specified after the question
+(`a>b`) was not true, thus the first value specified after the question
 mark was discarded in favor of the second value (the one after the
 colon) which was b (with a value of 7).
 
 ## **3.12 Operator Precedence and Associativity**
 
 If relational operators and Boolean operators
-are combined in the same expression in C++, the Boolean operator ```NOT (!)```
+are combined in the same expression in C++, the Boolean operator `NOT (!)`
 has the highest precedence, the relational operators have the next
-highest precedence, and the Boolean operators ```AND (&&)``` and ``` OR (||)```
+highest precedence, and the Boolean operators `AND (&&)` and `OR (||)`
 have the lowest. Expressions in parentheses are always evaluated first.
 
 A single expression may have multiple operators. For example:
 ```cpp
-      x = 5 + 7 % 2;   
-  ```
+x = 5 + 7 % 2;
+```
 
 In C++, the above expression always assigns 6 to variable x, because
-the ``` %``` operator has a higher precedence than the ```+ ``` operator and is always
+the `%` operator has a higher precedence than the `+` operator and is always
 evaluated before. Parts of the expressions can be enclosed in
 parenthesis to override this precedence order, or to make explicitly
 clear the intended effect. Notice the difference:
 
 ```cpp
- x = 5 + (7 % 2); // x = 6 (same as without parenthesis)    
- x = (5 + 7) % 2; // x = 0                                  |
+x = 5 + (7 % 2); // x = 6 (same as without parenthesis)
+x = (5 + 7) % 2; // x = 0
 ```
 
 From greatest to smallest priority, C++ operators are evaluated in the order of precedence (we have seen in the previous chapter)
 
-<!-- //   ----------------------------------------------------------------------------------------------------------------------
-//   **Level**   **Precedence group**           **Operator**             **Description**                    **Grouping**
-//   ----------- ------------------------------ ------------------------ ---------------------------------- ---------------
-//   1           Scope                          ::                       scope qualifier                    Left-to-right
 
-//   2           Postfix (unary)                ++ --                   postfix increment / decrement      Left-to-right
+| **Level**  | **Precedence group**         | **Operator**                                                                                    | **Description**                                                                                                                                                                         | **Grouping**
+|------------|------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------
+|     1      | Scope                        | `::`                                                                                            | scope qualifier                                                                                                                                                                         | Left-to-right
+|     2      | Postfix (unary)              | `++`, `--`<br>`()`<br>`[]`<br>`. ->`                                                            | postfix increment / decrement <br> functional forms <br> subscript <br >member access                                                                                                   | Left-to-right
+|     3      | Prefix (unary)               | `++`, `--`<br>`~`, `!`<br>`+`, `-`<br>`&`, `*`<br> `new`, `delete` <br> `sizeof` <br> `type`    | prefix increment / decrement <br> bitwise NOT / logical NOT <br> unary prefix <br> reference / dereference <br> allocation / deallocation <br> parameter pack <br> C-style type-casting | Right-to-left
+|     4      | Pointer-to-member            | `.*`, `->*`                                                                                     | access pointer                                                                                                                                                                          | Left-to-right
+|     5      | Arithmetic: scaling          | `*`, `/`, `%`                                                                                   | multiply, divide, modulo                                                                                                                                                                | Left-to-right
+|     6      | Arithmetic: addition         | `+`, `-`                                                                                        | addition, subtraction                                                                                                                                                                   | Left-to-right
+|     7      | Bitwise shift                | `<<`, `>>`                                                                                      | shift left, shift right                                                                                                                                                                 | Left-to-right
+|     8      | Relational                   | `<`, `>`, `<=`, `>=`                                                                            | comparison operators                                                                                                                                                                    | Left-to-right
+|     9      | Equality                     | `==`, `!=`                                                                                      | equality / inequality                                                                                                                                                                   | Left-to-right
+|    10      | And                          | `&`                                                                                             | bitwise AND                                                                                                                                                                             | Left-to-right
+|    11      | Exclusive or                 | `^`                                                                                             | bitwise XOR                                                                                                                                                                             | Left-to-right
+|    12      | Inclusive or                 | &#124;                                                                                          | bitwise OR                                                                                                                                                                              | Left-to-right
+|    13      | Conjunction                  | `&&`                                                                                            | logical AND                                                                                                                                                                             | Left-to-right
+|    14      | Disjunction                  | &#124;&#124;                                                                                    | logical OR                                                                                                                                                                              | Left-to-right
+|    15      | Assignment-level expressions | `=`, `*=`, `/=`, `%=`, `+=`, `-=` <br> `>>=`, `<<=`, `&=`, `^=`, &#124;= <br> `?:`              | assignment / compound assignment <br> <br> conditional operator                                                                                                                         | Right-to-left
+|    16      | Sequencing                   | `,`                                                                                             | comma separator                                                                                                                                                                         | Left-to-right
 
-//                                              ()                       functional forms                   
 
-//                                              []                     subscript                          
+**NOTE**:  
+When an expression has two operators with the same precedence level, 
+*grouping(associativity)* determines which one is evaluated first: either `left-to-right` or `right-to-left`. 
+*Enclosing all sub-statements in parentheses (even those unnecessary because of their precedence) improves code readability.*
 
-//                                              . ->                    member access                      
-
-//   3           Prefix (unary)                 ++ --                   prefix increment / decrement       Right-to-left
-
-//                                              ~ !                     bitwise NOT / logical NOT          
-
-//                                              + -                     unary prefix                       
-
-//                                              & *                     reference / dereference            
-
-//                                              new delete               allocation / deallocation          
-
-//                                              sizeof                   parameter pack                     
-
-//                                              (*type*)                 C-style type-casting               
-
-//   4           Pointer-to-member              .* ->*                access pointer                     Left-to-right
-
-//   5           Arithmetic: scaling            * / %                   multiply, divide, modulo           Left-to-right
-
-//   6           Arithmetic: addition           + -                     addition, subtraction              Left-to-right
-
-//   7           Bitwise shift                  << >>                shift left, shift right            Left-to-right
-
-//   8           Relational                     < > <= >=            comparison operators               Left-to-right
-
-//   9           Equality                       == !=                    equality / inequality              Left-to-right
-
-//   10          And                            &                        bitwise AND                        Left-to-right
-
-//   11          Exclusive or                   ^                       bitwise XOR                        Left-to-right
-
-//   12          Inclusive or                   |                       bitwise OR                         Left-to-right
-
-//   13          Conjunction                    &&                       logical AND                        Left-to-right
-
-//   14          Disjunction                    ||                     logical OR                         Left-to-right
-
-//   15          Assignment-level expressions   = *= /= %= += -=       assignment / compound assignment   Right-to-left
-//                                              >>= <<= &= ^= |=                                      
-
-//                                              ?:                       conditional operator               
-
-//   16          Sequencing                     ,                        comma separator                    Left-to-right
-//   ---------------------------------------------------------------------------------------------------------------------- -->
-
- **NOTE**:  When an expression has two operators with the same precedence level, *grouping(associativity)* determines which one is evaluated first: either left-to-right or right-to-left. 
-  *Enclosing all sub-statements in parentheses (even those unnecessary because of their precedence) improves code readability.* 
 
 ## **3.13 Debugging**
 
