@@ -129,6 +129,26 @@ if(age > 65 && gender == 'f')
 > <http://www.cs.uregina.ca/Links/class-info/110/selections/index.html>
 
 ## **3.4 Two-Way if-else Statements**
+If you want to perform an action if a specific condition happens you could use one-way if statement. 
+For example, if you want to increment a counter when number x is an even number 
+and do nothing when x is an odd number you could **use one-way if statement**:
+
+```cpp
+if(x % 2 == 0)
+    counter++;
+```
+However, if you want to increment the counter when the number is even and decrement 
+it when it is odd, you need to **use two-way if-else statement**:
+
+```cpp
+if(x % 2 == 0)
+    counter++;
+else
+    counter--;
+```
+
+![Two way if else statement diagram](../images/chapter_03/Two way if else statement diagram.png)
+
 
 ## **3.5 Nested if and Multi-Way if-else Statements**
 
