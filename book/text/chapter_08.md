@@ -5,11 +5,12 @@ style: chapter page-8
 order: 8
 ---
 
-# **8 Advance Topics**
+# **Advance Topics**
 
 ## **8.1 Introduction and Objectives**
 From chapter 1-7, you have learned the basics of the programming which will give you basic intuition on how programming logics are written using various concepts. In this chapter, you will learn some advanced topics like 2D arrays, object oriented programming concepts etc. This is to get you an understanding of real world problems we solve using programming. So, Lets start with 2D arrays.
-<http://www.cplusplus.com/articles/NAUq5Di1/>
+
+> <http://www.cplusplus.com/articles/NAUq5Di1/>
 
 ## **8.2Declaring Two-Dimensional Arrays**
 

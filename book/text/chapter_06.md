@@ -5,9 +5,9 @@ style: chapter page-6
 order: 6
 ---
 
-# Functions
+# **Functions**
 
-## Introduction and Objectives
+## **6.1 Introduction and Objectives**
 
 Functions allow to structure programs in segments of code to perform
 individual tasks.
@@ -17,7 +17,7 @@ which can be called from some point of the program
 
 > <http://www.cplusplus.com/doc/tutorial/functions/>
 
-## Defining and Calling a Function
+## **6.2 Defining and Calling a Function**
 
 The most common syntax to define a function is:
 
@@ -83,7 +83,7 @@ calls addition. The call to a function follows a structure very similar
 to its declaration. In the example above, the call to addition can be
 compared to its definition just a few lines earlier:
 
-![](media/image4.png)
+![alt text](../images/chapter_06/Picture1.png)
 
 The parameters in the function declaration have a clear correspondence
 to the arguments passed in the function call. The call passes two
@@ -117,7 +117,7 @@ statement that ended addition: in this particular case, the value of the
 local variable `r`, which at the moment of the return statement had a
 value of `8`.
 
-![](media/image5.png)
+![alt text](../images/chapter_06/Picture2.png)
 
 Therefore, the call to addition is an expression with the value returned
 by the function, and in this case, that value, `8`, is assigned to `z`. It
@@ -252,7 +252,7 @@ z = 2 + 4;
 > same as `z = subtraction (x, y) + 4;`
 
 
-## void Functions
+## **6.3 void Functions**
 
 The syntax shown above for functions:
 
@@ -325,7 +325,7 @@ printmessage;
 > <http://www.cs.uregina.ca/Links/class-info/110/functions/index-val-008_ggg.html>
 
 
-## Passing Arguments by Value
+## **6.4 Passing Arguments by Value**
 
 In the functions seen earlier, arguments have always been passed *by value*. 
 This means that, when calling a function, what is passed to the
@@ -346,7 +346,7 @@ has no effect on the values of the variables `x` and `y` outside it, because
 `x` and `y` were themselves not passed to the function on the call, but only
 copies of their values at that moment.
 
-![](media/image4.png)
+![](../images/chapter_06/Picture3.png)
 
 In certain cases, though, it may be useful to access an external
 variable from within a function. To do that, arguments can be passed *by reference*, 
@@ -384,7 +384,7 @@ x=2, y=6, z=14
 > <http://www.cs.uregina.ca/Links/class-info/110/functions/index-val-008_ggg.html>
 
 
-## Modularizing Code
+## **6.5 Modularizing Code**
 
 We have been building exceedingly small programs. When a program is
 small enough, we can keep all the details of the program in our heads at
@@ -410,9 +410,9 @@ together to form a working program without every developer needing to
 understand everything done by every other developer in the team. This is
 the key idea of modular programming.
 
-<https://www.cs.cornell.edu/courses/cs3110/2019sp/textbook/modules/modular_programming.html>
+> <https://www.cs.cornell.edu/courses/cs3110/2019sp/textbook/modules/modular_programming.html>
 
-## Overloading Functions
+## **6.6 Overloading Functions**
 
 In C++, two different functions can have the same name if their
 parameters are different; either because they have a different number of
@@ -477,7 +477,7 @@ Note that a function cannot be overloaded only by its return type. At
 least one of its parameters must have a different type.
 
 
-### Function templates
+### **6.7 Function templates**
 
 Overloaded functions may have the same definition. For example:
 
@@ -717,7 +717,7 @@ literals always produce values of type int, and floating-point literals
 always produce values of type double. Therefore `10` has always
 type int and `10.0` has always type double.
 
-### Non-type template arguments
+### **6.8 Non-type template arguments**
 
 The template parameters can not only include types introduced
 by class or typename, but can also include expressions of a particular
@@ -766,7 +766,7 @@ constant expression (it cannot be passed a variable).
 
 > <http://www.cplusplus.com/doc/tutorial/functions2/>
 
-## Function Declarations, Prototypes, Implementation, Definition
+## **6.9 Function Declarations, Prototypes, Implementation, Definition**
 
 Many people, when learning C++, seem to have some confusion about the
 distinction between and purpose of declarations and definitions.
@@ -774,7 +774,7 @@ Especially concerning functions or classes. To understand why all this
 seemingly pedantic and repetitive stuff is necessary, let's review the
 build process.
 
-![](media/image6.png)
+![](../images/chapter_06/Picture4.png)
 
 First, each .cpp file is compiled independently. During this process any
 `#include` directives will first insert the included file into the `.cpp`.
@@ -949,7 +949,7 @@ external addressing and finds multiple entities with the same name.
 
 > <http://www.cplusplus.com/articles/yAqpX9L8/>
 
-## Default Arguments
+## **6.8 Default Arguments**
 
 In C++, functions can also have optional parameters, for which no
 arguments are required in the call, in such a way that, for example, a
@@ -1010,7 +1010,7 @@ The call passes two arguments to the function. Therefore, the default
 value for `b` (`int b=2`) is ignored, and b takes the value passed as
 argument, that is `4`, yielding a result of `5`.
 
-## Inline Functions
+## **6.9 Inline Functions**
 
 In C, we have used Macro function an optimized technique used by
 compiler to reduce the execution time etc. So Question comes in mind
@@ -1152,7 +1152,7 @@ In gcc, you can also pass this in from the command-line with.-max-inline-insns-r
 > <http://www.cplusplus.com/articles/2LywvCM9/>
 
 
-## Local, Global, and Static Local Variables
+## **6.10 Local, Global, and Static Local Variables**
 
 In this section, we will learn about storage classes in C++.
 
@@ -1316,9 +1316,9 @@ function, and any modification on their corresponding local variables
 within the function are reflected in the variables passed as arguments
 in the call.
 
-![](media/image7.png){width="3.28125in" height="0.71875in"}
+![](media/image7.png)
 
-n fact, `a`, `b`, and `c` become aliases of the arguments passed on the
+in fact, `a`, `b`, and `c` become aliases of the arguments passed on the
 function call (`x`, `y`, and `z`) and any change on a within the function is
 actually modifying variable `x` outside the function. Any change
 on `b` modifies `y`, and any change on `c` modifies `z`. That is why when, in
@@ -1344,7 +1344,7 @@ program would have been the values of `x`, `y`, and `z` without being modifi
 
 > <http://www.cs.uregina.ca/Links/class-info/110/functions/index-ref-008_ggg.html>
 
-## Constant Reference Parameters
+## **6.11 Constant Reference Parameters**
 
 References used as function parameters can also be const. This allows us
 to access the argument without making a copy of it, while guaranteeing
@@ -1401,7 +1401,7 @@ extra indirection for a reference.
 
 > <https://www.learncpp.com/cpp-tutorial/6-11a-references-and-const/>
 
-## Case Study: Converting Hexadecimals to Decimals
+## **6.12 Case Study: Converting Hexadecimals to Decimals**
 
 Given with a hexadecimal number as an input, the task is to convert the
 given hexadecimal number into a decimal number.
@@ -1429,15 +1429,11 @@ To convert a hexadecimal number into a decimal number follow these steps
 Given below is the pictorial representation of converting a hexadecimal
 number into a decimal number.
 
-![](media/image8.jpeg){width="6.25in" height="4.333333333333333in"}
+![](../images/chapter_06/Picture5.png)
 
 ## Example
 
 Input:
-```text
-ACD
-```
-
 > `A(10)` will be converted to a decimal number by: `10 X 16^2 = 2560`
 
 > `C(12)` will be converted to a decimal number by: `12 X 16^1 = 192`
@@ -1543,7 +1539,7 @@ IF WE RUN THE ABOVE CODE IT WILL GENERATE FOLLOWING OUTPUT
 > <https://www.tutorialspoint.com/cplusplus-program-for-hexadecimal-to-decimal>
 
 
-## Function Abstraction and Stepwise Refinement
+## **6.13 Function Abstraction and Stepwise Refinement**
 
 Function Abstraction is a technique used in object-oriented programming
 where the function implemented provides only the high-level overview by
@@ -1569,7 +1565,7 @@ levels. Both concepts are necessary in developing software.
 
 > <https://www.cs.uct.ac.za/mit_notes/software/htmls/ch07s09.html>
 
-## Chapter Summary
+## **6.14 Chapter Summary**
 
 This chapter helps you in writing the modular programming using the
 functions where all the necessary topics are covered to declare, define
