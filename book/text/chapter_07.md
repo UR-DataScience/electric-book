@@ -4,15 +4,14 @@ subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-7
 order: 7
 ---
-# **Chapter 7**
 
 # **Single-Dimensional Arrays and C-Strings**
 
-## Introduction and Objectives
+## **7.1 Introduction and Objectives**
 
 > <http://www.cplusplus.com/doc/tutorial/arrays/>
 
-## Array Basics
+## **7.2 Array Basics**
 
 A **one-dimensional array** is a structured collection of components (often
 called array elements) that can be accessed individually by specifying
@@ -137,7 +136,7 @@ int age[] = {23, 56, 87, 92, 38, 12, 15, 6, 3};
 The compiler determines the size of the age array according to how many
 initial values are listed. Here, the size of the age array is `9`.
 
-**Example:** \
+**Example:** 
 This program adds two integer arrays and displays the arrays.
 
 ```cpp
@@ -188,7 +187,6 @@ int main ()
 }
 ```
 
-<!---
 > <http://www.cs.uregina.ca/Links/class-info/110/arrays/oneD_array_ggg.html>
 
 std::array is a container that encapsulates fixed size arrays.
@@ -209,9 +207,9 @@ calling front() or back() on a zero-sized array is undefined.
 
 An array can also be used as a tuple of N elements of the same type.
 
--   <https://en.cppreference.com/w/cpp/container/array>
---->
-## Passing Arrays to Functions
+>  <https://en.cppreference.com/w/cpp/container/array>
+
+## **7.3 Passing Arrays to Functions**
 
 Before we get into passing arrays, let's review the format for using
 functions.
@@ -238,6 +236,7 @@ int main()
   // e.g. max = ary[i];
 } // end function
 ```
+
 Now, let's take a closer look at how those arrays are passed. In C++,
 arrays are **not** passed by value to functions, they are **passed
 by reference**. Because of this, you do not have to use the & reference
@@ -262,7 +261,7 @@ getMax(ary, size);
 Notice that only the array name `ary` appears in the parameter list; it is
 not followed by any subscripts at all.
 
-Example:\
+**Example:**
 This program adds two integer arrays and displays the arrays.
 
 ```cpp
@@ -334,9 +333,10 @@ void add_arrays(int x[], int y[], int z[], int len)
   return;
 }
 ```
+
 > <http://www.cs.uregina.ca/Links/class-info/110/arrays/oneD_array_ggg.html>
 
-## Preventing Changes of Array Arguments in Functions
+## **7.4 Preventing Changes of Array Arguments in Functions**
 
 As we learned in the last section, there is no way to pass an array by
 value and not by reference. So, how we can prevent possible changes of
@@ -344,6 +344,7 @@ array arguments? One way to do so is passing the array as a **constant** to
 the function.
 
 For instance, if we have:
+
 ```cpp
 #include <iostream>
 
@@ -371,14 +372,16 @@ constant value which is impossible.
 
 You may try to return an array in you function. For example, you would
 write:
+
 ```cpp
 float[] calculateAreas(int x, int y)
 ```
+
 However, it is not a valid statement in C++.
 
 ## Searching Arrays
 
-**Linear search (O(n))**:\
+**Linear search (O(n))**:
 One of the approaches to search an array is **Linear Search**. In this
 approach you need to loop through the array and compare each element of
 the array to the value that you are looking for. This could be done by
@@ -387,13 +390,13 @@ using count controlled while loop or for loop.
 For instance, if we have an array of characters and we are looking for
 the index of character 'E' in the array, one of the possible solutions
 would be:
+
 ```cpp
 #include <iostream>
 
 using namespace std;
 
 int main()
-
 {
     char myArray[] = { 'A', 'b', 'E', 'e', 'c' };
     int index;
@@ -410,7 +413,8 @@ int main()
     return 0;
 }
 ```
-**Binary search (O(logn))**:\
+
+**Binary search (O(logn))**:
 Another possible approach is **Binary Search** which requires the array
 to be sorted.
 
@@ -465,7 +469,7 @@ Like before, we find the middle value:
 And compare the middle value with `X` which means `19` = `19`. So we found the
 index of `19` in the array.
 
-## Sorting Arrays
+## **7.6 Sorting Arrays**
 
 There are several various ways to sort an array. You could use sorting
 algorithms like *insertion sort*, *bubble sort*, *quick sort*. Also, there is
@@ -475,18 +479,18 @@ in `C++11` and higher compilers.
 The corresponding library to sort() function is `algorithm`. So, you
 would have `#include <algorithm>` at the top of your code.
 
-**About The Function**\
+**About The Function**
 So let's go dig into these and figure out what each does and why it does
 it.
 
-Found in \~ `#include <algorithm>`
+Found in ~ `#include <algorithm>`
 
-**Parameter 1** `myvector.begin()` \~ The first parameter is where you will be
+**Parameter 1** `myvector.begin()` ~ The first parameter is where you will be
 putting a iterator(Pointer) to the **first** element in the range that you
 want to sort. The sort will **include** the element that the iterator points
 to.
 
-**Parameter 2** `myvector.end()` \~ The second parameter is almost like the
+**Parameter 2** `myvector.end()` ~ The second parameter is almost like the
 first but instead of putting a iterator to the first element to sort you
 will be putting a iterator to the **last** element. One very important
 difference is that the search **won't include** the element that this
@@ -494,7 +498,7 @@ iterator points to. It is **[First,Last)** meaning it includes the first
 parameter in the sort but it doesn't include the second parameter in the
 sort.
 
-**Parameter 3** `myCompFunction() Optional` \~ I will only give a brief
+**Parameter 3** `myCompFunction() Optional` ~ I will only give a brief
 description here, because I will be explaining this parameter in more
 detail later. The third parameter is used to define how you do the
 search. For example if you have a struct that has 3 different variables
@@ -502,7 +506,7 @@ in it, how does the function know which one to sort? Or how does it know
 how it should sort it? This is what this parameter is for. I will
 explain this more in a bit.
 
-**Function Return** \~ This function doesn't return anything because it
+**Function Return** ~ This function doesn't return anything because it
 alters the container directly through iterators(Pointers).
 
 Array Example:
@@ -532,11 +536,12 @@ int main()
                                                               
   return 0;                                                                                                          
 }                                                      
-
 ```
--   <https://www.cplusplus.com/articles/NhA0RXSz/>
 
-## C-String
+>  <https://www.cplusplus.com/articles/NhA0RXSz/>
+
+## **7.7 C-String**
+
 `const char* c_str() const`. Get *C string* equivalent.
 
 Returns a *pointer* to an array that contains a *null-terminated* sequence
@@ -545,7 +550,7 @@ string object.
 
 This array includes the same sequence of characters that make up the
 value of the string object plus an additional terminating null-character
-('\\0') at the end. The pointer returned may be invalidated by further calls to other member
+('0') at the end. The pointer returned may be invalidated by further calls to other member
 functions that modify the object.
 
 **Parameters**: None
@@ -553,77 +558,67 @@ functions that modify the object.
 object's value.
 
 Example:
+
 ```cpp
 // strings and c-strings                                      
                                                                   
-#include <iostream>                                        
-#include <cstring>                                         
-#include <string>                                          
-                                                                  
-int main ()                                                   
-                                                                 
-{                                                             
-                                                                 
-  std::string str ("Please split this sentence into tokens");
-  char * cstr = new char [str.length()+1];
-  std::strcpy (cstr, str.c_str());
+#include <iostream>
+#include <cstring>
+#include <string>
 
-  // cstr now contains a c-string copy of str
-  char * p = std::strtok (cstr," ");
+int main ()
+{
+    std::string str ("Please split this sentence into tokens");
+    char * cstr = new char [str.length()+1];
+    std::strcpy (cstr, str.c_str());
 
-  while(p!=0)
-  {
-    std::cout << p << '\\n';
-    p = std::strtok(NULL," ");   
-  }
-  delete[] cstr;
-  return 0;
+    // cstr now contains a c-string copy of str
+    char * p = std::strtok (cstr," ");
+
+    while(p!=0)
+    {
+        std::cout << p << '\n';
+        p = std::strtok(NULL," ");
+    }
+    delete[] cstr;
+    return 0;
 }
 ```
 
 Output:
- >Please   
- >split    
- >this     
- >sentence 
- >into     
- >tokens   
 
+```text
+Please   
+split    
+this     
+sentence 
+into     
+tokens  
+```
 
--   <http://www.cplusplus.com/reference/string/string/c_str/>
+> <http://www.cplusplus.com/reference/string/string/c_str/>
 
-## Converting Numbers to Strings
+## **7.8 Converting Numbers to Strings**
 
 Returns a [string](http://www.cplusplus.com/string) with the
 representation of val.
-\
+
 The format used is the same
 that [printf](http://www.cplusplus.com/printf) would print for the
 corresponding type:
-**type of *val***    **printf equivalent**   **description**\
 
-  int                  "%d"                  Decimal-base representation of *val*.
-                                               The representations of negative values are preceded with a minus sign (-).
 
-  long                 "%ld                   
-
-  long long            "%lld                  
-
-  unsigned             "%u"                  Decimal-base representation of *val*.
-
-  unsigned long        "%lu                   
-
-  unsigned long long   "%llu                  
-
-  float                "%f"                  As many digits are written as needed to represent the integral part, followed by the decimal-point character and six decimal digits.
-                                               inf (or infinity) is used to represent *infinity*.
-                                               nan (followed by an optional sequence of characters) to represent NaNs (*Not-a-Number*).
-                                               The representations of negative values are preceded with a minus sign (-).
-
-  double               "%f                    
-
-  long double          "%Lf                   
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **type of val**      | **printf equivalent**  | **description**
+|----------------------|------------------------|-----------------------------
+| int                  | `%d`                   | Decimal-base representation of *val*. <br> The representations of negative values are preceded with a minus sign (-).
+| long                 | `%ld`                  |
+| long long            | `%lld`                 |
+| unsigned             | `%u`                   | Decimal-base representation of *val*.
+| unsigned long        | `%lu`                  |
+| unsigned long long   | `%llu`                 | 
+| float                | `%f`                   | As many digits are written as needed to represent the integral part, followed by the decimal-point character and six decimal digits. <br> inf (or infinity) is used to represent *infinity*. <br> nan (followed by an optional sequence of characters) to represent NaNs (*Not-a-Number*). <br> The representations of negative values are preceded with a minus sign (-). 
+| double               | `%f`                   |
+| long double          | `%Lf`                  | 
 
 Parameters
 
@@ -632,6 +627,10 @@ Val => Numerical value.
 Return Value => A [string](http://www.cplusplus.com/string) object
 containing the representation of val as a sequence of characters.
 
--   <http://www.cplusplus.com/reference/string/to_string/>
+> <http://www.cplusplus.com/reference/string/to_string/>
 
-## Chapter Summary
+## **7.9 Chapter Summary**
+All in all, in this chapter we learned about arrays. 
+At this point we know how declare an array, 
+how to pass it to a function, how to sort it, 
+and how to search for something in an array.
