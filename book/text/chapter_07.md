@@ -3,7 +3,6 @@ title: Programming and Problem Solving - Chapter 7
 subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-7
 ---
-# **Chapter 7**
 
 # **Single-Dimensional Arrays and C-Strings**
 
