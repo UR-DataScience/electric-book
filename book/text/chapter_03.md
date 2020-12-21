@@ -4,8 +4,6 @@ subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-3
 ---
 
-# **Chapter 3**
-
 # **Selections**
 
 ## **3.1 Introduction and Objectives**
