@@ -176,6 +176,7 @@ Camel case is a naming convention in which the first letter of each word
 is uppercase except for the first word. The rest of the letters are
 lower case. For example, `payRate`, `camelCase`, and `numberOfYears` are camelCase.
 
+![CamelCase](../images/chapter_02/330px-CamelCase_new.svg.png)
 
 > <https://en.wikipedia.org/wiki/Camel_case>
 
