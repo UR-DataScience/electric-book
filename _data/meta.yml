@@ -100,7 +100,7 @@ works:
           - "chapter_07": "Chapter 7"
           - "chapter_08": "Chapter 8"
         nav: # For each menu item, include at least label and file. Optionally add id (for deep linking) and children.
-          - label: "Chapter 2"
+          - label: "Chapter 2 - Elementary Programming"
             file: "chapter_02"
             children:
               - label: "Introduction and objectives"
@@ -148,7 +148,7 @@ works:
               - label: "Chapter Summary"
                 file: "chapter_02"
                 id: "215-chapter-summary"
-          - label: "Chapter 3 | Selections"
+          - label: "Chapter 3 - Selections"
             file: "chapter_03"
             childern:
               - label: "Introduction and Objectives"
@@ -193,7 +193,7 @@ works:
               - label: "Chapter Summary"
                 file: "chapter_03"
                 id: "314-chapter-summary"
-          - label: "Chapter 4 | Mathematical Functions, Characters, and Strings"
+          - label: "Chapter 4 - Mathematical Functions, Characters, and Strings"
             file: "chapter_04"
             children:
               - label: "Introduction and Objectives"
@@ -220,7 +220,7 @@ works:
               - label: "Chapter Summary"
                 file: "chapter_04"
                 id: "48-chapter-summary"
-          - label: "Chapter 5 | Loops"
+          - label: "Chapter 5 - Loops"
             file: "chapter_05"
             children:
               - label: "Introduction and Objectives"
@@ -259,7 +259,7 @@ works:
               - label: "Chapter Summary"
                 file: "chapter_05"
                 id: "512-chapter-summary"
-          - label: "Chapter 6 | Functions"
+          - label: "Chapter 6 - Functions"
             file: "chapter_06"
             children:
               - label: "Introduction and Objectives"
@@ -304,7 +304,7 @@ works:
               - label: "Chapter Summary"
                 file: "chapter_06"
                 id: "614-chapter-summary"
-          - label: "Chapter 7 | Single-Dimensional Arrays and C-Strings"
+          - label: "Chapter 7 - Single-Dimensional Arrays and C-Strings"
             file: "chapter_07"
             childern:
               - label: "Introduction and Objectives"
@@ -334,7 +334,7 @@ works:
               - label: "Chapter Summary"
                 file: "chapter_07"
                 id: "79-chapter-summary"
-          - label: "Chapter 8 | Advance Topics"
+          - label: "Chapter 8 - Advance Topics"
             file: "chapter_08"
             childern:
               - label: "Introduction and Objectives"
