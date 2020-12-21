@@ -4,8 +4,6 @@ subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-8
 ---
 
-# **Chapter 8**
-
 # **8 Advance Topics**
 
 ## **8.1 Introduction and Objectives**
@@ -23,7 +21,7 @@ stored within a vector do not need to be de-allocated (but pointers to
 objects do).
 You can also do some interesting things with dynamic multi-dimensional
 arrays with vectors. For example, if you only allocate the first
-dimension, then use the .push_back() to add records to the 2nd dimension
+dimension, then use the `.push_back()` to add records to the 2nd dimension
 it's no longer a grid, but an array with a dynamically sized 2nd
 dimension (much like a street of buildings each with a different amount
 of floors). This functionality can be achieved using pointers, but is
