@@ -6,5 +6,5 @@
 
                                                                            **Dr. Alireza Manashty**
 
-                                                                            University of Regina
+![](../../.gitbook/assets/ur_logo_primary_full_colour_rgb%20%281%29.jpg)
 
