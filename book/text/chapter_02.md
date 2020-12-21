@@ -28,10 +28,6 @@ int main()
     return 0;
 }
 ```
-<!---
-> Author: Ada Lovelace  
-> Purpose: Demonstrate Basic I/O operation by inputting a number and outputting the number just entered.
---->
 
 Try it yourself:
 
@@ -110,6 +106,8 @@ For instance, length and \_width1 are legal identifiers, while 1length and width
 **NOTE**: C++ is case sensitive. It means length, Length, and LEngTh are all different.
 
 **camelCase**: Camel case is a naming convention in which the first letter of each word is uppercase except for the first word. The rest of the letters are lower case. For example, `payRate`, `camelCase`, and `numberOfYears` are camelCase.
+
+![](../../.gitbook/assets/330px-camelcase_new.svg.png)
 
 > [https://en.wikipedia.org/wiki/Camel\_case](https://en.wikipedia.org/wiki/Camel_case)
 >

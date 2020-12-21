@@ -9,5 +9,5 @@ style: copyright-page
 
 {:.non-printing}
 
-\ Text © 
+ Text ©
 
