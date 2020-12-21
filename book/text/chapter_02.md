@@ -28,9 +28,10 @@ int main()
     return 0;
 }
 ```
-
+<!---
 > Author: Ada Lovelace  
 > Purpose: Demonstrate Basic I/O operation by inputting a number and outputting the number just entered.
+--->
 
 Try it yourself:
 
