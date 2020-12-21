@@ -4,17 +4,15 @@ subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-2
 ---
 
-# **Chapter 2**
-
 # **Elementary Programming**
 
-## Introduction and Objectives
+## **2.1 Introduction and Objectives**
 
 In this chapter you will learn how to solve a problem with programming.
 You will learn how to read input and use identifiers, variables, and
 expressions.
 
-## **Writing a Simple Program** 
+## **2.2 Writing a Simple Program** 
 
 Let's examine the following C++ program. We have numbered the lines so
 that we can discuss them easily.
@@ -106,7 +104,7 @@ in `""` quotation marks.
 
 -   `// end program` - a single line comment.
 
-## **Reading Input from the Keyboard**
+## **2.3 Reading Input from the Keyboard**
 
 Imagine we want to write a program to calculate the area of a
 rectangle with length of `x` and width of `y`. The first step to calculate
@@ -140,7 +138,7 @@ cin >> x >> y;
 
 > <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
-## **Identifiers**
+## **2,4 Identifiers**
 
 There are two main parts in a C++ program:
 
@@ -183,7 +181,7 @@ lower case. For example, `payRate`, `camelCase`, and `numberOfYears` are camelCa
 
 > <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
-## **Variables**
+## **2.5 Variables**
 
 Variables are named memory locations that have a type, such as an
 integer or character, and consequently, a size, which is inherited from
@@ -233,7 +231,7 @@ However, a variable can be used only **after its value is set**.
 
 > <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
-## **Assignment Statements and Assignment Expressions**
+## **2.6 Assignment Statements and Assignment Expressions**
 
 You need to know the definition of an **arithmetic expression** and the
 **precedence** of the operators.
@@ -244,7 +242,7 @@ combined into expressions using arithmetic operators.
 
 > <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
-## **Named Constants**
+## **2.7 Named Constants**
 
 We can also declare our initialized variable as a *constant*, by adding
 the type qualifier `const` before the definition. The general format for a
@@ -266,7 +264,7 @@ const double pi = 3.1415926536;
 > <http://www.cplusplus.com/doc/tutorial/constants/>
 
 
-## **Numeric Data Types and Operations**
+## **2.8 Numeric Data Types and Operations**
 
 A *data type* is a set of values and a set of operations on these values.
 In the preceding program, we used the data type `int` which is an
@@ -310,7 +308,7 @@ The arithmetic operators are listed in the following table:
 > <https://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
 
-## **Evaluating Expressions and Operator Precedence**
+## **2.9 Evaluating Expressions and Operator Precedence**
 
 The precedence rules of arithmetic apply to arithmetic expressions in a
 program. That is, the order of execution of an expression that contains
@@ -398,7 +396,7 @@ Output:
 
 > <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
-## **Augmented Assignment Operators**
+## **2.10 Augmented Assignment Operators**
 
 Assignment operators **modify** the value of the object.
 
@@ -564,7 +562,7 @@ Try it Yourself:
 
 >  <https://en.cppreference.com/w/cpp/language/operator_assignment>
 
-## **Increment and Decrement Operators**
+## **2.11 Increment and Decrement Operators**
 
 Increment/decrement operators increment or decrement the value of the object.
 
@@ -720,7 +718,7 @@ Try it Yourself:
 > <http://www.cplusplus.com/doc/tutorial/operators/>
 
 
-## **Numeric Type Conversions**
+## **2.12 Numeric Type Conversions**
 
 If an integral and a floating point variable or constant are mixed in an
 operation, the integral value is changed *temporarily* to its equivalent
@@ -757,14 +755,11 @@ explicit operator conversion-type-id **(2)** (since C++11)
 explicit ( expression ) operator conversion-type-id **(3)** (since C++20)
 ```
 
-1. Declares a user-defined conversion function that participates in **all
-implicit and explicit** conversions.
+1. Declares a user-defined conversion function that participates in **all implicit and explicit** conversions.
 
-2. Declares a user-defined conversion function that participates in
-**direct-initialization and explicit** conversions only.
+2. Declares a user-defined conversion function that participates in **direct-initialization and explicit** conversions only.
 
-3. Declares a user-defined conversion function that is **conditionally
-explicit**.
+3. Declares a user-defined conversion function that is **conditionally explicit**.
 
 
 *conversion-type-id* is a *type-id* except that function and array operators
@@ -904,7 +899,7 @@ int main()
 
 > <https://en.cppreference.com/w/cpp/language/cast_operator>
 
-## **Software Development Process**
+## **2.13 Software Development Process**
 
 In software engineering, a software development process is the process
 of dividing software development work into distinct phases to **improve
@@ -929,7 +924,7 @@ cycle.
 
 > <https://en.wikipedia.org/wiki/Software_development_process>
 
-## **Common Errors**
+## **2.14 Common Errors**
 
 -   Type conversion
 
@@ -937,13 +932,12 @@ cycle.
 
 -   Lack of using parentheses and getting the wrong Boolean expression
 
--   Forgetting ";" at the end of the lines that is needed
+-   Forgetting `;` at the end of the lines that is needed
 
 -   Inappropriate variable initialization
 
-## **Chapter Summary** 
+## **2.15 Chapter Summary** 
 
 All in all, now we know how a simple C++ program looks like. Also, we
 know how to declare variables, get them from user, and how to write
 expressions using them and operators.
-
