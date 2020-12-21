@@ -12,7 +12,7 @@ From chapter 1-7, you have learned the basics of the programming which will give
 
 > <http://www.cplusplus.com/articles/NAUq5Di1/>
 
-## **8.2Declaring Two-Dimensional Arrays**
+## **8.2 Declaring Two-Dimensional Arrays**
 
 **Vector based multi-dimensional arrays**- Vectors are a STL container
 that allow you to store pretty much anything in them. When used
@@ -193,21 +193,22 @@ functions as members.
 An *object* is an instantiation of a class. In terms of variables, a
 class would be the type, and an object would be the variable.
 
-Classes are defined using either keyword ```class``` or keyword ```struct```, with
+Classes are defined using either keyword `class` or keyword `struct`, with
 the following syntax:
 
 ```cpp
- class class_name {  
+class class_name
+{
+    access_specifier_1:member1;            
                      
- access_specifier_1:member1;            
-                     
- access_specifier_2:member2;            
+    access_specifier_2:member2;            
                    
- ...                                  
- } object_names;     
+    ...
+
+} object_names;     
 ```
 
-Where ```class_name``` is a valid identifier for the class, ```object_names``` is an
+Where `class_name` is a valid identifier for the class, `object_names` is an
 optional list of names for objects of this class. The body of the
 declaration can contain *members*, which can either be data or function
 declarations, and optionally *access specifiers*.
@@ -215,104 +216,111 @@ declarations, and optionally *access specifiers*.
 Classes have the same format as plain *data structures*, except that
 they can also include functions and have these new things called *access
 specifiers*. An *access specifier* is one of the following three
-keywords: ```private```, ```public``` or ```protected```. These specifiers modify the
+keywords: `private`, `public` or `protected`. These specifiers modify the
 access rights for the members that follow them:
 
--   ```private``` members of a class are accessible only from within other
+-   `private` members of a class are accessible only from within other
     members of the same class (or from their *"friends"*).
 
--   ```protected``` members are accessible from other members of the same
+-   `protected` members are accessible from other members of the same
     class (or from their *"friends"*), but also from members of their
     derived classes.
 
--   Finally, ```public``` members are accessible from anywhere where the
+-   Finally, `public` members are accessible from anywhere where the
     object is visible.
 
-By default, all members of a class declared with the ```class``` keyword have
+By default, all members of a class declared with the `class` keyword have
 private access for all its members. Therefore, any member that is
 declared before any other *access specifier* has private access
 automatically. For example:
 
 ```cpp
-  class Rectangle {                                          
-  int width, height;                                        
-  public:                                                  
-     void set_values (int,int);                                
-     int area (void);              
-                                   
-     } rect;                       
+class Rectangle
+{
+    int width, height;
+
+    public:
+        void set_values (int,int);
+        int area (void);
+} rect;                       
 ```
 
-Declares a class (i.e., a type) called ```Rectangle``` and an object (i.e., a
-variable) of this class, called ```rect```. This class contains four members:
-two data members of type *int* (member ```width``` and member ```height```)
+Declares a class (i.e., a type) called `Rectangle` and an object (i.e., a
+variable) of this class, called `rect`. This class contains four members:
+two data members of type *int* (member `width` and member `height`)
 with *private access* (because private is the default access level) and
 two member functions with *public access*: the
 functions *set_values* and *area*, of which for now we have only included
 their declaration, but not their definition.
 
 Notice the difference between the *class name* and the *object name*: In
-the previous example, ```Rectangle``` was the *class name* (i.e., the type),
-whereas ```rect``` was an object of type Rectangle. It is the same
+the previous example, `Rectangle` was the *class name* (i.e., the type),
+whereas `rect` was an object of type Rectangle. It is the same
 relationship *int* and a have in the following declaration:
 
-  ```
-      int a;   
-  ```
+```cpp
+int a;
+```
 
 where *int* is the type name (the class) and *a* is the variable name (the
 object).
 
 After the declarations of *Rectangle* and *rect*, any of the public members
 of object *rect* can be accessed as if they were normal functions or
-normal variables, by simply inserting a ```dot(.)``` between *object
+normal variables, by simply inserting a `dot(.)` between *object
 name* and *member name*. This follows the same syntax as accessing the
 members of plain data structures. For example:
 
 ```cpp
-  rect.set_values (3,4);                                
-  myarea = rect.area();     
+rect.set_values(3,4);
+myarea = rect.area();     
 ```
 
-The only members of ```rect``` that cannot be accessed from outside the class
-are ```width``` and ```height```, since they have private access and they can only
+The only members of `rect` that cannot be accessed from outside the class
+are `width` and `height`, since they have private access and they can only
 be referred to from within other members of that same class.
 
 Here is the complete example of class Rectangle:
 
 ```cpp
-   // classes example                    
-                                                   
-   #include <iostream>                                              
-   using namespace std;                                                                                       
-   class Rectangle {                                                                                     
-   int width, height;                                       
+// classes example
+
+
+#include <iostream>
+
+using namespace std;
+
+class Rectangle
+{
+    int width, height;                                       
                                                            
-  public:                                                  
-    void set_values (int,int);                                               
-                                                           
-  int area() {
-    return width*height;
-    }                                          
-                                                           
-  };                                                       
-                                                           
-  void  Rectangle::set_values (int x, int y)
-   {                                                                                                  
-      width = x;                                                                                               
-      height = y;                                                                                         
-      }                                                        
-                                                               
-      int main () {                                                                                          
-      Rectangle rect;                                                                                       
-      rect.set_values (3,4);                                                                                
-      cout << "area: " << rect.area();                                                                        
-      return 0;                                                
-                                                               
-  }                                                        
+    public:
+        void set_values (int, int);
+        int area()
+        {
+            return width*height;
+        }
+};
+
+void  Rectangle::set_values (int x, int y)
+{
+    width = x;
+    height = y;
+}
+
+int main()
+{
+    Rectangle rect;
+    rect.set_values(3, 4);
+    cout << "area: " << rect.area();
+    return 0;                                                  
+}
 ```
-```cpp
-Output: area: 12 
+
+Output: 
+
+```text
+area: 12 
 ```
 This example reintroduces the *scope operator* (::, two colons), seen in
 earlier chapters in relation to namespaces. Here it is used in the
@@ -358,51 +366,49 @@ important that values cannot be modified in an unexpected way
 The most important property of a class is that it is a type, and as
 such, we can declare multiple objects of it. For example, following with
 the previous example of class Rectangle, we could have declared the
-object ```rectb``` in addition to object ```rect```:
+object `rectb` in addition to object `rect`:
 
 ```cpp
-   // example: one class, two objects               
-                                      
-   #include<iostream>                                         
-                                                        
-   using namespace std;                                                 
-                                                       
-  class Rectangle 
-  {                                                                                       
-  int width,height;                                              
-                                                       
-  public:                                                                                                  
-  void set_values(int,int);                                           
-                                                       
-  int area ()                                          
-  {
-    return width*height;
-    }                                      
-                                                       
-  };                                                   
-                                                           
-  void Rectangle::set_values(int x, int y)
-   {                                                                                          
-      width = x;                                                                                            
-      height = y;                                                                                             
-   }                                                    
-                                                           
-      int main ()
-       {                                        
-                                                           
-      Rectangle rect, rectb;                                               
-                                                           
-      rect.set_values (3,4);                                               
-                                                           
-      rectb.set_values (5,6);                                               
-                                                           
-      cout << "rect area: " << rect.area() << endl;                                             
-      cout << "rectb area: " << rectb.area()                                                    
-      return 0;                                                                                               
-      }
+// example: one class, two objects
+
+
+#include<iostream>                                         
+
+using namespace std;                                                 
+
+class Rectangle
+{
+    int width,height;                                              
+
+    public:
+        void set_values(int,int);                                           
+        int area ()
+        {
+            return width*height;
+        }                                              
+};
+
+void Rectangle::set_values(int x, int y)
+{
+    width = x;
+    height = y;
+}
+
+int main()
+{
+    Rectangle rect, rectb;                                               
+    rect.set_values (3,4);                                               
+    rectb.set_values (5,6);                                               
+    
+    cout << "rect area: " << rect.area() << endl;
+    cout << "rectb area: " << rectb.area()
+    return 0;                                                                                               
+}
 ```
-```cpp    
-output:                                                
+
+Output:
+
+```text                                                
 rect area: 12
 rectb area: 30
 ```
@@ -410,8 +416,8 @@ In this particular case, the class (type of the objects) is Rectangle,
 of which there are two instances (i.e., objects): rect and rectb. Each
 one of them has its own member variables and member functions.
 
-Notice that the call to rect.area() does not give the same result as the
-call to rectb.area(). This is because each object of class Rectangle has
+Notice that the call to `rect.area()` does not give the same result as the
+call to `rectb.area()`. This is because each object of class Rectangle has
 its own variables width and height, as they -in some way- have also
 their own function members set_value and area that operate on the
 object's own member variables.
@@ -420,9 +426,9 @@ Classes allow programming using object-oriented paradigms: Data and
 functions are both members of the object, reducing the need to pass and
 carry handlers or other state variables as arguments to functions,
 because they are part of the object whose member is called. Notice that
-no arguments were passed on the calls to rect.area or rectb.area. Those
+no arguments were passed on the calls to `rect.area` or `rectb.area`. Those
 member functions directly used the data members of their respective
-objects rect and rectb.
+objects `rect` and `rectb`.
 
 > <http://www.cplusplus.com/doc/tutorial/classes/>
 
@@ -445,16 +451,22 @@ return type; not even void.
 
 The Rectangle class above can easily be improved by implementing a
 constructor:
+
 ```cpp
 // example: class constructor
+
+
 #include <iostream>
+
 using namespace std;
 
-class Rectangle {
+class Rectangle
+{
     int width, height;
-  public:
-    Rectangle (int,int);
-    int area () {return (width*height);}
+    
+    public:
+        Rectangle (int,int);
+        int area () {return (width*height);}
 };
 
 Rectangle::Rectangle (int a, int b) {
@@ -469,8 +481,11 @@ int main () {
   cout << "rectb area: " << rectb.area() << endl;
   return 0;
 }
- ```                                      
-```cpp
+```
+
+Output:
+                                   
+```text
 rect area: 12
 rectb area: 30  
 ```
@@ -484,8 +499,8 @@ Notice how these arguments are passed to the constructor at the moment
 at which the objects of this class are created:
 
 ```cpp
-  Rectangle rect (3,4);     
-  Rectangle rectb (5,6);    
+Rectangle rect (3,4);
+Rectangle rectb (5,6);    
 ```
 
 Constructors cannot be called explicitly as if they were regular member
@@ -503,48 +518,60 @@ Like any other function, a constructor can also be overloaded with
 different versions taking different parameters: with a different number
 of parameters and/or parameters of different types. The compiler will
 automatically call the one whose parameters match the arguments:
+
 ```cpp
 // overloading class constructors
+
+
 #include <iostream>
+
 using namespace std;
 
-class Rectangle {
+class Rectangle
+{
     int width, height;
-  public:
-    Rectangle ();
-    Rectangle (int,int);
-    int area (void) {return (width*height);}
+
+    public:
+        Rectangle ();
+        Rectangle (int,int);
+        int area (void) {return (width*height);}
 };
 
-Rectangle::Rectangle () {
-  width = 5;
-  height = 5;
+Rectangle::Rectangle()
+{
+    width = 5;
+    height = 5;
 }
 
-Rectangle::Rectangle (int a, int b) {
-  width = a;
-  height = b;
+Rectangle::Rectangle(int a, int b)
+{
+    width = a;
+    height = b;
 }
 
-int main () {
-  Rectangle rect (3,4);
-  Rectangle rectb;
-  cout << "rect area: " << rect.area() << endl;
-  cout << "rectb area: " << rectb.area() << endl;
-  return 0;
+int main()
+{
+    Rectangle rect (3,4);
+    Rectangle rectb;
+    cout << "rect area: " << rect.area() << endl;
+    cout << "rectb area: " << rectb.area() << endl;
+    return 0;
 }
-                                           
 ```
-```cpp
+
+Output:
+
+```text
 rect area: 12
 rectb area: 25  
 ```
+
 In the above example, two objects of class Rectangle are
 constructed: rect and rectb. rect is constructed with two arguments,
 like in the example before.
 
 But this example also introduces a special kind constructor:
-the *default constructor*. The ```default constructor``` is the constructor
+the *default constructor*. The `default constructor` is the constructor
 that takes no parameters, and it is special because it is called when an
 object is declared but is not initialized with any arguments. In the
 example above, the *default constructor* is called for *rectb*. Note
@@ -552,33 +579,36 @@ how *rectb* is not even constructed with an empty set of parentheses - in
 fact, empty parentheses cannot be used to call the default constructor:
 
 ```cpp
-  Rectangle rectb;   // ok, default constructor called
-  Rectangle rectc(); // oops, default constructor NOT called 
-  
+Rectangle rectb;   // ok, default constructor called
+Rectangle rectc(); // oops, default constructor NOT called   
 ```
 
-This is because the empty set of parentheses would make of ```rectc``` a
+This is because the empty set of parentheses would make of `rectc` a
 function declaration instead of an object declaration: It would be a
 function that takes no arguments and returns a value of type Rectangle.
 
 ### **8.7.3 Uniform initialization**
 
 The way of calling constructors by enclosing their arguments in
-parentheses, as shown above, is known as ```functional form```. But
+parentheses, as shown above, is known as `functional form`. But
 constructors can also be called with other syntaxes:
 
 First, constructors with a single parameter can be called using the
 variable initialization syntax (an equal sign followed by the
 argument):
-```
+
+```cpp
 class_name object_name = initialization_value;
 ```
+
 More recently, C++ introduced the possibility of constructors to be
 called using *uniform initialization*, which essentially is the same as
-the functional form, but using braces ({}) instead of parentheses (()):
-```
+the functional form, but using braces (`{}`) instead of parentheses (`()`):
+
+```cpp
 class_name object_name { value, value, value, ... }
 ```
+
 Optionally, this last syntax can include an equal sign before the
 braces.
 
@@ -586,38 +616,49 @@ Here is an example with four ways to construct objects of a class whose
 constructor takes a single parameter:
 
 ```cpp
-   // classes and uniform initialization
+// classes and uniform initialization
+
+
 #include <iostream>
+
 using namespace std;
 
-class Circle {
+class Circle 
+{
     double radius;
-  public:
-    Circle(double r) { radius = r; }
-    double circum() {return 2*radius*3.14159265;}
+
+    public:
+        Circle(double r) { radius = r; }
+        double circum() {return 2*radius*3.14159265;}
 };
 
-int main () {
-  Circle foo (10.0);   // functional form
-  Circle bar = 20.0;   // assignment init.
-  Circle baz {30.0};   // uniform init.
-  Circle qux = {40.0}; // POD-like
+int main()
+{
+    Circle foo (10.0);   // functional form
+    Circle bar = 20.0;   // assignment init.
+    Circle baz {30.0};   // uniform init.
+    Circle qux = {40.0}; // POD-like
 
-  cout << "foo's circumference: " << foo.circum() << '\n';
-  return 0;
+    cout << "foo's circumference: " << foo.circum() << '\n';
+    return 0;
 }
 ```
-```cpp
-output: foo's circumference: 62.8319
+
+output:
+
+```text
+foo's circumference: 62.8319
 ```
+
 An advantage of uniform initialization over functional form is that,
 unlike parentheses, braces cannot be confused with function
 declarations, and thus can be used to explicitly call default
 constructors:
+
 ```cpp
-     Rectangle rectb; // default constructor called 3  
-     Rectangle rectc(); // function declaration (default constructor called)                                                                                                  
-    Rectangle rectd{}; // default constructor called             
+Rectangle rectb; // default constructor called 3
+Rectangle rectc(); // function declaration (default constructor called)
+Rectangle rectd{}; // default constructor called             
 ```
 
 The choice of syntax to call constructors is largely a matter of style.
@@ -632,32 +673,41 @@ type.
 When a constructor is used to initialize other members, these other
 members can be initialized directly, without resorting to statements in
 its body. This is done by inserting, before the constructor's body, a
-```colon (:)``` and a list of initializations for class members. For example,
+`colon (:)` and a list of initializations for class members. For example,
 consider a class with the following declaration:
 
 ```cpp
-  class Rectangle {                     
-                                        
-  int width,height;                     
-                                        
-  public:                                                                  
-     Rectangle(int,int);                                                        
-     int area() {return width*height;}                                          
-     };                                    
+class Rectangle
+{
+    int width, height;
+
+    public:
+        Rectangle(int,int);                                                        
+        
+        int area() 
+        {
+            return width*height;
+        }                                          
+};                                    
 ```
 
 The constructor for this class could be defined, as usual, as:
-  ```cpp
-      Rectangle::Rectangle (int x, int y) { width=x; height=y; }   
-  ```
+
+```cpp
+Rectangle::Rectangle (int x, int y) { width=x; height=y; }
+```
+
 But it could also be defined using *member initialization* as:
-  ```cpp
-      Rectangle::Rectangle (int x, int y) : width(x) { height=y; }   
-  ```
+
+```cpp
+Rectangle::Rectangle (int x, int y) : width(x) { height=y; }
+```
+
 Or even:
- ```cpp
-      Rectangle::Rectangle (int x, int y) : width(x), height(y) { }   
-  ```
+
+```cpp
+Rectangle::Rectangle (int x, int y) : width(x), height(y) { }
+```
 
 Note how in this last case, the constructor does nothing else than
 initialize its members, hence it has an empty function body.
@@ -675,8 +725,11 @@ a default constructor). In these cases, members shall be initialized in
 the member initialization list. For example:
 
 ```cpp
-  // member initialization
+// member initialization
+
+
 #include <iostream>
+
 using namespace std;
 
 class Circle {
@@ -694,30 +747,32 @@ class Cylinder {
     double volume() {return base.area() * height;}
 };
 
-int main () {
+int main()
+{
   Cylinder foo (10,20);
 
   cout << "foo's volume: " << foo.volume() << '\n';
   return 0;
-}
-                                             
-```
-```cpp
-output: 
+}```
+
+output:
+
+```text 
 foo's volume: 6283.19
 ```
-In this example, class ```Cylinder``` has a member object whose type is
+
+In this example, class `Cylinder` has a member object whose type is
 another class (base's type is *Circle*). Because objects of
 class Circle can only be constructed with a parameter, Cylinder's
 constructor needs to call *base's* constructor, and the only way to do
 this is in the *member initializer list*.
 
 These initializations can also use uniform initializer syntax, using
-braces {} instead of parentheses ():
+braces `{}` instead of parentheses `()`:
 
-  ```cpp
-      Cylinder::Cylinder (double r, double h) : base{r}, height{h} { }   
-  ```
+```cpp
+Cylinder::Cylinder (double r, double h) : base{r}, height{h} { }
+```
 
 ### **8.7.5 Pointers to classes**
 
@@ -725,18 +780,22 @@ Objects can also be pointed to by pointers: Once declared, a class
 becomes a valid type, so it can be used as the type pointed to by a
 pointer. For example:
 
-  ```cpp
-      Rectangle * prect;   
-  ```
-is a pointer to an object of class ```Rectangle```.
+```cpp
+Rectangle * prect;   
+```
+
+is a pointer to an object of class `Rectangle`.
 
 Similarly as with plain data structures, the members of an object can be
-accessed directly from a pointer by using the arrow ```operator (->)```. Here
+accessed directly from a pointer by using the arrow `operator (->)`. Here
 is an example with some possible combinations:
 
 ```cpp
-   // pointer to classes example
+// pointer to classes example
+
+
 #include <iostream>
+
 using namespace std;
 
 class Rectangle {
@@ -761,10 +820,9 @@ int main() {
   delete bar;
   delete[] baz;
   return 0;
-}	
-                                                       
-
+}
 ```
+
 This example makes use of several operators to operate on objects and
 pointers (operators *, &, ., ->, []). They can be interpreted as:
 <dl>
@@ -797,10 +855,11 @@ pointers (operators *, &, ., ->, []). They can be interpreted as:
  <tr><td>x[n]</td><td>(n+1)th object pointed to by x</td></tr>
 </tbody></table>
 </dl>
+
 Most of these expressions have been introduced in earlier chapters. Most
-notably, the chapter about arrays introduced the offset operator ([])
+notably, the chapter about arrays introduced the offset operator (`[]`)
 and the chapter about plain data structures introduced the arrow
-operator (->).
+operator (`->`).
 
 ## **8.8 Inline Functions in Classes**
 
@@ -819,7 +878,7 @@ normal function.
 To make any function as inline, start its definitions with the keyword
 "inline".
 
-Example --
+Example:
 ```cpp
 Class A
 {
@@ -918,7 +977,7 @@ its limit with inline_depth.
 In gcc, you can also pass this in from the command-line with
 --max-inline-insns-recursive
 
-<https://www.cplusplus.com/articles/2LywvCM9/>
+> <https://www.cplusplus.com/articles/2LywvCM9/>
 
 ## **8.9 Data Field Encapsulation**
 

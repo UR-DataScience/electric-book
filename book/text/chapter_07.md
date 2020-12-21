@@ -379,7 +379,7 @@ float[] calculateAreas(int x, int y)
 
 However, it is not a valid statement in C++.
 
-## Searching Arrays
+## **7.5 Searching Arrays**
 
 **Linear search (O(n))**:
 One of the approaches to search an array is **Linear Search**. In this

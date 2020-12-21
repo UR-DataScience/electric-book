@@ -1,4 +1,4 @@
----
+_---
 title: Programming and Problem Solving Chapter 4
 subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
 style: chapter page-4
@@ -94,11 +94,11 @@ computes cubic root ($sqrt{x}$)
  - If no errors occur, the cubic root of arg ($sqrt[3]{arg}$), is returned.
  - If a range error occurs due to underflow, the correct result (after rounding) is returned.
 
-<https://en.cppreference.com/w/cpp/numeric/math/cbrt
+> <https://en.cppreference.com/w/cpp/numeric/math/cbrt>
 
-<http://www.cplusplus.com/reference/cmath/
+> <http://www.cplusplus.com/reference/cmath/>
 
-## 4.3 Character Data Type and Operations
+## **4.3 Character Data Type and Operations**
 
 -   `signed char` - type for *signed character* representation.
 
@@ -186,11 +186,11 @@ certain category:
 
 Two functions that convert between letter cases:
 
-  tolower   Convert uppercase letter to lowercase (function )
+  tolower   Convert uppercase letter to lowercase (function)
   --------- ---------------------------------------------------
-  toupper   Convert lowercase letter to uppercase (function )
+  toupper   Convert lowercase letter to uppercase (function)
 
-<http://www.cplusplus.com/reference/cctype/
+> <http://www.cplusplus.com/reference/cctype/>
 
 ## **4.5 The string Type**
 
@@ -354,7 +354,7 @@ str1 += "there";
 
 > <http://www.cs.uregina.ca/Links/class-info/110/fileio/index.html>
 
-## 4.6 Formatting Console Output
+## **4.6 Formatting Console Output**
 
 There are two ways to get input into our programs. First, we use `istream`
 variable cin together with the extraction operator  to get data from
@@ -481,9 +481,9 @@ does not skip the leading whitespace character(s). It stops when a new
 line character 'n' is encountered. getline is a function from C++
 standard library.
 
- <http://www.cs.uregina.ca/Links/class-info/110/strings/index_oldtext.html
+> <http://www.cs.uregina.ca/Links/class-info/110/strings/index_oldtext.html>
 
-## 4.7 Simple File Input and Output
+## **4.7 Simple File Input and Output**
 
 If you want to prepare input data ahead, you may store the data in a
 file and direct the program to read its input from a file. If you want
@@ -670,9 +670,9 @@ You may run the program and and test the state of the I/O stream.
 
 > <http://www.cplusplus.com/doc/tutorial/files/>
 
-## Chapter Summary
+## **4.8 Chapter Summary**
 
 All in all, now we know how to use char and string data type and 
 use pre-built mathematical, string, and character functions. 
 Also, we know how to read input information from a file and write 
-the output in an output file as well.
+the output in an output file as well._
