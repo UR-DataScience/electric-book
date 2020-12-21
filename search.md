@@ -2,8 +2,7 @@
 title: Search
 ---
 
-{% include metadata %}
+# search
 
-# {{ locale.search.search-title }}
+## 
 
-{% include search %}

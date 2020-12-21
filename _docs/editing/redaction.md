@@ -15,6 +15,7 @@ To redact content in PDF:
 
 The redaction turns images black and text to series of `x`es and a few other letters. The aim is to completely replace the original text, but as closely as possible retain text flow, which might have been manually refined.
 
-*Note that this is only effective for PDF outputs.* While text and images will *appear* redacted in web, epub and app outputs, the redaction there is done only by client-side Javascript, so it's only a thin layer of redaction that can be easily turned off, and won't work at all without Javascript.
+_Note that this is only effective for PDF outputs._ While text and images will _appear_ redacted in web, epub and app outputs, the redaction there is done only by client-side Javascript, so it's only a thin layer of redaction that can be easily turned off, and won't work at all without Javascript.
 
-Should the need arise, in future we might add a preprocessor step (e.g. using gulp) to redact the HTML in the build process.
+Should the need arise, in future we might add a preprocessor step \(e.g. using gulp\) to redact the HTML in the build process.
+

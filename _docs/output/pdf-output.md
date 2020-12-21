@@ -5,10 +5,12 @@ order: 2
 ---
 
 # Print output
-{:.no_toc}
+
+{:.no\_toc}
 
 * Page contents
-{:toc}
+
+  {:toc}
 
 ## Introduction
 
@@ -28,23 +30,23 @@ Run the template's `run-` output script for your operating system, and follow th
 
 We often have to create print PDFs for Lightning Source and similar print-on-demand providers. Their needs are unusual and specific. In most cases, you can get a Lightning Source-compatible PDF by turning on the Lightning Source setting in your book's `print-pdf.scss` file:
 
-``` scss
+```css
 $print-page-setup-lightning-source: true;
 ```
 
-This is set off (`false`) by default. This setting:
+This is set off \(`false`\) by default. This setting:
 
-- removes crop marks
-- sets bleed to 3mm
-- makes sure page elements don't bleed into the facing page's bleed area.
+* removes crop marks
+* sets bleed to 3mm
+* makes sure page elements don't bleed into the facing page's bleed area.
 
 In addition, also in your book's `print-pdf.scss` file, make sure your PDF profile is set to PDF/X-1a:
 
-``` scss
+```css
 $pdf-profile: "PDF/X-1a:2001"
 ```
 
-Also see the section on [colour profiles](../layout/colour-profiles).
+Also see the section on [colour profiles](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/_docs/layout/colour-profiles/README.md).
 
 ## Refining print layout
 
@@ -52,11 +54,11 @@ You will doubtless want to refine your print layout by editing your markdown and
 
 For instance, to save widows and orphans, you can tighten letter-spacing by adding `{:.tighten-5}` and `{:.loosen-5}` tags to the lines after paragraphs. The number in the tag refers to how many thousands of an em you're affecting letter-spacing by. For instance, `{:.tighten-10}` will tighten letter-spacing by 10/1000 em. In good typography, you should avoid tightening or loosening by more than 10/1000 wherever possible.
 
-And to add manual hyphens to improve spacing, use discretionary hyphens (aka soft hyphens) by adding the HTML entity `&shy;` where you want the soft hyphen.
+And to add manual hyphens to improve spacing, use discretionary hyphens \(aka soft hyphens\) by adding the HTML entity `&shy;` where you want the soft hyphen.
 
 ### Faster print refinement
 
-When refining print layout (e.g. fixing widows and orphans), this happens:
+When refining print layout \(e.g. fixing widows and orphans\), this happens:
 
 1. You edit the markdown.
 2. Jekyll generates new HTML.
@@ -65,67 +67,67 @@ When refining print layout (e.g. fixing widows and orphans), this happens:
 
 There are two main delays in this process:
 
-1. Jekyll can take several seconds to regenerate the entire book (even with `--incremental` enabled).
-2. You have to click 'Convert' and Prince must regenerate the file(s).
+1. Jekyll can take several seconds to regenerate the entire book \(even with `--incremental` enabled\).
+2. You have to click 'Convert' and Prince must regenerate the file\(s\).
 3. If your PDF viewer locks the file you're viewing, you have to close it before generating a new PDF in Prince.
 
 To speed this up:
 
-1.  Temporarily stop Jekyll generating any files you aren't working on. In `_config.yml`, add a line that excludes those files. In this example, we exclude the CSS folder and all the book's chapters, and then commented out with `#` the file we're working on, so that Jekyll does regenerate that one file:
+1. Temporarily stop Jekyll generating any files you aren't working on. In `_config.yml`, add a line that excludes those files. In this example, we exclude the CSS folder and all the book's chapters, and then commented out with `#` the file we're working on, so that Jekyll does regenerate that one file:
 
-    ~~~
-    exclude: [
-    css,
-    book-one/0-0-cover.md, 
-    book-one/0-1-half-title.md, 
-    book-one/0-2-titlepage.md, 
-    book-one/0-3-copyright.md,
-    book-one/0-4-contents.md,
-    # book-one/1.md,
-    book-one/2.md,
-    book-one/3.md,
-    ]
-    ~~~
+   ```text
+   exclude: [
+   css,
+   book-one/0-0-cover.md, 
+   book-one/0-1-half-title.md, 
+   book-one/0-2-titlepage.md, 
+   book-one/0-3-copyright.md,
+   book-one/0-4-contents.md,
+   # book-one/1.md,
+   book-one/2.md,
+   book-one/3.md,
+   ]
+   ```
 
-    An `exclude` list can also be written as a list:
+   An `exclude` list can also be written as a list:
 
-    ~~~
-    exclude:
-      - css
-      - book-one/0-0-cover.md
-      - book-one/0-1-half-title.md
-      - book-one/0-2-titlepage.md
-      - book-one/0-3-copyright.md
-      - book-one/0-4-contents.md
-      # - book-one/1.md
-      - book-one/2.md
-      - book-one/3.md
-    ~~~
+   ```text
+   exclude:
+     - css
+     - book-one/0-0-cover.md
+     - book-one/0-1-half-title.md
+     - book-one/0-2-titlepage.md
+     - book-one/0-3-copyright.md
+     - book-one/0-4-contents.md
+     # - book-one/1.md
+     - book-one/2.md
+     - book-one/3.md
+   ```
 
-    And you can use wildcards. For instance, here we exclude all the prelims and the whole of `book-two`, but not the first chapter in `book-one`:
+   And you can use wildcards. For instance, here we exclude all the prelims and the whole of `book-two`, but not the first chapter in `book-one`:
 
-    ~~~
-    exclude:
-      - css
-      - book-one/0*
-      # - book-one/1*
-      - book-one/2*
-      - book-one/3*
-      - book-two*
-    ~~~
+   ```text
+   exclude:
+     - css
+     - book-one/0*
+     # - book-one/1*
+     - book-one/2*
+     - book-one/3*
+     - book-two*
+   ```
 
-2.  We should now only pass Prince the file(s) we're actually generating. In the `files` list in `_data/meta.yml`, comment out the lines listing files you're not working on.
-3.  If you've used Javascript not required for PDF, make sure it's wrapped in a `if site.output == ""` tag that doesn't include it in `print-pdf` output.
-4.  Use a PDF Viewer that [doesn't lock the file](http://superuser.com/questions/599442/pdf-viewer-that-handles-live-updating-of-pdf-doesnt-lock-the-file). 
-	*	On Windows, [Sumatra](http://www.sumatrapdfreader.org/free-pdf-reader.html) is perfect for this, unlike Acrobat and Windows Preview, which locks the file. If you edit/regenerate a PDF it has open, Sumatra will allow that to happen and will automatically reload the new file, at the same page you had open.
-	*	On Mac OSX, Preview does the same, though we've found it doesn't open the regenerated file to the page you were on, sending you back to the start of the book, which is a pain. A much better alternative on OSX is [Skim](http://skim-app.sourceforge.net/), an open-source PDF reader. In its Preferences > Sync, set Skim to watch for file changes and update automatically. Also set PDFs to open to the last viewed page in Preferences > General.
+2. We should now only pass Prince the file\(s\) we're actually generating. In the `files` list in `_data/meta.yml`, comment out the lines listing files you're not working on.
+3. If you've used Javascript not required for PDF, make sure it's wrapped in a `if site.output == ""` tag that doesn't include it in `print-pdf` output.
+4. Use a PDF Viewer that [doesn't lock the file](http://superuser.com/questions/599442/pdf-viewer-that-handles-live-updating-of-pdf-doesnt-lock-the-file). 
+   * On Windows, [Sumatra](http://www.sumatrapdfreader.org/free-pdf-reader.html) is perfect for this, unlike Acrobat and Windows Preview, which locks the file. If you edit/regenerate a PDF it has open, Sumatra will allow that to happen and will automatically reload the new file, at the same page you had open.
+   * On Mac OSX, Preview does the same, though we've found it doesn't open the regenerated file to the page you were on, sending you back to the start of the book, which is a pain. A much better alternative on OSX is [Skim](http://skim-app.sourceforge.net/), an open-source PDF reader. In its Preferences &gt; Sync, set Skim to watch for file changes and update automatically. Also set PDFs to open to the last viewed page in Preferences &gt; General.
 
 > ## Technical background: The output-to-PDF process
-> 
-> 1.    When Jekyll runs, it saves your book's HTML files in the `_site` folder.
-> 2.    The output script passes a list of HTML files into Prince. This list is generated from the `files` list in `_data.meta.yml` for each PDF format, `print-pdf` and `screen-pdf`, in the order they're listed. These should only include the files you need in the relevant PDF. For instance, you'll usually leave out `index.html`. And you'll usually only include `cover` for the screen PDF.
-> 3.    Prince will use your book's print CSS file for the design, which Jekyll creates from the `print-pdf.scss` or `screenpdf.scss` files in your book's folder.
-> 4.  Prince will save the PDF is creates to the `_output` folder.
-> 
-> If you want to learn about using CSS to control print output using Prince, [this is a great tutorial](http://www.smashingmagazine.com/2015/01/designing-for-print-with-css/).
-{:.box}
+>
+> 1. When Jekyll runs, it saves your book's HTML files in the `_site` folder.
+> 2. The output script passes a list of HTML files into Prince. This list is generated from the `files` list in `_data.meta.yml` for each PDF format, `print-pdf` and `screen-pdf`, in the order they're listed. These should only include the files you need in the relevant PDF. For instance, you'll usually leave out `index.html`. And you'll usually only include `cover` for the screen PDF.
+> 3. Prince will use your book's print CSS file for the design, which Jekyll creates from the `print-pdf.scss` or `screenpdf.scss` files in your book's folder.
+> 4. Prince will save the PDF is creates to the `_output` folder.
+>
+> If you want to learn about using CSS to control print output using Prince, [this is a great tutorial](http://www.smashingmagazine.com/2015/01/designing-for-print-with-css/). {:.box}
+

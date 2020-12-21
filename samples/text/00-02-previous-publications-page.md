@@ -7,7 +7,7 @@ style: previous-publications-page
 
 [The Electric Book Works Knowledge Base](http://electricbookworks.com/kb)
 
-*Designing for Digital: What every book designer needs to know*
+_Designing for Digital: What every book designer needs to know_
 
-*Killing Time*
+_Killing Time_
 

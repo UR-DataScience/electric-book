@@ -3,16 +3,13 @@ title: Title page
 style: title-page
 ---
 
-{% include metadata %}
+# 0-1-titlepage
 
-{{ title }}
-{:.title-page-title}
+ {:.title-page-title}
 
-{{ subtitle }}
-{:.title-page-subtitle}
+ {:.title-page-subtitle}
 
-{{ creator }}
-{:.title-page-author}
+ {:.title-page-author}
 
-{{ publisher }}
-{:.title-page-publisher}
+ {:.title-page-publisher}
+

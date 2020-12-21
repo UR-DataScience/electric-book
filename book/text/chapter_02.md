@@ -1,21 +1,19 @@
 ---
 title: Programming and Problem Solving Chapter 2
-subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
+subtitle: '**Dr. Alireza Manashty**<br>**University of Regina**'
 style: chapter page-2
+description: Chapter 2
 ---
 
-# **Elementary Programming**
+# Elementary Programming
 
 ## Introduction and Objectives
 
-In this chapter you will learn how to solve a problem with programming.
-You will learn how to read input and use identifiers, variables, and
-expressions.
+In this chapter you will learn how to solve a problem with programming. You will learn how to read input and use identifiers, variables, and expressions.
 
-## **Writing a Simple Program** 
+## **Writing a Simple Program**
 
-Let's examine the following C++ program. We have numbered the lines so
-that we can discuss them easily.
+Let's examine the following C++ program. We have numbered the lines so that we can discuss them easily.
 
 ```cpp
 #include <iostream>
@@ -30,101 +28,50 @@ int main()
     return 0;
 }
 ```
-> Author: Ada Lovelace                                       
+
+> Author: Ada Lovelace  
 > Purpose: Demonstrate Basic I/O operation by inputting a number and outputting the number just entered.
 
 Try it yourself:
-<div>
-<iframe height="500px" width="100%" src="https://repl.it/@YazdanRa/cpp-book?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-</div>
 
--   The first 6 lines of code is a comment block that gives a brief introduction to the
-    C++ program.
+* The first 6 lines of code is a comment block that gives a brief introduction to the C++ program.
+* By convention, every single C++ program should have this kind of comment block at the beginning of the program.
+* Usually, a comment that carries over several lines begins with `*` and ends with `*`
+* A comment on just one line - or part of the line - begins with `//`
+* Typically, you will see an inline comment at the beginning or end of a processing block such as `//` end of program.
+* The next two lines tell the compiler to add **console** input and output \(_iostream_\) features to the program and to make them easier to use by adding their namespace into our program. You will probably use these in every program this semester.
+* Line 8 is what's known as a **preprocessor command**. The pound \(`#`\) sign followed by `include`{:.cpp} begins every preprocessor command.
+* Any _built-in_ or _user-defined_ header files you wish to use in your program must follow this same syntax.
 
--   By convention, every single C++ program should have this kind of
-    comment block at the beginning of the program.
+> **NOTE**: Built-in header files are enclosed inside the `<` and `>` marks. Header files you create and bring in to the program are enclosed in `""` quotation marks.
 
--   Usually, a comment that carries over several lines begins with `*`
-    and ends with `*`
-
--   A comment on just one line - or part of the line - begins with `//`
-
--   Typically, you will see an inline comment at the beginning or end of
-    a processing block such as `//` end of program.
-
--   The next two lines tell the compiler to add **console** input and output
-    (*iostream*) features to the program and to make them easier to use by
-    adding their namespace into our program. You will probably use these
-    in every program this semester.
-
--   Line 8 is what's known as a **preprocessor command**. The pound (`#`)
-    sign followed by `include`{:.cpp} begins every preprocessor command.
-
--   Any *built-in* or *user-defined* header files you wish to use in your
-    program must follow this same syntax.
-
-
->**NOTE**: Built-in header files are enclosed inside the `<` and `>`
-marks. Header files you create and bring in to the program are enclosed
-in `""` quotation marks.
-
--   `int main()`{:.cpp} is the executable part of our program. The
-    function name is `main`, and it returns a value that is of type
-    integer. The function has no parameters, as indicated by the empty
-    parentheses.
-
--   The parentheses `{ }` mark the **beginning** and **end**
-    of a group of C++ statements. In this case, they enclose our `main`
-    function.
-
--   `int number;` sets `number` as a variable of type *integer*.
-
--   `cout` is the command to print text or data **on the screen**.
-    Anything that is enclosed in **quotation marks** is to be printed.
-
--   `cin` - command that receives data from the end user.
-
--   The `<iostream>`{:.cpp} file exists in every C++ program, and it is
-    this file which allows us to use cout and cin.
-
--   The second cout line prints out `"You entered:
-    [number]"`. So, if I entered 5, the output would be: `You entered 5`
-
--   This kind of way to get data into the program is called a **user
-    interactive input**, and it makes the program become an interactive
-    program.
-
--   `endl` is *manipulator* to indicate the **end of the line**. It tells the
-    cursor to stop printing on the current line, and begin on the next
-    line.
-
--   `return 0;`{:.cpp} - This line is there, since the return value in
-    our main program was designated as an integer. Just prevents the
-    compiler from reporting a syntax error.
-
--   `// end program` - a single line comment.
+* `int main()`{:.cpp} is the executable part of our program. The function name is `main`, and it returns a value that is of type integer. The function has no parameters, as indicated by the empty parentheses.
+* The parentheses `{ }` mark the **beginning** and **end** of a group of C++ statements. In this case, they enclose our `main` function.
+* `int number;` sets `number` as a variable of type _integer_.
+* `cout` is the command to print text or data **on the screen**. Anything that is enclosed in **quotation marks** is to be printed.
+* `cin` - command that receives data from the end user.
+* The `<iostream>`{:.cpp} file exists in every C++ program, and it is this file which allows us to use cout and cin.
+* The second cout line prints out `"You entered: [number]"`. So, if I entered 5, the output would be: `You entered 5`
+* This kind of way to get data into the program is called a **user interactive input**, and it makes the program become an interactive program.
+* `endl` is _manipulator_ to indicate the **end of the line**. It tells the cursor to stop printing on the current line, and begin on the next line.
+* `return 0;`{:.cpp} - This line is there, since the return value in our main program was designated as an integer. Just prevents the compiler from reporting a syntax error.
+* `// end program` - a single line comment.
 
 ## **Reading Input from the Keyboard**
 
-Imagine we want to write a program to calculate the area of a
-rectangle with length of `x` and width of `y`. The first step to calculate
-the area is to get the length and width from input. Reading input will
-enables you to interact with the user and get the necessary information
-for you program.
+Imagine we want to write a program to calculate the area of a rectangle with length of `x` and width of `y`. The first step to calculate the area is to get the length and width from input. Reading input will enables you to interact with the user and get the necessary information for you program.
 
-Here is the table of C++ **basic Input/Output** (I/O) symbols:
+Here is the table of C++ **basic Input/Output** \(I/O\) symbols:
 
+| **Symbol** | **Name** | **Description** |
+| :--- | :--- | :--- |
+| `cout` | A special variable | used along with the insertion operator “&lt;&lt;” to write out the values of variables and expressions to the standard output device such as screen. |
+| `<<` | Insertion operator | takes two operands. Its left-hand operand is a stream expression. Its right-hand operand is an expression which could be as simple as a literal string. It can be used several times in a single output statement. |
+| `cin` | A special variable | used along with the extraction operator “&gt;&gt;” to input values from the standard input device such as keyboard to a variable. |
+| `>>` | Extraction operator | takes two operands. Its left-hand operand is a stream expression. Its right-hand operand is a variable into which we store the input data. It can be used several times in a single input statement. |
 
-| **Symbol**     | **Name**            | **Description**
-|------------    |------------         |------------------
-| `cout`         | A special variable  | used along with the insertion operator “<<” to write out the values of variables and expressions to the standard output device such as screen.
-| `<<`           | Insertion operator  | takes two operands. Its left-hand operand is a stream expression. Its right-hand operand is an expression which could be as simple as a literal string. It can be used several times in a single output statement. 
-| `cin`          | A special variable  | used along with the extraction operator “>>” to input values from the standard input device such as keyboard to a variable.                                                                                        
-| `>>`           | Extraction operator | takes two operands. Its left-hand operand is a stream expression. Its right-hand operand is a variable into which we store the input data. It can be used several times in a single input statement.               
+For instance, for getting `x`{:.cpp} \(length\) and `y`{:.cpp} \(width\) from input we could say:
 
-
-For instance, for getting `x`{:.cpp} (length) and `y`{:.cpp} (width) from input we could
-say:
 ```cpp
 cin >> x;
 cin >> y;
@@ -136,62 +83,42 @@ Also, we could get `x` and `y`in one line:
 cin >> x >> y;
 ```
 
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
+> [http://www.cs.uregina.ca/Links/class-info/110/unix/index.html](http://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
 
 ## **Identifiers**
 
 There are two main parts in a C++ program:
 
 1. Instructions to the C++ **preprocessor** and **compiler**.
-
 2. Instructions that describe the processing to be done.
 
-Before we can describe these instructions, we must have a way of naming
-things so that we can tell the compiler about them and describe what we
-want to do with them. We name things (data types, data objects, and
-actions) by giving them an *identifier*.
+Before we can describe these instructions, we must have a way of naming things so that we can tell the compiler about them and describe what we want to do with them. We name things \(data types, data objects, and actions\) by giving them an _identifier_.
 
 **Rules of identifiers**:
 
--   An identifier is made up of **letters**, **numbers**, and **underscore** ( \_ ).
+* An identifier is made up of **letters**, **numbers**, and **underscore** \( \_ \).
+* An identifier must begin with a letter or an underscore.
+* An identifier should not be a _reserved word_. \(\)
 
--   An identifier must begin with a letter or an underscore.
+For instance, length and \_width1 are legal identifiers, while 1length and width-4 are not legal.
 
--   An identifier should not be a *reserved word*. ()
+**NOTE**: Reserved words are certain words which have predefined meanings within the C++ language. Examples of reserved words: `int`, `namespace`, `using`, `include`, `cin`, `cout`, `and`, `return`, etc.. You **cannot** use them as your user defined identifier such as variable names.
 
-For instance, length and \_width1 are legal identifiers, while 1length
-and width-4 are not legal.
-
-**NOTE**: Reserved words are certain words which have predefined meanings within the C++
-language. Examples of reserved words:
-`int`, `namespace`, `using`, `include`, `cin`, `cout`, `and`, `return`, etc.. 
-You **cannot** use them as your user defined identifier such as variable names.
-
->   https://www.cs.uregina.ca/Links/class-info/110/unix/index.html
+> [https://www.cs.uregina.ca/Links/class-info/110/unix/index.html](https://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
 
 **NOTE**: C++ is case sensitive. It means length, Length, and LEngTh are all different.
 
-**camelCase**:
-Camel case is a naming convention in which the first letter of each word
-is uppercase except for the first word. The rest of the letters are
-lower case. For example, `payRate`, `camelCase`, and `numberOfYears` are camelCase.
+**camelCase**: Camel case is a naming convention in which the first letter of each word is uppercase except for the first word. The rest of the letters are lower case. For example, `payRate`, `camelCase`, and `numberOfYears` are camelCase.
 
-
-> <https://en.wikipedia.org/wiki/Camel_case>
-
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
+> [https://en.wikipedia.org/wiki/Camel\_case](https://en.wikipedia.org/wiki/Camel_case)
+>
+> [http://www.cs.uregina.ca/Links/class-info/110/unix/index.html](http://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
 
 ## **Variables**
 
-Variables are named memory locations that have a type, such as an
-integer or character, and consequently, a size, which is inherited from
-their **type**. Since variables are types, they have a set of operations
-that can be used to change or manipulate them.
+Variables are named memory locations that have a type, such as an integer or character, and consequently, a size, which is inherited from their **type**. Since variables are types, they have a set of operations that can be used to change or manipulate them.
 
-Each variable in your program must be **declared** and **initialized**. There
-are two ways in which we can do this.
-One is we can declare our variables
-first, like this:
+Each variable in your program must be **declared** and **initialized**. There are two ways in which we can do this. One is we can declare our variables first, like this:
 
 ```cpp
 char letter;
@@ -213,8 +140,7 @@ pi = 3.1415926536;
 valid = true;
 ```
 
-The other way is to initialize them at the same time as they are
-declared (in one statement).
+The other way is to initialize them at the same time as they are declared \(in one statement\).
 
 ```cpp
 char letter = 'A';
@@ -227,26 +153,21 @@ bool valid = true;
 
 However, a variable can be used only **after its value is set**.
 
-> <https://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
-
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
+> [https://www.cs.uregina.ca/Links/class-info/110/unix/index.html](https://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
+>
+> [http://www.cs.uregina.ca/Links/class-info/110/unix/index.html](http://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
 
 ## **Assignment Statements and Assignment Expressions**
 
-You need to know the definition of an **arithmetic expression** and the
-**precedence** of the operators.
+You need to know the definition of an **arithmetic expression** and the **precedence** of the operators.
 
-**Arithmetic Expressions**:
-Variables and constants of integral and floating point types can be
-combined into expressions using arithmetic operators.
+**Arithmetic Expressions**: Variables and constants of integral and floating point types can be combined into expressions using arithmetic operators.
 
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
+> [http://www.cs.uregina.ca/Links/class-info/110/unix/index.html](http://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
 
 ## **Named Constants**
 
-We can also declare our initialized variable as a *constant*, by adding
-the type qualifier `const` before the definition. The general format for a
-const declaration is shown below:
+We can also declare our initialized variable as a _constant_, by adding the type qualifier `const` before the definition. The general format for a const declaration is shown below:
 
 `const type variable-name = any value you like`
 
@@ -257,70 +178,50 @@ const float payRate = 12.85;
 const double pi = 3.1415926536;
 ```
 
-> <https://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
-
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
-
-> <http://www.cplusplus.com/doc/tutorial/constants/>
-
+> [https://www.cs.uregina.ca/Links/class-info/110/unix/index.html](https://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
+>
+> [http://www.cs.uregina.ca/Links/class-info/110/unix/index.html](http://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
+>
+> [http://www.cplusplus.com/doc/tutorial/constants/](http://www.cplusplus.com/doc/tutorial/constants/)
 
 ## **Numeric Data Types and Operations**
 
-A *data type* is a set of values and a set of operations on these values.
-In the preceding program, we used the data type `int` which is an
-identifier for the integer data type.
+A _data type_ is a set of values and a set of operations on these values. In the preceding program, we used the data type `int` which is an identifier for the integer data type.
 
-We used data type `int` in four ways in the preceding program. `int`
-precedes `main`, the name of the main function in the program to indicate
-that the function returns the value of type `int`. At the end an `int`
-literal (zero) is returned as the result of the main function `main`. Also, in the middle of the program a variable number is declared to have the data type `int`. In addition, an integer number was read from the keyboard and stored in the
-storage of variable number.
+We used data type `int` in four ways in the preceding program. `int` precedes `main`, the name of the main function in the program to indicate that the function returns the value of type `int`. At the end an `int` literal \(zero\) is returned as the result of the main function `main`. Also, in the middle of the program a variable number is declared to have the data type `int`. In addition, an integer number was read from the keyboard and stored in the storage of variable number.
 
 The following are some fundamental/simple data types:
 
+## Integral Types
 
- Integral Types                                             
-------------------------------------------------------------
- `short`           `int`              `long`           `char `         
- `unsigned short`  `unsigned int`       `unsigned long`  `unsigned char` 
+`short` `int` `long` `char`  
+`unsigned short` `unsigned int` `unsigned long` `unsigned char`
 
+## Floating Types
 
- Floating Types                             
---------------------------------------------
- `float`           `double `    `long double`      
+`float` `double` `long double`
 
+The arithmetic operators are listed in the following table:
 
-The arithmetic operators are listed in the following table:                                                 
+| Operator | Description |
+| :--- | :--- |
+| `+` | **Unary plus** needs one operand. |
+| `-` | **Unary minus** needs one operand. |
+| `+` | **Addition** needs two operands. |
+| `-` | **Subtraction** needs two operands. |
+| `\` | **Multiplication** needs two operands. |
+| `/` | **Division** needs two operands.  Floating point operands → floating point result   Integer operands → integer quotient    Mixed operands → floating point result |
+| `%` | **Modulus**    Remainder from integer division     Operands must be integral |
+| `++` | **Increment by one**   Can be prefix or postfix   As postfix has highest precedence |
+| `--` | **Decrement by one**   Can be prefix or postfix   As postfix has highest precedence |
 
-| Operator     | Description                                                                     
-|-----------   |----------------
-| `+`          | **Unary plus** needs one operand.                                                   
-| `-`          | **Unary minus** needs one operand.                                                  
-| `+`          | **Addition** needs two operands.                                                    
-| `-`          | **Subtraction** needs two operands.                                                 
-| `\`          | **Multiplication** needs two operands.                                              
-| `/`          | **Division** needs two operands. <br>Floating point operands &rightarrow; floating point result <br> Integer operands &rightarrow; integer quotient <br>  Mixed operands &rightarrow; floating point result                                              
-| `%`          | **Modulus**  <br> Remainder from integer division <br>   Operands must be integral                                                                    
-| `++`         | **Increment by one** <br> Can be prefix or postfix <br> As postfix has highest precedence                                                          
-| `--`         | **Decrement by one** <br> Can be prefix or postfix <br> As postfix has highest precedence                                                          
-
-
-> <https://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
-
+> [https://www.cs.uregina.ca/Links/class-info/110/unix/index.html](https://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
 
 ## **Evaluating Expressions and Operator Precedence**
 
-The precedence rules of arithmetic apply to arithmetic expressions in a
-program. That is, the order of execution of an expression that contains
-more than one operation is determined by the precedence rules of
-arithmetic. These rules state that parentheses have the highest
-precedence, multiplication, division, and modulus have the next highest
-precedence, and addition and subtraction have the lowest. The Postfix
-increment and decrement operators have the highest precedence over any
-of the arithmetic operators.
+The precedence rules of arithmetic apply to arithmetic expressions in a program. That is, the order of execution of an expression that contains more than one operation is determined by the precedence rules of arithmetic. These rules state that parentheses have the highest precedence, multiplication, division, and modulus have the next highest precedence, and addition and subtraction have the lowest. The Postfix increment and decrement operators have the highest precedence over any of the arithmetic operators.
 
-Look at the following example, and decide what is written by each of the
-output statements.
+Look at the following example, and decide what is written by each of the output statements.
 
 ```cpp
 // The program demonstrates the precedence of the operators.
@@ -344,97 +245,84 @@ Output:
 ```text
 
 ```
-<div>
-<iframe height="600px" width="100%" src="https://repl.it/@YazdanRa/cpp-book?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-</div>
 
+| **Precedence** | **Operator** | **Description** | **Associativity** |
+| :--- | :--- | :--- | :--- |
+| 1 | `::` | Scope resolution | Left-to-right |
+| 2 | `a++`, `a--` | Suffix/postfix increment and decrement |  |
+| `type()`, `type{}` | Functional cast |  |  |
+| `a()` | Function call |  |  |
+| `a[]` | Subscript |  |  |
+| `.`, `->` | Member access |  |  |
+| 3 | `++a`, `--a` | Prefix increment and decrement | Right-to-left |
+| `+a`, `-a` | Unary plus and minus |  |  |
+| `!`, `~` | Logical NOT and bitwise NOT |  |  |
+| `(type)` | C-style cast |  |  |
+| `*a` | Indirection \(dereference\) |  |  |
+| `&a` | Address-of |  |  |
+| `sizeof` | Size-of\[note 1\] |  |  |
+| `co_await` | await-expression \(C++20\) |  |  |
+| `new`, `new[]` | Dynamic memory allocation |  |  |
+| `delete`, `delete[]` | Dynamic memory deallocation |  |  |
+| 4 | `.*`, `->*` | Pointer-to-member | Left-to-right |
+| 5 | `a*b`, `a/b`, `a%b` | Multiplication, division, and remainder |  |
+| 6 | `a+b`, `a-b` | Addition and subtraction |  |
+| 7 | `<<`, `>>` | Bitwise left shift and right shift |  |
+| 8 | `<=>` | Three-way comparison operator \(since C++20\) |  |
+| 9 | `<`, `<=` | For relational operators &lt; and ≤ respectively |  |
+| `>`, `>=` | For relational operators &gt; and ≥ respectively |  |  |
+| 10 | `==`, `!=` | For relational operators = and ≠ respectively |  |
+| 11 | `&` | Bitwise AND |  |
+| 12 | `^` | Bitwise XOR \(exclusive or\) |  |
+| 13 | `\` | Bitwise OR \(inclusive or\) |  |
+| 14 | `&&` | Logical AND |  |
+| 15 | `^` | Logical OR |  |
+| 16 | `a?b:c` | Ternary conditional\[note 2\] | Right-to-left |
+| `throw` | throw operator |  |  |
+| `co_yield` | yield-expression \(C++20\) |  |  |
+| `=` | Direct assignment \(provided by default for C++ classes\) |  |  |
+| `+=`, `-=` | Compound assignment by sum and difference |  |  |
+| `*=`, `/=`, `%=` | Compound assignment by product, quotient, and remainder |  |  |
+| `<<=`, `>>=` | Compound assignment by bitwise left shift and right shift |  |  |
+| `&=`, `^=`, `\=` | Compound assignment by bitwise AND, XOR, and OR |  |  |
+| 17 | `,` | Comma | Left-to-right |
+|  |  |  |  |
 
- **Precedence** | **Operator**          | **Description**                                            | **Associativity** 
-----------------|---------------        |------------------                                          |-------------------
-     1          | `::`                  |  Scope resolution                                          |  Left-to-right 
-     2          | `a++`, `a--`          |  Suffix/postfix increment and decrement                    |                  
-                | `type()`, `type{}`    |  Functional cast                                           |                  
-                | `a()`                 |  Function call                                             |                  
-                | `a[]`                 |  Subscript                                                 |
-                | `.`, `->`             |  Member access                                             |                  
-     3          | `++a`, `--a`          |  Prefix increment and decrement                            |  Right-to-left 
-                | `+a`, `-a`            |  Unary plus and minus                                      |                  
-                | `!`, `~`              |  Logical NOT and bitwise NOT                               |                  
-                | `(type)`              |  C-style cast                                              |                  
-                | `*a`                  |  Indirection (dereference)                                 |                  
-                | `&a`                  |  Address-of                                                |                  
-                | `sizeof`              |  Size-of[note 1]                                           |                  
-                | `co_await`            |  await-expression (C++20)                                  |                  
-                | `new`, `new[]`        |  Dynamic memory allocation                                 |                  
-                | `delete`, `delete[]`  |  Dynamic memory deallocation                               |                  
-     4          | `.*`, `->*`           |  Pointer-to-member                                         |  Left-to-right 
-     5          | `a*b`, `a/b`, `a%b`   |  Multiplication, division, and remainder                   |                  
-     6          | `a+b`, `a-b`          |  Addition and subtraction                                  |                  
-     7          | `<<`, `>>`            |  Bitwise left shift and right shift                        |                  
-     8          | `<=>`                 |  Three-way comparison operator (since C++20)               |                  
-     9          | `<`, `<=`             |  For relational operators < and ≤ respectively             |                  
-                | `>`, `>=`             |  For relational operators > and ≥ respectively             |                  
-     10         | `==`, `!=`            |  For relational operators = and ≠ respectively             |                  
-     11         | `&`                   |  Bitwise AND                                               |                  
-     12         | `^`                   |  Bitwise XOR (exclusive or)                                |                  
-     13         | `\`                   |  Bitwise OR (inclusive or)                                 |                  
-     14         | `&&`                  |  Logical AND                                               |                  
-     15         | `^`                   |  Logical OR                                                |                  
-     16         | `a?b:c`               |  Ternary conditional[note 2]                               |  Right-to-left 
-                | `throw`               |  throw operator                                            |                  
-                | `co_yield`            |  yield-expression (C++20)                                  |                  
-                | `=`                   |  Direct assignment (provided by default for C++ classes)   |                  
-                | `+=`, `-=`            |  Compound assignment by sum and difference                 |                  
-                | `*=`, `/=`, `%=`      |  Compound assignment by product, quotient, and remainder   |                  
-                | `<<=`, `>>=`          |  Compound assignment by bitwise left shift and right shift |               
-                | `&=`, `^=`, `\=`      |  Compound assignment by bitwise AND, XOR, and OR           |               
-     17         | `,`                   |  Comma                                                     |  Left-to-right 
-                |                       |                                                            |
-
-
->  <https://en.cppreference.com/w/cpp/language/operator_precedence>
-
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
+> [https://en.cppreference.com/w/cpp/language/operator\_precedence](https://en.cppreference.com/w/cpp/language/operator_precedence)
+>
+> [http://www.cs.uregina.ca/Links/class-info/110/unix/index.html](http://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
 
 ## **Augmented Assignment Operators**
 
 Assignment operators **modify** the value of the object.
 
-| Operator name                       | Syntax     | Over​load​able  | Prototype examples (for class T)
-|----------------                     |--------    |-------------- |-----------------------------------
-| simple assignment                   | `a = b`    | Yes           | `T& T::operator =(const T2& b);`<br> `N/A`
-| addition assignment                 | `a += b`   | Yes           | `T& T::operator +=(const T2& b);`<br> `T& operator +=(T& a, const T2& b);`
-| subtraction assignment              | `a -= b`   | Yes           | `T& T::operator -=(const T2& b);`<br> `T& operator -=(T& a, const T2& b);`
-| multiplication assignment           | `a *= b`   | Yes           | `T& T::operator *=(const T2& b);`<br> `T& operator *=(T& a, const T2& b);`
-| division assignment                 | `a /= b`   | Yes           | `T& T::operator /=(const T2& b);`<br> `T& operator /=(T& a, const T2& b);`
-| modulo assignment                   | `a %= b`   | Yes           | `T& T::operator %=(const T2& b);`<br> `T& operator %=(T& a, const T2& b);`
-| bitwise AND assignment              | `a &= b`   | Yes           | `T& T::operator &=(const T2& b);`<br> `T& operator &=(T& a, const T2& b);`  
-| bitwise OR assignment               | `a \= b`   | Yes           | `T& T::operator \=(const T2& b);`<br> `T& operator \=(T& a, const T2& b);` 
-| bitwise XOR assignment              | `a ^= b`   | Yes           | `T& T::operator ^=(const T2& b);`<br> `T& operator ^=(T& a, const T2& b);`  
-| bitwise left shift assignment       | `a <<= b`  | Yes           | `T& T::operator <<=(const T2& b);`<br> `T& operator <<=(T& a, const T2& b);` 
-| bitwise right shift assignment      | `a >>= b`  | Yes           | `T& T::operator >>=(const T2& b);`<br> `T& operator >>=(T& a, const T2& b);`
+| Operator name | Syntax | Over​load​able | Prototype examples \(for class T\) |
+| :--- | :--- | :--- | :--- |
+| simple assignment | `a = b` | Yes | `T& T::operator =(const T2& b);`  `N/A` |
+| addition assignment | `a += b` | Yes | `T& T::operator +=(const T2& b);`  `T& operator +=(T& a, const T2& b);` |
+| subtraction assignment | `a -= b` | Yes | `T& T::operator -=(const T2& b);`  `T& operator -=(T& a, const T2& b);` |
+| multiplication assignment | `a *= b` | Yes | `T& T::operator *=(const T2& b);`  `T& operator *=(T& a, const T2& b);` |
+| division assignment | `a /= b` | Yes | `T& T::operator /=(const T2& b);`  `T& operator /=(T& a, const T2& b);` |
+| modulo assignment | `a %= b` | Yes | `T& T::operator %=(const T2& b);`  `T& operator %=(T& a, const T2& b);` |
+| bitwise AND assignment | `a &= b` | Yes | `T& T::operator &=(const T2& b);`  `T& operator &=(T& a, const T2& b);` |
+| bitwise OR assignment | `a \= b` | Yes | `T& T::operator \=(const T2& b);`  `T& operator \=(T& a, const T2& b);` |
+| bitwise XOR assignment | `a ^= b` | Yes | `T& T::operator ^=(const T2& b);`  `T& operator ^=(T& a, const T2& b);` |
+| bitwise left shift assignment | `a <<= b` | Yes | `T& T::operator <<=(const T2& b);`  `T& operator <<=(T& a, const T2& b);` |
+| bitwise right shift assignment | `a >>= b` | Yes | `T& T::operator >>=(const T2& b);`  `T& operator >>=(T& a, const T2& b);` |
 
 > Examples are **Inside class definition** and **Outside class definition** respectively.
 
-**NOTE**: All built-in assignment operators return *this, and most user-defined overloads also return *this so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type (including void).
-`T2` can be any type including `T`.  
+**NOTE**: All built-in assignment operators return _this, and most user-defined overloads also return_ this so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type \(including void\). `T2` can be any type including `T`.
 
-### **Explanation** 
-**copy assignment** operator replaces the contents of the object a with a
-copy of the contents of b (b is not modified). For class types, this is
-a special member function, described in copy assignment operator.
+### **Explanation**
 
-**move assignment** operator replaces the contents of the object a with the
-contents of b, avoiding copying if possible (b may be modified). For
-class types, this is a special member function, described in move
-assignment operator. (since C++11)
+**copy assignment** operator replaces the contents of the object a with a copy of the contents of b \(b is not modified\). For class types, this is a special member function, described in copy assignment operator.
 
-For non-class types, copy and move assignment are indistinguishable and
-are referred to as **direct assignment**.
+**move assignment** operator replaces the contents of the object a with the contents of b, avoiding copying if possible \(b may be modified\). For class types, this is a special member function, described in move assignment operator. \(since C++11\)
 
-**compound assignment** operators replace the contents of the object a with
-the result of a binary operation between the previous value of a and the
-value of b.
+For non-class types, copy and move assignment are indistinguishable and are referred to as **direct assignment**.
+
+**compound assignment** operators replace the contents of the object a with the result of a binary operation between the previous value of a and the value of b.
 
 Builtin direct assignment
 
@@ -448,51 +336,29 @@ lhs = {} (2) (since C++11)
 lhs = { rhs } (3) (since C++11)
 ```
 
-For the built-in operator, lhs may have any non-const scalar type and
-rhs must be implicitly convertible to the type of lhs.
+For the built-in operator, lhs may have any non-const scalar type and rhs must be implicitly convertible to the type of lhs.
 
-The direct assignment operator expects a modifiable lvalue as its left
-operand and an rvalue expression or a braced-init-list (since C++11) as
-its right operand, and returns an lvalue identifying the left operand
-after modification.
+The direct assignment operator expects a modifiable lvalue as its left operand and an rvalue expression or a braced-init-list \(since C++11\) as its right operand, and returns an lvalue identifying the left operand after modification.
 
-For non-class types, the right operand is first implicitly converted to
-the cv-unqualified type of the left operand, and then its value is
-copied into the object identified by left operand.
+For non-class types, the right operand is first implicitly converted to the cv-unqualified type of the left operand, and then its value is copied into the object identified by left operand.
 
-When the left operand has reference type, the assignment operator
-modifies the referred-to object.
+When the left operand has reference type, the assignment operator modifies the referred-to object.
 
-If the left and the right operands identify overlapping objects, the
-behavior is undefined (unless the overlap is exact and the type is the
-same)
+If the left and the right operands identify overlapping objects, the behavior is undefined \(unless the overlap is exact and the type is the same\)
 
 If the right operand is a braced-init-list
 
 if the expression `E1` has scalar type,
 
-the expression `E1 = {}` is equivalent to `E1 = T{}`, where `T` is the type of
-`E1`.
+the expression `E1 = {}` is equivalent to `E1 = T{}`, where `T` is the type of `E1`.
 
-the expression `E1 = {E2}` is equivalent to `E1 = T{E2}`, where `T` is the
-type of `E1`.
+the expression `E1 = {E2}` is equivalent to `E1 = T{E2}`, where `T` is the type of `E1`.
 
-if the expression `E1` has class type, the syntax `E1 = {args...}`
-generates a call to the assignment operator with the braced-init-list as
-the argument, which then selects the appropriate assignment operator
-following the rules of overload resolution. Note that, if a non-template
-assignment operator from some non-class type is available, it is
-preferred over the copy/move assignment in `E1 = {}` because `{}` to
-non-class is an identity conversion, which outranks the user-defined
-conversion from `{}` to a `class` type. (since C++11)
+if the expression `E1` has class type, the syntax `E1 = {args...}` generates a call to the assignment operator with the braced-init-list as the argument, which then selects the appropriate assignment operator following the rules of overload resolution. Note that, if a non-template assignment operator from some non-class type is available, it is preferred over the copy/move assignment in `E1 = {}` because `{}` to non-class is an identity conversion, which outranks the user-defined conversion from `{}` to a `class` type. \(since C++11\)
 
-Using an lvalue of volatile-qualified non-class type as left operand of
-built-in direct assignment operator is deprecated, unless the assignment
-expression appears in an unevaluated context or is a discarded-value
-expression. (since C++20)
+Using an lvalue of volatile-qualified non-class type as left operand of built-in direct assignment operator is deprecated, unless the assignment expression appears in an unevaluated context or is a discarded-value expression. \(since C++20\)
 
-In overload resolution against user-defined operators, for every type `T`,
-the following function signatures participate in overload resolution:
+In overload resolution against user-defined operators, for every type `T`, the following function signatures participate in overload resolution:
 
 ```cpp
 T*& operator=(T*&, T*);
@@ -500,22 +366,17 @@ T*& operator=(T*&, T*);
 T*volatile & operator=(T*volatile &, T*);
 ```
 
-For every enumeration or pointer to member type `T`, optionally
-volatile-qualified, the following function signature participates in
-overload resolution:
+For every enumeration or pointer to member type `T`, optionally volatile-qualified, the following function signature participates in overload resolution:
 
 ```cpp
 T& operator=(T&, T );
 ```
 
-For every pair `A1` and `A2`, where `A1` is an arithmetic type (optionally
-volatile-qualified) and `A2` is a promoted arithmetic type, the following
-function signature participates in overload resolution:
+For every pair `A1` and `A2`, where `A1` is an arithmetic type \(optionally volatile-qualified\) and `A2` is a promoted arithmetic type, the following function signature participates in overload resolution:
 
 ```cpp
 A1& operator=(A1&, A2);
 ```
-
 
 ```cpp
 #include <iostream>
@@ -556,38 +417,31 @@ Output:
 
 Try it Yourself:
 
-<div>
-<iframe height="1000px" width="100%" src="https://repl.it/@YazdanRa/cpp-book?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-</div>
-
->  <https://en.cppreference.com/w/cpp/language/operator_assignment>
+> [https://en.cppreference.com/w/cpp/language/operator\_assignment](https://en.cppreference.com/w/cpp/language/operator_assignment)
 
 ## **Increment and Decrement Operators**
 
 Increment/decrement operators increment or decrement the value of the object.
 
-| **Operator name**   | Syntax     | Over​load​able  | Prototype examples (for class T)                           
-|-------------------  |---------   |-------------  |------------------------------------
-| pre-increment       | `++a`      | Yes           | `T& T::operator++();`<br> `T& operator++(T& a);`     
-| pre-decrement       | `--a`      | Yes           | `T& T::operator--();`<br> `T& operator--(T& a);`
-| post-increment      | `a++`      | Yes           | `T T::operator++(int);`<br> `T operator++(T& a, int);` 
-| post-decrement      | `a--`      | Yes           | `T T::operator--(int);`<br> `T operator--(T& a, int);` 
+| **Operator name** | Syntax | Over​load​able | Prototype examples \(for class T\) |
+| :--- | :--- | :--- | :--- |
+| pre-increment | `++a` | Yes | `T& T::operator++();`  `T& operator++(T& a);` |
+| pre-decrement | `--a` | Yes | `T& T::operator--();`  `T& operator--(T& a);` |
+| post-increment | `a++` | Yes | `T T::operator++(int);`  `T operator++(T& a, int);` |
+| post-decrement | `a--` | Yes | `T T::operator--(int);`  `T operator--(T& a, int);` |
 
 > Examples are **Inside class definition** and **Outside class definition** respectively.
 
-**NOTE**: Prefix versions of the built-in operators return references and postfix versions return values, and typical user-defined overloads follow the pattern so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type (including void).                      
-The int parameter is a dummy parameter used to differentiate between prefix and postfix versions of the operators. When the user-defined postfix operator is called, the value passed in that parameter is always zero, although it may be changed by calling the operator using function call notation (e.g., `a.operator++(2)` or `operator++(a, 2)`).
+**NOTE**: Prefix versions of the built-in operators return references and postfix versions return values, and typical user-defined overloads follow the pattern so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type \(including void\).  
+The int parameter is a dummy parameter used to differentiate between prefix and postfix versions of the operators. When the user-defined postfix operator is called, the value passed in that parameter is always zero, although it may be changed by calling the operator using function call notation \(e.g., `a.operator++(2)` or `operator++(a, 2)`\).
 
 ### **Explanation**
-Pre-increment and pre-decrement operators increments or decrements the
-value of the object and returns a reference to the result.
 
-Post-increment and post-decrement creates a copy of the object,
-increments or decrements the value of the object and returns the copy
-from before the increment or decrement.
+Pre-increment and pre-decrement operators increments or decrements the value of the object and returns a reference to the result.
 
-Using an lvalue of volatile-qualified non-class type as operand of
-built-in version of these operators is deprecated. (since C++20)
+Post-increment and post-decrement creates a copy of the object, increments or decrements the value of the object and returns the copy from before the increment or decrement.
+
+Using an lvalue of volatile-qualified non-class type as operand of built-in version of these operators is deprecated. \(since C++20\)
 
 Built-in prefix operators
 
@@ -597,29 +451,14 @@ The prefix increment and decrement expressions have the form
 
 `-- expr`
 
-1. prefix increment (pre-increment)
+1. prefix increment \(pre-increment\)
+2. prefix decrement \(pre-decrement\)
 
-2. prefix decrement (pre-decrement)
+The operand `expr` of a built-in prefix increment or decrement operator must be a modifiable \(non-const\) value of non-boolean \(since C++17\) arithmetic type or pointer to completely-defined object type. For non-boolean operands, the expression `++x` is exactly equivalent to `x += 1`, and the expression. `-x` is exactly equivalent to `x -= 1`, that is, the prefix increment or decrement is an lvalue expression that identifies the modified operand. All arithmetic conversion rules and pointer arithmetic rules defined for arithmetic operators apply and determine the implicit conversion \(if any\) applied to the operand as well as the return type of the expression.
 
-The operand ``expr`` of a built-in prefix increment or decrement operator
-must be a modifiable (non-const) value of non-boolean (since C++17)
-arithmetic type or pointer to completely-defined object type. For
-non-boolean operands, the expression `++x` is exactly equivalent to `x += 1`, 
-and the expression. `-x` is exactly equivalent to `x -= 1`, that is, the
-prefix increment or decrement is an lvalue expression that identifies
-the modified operand. All arithmetic conversion rules and pointer
-arithmetic rules defined for arithmetic operators apply and determine
-the implicit conversion (if any) applied to the operand as well as the
-return type of the expression.
+If the operand of the pre-increment operator is of type bool, it is set to true \(deprecated\). \(until C++17\)
 
-If the operand of the pre-increment operator is of type bool, it is set
-to true (deprecated). (until C++17)
-
-In overload resolution against user-defined operators, for every
-optionally volatile-qualified arithmetic type A other than bool, and for
-every optionally volatile-qualified pointer P to optionally cv-qualified
-object type, the following function signatures participate in overload
-resolution:
+In overload resolution against user-defined operators, for every optionally volatile-qualified arithmetic type A other than bool, and for every optionally volatile-qualified pointer P to optionally cv-qualified object type, the following function signatures participate in overload resolution:
 
 ```cpp
 A& operator++(A&)
@@ -634,6 +473,7 @@ A& operator.-(A&)
 
 P& operator.-(P&)
 ```
+
 Built-in postfix operators
 
 The postfix increment and decrement expressions have the form
@@ -642,29 +482,15 @@ The postfix increment and decrement expressions have the form
 
 `expr .-`
 
-) postfix increment (post-increment)
+\) postfix increment \(post-increment\)
 
-) postfix decrement (post-decrement)
+\) postfix decrement \(post-decrement\)
 
-The operand expr of a built-in postfix increment or decrement operator
-must be a modifiable (non-const) lvalue of non-boolean (since C++17)
-arithmetic type or pointer to completely-defined object type. The result
-is prvalue copy of the original value of the operand. As a side-effect,
-for non-boolean operands, the expression x++ modifies the value of its
-operand as if by evaluating x += 1, and the expression x.- modifies the
-value of its operand as if by evaluating x -= 1. All arithmetic
-conversion rules and pointer arithmetic rules defined for arithmetic
-operators apply and determine the implicit conversion (if any) applied
-to the operand as well as the return type of the expression.
+The operand expr of a built-in postfix increment or decrement operator must be a modifiable \(non-const\) lvalue of non-boolean \(since C++17\) arithmetic type or pointer to completely-defined object type. The result is prvalue copy of the original value of the operand. As a side-effect, for non-boolean operands, the expression x++ modifies the value of its operand as if by evaluating x += 1, and the expression x.- modifies the value of its operand as if by evaluating x -= 1. All arithmetic conversion rules and pointer arithmetic rules defined for arithmetic operators apply and determine the implicit conversion \(if any\) applied to the operand as well as the return type of the expression.
 
-If the operand of the post-increment operator is of type bool, it is set
-to true (deprecated). (until C++17)
+If the operand of the post-increment operator is of type bool, it is set to true \(deprecated\). \(until C++17\)
 
-In overload resolution against user-defined operators, for every
-optionally volatile-qualified arithmetic type A other than bool, and for
-every optionally volatile-qualified pointer P to optionally cv-qualified
-object type, the following function signatures participate in overload
-resolution:
+In overload resolution against user-defined operators, for every optionally volatile-qualified arithmetic type A other than bool, and for every optionally volatile-qualified pointer P to optionally cv-qualified object type, the following function signatures participate in overload resolution:
 
 ```cpp
 A operator++(A&, int)
@@ -679,7 +505,6 @@ A operator.-(A&, int)
 
 P operator.-(P&, int)
 ```
-
 
 ```cpp
 #include <iostream>
@@ -709,43 +534,27 @@ n4 = 4
 
 Try it Yourself:
 
-<div>
-<iframe height="500px" width="100%" src="https://repl.it/@YazdanRa/cpp-book?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-</div>
-
-> <https://en.cppreference.com/w/cpp/language/operator_incdec>
-
-> <http://www.cplusplus.com/doc/tutorial/operators/>
-
+> [https://en.cppreference.com/w/cpp/language/operator\_incdec](https://en.cppreference.com/w/cpp/language/operator_incdec)
+>
+> [http://www.cplusplus.com/doc/tutorial/operators/](http://www.cplusplus.com/doc/tutorial/operators/)
 
 ## **Numeric Type Conversions**
 
-If an integral and a floating point variable or constant are mixed in an
-operation, the integral value is changed *temporarily* to its equivalent
-floating point representation before the operation is executed. This
-automatic conversion of an integral value to a floating point value is
-called **type coercion**. Type coercion also occurs when a floating point
-value is assigned to an integral variable. Coercion from an integer to a
-floating point is exact. However, when a floating point value is coerced
-into an integral value, the fractional part is truncated.
+If an integral and a floating point variable or constant are mixed in an operation, the integral value is changed _temporarily_ to its equivalent floating point representation before the operation is executed. This automatic conversion of an integral value to a floating point value is called **type coercion**. Type coercion also occurs when a floating point value is assigned to an integral variable. Coercion from an integer to a floating point is exact. However, when a floating point value is coerced into an integral value, the fractional part is truncated.
 
-Type changes can be made explicit by placing the value to be changed in
-parentheses and placing the name of the new type before it. This is
-called *type casting* or *type conversion*. For example,
+Type changes can be made explicit by placing the value to be changed in parentheses and placing the name of the new type before it. This is called _type casting_ or _type conversion_. For example,
 
 `intValue = 10.66;` and `intValue = int(10.66);` produce the same result `10`.
 
 In summary, we have explicit and implicit data type conversion.
 
-**Type coercion** The implicit (automatic) conversion of a value from one data type to another.
+**Type coercion** The implicit \(automatic\) conversion of a value from one data type to another.
 
 **Type casting** The explicit conversion of a value from one data type to another; also called type conversion.
 
-> <https://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
+> [https://www.cs.uregina.ca/Links/class-info/110/unix/index.html](https://www.cs.uregina.ca/Links/class-info/110/unix/index.html)
 
-Conversion function is declared like a non-static member function or
-member function template with no parameters, no explicit return type,
-and with the name of the form:
+Conversion function is declared like a non-static member function or member function template with no parameters, no explicit return type, and with the name of the form:
 
 ```cpp
 operator conversion-type-id **(1)**
@@ -755,77 +564,53 @@ explicit operator conversion-type-id **(2)** (since C++11)
 explicit ( expression ) operator conversion-type-id **(3)** (since C++20)
 ```
 
-1. Declares a user-defined conversion function that participates in **all
-implicit and explicit** conversions.
+1. Declares a user-defined conversion function that participates in **all implicit and explicit** conversions.
+2. Declares a user-defined conversion function that participates in **direct-initialization and explicit** conversions only.
+3. Declares a user-defined conversion function that is **conditionally explicit**.
 
-2. Declares a user-defined conversion function that participates in
-**direct-initialization and explicit** conversions only.
+_conversion-type-id_ is a _type-id_ except that function and array operators `[]` or `()` are not allowed in its declarator \(thus conversion to types such as pointer to array requires a type alias/typedef or an identity template: see below\). Regardless of typedef, conversion-type-id cannot represent an array or a function type.
 
-3. Declares a user-defined conversion function that is **conditionally
-explicit**.
+Although the return type is not allowed in the declaration of a user-defined conversion function, the decl-specifier-seq of the declaration grammar may be present and may include any specifier other than type-specifier or the keyword static, In particular, besides explicit, the specifiers inline, virtual, constexpr \(since C++11\), consteval \(since C++20\), and friend are also allowed \(note that friend requires a qualified name: friend A::operator B\(\);\).
 
-
-*conversion-type-id* is a *type-id* except that function and array operators
-`[]` or `()` are not allowed in its declarator (thus conversion to types
-such as pointer to array requires a type alias/typedef or an identity
-template: see below). Regardless of typedef, conversion-type-id cannot
-represent an array or a function type.
-
-Although the return type is not allowed in the declaration of a
-user-defined conversion function, the decl-specifier-seq of the
-declaration grammar may be present and may include any specifier other
-than type-specifier or the keyword static, In particular, besides
-explicit, the specifiers inline, virtual, constexpr (since C++11),
-consteval (since C++20), and friend are also allowed (note that friend
-requires a qualified name: friend A::operator B();).
-
-When such member function is declared in class `X`, it performs conversion
-from `X` to conversion-type-id:
+When such member function is declared in class `X`, it performs conversion from `X` to conversion-type-id:
 
 ```cpp
 struct X {
     // implicit conversion
     operator int() const { return 7; }
- 
+
     // explicit conversion
     explicit operator int*() const { return nullptr; }
- 
+
     // Error: array operator not allowed in conversion-type-id
     // operator int(*)[3]() const { return nullptr; }
     using arr_t = int[3];
     operator arr_t*() const { return nullptr; } // OK if done through typedef
     // operator arr_t () const; // Error: conversion to array not allowed in any case
 };
- 
+
 int main()
 {
     X x;
- 
+
     int n = static_cast<int>(x);   // OK: sets n to 7
     int m = x;                     // OK: sets m to 7
- 
+
     int* p = static_cast<int*>(x);  // OK: sets p to null
 //  int* q = x; // Error: no implicit conversion
- 
+
     int (*pa)[3] = x;  // OK
 }
 ```
 
-**Explanation**
-User-defined conversion function is invoked on the second stage of the
-implicit conversion, which consists of zero or one converting
-constructor or zero or one user-defined conversion function.
+**Explanation** User-defined conversion function is invoked on the second stage of the implicit conversion, which consists of zero or one converting constructor or zero or one user-defined conversion function.
 
-If both conversion functions and converting constructors can be used to
-perform some user-defined conversion, the conversion functions and
-constructors are both considered by overload resolution in
-copy-initialization and reference-initialization contexts, but only the
-constructors are considered in direct-initialization contexts.
+If both conversion functions and converting constructors can be used to perform some user-defined conversion, the conversion functions and constructors are both considered by overload resolution in copy-initialization and reference-initialization contexts, but only the constructors are considered in direct-initialization contexts.
 
 ```cpp
 struct To {
     To() = default;
-    
+
     To(const struct From&) {} // converting constructor
 };
 
@@ -855,11 +640,7 @@ int main()
 }
 ```
 
-Conversion function to its own (possibly cv-qualified) class (or to a
-reference to it), to the base of its own class (or to a reference to
-it), and to the type void can be defined, but can not be executed as
-part of the conversion sequence, except, in some cases, through virtual
-dispatch:
+Conversion function to its own \(possibly cv-qualified\) class \(or to a reference to it\), to the base of its own class \(or to a reference to it\), and to the type void can be defined, but can not be executed as part of the conversion sequence, except, in some cases, through virtual dispatch:
 
 ```cpp
 struct D;
@@ -900,48 +681,27 @@ int main()
 }
 ```
 
-> <https://en.cppreference.com/w/cpp/language/cast_operator>
+> [https://en.cppreference.com/w/cpp/language/cast\_operator](https://en.cppreference.com/w/cpp/language/cast_operator)
 
 ## **Software Development Process**
 
-In software engineering, a software development process is the process
-of dividing software development work into distinct phases to **improve
-design**, **product management**, and **project management**. It is also known as
-a **software development life cycle** (SDLC). The methodology may include
-the pre-definition of specific deliverables and artifacts that are
-created and completed by a project team to develop or maintain an
-application.
+In software engineering, a software development process is the process of dividing software development work into distinct phases to **improve design**, **product management**, and **project management**. It is also known as a **software development life cycle** \(SDLC\). The methodology may include the pre-definition of specific deliverables and artifacts that are created and completed by a project team to develop or maintain an application.
 
-Most modern development processes can be vaguely described as agile.
-Other methodologies include waterfall, prototyping, iterative and
-incremental development, spiral development, rapid application
-development, and extreme programming.
+Most modern development processes can be vaguely described as agile. Other methodologies include waterfall, prototyping, iterative and incremental development, spiral development, rapid application development, and extreme programming.
 
-A life-cycle "model" is sometimes considered a more general term for a
-category of methodologies and a software development "process" a more
-specific term to refer to a specific process chosen by a specific
-organization.[citation needed] For example, there are many specific
-software development processes that fit the spiral life-cycle model. The
-field is often considered a subset of the systems development life
-cycle.
+A life-cycle "model" is sometimes considered a more general term for a category of methodologies and a software development "process" a more specific term to refer to a specific process chosen by a specific organization.\[citation needed\] For example, there are many specific software development processes that fit the spiral life-cycle model. The field is often considered a subset of the systems development life cycle.
 
-> <https://en.wikipedia.org/wiki/Software_development_process>
+> [https://en.wikipedia.org/wiki/Software\_development\_process](https://en.wikipedia.org/wiki/Software_development_process)
 
 ## **Common Errors**
 
--   Type conversion
+* Type conversion
+* Trying to change the value of a constant variable
+* Lack of using parentheses and getting the wrong Boolean expression
+* Forgetting ";" at the end of the lines that is needed
+* Inappropriate variable initialization
 
--   Trying to change the value of a constant variable
+## **Chapter Summary**
 
--   Lack of using parentheses and getting the wrong Boolean expression
-
--   Forgetting ";" at the end of the lines that is needed
-
--   Inappropriate variable initialization
-
-## **Chapter Summary** 
-
-All in all, now we know how a simple C++ program looks like. Also, we
-know how to declare variables, get them from user, and how to write
-expressions using them and operators.
+All in all, now we know how a simple C++ program looks like. Also, we know how to declare variables, get them from user, and how to write expressions using them and operators.
 

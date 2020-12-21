@@ -3,7 +3,7 @@ title: Half-title page
 style: halftitle-page page-1
 ---
 
-{% include metadata %}
+# 00-01-halftitle-page
 
-{{ title }}
-{:.title-page-title}
+ {:.title-page-title}
+

@@ -5,38 +5,40 @@ order: 10
 ---
 
 # Settings
-{:.no_toc}
+
+{:.no\_toc}
 
 You can apply a range of settings to how your books build in `_data/settings.yml`.
 
 * Page contents
-{:toc}
+
+  {:toc}
 
 ## Electric Book Manager
 
 These settings are not yet used. In future, we expect to use this setting to allow or disallow Electric Book Manager servers to access your book project.
 
-``` yaml
+```yaml
 electric-book-manager: enable
 electric-book-manager-key: ""
 ```
 
 ## Variants
 
-See [Variants](variants.html).
+See [Variants](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/_docs/setup/variants.html).
 
 ## Masthead
 
 These settings control the content of your masthead in web and app outputs. You can have different settings for web and app output. Your masthead can display:
 
-- only the project name (setting: `project-name`)
-- the project name and book title (setting: `book-title`)
-- the project name, book title, and page title (setting: `page-title`)
-- full breadcrumbs that include the project name, book title, all labels listed in `nav` in `_data/meta.yml`, and the page title (setting: `breadcrumbs`).
+* only the project name \(setting: `project-name`\)
+* the project name and book title \(setting: `book-title`\)
+* the project name, book title, and page title \(setting: `page-title`\)
+* full breadcrumbs that include the project name, book title, all labels listed in `nav` in `_data/meta.yml`, and the page title \(setting: `breadcrumbs`\).
 
 For example:
 
-``` yaml
+```yaml
 web:
   masthead:
     content: page-title
@@ -53,11 +55,11 @@ Pagination is the links to the previous and next HTML pages in your books. By de
 
 You define pagination for `web` and `app` output separately, so that they can differ if you need them to.
 
-See [Pagination](../layout/web-pagination.html) for details.
+See [Pagination](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/_docs/layout/web-pagination.html) for details.
 
 ## Annotation
 
-You can turn on open annotation with [Hypothes.is](https://hypothes.is) by setting the `annotator` settings for the development and/or live versions of your website to `true` (i.e. annotation on) or `false` (i.e. annotation off).
+You can turn on open annotation with [Hypothes.is](https://hypothes.is) by setting the `annotator` settings for the development and/or live versions of your website to `true` \(i.e. annotation on\) or `false` \(i.e. annotation off\).
 
 By default, the template turns annotation for development, and off for live. This is because annotation can be useful during development for discussing changes within a team.
 
@@ -71,20 +73,20 @@ You can turn bookmarks on or off in `settings.yml` in the settings for `web` and
 
 ## Epub settings
 
-You'll need to adjust the epub settings if you want to embed fonts or hide the epub's nav element. See [Epub output](../output/epub-output.html) for details.
+You'll need to adjust the epub settings if you want to embed fonts or hide the epub's nav element. See [Epub output](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/_docs/output/epub-output.html) for details.
 
 ## App settings
 
-Among other things, this is where you enable a Google Play expansion file, if you need one for a large app. This is a rare need, so by default this is off (`false`).
+Among other things, this is where you enable a Google Play expansion file, if you need one for a large app. This is a rare need, so by default this is off \(`false`\).
 
-``` yaml
+```yaml
 google-play-expansion-file-enabled: false
 google-play-public-api-key: ""
 ```
 
 ## External media
 
-If a large number of images makes your project too big, you can store your images in a separate location. See [External media](../images/external-media.html) for details.
+If a large number of images makes your project too big, you can store your images in a separate location. See [External media](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/_docs/images/external-media.html) for details.
 
 ## SVG injection
 
@@ -98,12 +100,9 @@ web:
     inject: true
 ```
 
-{% raw %}
-When this is `true`, SVG injection happens automatically for all images added with `{% include figure %}` or `{% include image %}`, and to any image to which you apply the class `inject-svg`. To turn off SVG-injection for a specific image only, add the class `no-inject-svg` to it.
-{% endraw %}
-
 Injecting SVGs can have side-effects, depending how your SVGs are created and coded. If you are going to inject SVGs, we recommend:
 
-- Your SVGs should have inline styles (Illustrator called these 'Style attributes'), not stylesheets in `<style>` elements. If different SVGs use the same class names for different styles, they all inherit each other's styles, ruining your SVGs.
-- If font names in your SVGs are different from the font names you use in your site CSS, adjust the font names in `assets/js/svg-management.js`. That script can replace font-family names in SVGs after injection.
-- All SVGs must have a [`viewBox` attribute](https://css-tricks.com/scale-svg/#article-header-id-3) for correct sizing. Good programs like Illustrator will add this automatically. Otherwise you should add it yourself to the SVG you save in your book's `_source` images.
+* Your SVGs should have inline styles \(Illustrator called these 'Style attributes'\), not stylesheets in `<style>` elements. If different SVGs use the same class names for different styles, they all inherit each other's styles, ruining your SVGs.
+* If font names in your SVGs are different from the font names you use in your site CSS, adjust the font names in `assets/js/svg-management.js`. That script can replace font-family names in SVGs after injection.
+* All SVGs must have a [`viewBox` attribute](https://css-tricks.com/scale-svg/#article-header-id-3) for correct sizing. Good programs like Illustrator will add this automatically. Otherwise you should add it yourself to the SVG you save in your book's `_source` images.
+

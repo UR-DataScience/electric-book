@@ -9,7 +9,6 @@
 * [Improve logic for setting the HTML title element](https://github.com/electricbookworks/electric-book/pull/507)
 * Various minor fixes and refinements.
 
-
 ## 0.18.0
 
 * [Enable bookmarking](https://github.com/electricbookworks/electric-book/pull/444)
@@ -40,7 +39,7 @@
 * [Generate separate web and app search indexes](https://github.com/electricbookworks/electric-book/pull/424)
 * [Allow fully translated landing pages](https://github.com/electricbookworks/electric-book/pull/423)
 * [Lazyload images to save user data](https://github.com/electricbookworks/electric-book/pull/419)
-* [Create TOCs outside of book files (and other nav fixes)](https://github.com/electricbookworks/electric-book/pull/413)
+* [Create TOCs outside of book files \(and other nav fixes\)](https://github.com/electricbookworks/electric-book/pull/413)
 * [Convert .html to .xhtml on epub output](https://github.com/electricbookworks/electric-book/pull/398)
 * [Don't force a blank baseurl on web output](https://github.com/electricbookworks/electric-book/pull/397)
 * [Localise home-page title element in locales](https://github.com/electricbookworks/electric-book/pull/396)
@@ -111,14 +110,14 @@
 
 ## 0.11.1
 
-* [Add pagination](https://github.com/electricbookworks/electric-book/pull/225) (next/previous lnks) to web and app outputs.
+* [Add pagination](https://github.com/electricbookworks/electric-book/pull/225) \(next/previous lnks\) to web and app outputs.
 * [Allow RTL text direction to be set per language in `locales`](https://github.com/electricbookworks/electric-book/pull/224).
 * [Fix issue](https://github.com/electricbookworks/electric-book/pull/222) that caused invalid epubs in EpubCheck 3.
 * Use [clearer language-select icon](https://github.com/electricbookworks/electric-book/pull/223).
-* [Fix issue](388ca1e81cf47f69817dee530dc5846aeb59cc32) where app output used web nav for breadcrumbs.
-* [Remove clumsy doctype entities](7d5bb49ac9a537a201947bd99b0068e43ea439f1) in epub output.
+* [Fix issue](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/388ca1e81cf47f69817dee530dc5846aeb59cc32/README.md) where app output used web nav for breadcrumbs.
+* [Remove clumsy doctype entities](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/7d5bb49ac9a537a201947bd99b0068e43ea439f1/README.md) in epub output.
 * Updates to docs.
-* [Fix issue](bd5d23422583c939985c8835f485b80f2a1cab0f) with timestamps on some Windows machines.
+* [Fix issue](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/bd5d23422583c939985c8835f485b80f2a1cab0f/README.md) with timestamps on some Windows machines.
 * [Improve docs](https://github.com/electricbookworks/electric-book/pull/229), especially guidance on `meta.yml`.
 * [Improvements to iOS app output](https://github.com/electricbookworks/electric-book/pull/230).
 * [Replace buggy version of Crimson Roman](https://github.com/electricbookworks/electric-book/commit/84ac35be8d7681fefdeeafe86eecff08c8083933).
@@ -163,11 +162,11 @@
 ## 0.9.0
 
 * Various updates to documentation
-* Add epub generation (replaces old epub-ready files for Sigil approach)
+* Add epub generation \(replaces old epub-ready files for Sigil approach\)
 * Epubs now MathJax and JS capable
-* Add app generation (Android in Windows, app-ready HTML for iOS)
+* Add app generation \(Android in Windows, app-ready HTML for iOS\)
 * Add gulpfile to autoprocess images from `_source` into output formats
-* Important change to translations structure (documented)
+* Important change to translations structure \(documented\)
 * New `page-info` include for checking metadata for a book and given page
 * All categorisation of docs
 * Fix video embeds, and only load iframe JS on click
@@ -175,11 +174,11 @@
 
 ## 0.8.0
 
-* Allow variant outputs (e.g. variations on `print-pdf` for derivative works)
+* Allow variant outputs \(e.g. variations on `print-pdf` for derivative works\)
 * New `identifiers` include lists, e.g. ISBNs, from `meta.yml`
 * New `_data/settings.yml` for Electric Book settings like variants, and
 * for future Electric Book Manager integration
-* Integrate documentation and typography samples (replaces separate docs repo)
+* Integrate documentation and typography samples \(replaces separate docs repo\)
 * Output formats now force appropriate image-set
 * Support Vimeo embeds
 * Allow series footer text in addition to book-specific web footers
@@ -199,17 +198,17 @@
 * Add support for translations as subdirectories of `text`
 * Add MathJax output in PDF
 * Assume/force use of format-specific image-sets
-* Far more powerful `figure` include (and related styling)
+* Far more powerful `figure` include \(and related styling\)
 * PDF export now conforms to major standards: X1-a for print-pdf, A-3b for screen-pdf.
 * Add ability to change the PDF profile and colour intent in Sass config.
-* Change Jekyll destination back to `_site_` (no longer non-standard `_html`)
+* Change Jekyll destination back to `_site_` \(no longer non-standard `_html`\)
 * More variables available from `include metadata`
 * Breadcrumb trail clickable, when destination files are defined in `meta.yml`'s web nav tree
 * Simpler, better way to [create book-cover files](https://github.com/electricbookworks/electric-book/pull/81)
 * Linux and Mac scripts fixed and updated
 * Javascript in Prince activated by default in scripts
 * HTML compressed with [compress.html](http://jch.penibelst.de/)
-* Minor fixes and improvements (including base typography, nav buttons, TOC layout, default font, Prose config, gitignore, output scripts)
+* Minor fixes and improvements \(including base typography, nav buttons, TOC layout, default font, Prose config, gitignore, output scripts\)
 
 ## 0.6.3
 
@@ -223,13 +222,13 @@
 ## 0.6.1
 
 * Major improvements to web navigation
-* Text search (client-side, using elasticlunr)
+* Text search \(client-side, using elasticlunr\)
 * Breadcrumbs in masthead
 * Many fixes and minor improvements
 
 ## 0.5.2
 
-* Hide web-only elements (e.g. masthead) from print output for printing from browser.
+* Hide web-only elements \(e.g. masthead\) from print output for printing from browser.
 * Fix start depth for frontmatter.
 * Add mispelling fallback for `.half-title-page`/`.halftitle-page`.
 * Define nav-bar-prompt text color.
@@ -267,7 +266,7 @@ Major revision, the key change is that we no longer use a gem-based theme, but r
 ## 0.4.2
 
 * New web navigation option to allow nested menu items: add a web nav tree to `meta.yml`, and enable in `_config.yml`.
-* Move `youtube` include to theme and out of template. (How to manage embeds should be a theme decision.)
+* Move `youtube` include to theme and out of template. \(How to manage embeds should be a theme decision.\)
 * Add index page to book folder that redirects to `text/index`
 * Add related `redirect` include for redirecting any page
 * Add `head-elements` include for injecting scripts and links in `<head>`
@@ -276,27 +275,27 @@ Major revision, the key change is that we no longer use a gem-based theme, but r
 ## 0.4.1
 
 * Rename `get-metadata` include to `metadata` for simpler tag
-* Fix broken font paths and management (fonts now all called from custom CSS)
+* Fix broken font paths and management \(fonts now all called from custom CSS\)
 * Add experimental Windows bundle install script
 
 ## 0.4.0
 
 * Overhaul to work with Jekyll 3.2, supporting themes as gems.
 * Automatically requires the Electric Book Classic Theme gem.
-* Faster epub creation (file structure now matches Sigil conventions).
+* Faster epub creation \(file structure now matches Sigil conventions\).
 * Each book can have its own custom Sass/CSS.
 * Bug fixes and improvements.
 
 ## 0.3.0
 
-* Major change (and improvement) to metadata structures
+* Major change \(and improvement\) to metadata structures
 * Output formats now consistently named print-pdf, screen-pdf, epub and web
 * Fixes to mac-pdf.command script
 * Minor edits
 
 ## 0.2.4
 
-* Add Gemfile and require bundler for scripts to work (NB since Jekyll 3.2.1)
+* Add Gemfile and require bundler for scripts to work \(NB since Jekyll 3.2.1\)
 * Fix `-fitting` classes style inheritance in web and epub CSS
 * Minor improvements
 
@@ -305,7 +304,7 @@ Major revision, the key change is that we no longer use a gem-based theme, but r
 * Fix broken pink to print stylesheets.
 * Fix broken links in @font-face partials.
 * Add more font includes.
-* Turn on kramdown auto_id_stripping to keep IDs neat and persistent, and ahead of 2.0 where this will be default.
+* Turn on kramdown auto\_id\_stripping to keep IDs neat and persistent, and ahead of 2.0 where this will be default.
 * Fix line-height on chapter-numbers to retain baseline grid.
 
 ## 0.2.2
@@ -320,12 +319,12 @@ Major revision, the key change is that we no longer use a gem-based theme, but r
 
 * Bug-fix broken links in new nav include.
 * Improve template index page.
-* Make default web typography paras space-between (not text indent).
+* Make default web typography paras space-between \(not text indent\).
 
 ## 0.2.0
 
 * Move series template out into its own repo for easier forking/copying.
-* Move themes into `_themes` folder (better theme management, and in line with likely forthcoming Jekyll theme structure).
+* Move themes into `_themes` folder \(better theme management, and in line with likely forthcoming Jekyll theme structure\).
 * Improve `nav` and `footer` elements to give themes more to work with, and allow for fuller web output chapter menus.
 * Change `print-list` to `file-list` and auto-generate from file lists per product in `meta.yml`.
 * Create `win-epub.bat` to speed up EPUB creation.
@@ -337,8 +336,8 @@ Major revision, the key change is that we no longer use a gem-based theme, but r
 
 ## 0.1.4
 
-* Move all metadata out of `_config.yml`, into `_data` (no more setting up the slug)
-* Support `<hr>` as text divider (\*\*\* in markdown)
+* Move all metadata out of `_config.yml`, into `_data` \(no more setting up the slug\)
+* Support `<hr>` as text divider \(\*\*\* in markdown\)
 * Minor improvements to code comments
 * Minor improvement to layout of reference indexes
 * Fix for blank baseurl in `win-web.bat` launcher
@@ -364,4 +363,5 @@ Major revision, the key change is that we no longer use a gem-based theme, but r
 ## 0.1.1
 
 * Add .title-page-publisher
-* Liquid tags can populate whole title page and copyright page from _data
+* Liquid tags can populate whole title page and copyright page from \_data
+

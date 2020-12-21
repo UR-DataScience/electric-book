@@ -1,5 +1,2 @@
----
-style: cover
----
+# 0-0-cover
 
-{% include cover %}

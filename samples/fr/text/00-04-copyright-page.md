@@ -1,19 +1,13 @@
 ---
 title: Copyright
 style: copyright-page
-
-# The Liquid tags here fetch metadata 
-# from this book's YML file in _data
 ---
 
-{% include metadata %}
+# 00-04-copyright-page
 
-# Copyright
+## Copyright
+
 {:.non-printing}
 
-*{{ title }}*\\
-Text © {{ creator }}
+\ Text © 
 
-{% include identifiers scheme="ISBN" %}
-
-{{ rights }}

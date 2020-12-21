@@ -5,10 +5,12 @@ order: 1
 ---
 
 # Web output
-{:.no_toc}
+
+{:.no\_toc}
 
 * Page contents
-{:toc}
+
+  {:toc}
 
 Run the template's `run-` script for your operating system and follow the prompts. For these to work, you must already have Jekyll installed and working.
 
@@ -24,7 +26,8 @@ See GitHub's help docs for [guidance](https://help.github.com/articles/using-a-c
 
 In your Electric Book project, you must update the `baseurl` in `_config.yml` for this to work.
 
-- If you are using a custom domain, the `baseurl` should be empty: `baseurl: ""`
-- If you are using the `username.github.io/reponame` URL that GitHub provides automatically, you must set the `baseurl` to the name of your repo, with a slash in front of it. E.g.: `baseurl: "/superpotatoes"`.
+* If you are using a custom domain, the `baseurl` should be empty: `baseurl: ""`
+* If you are using the `username.github.io/reponame` URL that GitHub provides automatically, you must set the `baseurl` to the name of your repo, with a slash in front of it. E.g.: `baseurl: "/superpotatoes"`.
 
 This is because your site is being served at a subdirectory-like URL, and all links in your book must be relative to that full URL. For instance, it must know that your website's CSS is at `farmerjane.github.io/superpotatoes/book/styles/web.css`, and not `farmerjane.github.io/book/styles/web.css`.
+

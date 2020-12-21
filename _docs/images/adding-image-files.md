@@ -12,4 +12,5 @@ Images files must be saved there. Each folder should contain the same set of ima
 
 This can be a lot of work! So it's best to store large master versions of your images in the `images/_source` folder for each book and then automate their conversion to the output format folders.
 
-For how to do this, see [Automating image conversions](image-conversions.html).
+For how to do this, see [Automating image conversions](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/_docs/images/image-conversions.html).
+

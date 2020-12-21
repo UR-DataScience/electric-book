@@ -11,3 +11,4 @@ The website and app outputs include full-text search. The search index is loaded
 The search index is a content file that you need to refresh whenever you've changed the content in your project.
 
 To build or refresh the search index, run the output script for your operating system as you would for any output, and select the 'Refresh search index' option.
+

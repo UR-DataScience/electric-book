@@ -1,5 +1,2 @@
----
-style: cover
----
+# index
 
-{% include cover %}

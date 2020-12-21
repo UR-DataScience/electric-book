@@ -1,14 +1,13 @@
 ---
-title: "Other frontmatter"
+title: Other frontmatter
 style: frontmatter
 ---
 
 # Other frontmatter
 
-In a real book, this might be a Preface or a Foreword or some other kind of prefatory section. But right now we just want to show you what it looks like when a book file is generic frontmatter. To keep you entertained as you stare at these pages, here is the first part of Hippolyte Adolphe Taine's Introduction to the *History of English Literature.*
+In a real book, this might be a Preface or a Foreword or some other kind of prefatory section. But right now we just want to show you what it looks like when a book file is generic frontmatter. To keep you entertained as you stare at these pages, here is the first part of Hippolyte Adolphe Taine's Introduction to the _History of English Literature._
 
-History, within a hundred years in Germany, and within sixty years in France, has undergone a transformation owing to a study of literatures.
-{:.first}
+History, within a hundred years in Germany, and within sixty years in France, has undergone a transformation owing to a study of literatures. {:.first}
 
 The discovery has been made that a literary work is not a mere play of the imagination, the isolated caprice of an excited brain, but a transcript of contemporary manners and customs and the sign of a particular state of intellect. The conclusion derived from this is that, through literary monuments, we can retrace the way in which men felt and thought many centuries ago. This method has been tried and found successful.
 
@@ -23,3 +22,4 @@ In like manner, on reading a Greek tragedy, our first care is to figure to ourse
 And so again, in order to understand an Indian Purana, one must begin by imagining the father of a family who, “having seen a son on his son’s knees,” follows the law and, with ax and pitcher, seeks solitude under a banyan tree, talks no more, multiplies his fastings, lives naked with four fires around him under the fifth fire, that terrible sun which endlessly devours and resuscitates all living things; who fixes his imagination in turn for weeks at a time on the foot of Brahma, then on his knee, on his thigh, on his navel, and so on, until, beneath the strain of this intense meditation, hallucinations appear, when all the forms of being, mingling together and transformed into each other, oscillate to and fro in this vertiginous brain until the motionless man, with suspended breath and fixed eyeballs, beholds the universe melting away like vapor over the vacant immensity of the Being in which he hopes for absorption. In this case the best of teachings would be a journey in India; but, for lack of a better one, take the narratives of travelers along with works in geography, botany, and ethnology. In any event, there must be the same research. A language, a law, a creed, is never other than an abstraction; the perfect thing is found in the active man, the visible corporeal figure which eats, walks, fights, and labors. Set aside the theories of constitutions and their results, of religions and their systems, and try to observe men in their workshops or offices, in their fields along with their own sky and soil, with their own homes, clothes, occupations and repasts, just as you see them when, on landing in England or in Italy, you remark their features and gestures, their roads and their inns, the citizen on his promenades and the workman taking a drink. Let us strive as much as possible to supply the place of the actual, personal, sensible observation that is no longer practicable, this being the only way in which we can really know the man; let us make the past present; to judge of an object it must be present; no experience can be had of what is absent. Undoubtedly, this sort of reconstruction is always imperfect; only an imperfect judgment can be based on it; but let us do the best we can; incomplete knowledge is better than none at all, or than knowledge which is erroneous, and there is no other way of obtaining knowledge approximatively of bygone times than by seeing approximatively the men of former times.
 
 Such is the first step in history. This step was taken in Europe at the end of the last century when the imagination took fresh flight under the auspices of Lessing and Walter Scott, and a little later in France under Chateaubriand, Augustin Thierry, Michelet, and others. We now come to the second step.
+

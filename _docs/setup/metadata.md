@@ -13,29 +13,31 @@ Before you can output your books you must make sure the `meta.yml` file contains
 
 The Electric Book template uses the data in `meta.yml` to populate and build navigation, tables of content, the parts of each book, translations, ISBNs and more.
 
-**Tip**: You can see the `metadata` generated for any given page by using the `page-info` include on it. Simply add this tag to any page to include an output a summary of its metadata: {% raw %}`{% include page-info %}`{% endraw %}.
-{:.box}
+**Tip**: You can see the `metadata` generated for any given page by using the `page-info` include on it. Simply add this tag to any page to include an output a summary of its metadata:
+
+. {:.box}
 
 ## YAML syntax
 
 The `meta.yml` file is written in a syntax called YAML. At its simplest, YAML is just a list of values like this:
 
-``` yaml
+```yaml
 title: "Great Expectations"
 creator: "Charles Dickens"
 ```
 
 Importantly, you can nest information in YAML, so that information can be grouped. For example:
 
-``` yaml
+```yaml
 title: "Great Expectations"
 products:
   print-pdf
   epub
 ```
 
-In YAML, indentation *must* be accurate and *must* be created with spaces, not tabs. If a YAML file contains errors in indentation (or other syntax), your project will not output anything at all.
+In YAML, indentation _must_ be accurate and _must_ be created with spaces, not tabs. If a YAML file contains errors in indentation \(or other syntax\), your project will not output anything at all.
 
 There are many subtle rules for structuring YAML, but if you just follow the existing structure in `meta.yml` carefully, you'll be fine. [Here is a good tutorial](https://learn.getgrav.org/advanced/yaml) on YAML, if you want to know more.
 
-There is more detail on editing `meta.yml` in [Navigation and TOCs](tocs.html).
+There is more detail on editing `meta.yml` in [Navigation and TOCs](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/_docs/setup/tocs.html).
+

@@ -1,22 +1,22 @@
 ---
-title: "Plain text"
+title: Plain text
 ---
 
-## Plain text
+# Plain text
 
-Most books comprise pages and pages of running text. A good design makes them lovely to look at and easy to read. The heart of a design is how it handles both plain text and special forms like letters. There is a [letter towards the end of this chapter](#letter){:.show-page-number}.
+Most books comprise pages and pages of running text. A good design makes them lovely to look at and easy to read. The heart of a design is how it handles both plain text and special forms like letters. There is a [letter towards the end of this chapter](01-01-plain-text.md#letter){:.show-page-number}.
 
-The text for this chapter is taken from Sir Arthur Conan Doyle's [*Adventures of Sherlock Holmes*](10-02-dynamic-index.html#sherlock-1){:.indexed #sherlock-1}.
+The text for this chapter is taken from Sir Arthur Conan Doyle's [_Adventures of Sherlock Holmes_](https://github.com/UR-DataScience/electric-book/tree/2a308e4940331c0bffb0ddf1cef032daccf6dc4f/samples/text/10-02-dynamic-index.html#sherlock-1){:.indexed \#sherlock-1}.
 
-### A Scandal in Bohemia
+## A Scandal in Bohemia
 
-#### I.
+### I.
 
 To Sherlock Holmes she is always THE woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position. He never spoke of the softer passions, save with a gibe and a sneer. They were admirable things for the observer--excellent for drawing the veil from men's motives and actions. But for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results. Grit in a sensitive instrument, or a crack in one of his own high-power lenses, would not be more disturbing than a strong emotion in a nature such as his. And yet there was but one woman to him, and that woman was the late Irene Adler, of dubious and questionable memory.
 
 I had seen little of Holmes lately. My marriage had drifted us away from each other. My own complete happiness, and the home-centred interests which rise up around the man who first finds himself master of his own establishment, were sufficient to absorb all my attention, while Holmes, who loathed every form of society with his whole Bohemian soul, remained in our lodgings in Baker Street, buried among his old books, and alternating from week to week between cocaine and ambition, the drowsiness of the drug, and the fierce energy of his own keen nature. He was still, as ever, deeply attracted by the study of crime, and occupied his immense faculties and extraordinary powers of observation in following out those clues, and clearing up those mysteries which had been abandoned as hopeless by the official police. From time to time I heard some vague account of his doings: of his summons to Odessa in the case of the Trepoff murder, of his clearing up of the singular tragedy of the Atkinson brothers at Trincomalee, and finally of the mission which he had accomplished so delicately and successfully for the reigning family of Holland. Beyond these signs of his activity, however, which I merely shared with all the readers of the daily press, I knew little of my former friend and companion.
 
-One night--it was on the twentieth of March, 1888--I was returning from a journey to a patient (for I had now returned to civil practice), when my way led me through Baker Street. As I passed the well-remembered door, which must always be associated in my mind with my wooing, and with the dark incidents of the Study in Scarlet, I was seized with a keen desire to see Holmes again, and to know how he was employing his extraordinary powers. His rooms were brilliantly lit, and, even as I looked up, I saw his tall, spare figure pass twice in a dark silhouette against the blind. He was pacing the room swiftly, eagerly, with his head sunk upon his chest and his hands clasped behind him. To me, who knew his every mood and habit, his attitude and manner told their own story. He was at work again. He had risen out of his drug-created dreams and was hot upon the scent of some new problem. I rang the bell and was shown up to the chamber which had formerly been in part my own.
+One night--it was on the twentieth of March, 1888--I was returning from a journey to a patient \(for I had now returned to civil practice\), when my way led me through Baker Street. As I passed the well-remembered door, which must always be associated in my mind with my wooing, and with the dark incidents of the Study in Scarlet, I was seized with a keen desire to see Holmes again, and to know how he was employing his extraordinary powers. His rooms were brilliantly lit, and, even as I looked up, I saw his tall, spare figure pass twice in a dark silhouette against the blind. He was pacing the room swiftly, eagerly, with his head sunk upon his chest and his hands clasped behind him. To me, who knew his every mood and habit, his attitude and manner told their own story. He was at work again. He had risen out of his drug-created dreams and was hot upon the scent of some new problem. I rang the bell and was shown up to the chamber which had formerly been in part my own.
 
 His manner was not effusive. It seldom was; but he was glad, I think, to see me. With hardly a word spoken, but with a kindly eye, he waved me to an armchair, threw across his case of cigars, and indicated a spirit case and a gasogene in the corner. Then he stood before the fire and looked me over in his singular introspective fashion.
 
@@ -56,13 +56,11 @@ The note was undated, and without either signature or address.
 
 "There will call upon you to-night, at a quarter to eight o'clock," it said, "a gentleman who desires to consult you upon a matter of the very deepest moment. Your recent services to one of the royal houses of Europe have shown that you are one who may safely be trusted with matters which are of an importance which can hardly be exaggerated. This account of you we have from all quarters received. Be in your chamber then at that hour, and do not take it amiss if your visitor wear a mask."
 
-"This is indeed a mystery," I remarked. "What do you imagine that
-it means?"
+"This is indeed a mystery," I remarked. "What do you imagine that it means?"
 
 "I have no data yet. It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts. But the note itself. What do you deduce from it?"
 
-I carefully examined the writing, and the paper upon which it was
-written.
+I carefully examined the writing, and the paper upon which it was written.
 
 "The man who wrote it was presumably well to do," I remarked, endeavouring to imitate my companion's processes. "Such paper could not be bought under half a crown a packet. It is peculiarly strong and stiff."
 
@@ -254,8 +252,7 @@ Holmes took a note of it. "One other question," said he. "Was the photograph a c
 
 "Then, good-night, your Majesty, and I trust that we shall soon have some good news for you. And good-night, Watson," he added, as the wheels of the royal brougham rolled down the street. "If you will be good enough to call to-morrow afternoon at three o'clock I should like to chat this little matter over with you."
 
-
-#### II.
+### II.
 
 At three o'clock precisely I was at Baker Street, but Holmes had not yet returned. The landlady informed me that he had left the house shortly after eight o'clock in the morning. I sat down beside the fire, however, with the intention of awaiting him, however long he might be. I was already deeply interested in his inquiry, for, though it was surrounded by none of the grim and strange features which were associated with the two crimes which I have already recorded, still, the nature of the case and the exalted station of his client gave it a character of its own. Indeed, apart from the nature of the investigation which my friend had on hand, there was something in his masterly grasp of a situation, and his keen, incisive reasoning, which made it a pleasure to me to study his system of work, and to follow the quick, subtle methods by which he disentangled the most inextricable mysteries. So accustomed was I to his invariable success that the very possibility of his failing had ceased to enter into my head.
 
@@ -301,8 +298,7 @@ It was close upon four before the door opened, and a drunken-looking groom, ill-
 
 "I was half-dragged up to the altar, and before I knew where I was I found myself mumbling responses which were whispered in my ear, and vouching for things of which I knew nothing, and generally assisting in the secure tying up of Irene Adler, spinster, to Godfrey Norton, bachelor. It was all done in an instant, and there was the gentleman thanking me on the one side and the lady on the other, while the clergyman beamed on me in front. It was the most preposterous position in which I ever found myself in my life, and it was the thought of it that started me laughing just now. It seems that there had been some informality about their license, that the clergyman absolutely refused to marry them without a witness of some sort, and that my lucky appearance saved the bridegroom from having to sally out into the streets in search of a best man. The bride gave me a sovereign, and I mean to wear it on my watch-chain in memory of the occasion."
 
-"This is a very unexpected turn of affairs," said I; "and what
-then?"
+"This is a very unexpected turn of affairs," said I; "and what then?"
 
 "Well, I found my plans very seriously menaced. It looked as if the pair might take an immediate departure, and so necessitate very prompt and energetic measures on my part. At the church door, however, they separated, he driving back to the Temple, and she to her own house. 'I shall drive out in the park at five as usual,' she said as she left him. I heard no more. They drove away in different directions, and I went off to make my own arrangements."
 
@@ -448,8 +444,7 @@ There were several people on the pavement at the time, but the greeting appeared
 
 "I've heard that voice before," said Holmes, staring down the dimly lit street. "Now, I wonder who the deuce that could have been."
 
-
-#### III.
+### III.
 
 I slept at Baker Street that night, and we were engaged upon our toast and coffee in the morning when the King of Bohemia rushed into the room.
 
@@ -506,15 +501,12 @@ The door of Briony Lodge was open, and an elderly woman stood upon the steps. Sh
 "We shall see." He pushed past the servant and rushed into the drawing-room, followed by the King and myself. The furniture was scattered about in every direction, with dismantled shelves and open drawers, as if the lady had hurriedly ransacked them before her flight. Holmes rushed at the bell-pull, tore back a small sliding shutter, and, plunging in his hand, pulled out a photograph and a letter. The photograph was of Irene Adler herself in evening dress, the letter was superscribed to "Sherlock Holmes, Esq. To be left till called for." My friend tore it open and we all three read it together. It was dated at midnight of the preceding night and ran in this way:
 
 > "MY DEAR MR. SHERLOCK HOLMES,--You really did it very well. You took me in completely. Until after the alarm of fire, I had not a suspicion. But then, when I found how I had betrayed myself, I began to think. I had been warned against you months ago. I had been told that if the King employed an agent it would certainly be you. And your address had been given me. Yet, with all this, you made me reveal what you wanted to know. Even after I became suspicious, I found it hard to think evil of such a dear, kind old clergyman. But, you know, I have been trained as an actress myself. Male costume is nothing new to me. I often take advantage of the freedom which it gives. I sent John, the coachman, to watch you, ran up stairs, got into my walking-clothes, as I call them, and came down just as you departed.
-> 
+>
 > "Well, I followed you to your door, and so made sure that I was really an object of interest to the celebrated Mr. Sherlock Holmes. Then I, rather imprudently, wished you good-night, and started for the Temple to see my husband.
-> 
+>
 > "We both thought the best resource was flight, when pursued by so formidable an antagonist; so you will find the nest empty when you call to-morrow. As to the photograph, your client may rest in peace. I love and am loved by a better man than he. The King may do what he will without hindrance from one whom he has cruelly wronged. I keep it only to safeguard myself, and to preserve a weapon which will always secure me from any steps which he might take in the future. I leave a photograph which he might care to possess; and I remain, dear Mr. Sherlock Holmes,
-> 
-> "Very truly yours,\\
-> "IRENE NORTON, née ADLER."
-> {:.valediction}
-{:.letter #letter}
+>
+> "Very truly yours,\ "IRENE NORTON, née ADLER." {:.valediction} {:.letter \#letter}
 
 "What a woman--oh, what a woman!" cried the King of Bohemia, when we had all three read this epistle. "Did I not tell you how quick and resolute she was? Would she not have made an admirable queen? Is it not a pity that she was not on my level?"
 
@@ -538,4 +530,5 @@ The King stared at him in amazement.
 
 "I thank your Majesty. Then there is no more to be done in the matter. I have the honour to wish you a very good-morning." He bowed, and, turning away without observing the hand which the King had stretched out to him, he set off in my company for his chambers.
 
-And that was how a great scandal threatened to affect the kingdom of Bohemia, and how the best plans of Mr. Sherlock Holmes were beaten by a woman's wit. He used to make merry over the cleverness of women, but I have not heard him do it of late. And when he speaks of Irene Adler, or when he refers to her photograph, it is always under the honourable title of the woman. 
+And that was how a great scandal threatened to affect the kingdom of Bohemia, and how the best plans of Mr. Sherlock Holmes were beaten by a woman's wit. He used to make merry over the cleverness of women, but I have not heard him do it of late. And when he speaks of Irene Adler, or when he refers to her photograph, it is always under the honourable title of the woman.
+
