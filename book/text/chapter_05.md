@@ -7,7 +7,7 @@ order: 5
 
 # **Loops**
 
-## Introduction and Objectives
+## **5.1 Introduction and Objectives**
 
 When the program needs to be executed multiple times on a sequence of
 inputs or validate them using the condition statements then it is not a
@@ -18,22 +18,23 @@ keywords while, do, and for.
 
 > <http://www.cplusplus.com/doc/tutorial/control/>
 
-## The while Loop
+## **5.2 The while Loop**
 
 The simplest kind of loop is the while-loop. Its syntax is:
+
 ```cpp
 while (expression) statement
 ```
+
 The while-loop simply repeats statement while expression is true. If,
 after any execution of statement, expression is no longer true, the loop
 ends, and the program continues right after the loop.
 
 For example, let's have a look at a countdown using a while-loop:
+
 ```cpp
-*/  
-    10, 9, 8, 7, 6, 5, 4, 3, 2, 1, liftoff!
-    [url](http://www.cplusplus.com/doc/tutorial/control/) 
-*/
+//  [url](http://www.cplusplus.com/doc/tutorial/control/) 
+
 
 #include <iostream>
                                                    
@@ -49,6 +50,13 @@ int main ()
     cout << "liftoff!\n";                                        
 }
 ```
+
+Output:
+
+```text
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1, liftoff!
+```
+
 The first statement in main sets `n` to a value of 10. This is the first
 number in the countdown. Then the while-loop begins: if this value
 fulfills the condition `n>0` (that n is greater than zero), then the
@@ -99,10 +107,10 @@ between elements of the count
 for a countdown example with delays).
 
 > <http://www.cs.uregina.ca/Links/class-info/110/loops/index.html>
->
+
 > <https://www.tutorialspoint.com/cplusplus/cpp_while_loop.htm>
 
-## Loop Design Strategies
+## **5.3 Loop Design Strategies**
 
 Initial days of programming makes it difficult to understand the working
 of the loops and while to implement you may make some errors. So, here
@@ -131,7 +139,7 @@ while loop-continuation-condition:
 ```
 
 
-## Controlling a Loop with User Confirmation
+## **5.4 Controlling a Loop with User Confirmation**
 
 We can write a program using a loop that executes the next iteration
 only if it gets some input from the user which controls the flow the
@@ -159,14 +167,18 @@ E.g. Tell the user to input any positive integer values. And inform the
 user that giving a negative integer `-1` will terminate the loop. So, `-1`
 is the sentinel value in this program.
 
-## Input and Output Redirections and Read All Data from a File
+## **5.5 Input and Output Redirections and Read All Data from a File**
 
-## The do-while Loop
+TODO
+
+## **5.6 The do-while Loop**
 
 A very similar loop is the do-while loop, whose syntax is:
+
 ```cpp
 do statement while (condition);
 ```
+
 It behaves like a while-loop, except that condition is evaluated after
 the execution of statement instead of before, guaranteeing at least one
 execution of statement, even if condition is never fulfilled. For
@@ -203,15 +215,17 @@ int main()
 > entering goodbye, the block in the loop needs to be executed at least
 > once to prompt for input, and the condition can, in fact, only be
 > determined after it is executed.
->
+
 > <http://www.cs.uregina.ca/Links/class-info/110/loops/write-p1.html>
 
-## The for Loop
+## **5.7 The for Loop**
 
 The for loop is designed to iterate a number of times. Its syntax is:
-```
+
+```cpp
 for (initialization; condition; increase) statement;
 ```
+
 Like the while-loop, this loop repeats statement while condition is
 true. But, in addition, the for loop provides specific locations to
 contain an initialization and an increase expression, executed before
@@ -238,11 +252,8 @@ It works in the following way:
 Here is the countdown example using a for loop:
 
 ```cpp
-*/
-    countdown using a for loop
-    10, 9, 8, 7, 6, 5, 4, 3, 2, 1, liftoff!
-    [](http://www.cplusplus.com/doc/tutorial/control/)
-*/
+// countdown using a for loop
+
 
 #include <iostream>
 
@@ -257,6 +268,13 @@ int main ()
     cout << "liftoff!\n";                                        
 }
 ```
+
+Ooutput:
+
+```text
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1, liftoff!
+```
+
 The three fields in a for-loop are optional. They can be left empty, but
 in all cases the semicolon signs between them are required. For
 example, `for (;n<10;)` is a loop
@@ -287,7 +305,7 @@ for ( n=0, i=100 ; n!=i ; ++n, --i )
 This loop will execute 50 times if neither `n` or `i` are modified within
 the loop:
 
-![alt-image](media/image3.png)
+![alt-image](../images/chapter_05/Picture1.png)
 
 `n` starts with a value of `0`, and `i` with `100`, the condition is `n!=i` 
 (i.e., that `n` is not equal to `i`). 
@@ -357,7 +375,7 @@ in str.
 
 > <http://www.cs.uregina.ca/Links/class-info/110/loops/write-p1.html>
 
-## Which Loop to Use?
+## **5.8 Which Loop to Use?**
 
 Now we know there are 3 different looping techniques, but which one to
 use where?
@@ -383,7 +401,7 @@ And when you want to execute the block of statements at least once
 without considering the satisfying condition then you can go with Do-
 while loop
 
-## Nested Loops
+## **5.9 Nested Loops**
 
 The body of a loop can contain any type of statement including another
 loop such as a While loop, a Do-while loop, or a For loop. A loop inside
@@ -454,7 +472,7 @@ int main()
 ```
 > <http://www.cs.uregina.ca/Links/class-info/110/loops/index.html>
 
-## Minimizing Numeric Errors
+## **5.10 Minimizing Numeric Errors**
 
 Using floating-point numbers in the loop-continuation condition may
 cause numeric errors.
@@ -500,7 +518,7 @@ loop terminates and gives a slight error in output. Basically, the
 floating points are represented by approximation. So, we should avoid
 floating points in iterating the loops.
 
-## Jump Statements (Keywords break and continue)
+## **5.11 Jump Statements (Keywords break and continue)**
 
 Jump statements allow altering the flow of a program by performing jumps
 to specific locations.
@@ -602,7 +620,7 @@ int main()
 ```
 > <https://www.w3schools.com/cpp/cpp_break.asp> (optional)
 
-## Chapter Summary
+## **5.12 Chapter Summary**
 
 In this chapter, you have learned how to use loops, jump statements and
 where to use the loops with the error making possibilities and solutions
