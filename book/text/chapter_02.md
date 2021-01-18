@@ -9,7 +9,7 @@ order: 2
 
 ## **2.1 Introduction and Objectives**
 
-Let us start our journey in programming with learning some basic concepts. We are going to learn about simple input/output, identifiers, variables, and expressions in this chapter. These are some important tools that will help us to communicate information between a user and our code. We will learn how to get information from the user, how to save that information, how to do some calculation using that information, and eventually, how to let the user know about the result of the calculation. 
+Let's start our journey in programming with learning some basic concepts. We are going to learn about simple input/output, identifiers, variables, and expressions in this chapter. These are some important tools that will help us to communicate information between a user and our code. We will learn how to get information from the user, how to save that information, how to do some calculation using that information, and eventually, how to let the user know about the result of the calculation. 
 
 ## **2.2 Writing a Simple Program** 
 
