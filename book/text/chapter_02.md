@@ -574,7 +574,7 @@ Try it yourself:
 
 <iframe 
     height="700px" 
-    width="100%" 
+    width="700px" 
     src="https://repl.it/@DataScienceLab/2-10#main.cpp?lite=true" 
     scrolling="no" 
     frameborder="no" 
