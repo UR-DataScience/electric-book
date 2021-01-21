@@ -9,16 +9,16 @@ order: 2
 
 ## **2.1 Introduction and Objectives**
 
-In this chapter you will learn how to solve a problem with programming.
-You will learn how to read input and use identifiers, variables, and
-expressions.
+Let us start our journey in programming with learning some basic concepts. We are going to learn about simple input/output, identifiers, variables, and expressions in this chapter. These are some important tools that will help us to communicate information between a user and our code. We will learn how to get information from the user, how to save that information, how to do some calculation using that information, and eventually, how to let the user know about the result of the calculation. 
 
 ## **2.2 Writing a Simple Program** 
 
-Let's examine the following C++ program. We have numbered the lines so
-that we can discuss them easily.
+Let's examine the following C++ program.
 
 ```cpp
+// Author: Ada Lovelace
+// Purpose: Demonstrate Basic I/O operation by inputting a number and outputting the number just entered.
+
 #include <iostream>
 using namespace std;
 
@@ -31,13 +31,13 @@ int main()
     return 0;
 }
 ```
-> Author: Ada Lovelace                                       
-> Purpose: Demonstrate Basic I/O operation by inputting a number and outputting the number just entered.
 
 Try it yourself:
 <div>
-<iframe height="500px" width="100%" src="https://repl.it/@YazdanRa/cpp-book?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@Baranerf/Ch21?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 </div>
+
+
 
 -   The first 6 lines of code is a comment block that gives a brief introduction to the
     C++ program.
@@ -137,7 +137,7 @@ Also, we could get `x` and `y`in one line:
 cin >> x >> y;
 ```
 
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
+
 
 ## **2.4 Identifiers**
 
@@ -158,17 +158,17 @@ actions) by giving them an *identifier*.
 
 -   An identifier must begin with a letter or an underscore.
 
--   An identifier should not be a *reserved word*. ()
+-   An identifier should not be a *reserved word*.
 
 For instance, length and \_width1 are legal identifiers, while 1length
 and width-4 are not legal.
 
 **NOTE**: Reserved words are certain words which have predefined meanings within the C++
 language. Examples of reserved words:
-`int`, `namespace`, `using`, `include`, `cin`, `cout`, `and`, `return`, etc.. 
+`int`, `namespace`, `using`, `include`, `cin`, `cout`, `and`, `return`, etc. 
 You **cannot** use them as your user defined identifier such as variable names.
 
->   https://www.cs.uregina.ca/Links/class-info/110/unix/index.html
+
 
 **NOTE**: C++ is case sensitive. It means length, Length, and LEngTh are all different.
 
@@ -179,9 +179,6 @@ lower case. For example, `payRate`, `camelCase`, and `numberOfYears` are `camelC
 
 ![CamelCase](../images/chapter_02/330px-CamelCase_new.svg.png)
 
-> <https://en.wikipedia.org/wiki/Camel_case>
-
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
 ## **2.5 Variables**
 
@@ -229,9 +226,6 @@ bool valid = true;
 
 However, a variable can be used only **after its value is set**.
 
-> <https://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
-
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
 ## **2.6 Assignment Statements and Assignment Expressions**
 
@@ -242,7 +236,6 @@ You need to know the definition of an **arithmetic expression** and the
 Variables and constants of integral and floating point types can be
 combined into expressions using arithmetic operators.
 
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
 ## **2.7 Named Constants**
 
@@ -259,11 +252,6 @@ const float payRate = 12.85;
 const double pi = 3.1415926536;
 ```
 
-> <https://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
-
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
-
-> <http://www.cplusplus.com/doc/tutorial/constants/>
 
 
 ## **2.8 Numeric Data Types and Operations**
@@ -307,7 +295,6 @@ The arithmetic operators are listed in the following table:
 | `--`         | **Decrement by one** <br> Can be prefix or postfix <br> As postfix has highest precedence                                                          
 
 
-> <https://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
 
 ## **2.9 Evaluating Expressions and Operator Precedence**
@@ -350,8 +337,9 @@ Output:
 10
 ```
 
+Try it yourself:
 <div>
-<iframe height="600px" width="100%" src="https://repl.it/@YazdanRa/cpp-book?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@Baranerf/Ch22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 </div>
 
 
@@ -396,9 +384,6 @@ Output:
 |                | `&=`, `^=`, `\=`      |  Compound assignment by bitwise AND, XOR, and OR           |               
 |     17         | `,`                   |  Comma                                                     |  Left-to-right 
 
->  <https://en.cppreference.com/w/cpp/language/operator_precedence>
-
-> <http://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
 ## **2.10 Augmented Assignment Operators**
 
@@ -557,7 +542,7 @@ Output:
 ```text
 1 0 97 98 1 2
 ```
-
+<!---
 Try it Yourself:
 
 <div>
@@ -565,6 +550,7 @@ Try it Yourself:
 </div>
 
 >  <https://en.cppreference.com/w/cpp/language/operator_assignment>
+--->
 
 ## **2.11 Increment and Decrement Operators**
 
@@ -597,13 +583,10 @@ Built-in prefix operators
 
 The prefix increment and decrement expressions have the form
 
-`++ expr`
+`++ expr`: prefix increment (pre-increment)
 
-`-- expr`
+`-- expr`: prefix decrement (pre-decrement)
 
-1. prefix increment (pre-increment)
-
-2. prefix decrement (pre-decrement)
 
 The operand ``expr`` of a built-in prefix increment or decrement operator
 must be a modifiable (non-const) value of non-boolean (since C++17)
@@ -714,12 +697,9 @@ n4 = 4
 Try it Yourself:
 
 <div>
-<iframe height="500px" width="100%" src="https://repl.it/@YazdanRa/cpp-book?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@Baranerf/Ch23?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 </div>
 
-> <https://en.cppreference.com/w/cpp/language/operator_incdec>
-
-> <http://www.cplusplus.com/doc/tutorial/operators/>
 
 
 ## **2.12 Numeric Type Conversions**
@@ -731,33 +711,31 @@ automatic conversion of an integral value to a floating point value is
 called **type coercion**. Type coercion also occurs when a floating point
 value is assigned to an integral variable. Coercion from an integer to a
 floating point is exact. However, when a floating point value is coerced
-into an integral value, the fractional part is truncated.
+into an integral value, the fractional part is **truncated**.
 
 Type changes can be made explicit by placing the value to be changed in
 parentheses and placing the name of the new type before it. This is
-called *type casting* or *type conversion*. For example,
+called *type casting* or *type conversion*. For example, `intValue = 10.66;` and `intValue = int(10.66);` produce the same result `10`.
 
-`intValue = 10.66;` and `intValue = int(10.66);` produce the same result `10`.
+In summary, we have *explicit* and *implicit* data type conversion.
 
-In summary, we have explicit and implicit data type conversion.
+- **Type coercion** The **implicit** (automatic) conversion of a value from one data type to another.
 
-**Type coercion** The implicit (automatic) conversion of a value from one data type to another.
+- **Type casting** The **explicit** conversion of a value from one data type to another; also called *type conversion*.
 
-**Type casting** The explicit conversion of a value from one data type to another; also called type conversion.
 
-> <https://www.cs.uregina.ca/Links/class-info/110/unix/index.html>
 
 Conversion function is declared like a non-static member function or
 member function template with no parameters, no explicit return type,
 and with the name of the form:
 
-```cpp
-operator conversion-type-id **(1)**
 
-explicit operator conversion-type-id **(2)** (since C++11)
+> operator conversion-type-id **(1)**
 
-explicit ( expression ) operator conversion-type-id **(3)** (since C++20)
-```
+> explicit operator conversion-type-id **(2)** (since C++11)
+
+> explicit ( expression ) operator conversion-type-id **(3)** (since C++20)
+
 
 1. Declares a user-defined conversion function that participates in **all implicit and explicit** conversions.
 
@@ -767,11 +745,12 @@ explicit ( expression ) operator conversion-type-id **(3)** (since C++20)
 
 
 *conversion-type-id* is a *type-id* except that function and array operators
-`[]` or `()` are not allowed in its declarator (thus conversion to types
+`[]` or `()` are **not allowed** in its declarator (thus conversion to types
 such as pointer to array requires a type alias/typedef or an identity
-template: see below). Regardless of typedef, conversion-type-id cannot
-represent an array or a function type.
+template). Regardless of typedef, conversion-type-id cannot
+represent an array  a function ortype.
 
+<!---
 Although the return type is not allowed in the declaration of a
 user-defined conversion function, the decl-specifier-seq of the
 declaration grammar may be present and may include any specifier other
@@ -782,6 +761,8 @@ requires a qualified name: friend A::operator B();).
 
 When such member function is declared in class `X`, it performs conversion
 from `X` to conversion-type-id:
+
+
 
 ```cpp
 struct X {
@@ -900,8 +881,7 @@ int main()
     B& b3 = x.operator B&(); // calls X::operatorB&
 }
 ```
-
-> <https://en.cppreference.com/w/cpp/language/cast_operator>
+--->
 
 ## **2.13 Software Development Process**
 
@@ -926,7 +906,6 @@ software development processes that fit the spiral life-cycle model. The
 field is often considered a subset of the systems development life
 cycle.
 
-> <https://en.wikipedia.org/wiki/Software_development_process>
 
 ## **2.14 Common Errors**
 
@@ -945,3 +924,13 @@ cycle.
 All in all, now we know how a simple C++ program looks like. Also, we
 know how to declare variables, get them from user, and how to write
 expressions using them and operators.
+
+## **References**
+- <http://www.cs.uregina.ca>
+- <https://en.wikipedia.org/wiki/Camel_case>
+- <http://www.cplusplus.com/doc/tutorial/constants/>
+- <https://en.cppreference.com/w/cpp/language/operator_precedence>
+- <https://en.cppreference.com/w/cpp/language/cast_operator>
+- <https://en.cppreference.com/w/cpp/language/operator_incdec>
+- <http://www.cplusplus.com/doc/tutorial/operators/>
+- <https://en.wikipedia.org/wiki/Software_development_process>
