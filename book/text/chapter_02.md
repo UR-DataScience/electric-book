@@ -1,17 +1,17 @@
 ---
 title: Programming and Problem Solving Chapter 2
-subtitle: "**Dr. Alireza Manashty**<br>**University of Regina**"
+subtitle: "Dr. Alireza Manashty<br>University of Regina"
 style: chapter page-2
 order: 2
 ---
 
-# **Elementary Programming**
+# Elementary Programming
 
-## **2.1 Introduction and Objectives**
+## 2.1 Introduction and Objectives
 
 Let us start our journey in programming with learning some basic concepts. We are going to learn about simple input/output, identifiers, variables, and expressions in this chapter. These are some important tools that will help us to communicate information between a user and our code. We will learn how to get information from the user, how to save that information, how to do some calculation using that information, and eventually, how to let the user know about the result of the calculation. 
 
-## **2.2 Writing a Simple Program** 
+## 2.2 Writing a Simple Program
 
 Let's examine the following C++ program.
 
@@ -33,10 +33,18 @@ int main()
 ```
 
 Try it yourself:
-<div>
-<iframe height="400px" width="100%" src="https://repl.it/@Baranerf/Ch21?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-</div>
 
+<iframe 
+    height="500px" 
+    width="100%" 
+    src="https://repl.it/@Baranerf/Ch21?lite=true" 
+    scrolling="no" 
+    frameborder="no" 
+    allowtransparency="true" 
+    allowfullscreen="true" 
+    sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+</iframe>
+<br>
 
 
 -   The first 6 lines of code is a comment block that gives a brief introduction to the
@@ -65,9 +73,11 @@ Try it yourself:
     program must follow this same syntax.
 
 
->**NOTE**: Built-in header files are enclosed inside the `<` and `>`
-marks. Header files you create and bring in to the program are enclosed
-in `""` quotation marks.
+> **NOTE**: 
+>
+> Built-in header files are enclosed inside the `<` and `>`
+> marks. Header files you create and bring in to the program are enclosed
+> in `""` quotation marks.
 
 -   `int main() {:.cpp}` is the executable part of our program. The
     function name is `main`, and it returns a value that is of type
@@ -105,7 +115,7 @@ in `""` quotation marks.
 
 -   `// end program` - a single line comment.
 
-## **2.3 Reading Input from the Keyboard**
+## 2.3 Reading Input from the Keyboard
 
 Imagine we want to write a program to calculate the area of a
 rectangle with length of `x` and width of `y`. The first step to calculate
@@ -139,7 +149,7 @@ cin >> x >> y;
 
 
 
-## **2.4 Identifiers**
+## 2.4 Identifiers
 
 There are two main parts in a C++ program:
 
@@ -163,14 +173,15 @@ actions) by giving them an *identifier*.
 For instance, length and \_width1 are legal identifiers, while 1length
 and width-4 are not legal.
 
-**NOTE**: Reserved words are certain words which have predefined meanings within the C++
-language. Examples of reserved words:
-`int`, `namespace`, `using`, `include`, `cin`, `cout`, `and`, `return`, etc. 
-You **cannot** use them as your user defined identifier such as variable names.
+> **NOTE**: 
+> 
+> 1. Reserved words are certain words which have predefined meanings within the C++
+>    language. Examples of reserved words:
+>    `int`, `namespace`, `using`, `include`, `cin`, `cout`, `and`, `return`, etc. 
+>    You **cannot** use them as your user defined identifier such as variable names.
+>
+> 2. C++ is case sensitive. It means length, Length, and LEngTh are all different.
 
-
-
-**NOTE**: C++ is case sensitive. It means length, Length, and LEngTh are all different.
 
 **camelCase**:
 Camel case is a naming convention in which the first letter of each word
@@ -180,7 +191,7 @@ lower case. For example, `payRate`, `camelCase`, and `numberOfYears` are `camelC
 ![CamelCase](../images/chapter_02/330px-CamelCase_new.svg.png)
 
 
-## **2.5 Variables**
+## 2.5 Variables
 
 Variables are named memory locations that have a type, such as an
 integer or character, and consequently, a size, which is inherited from
@@ -227,7 +238,7 @@ bool valid = true;
 However, a variable can be used only **after its value is set**.
 
 
-## **2.6 Assignment Statements and Assignment Expressions**
+## 2.6 Assignment Statements and Assignment Expressions
 
 You need to know the definition of an **arithmetic expression** and the
 **precedence** of the operators.
@@ -237,7 +248,7 @@ Variables and constants of integral and floating point types can be
 combined into expressions using arithmetic operators.
 
 
-## **2.7 Named Constants**
+## 2.7 Named Constants
 
 We can also declare our initialized variable as a *constant*, by adding
 the type qualifier `const` before the definition. The general format for a
@@ -254,7 +265,7 @@ const double pi = 3.1415926536;
 
 
 
-## **2.8 Numeric Data Types and Operations**
+## 2.8 Numeric Data Types and Operations
 
 A *data type* is a set of values and a set of operations on these values.
 In the preceding program, we used the data type `int` which is an
@@ -297,7 +308,7 @@ The arithmetic operators are listed in the following table:
 
 
 
-## **2.9 Evaluating Expressions and Operator Precedence**
+## 2.9 Evaluating Expressions and Operator Precedence
 
 The precedence rules of arithmetic apply to arithmetic expressions in a
 program. That is, the order of execution of an expression that contains
@@ -338,9 +349,19 @@ Output:
 ```
 
 Try it yourself:
-<div>
-<iframe height="400px" width="100%" src="https://repl.it/@Baranerf/Ch22?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-</div>
+
+
+<iframe 
+    height="400px" 
+    width="100%" 
+    src="https://repl.it/@Baranerf/Ch22?lite=true" 
+    scrolling="no" 
+    frameborder="no" 
+    allowtransparency="true" 
+    allowfullscreen="true" 
+    sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+</iframe>
+<br>
 
 
 | **Precedence** | **Operator**          | **Description**                                            | **Associativity** 
@@ -385,32 +406,37 @@ Try it yourself:
 |     17         | `,`                   |  Comma                                                     |  Left-to-right 
 
 
-## **2.10 Augmented Assignment Operators**
+## 2.10 Augmented Assignment Operators
 
 Assignment operators **modify** the value of the object.
 
-| Operator name                       | Syntax     | Over​load​able  | Prototype examples (for class T)
-|----------------                     |--------    |-------------- |-----------------------------------
-| simple assignment                   | `a = b`    | Yes           | `T& T::operator =(const T2& b);`<br> `N/A`
-| addition assignment                 | `a += b`   | Yes           | `T& T::operator +=(const T2& b);`<br> `T& operator +=(T& a, const T2& b);`
-| subtraction assignment              | `a -= b`   | Yes           | `T& T::operator -=(const T2& b);`<br> `T& operator -=(T& a, const T2& b);`
-| multiplication assignment           | `a *= b`   | Yes           | `T& T::operator *=(const T2& b);`<br> `T& operator *=(T& a, const T2& b);`
-| division assignment                 | `a /= b`   | Yes           | `T& T::operator /=(const T2& b);`<br> `T& operator /=(T& a, const T2& b);`
-| modulo assignment                   | `a %= b`   | Yes           | `T& T::operator %=(const T2& b);`<br> `T& operator %=(T& a, const T2& b);`
-| bitwise AND assignment              | `a &= b`   | Yes           | `T& T::operator &=(const T2& b);`<br> `T& operator &=(T& a, const T2& b);`  
-| bitwise OR assignment               | `a \= b`   | Yes           | `T& T::operator \=(const T2& b);`<br> `T& operator \=(T& a, const T2& b);` 
-| bitwise XOR assignment              | `a ^= b`   | Yes           | `T& T::operator ^=(const T2& b);`<br> `T& operator ^=(T& a, const T2& b);`  
-| bitwise left shift assignment       | `a <<= b`  | Yes           | `T& T::operator <<=(const T2& b);`<br> `T& operator <<=(T& a, const T2& b);` 
-| bitwise right shift assignment      | `a >>= b`  | Yes           | `T& T::operator >>=(const T2& b);`<br> `T& operator >>=(T& a, const T2& b);`
+| Operator name                    | Syntax     | Over​load​able  | Prototype examples (for class T)
+|----------------                  |--------    |-------------- |-----------------------------------
+| simple assignment                | `a = b`    | Yes           | `T& T::operator =(const T2& b);`<br> `N/A`
+| addition assignment              | `a += b`   | Yes           | `T& T::operator +=(const T2& b);`<br> `T& operator += (T& a, const T2& b);`
+| subtraction assignment           | `a -= b`   | Yes           | `T& T::operator -=(const T2& b);`<br> `T& operator -= (T& a, const T2& b);`
+| multiplication assignment        | `a *= b`   | Yes           | `T& T::operator *=(const T2& b);`<br> `T& operator *= (T& a, const T2& b);`
+| division assignment              | `a /= b`   | Yes           | `T& T::operator /=(const T2& b);`<br> `T& operator /= (T& a, const T2& b);`
+| modulo assignment                | `a %= b`   | Yes           | `T& T::operator %=(const T2& b);`<br> `T& operator %= (T& a, const T2& b);`
+| bitwise AND assignment           | `a &= b`   | Yes           | `T& T::operator &=(const T2& b);`<br> `T& operator &= (T& a, const T2& b);`  
+| bitwise OR assignment            | `a \= b`   | Yes           | `T& T::operator \=(const T2& b);`<br> `T& operator \= (T& a, const T2& b);` 
+| bitwise XOR assignment           | `a ^= b`   | Yes           | `T& T::operator ^=(const T2& b);`<br> `T& operator ^= (T& a, const T2& b);`  
+| bitwise left shift assignment    | `a <<= b`  | Yes           | `T& T::operator <<=(const T2& b);`<br> `T& operator <<= (T& a, const T2& b);` 
+| bitwise right shift assignment   | `a >>= b`  | Yes           | `T& T::operator >>=(const T2& b);`<br> `T& operator >>= (T& a, const T2& b);`
 
 > Examples are **Inside class definition** and **Outside class definition** respectively.
 
-**NOTE**: All built-in assignment operators return *this, and most user-defined overloads also return *this so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type (including void).
-`T2` can be any type including `T`.  
+> **NOTE**: 
+>
+> All built-in assignment operators return *this, and most user-defined overloads also return *this 
+> so that the user-defined operators can be used in the same manner as the built-ins. 
+> However, in a user-defined operator overload, any type can be used as return type (including void).
+> `T2` can be any type including `T`.
 
-### **Explanation** 
+### Explanation
+
 **copy assignment** operator replaces the contents of the object a with a
-copy of the contents of b (b is not modified). For class types, this is
+copy of the contents of `b` (`b` is not modified). For class types, this is
 a special member function, described in copy assignment operator.
 
 **move assignment** operator replaces the contents of the object a with the
@@ -541,18 +567,25 @@ Output:
 
 ```text
 1 0 97 98 1 2
+1 abc
 ```
-<!---
-Try it Yourself:
 
-<div>
-<iframe height="1000px" width="100%" src="https://repl.it/@YazdanRa/cpp-book?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-</div>
+Try it yourself:
 
->  <https://en.cppreference.com/w/cpp/language/operator_assignment>
---->
+<iframe 
+    height="700px" 
+    width="100%" 
+    src="https://repl.it/@DataScienceLab/2-10#main.cpp?lite=true" 
+    scrolling="no" 
+    frameborder="no" 
+    allowtransparency="true" 
+    allowfullscreen="true" 
+    sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+</iframe>
+<br>
 
-## **2.11 Increment and Decrement Operators**
+
+## 2.11 Increment and Decrement Operators
 
 Increment/decrement operators increment or decrement the value of the object.
 
@@ -696,13 +729,21 @@ n4 = 4
 
 Try it Yourself:
 
-<div>
-<iframe height="400px" width="100%" src="https://repl.it/@Baranerf/Ch23?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-</div>
+<iframe 
+    height="400px"
+    width="100%" 
+    src="https://repl.it/@Baranerf/Ch23?lite=true" 
+    scrolling="no" 
+    frameborder="no" 
+    allowtransparency="true" 
+    allowfullscreen="true" 
+    sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals">
+</iframe>
+<br>
 
 
 
-## **2.12 Numeric Type Conversions**
+## 2.12 Numeric Type Conversions
 
 If an integral and a floating point variable or constant are mixed in an
 operation, the integral value is changed *temporarily* to its equivalent
@@ -750,18 +791,17 @@ such as pointer to array requires a type alias/typedef or an identity
 template). Regardless of typedef, conversion-type-id cannot
 represent an array  a function ortype.
 
-<!---
+
 Although the return type is not allowed in the declaration of a
 user-defined conversion function, the decl-specifier-seq of the
 declaration grammar may be present and may include any specifier other
 than type-specifier or the keyword static, In particular, besides
 explicit, the specifiers inline, virtual, constexpr (since C++11),
-consteval (since C++20), and friend are also allowed (note that friend
-requires a qualified name: friend A::operator B();).
+const eval (since C++20), and friend are also allowed 
+(note that friend requires a qualified name: `friend A::operator B();`).
 
 When such member function is declared in class `X`, it performs conversion
 from `X` to conversion-type-id:
-
 
 
 ```cpp
@@ -881,9 +921,8 @@ int main()
     B& b3 = x.operator B&(); // calls X::operatorB&
 }
 ```
---->
 
-## **2.13 Software Development Process**
+## 2.13 Software Development Process
 
 In software engineering, a software development process is the process
 of dividing software development work into distinct phases to **improve
@@ -907,25 +946,28 @@ field is often considered a subset of the systems development life
 cycle.
 
 
-## **2.14 Common Errors**
+## 2.14 Common Errors
 
--   Type conversion
+-   **TypeError**: Type conversion
 
--   Trying to change the value of a constant variable
+-   **ValueError**: Trying to change the value of a constant variable
 
--   Lack of using parentheses and getting the wrong Boolean expression
+-   **LogicalError**: Lack of using parentheses and getting the wrong Boolean expression
 
--   Forgetting `;` at the end of the lines that is needed
+-   **SyntaxError**: Forgetting `;` at the end of the lines that is needed
 
--   Inappropriate variable initialization
+-   **VariableError**: Inappropriate variable initialization
 
-## **2.15 Chapter Summary** 
+
+## 2.15 Chapter Summary
 
 All in all, now we know how a simple C++ program looks like. Also, we
 know how to declare variables, get them from user, and how to write
 expressions using them and operators.
 
-## **References**
+<hr>
+
+## References
 - <http://www.cs.uregina.ca>
 - <https://en.wikipedia.org/wiki/Camel_case>
 - <http://www.cplusplus.com/doc/tutorial/constants/>
