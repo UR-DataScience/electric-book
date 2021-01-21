@@ -261,7 +261,7 @@ using namespace std;
 
 int main ()
 {
-    for (int n=10; n>0; n--)                                       
+    for ( int n=10 ; n>0 ; n-- )                                       
     {
         cout << n << ", ";                                         
     }                                    
@@ -289,7 +289,7 @@ cycle of a loop, it may be useful to execute more than a single
 expression as any of *initialization*, *condition*, or *statement*.
 Unfortunately, these are not statements, but rather, simple expressions,
 and thus cannot be replaced by a block. As expressions, they can,
-however, make use of the comma operator (,): This operator is an
+however, make use of the comma operator (`,`): This operator is an
 expression separator, and can separate multiple expressions where only
 one is generally expected. For example, using it, it would be possible
 for a for loop to handle two counter variables, initializing and

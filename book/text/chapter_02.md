@@ -54,12 +54,12 @@ Try it yourself:
     a processing block such as `//` end of program.
 
 -   The next two lines tell the compiler to add **console** input and output
-    (*iostream*) features to the program and to make them easier to use by
+    (`iostream`) features to the program and to make them easier to use by
     adding their namespace into our program. You will probably use these
     in every program this semester.
 
 -   Line 8 is what's known as a **preprocessor command**. The pound (`#`)
-    sign followed by `include`{:.cpp} begins every preprocessor command.
+    sign followed by `include {:.cpp}` begins every preprocessor command.
 
 -   Any *built-in* or *user-defined* header files you wish to use in your
     program must follow this same syntax.
@@ -69,7 +69,7 @@ Try it yourself:
 marks. Header files you create and bring in to the program are enclosed
 in `""` quotation marks.
 
--   `int main()`{:.cpp} is the executable part of our program. The
+-   `int main() {:.cpp}` is the executable part of our program. The
     function name is `main`, and it returns a value that is of type
     integer. The function has no parameters, as indicated by the empty
     parentheses.
@@ -85,21 +85,21 @@ in `""` quotation marks.
 
 -   `cin` - command that receives data from the end user.
 
--   The `<iostream>`{:.cpp} file exists in every C++ program, and it is
-    this file which allows us to use cout and cin.
+-   The `<iostream> {:.cpp}` file exists in every C++ program, and it is
+    this file which allows us to use `cout` and cin.
 
--   The second cout line prints out `"You entered:
-    [number]"`. So, if I entered 5, the output would be: `You entered 5`
+-   The second `cout` line prints out `"You entered: [number]"`. 
+    So, if I entered 5, the output would be: `You entered: 5`
 
--   This kind of way to get data into the program is called a **user
-    interactive input**, and it makes the program become an interactive
-    program.
+-   This kind of way to get data into the program is called a 
+    **user interactive input**, and it makes the program become 
+    an interactive program.
 
 -   `endl` is *manipulator* to indicate the **end of the line**. It tells the
     cursor to stop printing on the current line, and begin on the next
     line.
 
--   `return 0;`{:.cpp} - This line is there, since the return value in
+-   `return 0; {:.cpp}` - This line is there, since the return value in
     our main program was designated as an integer. Just prevents the
     compiler from reporting a syntax error.
 

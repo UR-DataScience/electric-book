@@ -28,17 +28,14 @@ we limit our discussion to simple data types (e.g. integral and floating
 types). **ConstIntExpression** indicates the size of the array declared.
 That is, it specifies the number of array components in the array. It
 must have a value **greater than 0**. If the value is `n`, the range of the
-index values is `0` to `n-1`. For example, the declaration
-```cpp
-int number[50];
-```
-creates the number array which has 50 components, each capable of
-holding one int value. In other words, the number array has a total of
-50 components, all of type int.
+index values is `0` to `n-1`. 
+For example, the declaration`int number[50];` creates the number array which has 50 components, 
+each capable of holding one int value. In other words, the number array 
+has a total of `50` components, all of type `int`.
 
-**Fundamental Operations on a One-dimensional Array:**\
-Now let's look at how to access individual components of an array. The
-syntax template for accessing an array component is
+**Fundamental Operations on a One-dimensional Array:**
+Now let's look at how to access individual components of an array. 
+The syntax template for accessing an array component is:
 
 ```cpp
 ArrayName[ IndexExpression ]
@@ -48,15 +45,15 @@ The index expression must result in an integer value. It can be of type
 `char`, `short`, `int`, `long`, or `bool` value because these are all *integral*
 types. The simplest form of index expression is a constant. For example:
 
-> `number[0]` specifies the 1st compnent of the number array
+> `number[0]` specifies the 1st component of the number array
 >
-> `number[1]` specifies the 2nd compnent of the number array
+> `number[1]` specifies the 2nd component of the number array
 >
-> `number[2]` specifies the 3rd compnent of the number array
+> `number[2]` specifies the 3rd component of the number array
 >
-> `number[3]` specifies the 4th compnent of the number array
+> `number[3]` specifies the 4th component of the number array
 >
-> `number[4]` specifies the 5th compnent of the number array
+> `number[4]` specifies the 5th component of the number array
 >
 > .
 >
@@ -71,12 +68,12 @@ types. The simplest form of index expression is a constant. For example:
 To store values in the number array, we can do the following:
 
 ```cpp
-for (int i=0; i < 50; i++)
+for (int i=0; i<50; i++)
 {
-  number[i]=i; //store a number in each array element
+    number[i]=i; //store a number in each array element
 
-  cout << "number[" << i << "] = " << number[i] <<
-  endl;
+    cout << "number[" << i << "] = " << number[i] <<
+    endl;
 }
 ```
 
@@ -88,18 +85,17 @@ To use the values stored in the number array, we can treat each array
 element as a simple variable of data type `int`. For example:
 
 ```cpp
-for (int i=0; i < 50; i++)
+for (int i=0; i<50; i++)
 {
-  number[i]=2*number[i]; //double the value in each array element
-  //and store it in the array element
-  cout << "number[" << i << "] = " << number[i] <<
-  endl;
+    number[i]=2*number[i]; //double the value in each array element
+    //and store it in the array element
+    cout << "number[" << i << "] = " << number[i] << endl;
 }
 ```
 
 For the number array, the valid index range is from `0` to `49`. If the
 `IndexExpression` results in a value less than `0` or greater than the
-`array_size` minus `1`, then the index is considered to be *out-of-bounds*.
+`array_size` minus `1`, then the index is considered to be **out-of-bounds**.
 For instance, `number[50]` is trying to access a memory location outside
 of the number array.
 
@@ -113,8 +109,8 @@ int value = 25;
 
 The value `25` is called an *initializer*. Similarly, an array can be
 initialized in its declaration. A list of initial values for array
-elements can be specified. They are **separated with commas** and **enclosed
-within braces**. For example:
+elements can be specified. They are **separated with commas** and 
+**enclosed within braces**. For example:
 
 ```cpp
 int age[5] = {23, 56, 87, 92, 38};
@@ -142,54 +138,56 @@ This program adds two integer arrays and displays the arrays.
 ```cpp
 // Program Arraypractice.cpp will add two arrays and store the sum
 // in the third array. Print them all out to the screen.
+
+
 #include <iostream>
 
 using namespace std;
 
 int main ()
 {
-  const int MAX_ARRAY = 5;
-  int a[MAX_ARRAY];
-  int b[MAX_ARRAY];
-  int c[MAX_ARRAY];
-  int index;
+    const int MAX_ARRAY = 5;
+    int a[MAX_ARRAY];
+    int b[MAX_ARRAY];
+    int c[MAX_ARRAY];
+    int index;
 
-  // Ask users to enter values for array a[].
-  for (index = 0; index < MAX_ARRAY; index++)
-  {
-    cout << "Please input a number for the array element: ";
-    cin >>a[index];
-  }
+    // Ask users to enter values for array a[].
+    for(index = 0; index < MAX_ARRAY; index++)
+    {
+        cout << "Please input a number for the array element: ";
+        cin >> a[index];
+    }
 
-  // Ask users to enters value for array b[].
-  for (index = 0; index < MAX_ARRAY; index++)
-  {
-    cout << "Please input a number for the array element: ";
-    cin >>b[index];
-  }
+    // Ask users to enters value for array b[].
+    for(index = 0; index < MAX_ARRAY; index++)
+    {
+        cout << "Please input a number for the array element: ";
+       cin >> b[index];
+    }
 
-  // Store the sum of array a[] and array b[] to array c[].
-  for (index = 0; index < MAX_ARRAY; index++)
-  {
-    c[index] = a[index]+ b[index];
-  }
+    // Store the sum of array a[] and array b[] to array c[].
+    for(index = 0; index < MAX_ARRAY; index++)
+    {
+        c[index] = a[index] + b[index];
+    }
 
-  // Add code to print out each of the arrays
-  for (index = 0; index < MAX_ARRAY; index++)
-  {
-    cout << "array a is " << a[index] << endl;
-    cout << "array b is " << b[index] << endl;
-    cout << "array c is " << c[index] << endl;
-    cout << endl;
-  }
-
-  return 0;
+    // Add code to print out each of the arrays
+    for (index = 0; index < MAX_ARRAY; index++)
+    {
+        cout << "array a is " << a[index] << endl;
+        cout << "array b is " << b[index] << endl;
+        cout << "array c is " << c[index] << endl;
+        cout << endl;
+    }
+    
+    return 0;
 }
 ```
 
 > <http://www.cs.uregina.ca/Links/class-info/110/arrays/oneD_array_ggg.html>
 
-std::array is a container that encapsulates fixed size arrays.
+`std::array` is a container that encapsulates **fixed size arrays**.
 
 The struct combines the performance and accessibility of a C-style array
 with the benefits of a standard container, such as knowing its own size,
@@ -201,11 +199,11 @@ and that the complexity of swapping is linear, satisfies the
 requirements of ContiguousContainer, (since C++17) and partially
 satisfies the requirements of SequenceContainer.
 
-There is a special case for a zero-length array (N == 0). In that case,
-array.begin() == array.end(), which is some unique value. The effect of
-calling front() or back() on a zero-sized array is undefined.
+There is a special case for a zero-length array (`N == 0`). In that case,
+`array.begin() == array.end()`, which is some unique value. The effect of
+calling `front()` or `back()` on a **zero-sized array** is undefined.
 
-An array can also be used as a tuple of N elements of the same type.
+An array can also be used as a tuple of `N` elements of the same type.
 
 >  <https://en.cppreference.com/w/cpp/container/array>
 
@@ -238,8 +236,8 @@ int main()
 ```
 
 Now, let's take a closer look at how those arrays are passed. In C++,
-arrays are **not** passed by value to functions, they are **passed
-by reference**. Because of this, you do not have to use the & reference
+arrays are **not** passed by value to functions, they are **passed by reference**. 
+Because of this, you do not have to use the & reference
 character. You simply pass the base address of an array to a function.
 To do this, just supply the name of the array.
 
@@ -251,8 +249,8 @@ int ary[size];
 ```
 
 Further suppose you wanted to pass this array to a function
-called `getMax` which expected the array reference as a parameter. The
-call to that function would be:
+called `getMax` which expected the array reference as a parameter. 
+The call to that function would be:
 
 ```cpp
 getMax(ary, size);
@@ -276,61 +274,61 @@ void add_arrays(int [], int [], int [], int);
 
 int main ()
 {
-  const int MAX_ARRAY = 5;
-  int a[MAX_ARRAY];
-  int b[MAX_ARRAY];
-  int c[MAX_ARRAY];
-  int index;
-
-  // Ask users to enter values for array a[].
-  cout << "Please input 5 values for a array." << endl;
-  for (index = 0; index < MAX_ARRAY; index++)
-  {
-    cout << index+1 << ": ";
-    cin >>a[index];
-  }
-
-  // Ask users to enters value for array b[].
-
-  cout << "Please input 5 values for b array." << endl;;
-
-  for (index = 0; index < MAX_ARRAY; index++)
-  {
-    cout << index+1 << ": ";
-    cin >>b[index];
-  }
-
-  // Store the sum of array a[] and array b[] to array c[].
-  // for (index = 0; index < MAX_ARRAY; index++)
-  // {
-  // c[index] = a[index]+ b[index];
-  // }
-
-  // call for the function add_arrays() to add two arrays
-  add_arrays( a, b, c, MAX_ARRAY);
-
-  //To separate the output from other stuff
-  cout << endl;
-
-  // Add code to print out each of the arrays
-  for (index = 0; index < MAX_ARRAY; index++)
-  {
-    cout << "a[" << index << "] = " << a[index] << endl;
-    cout << "b[" << index << "] = " << b[index] << endl;
-    cout << "c[" << index << "] = " << c[index] << endl;
+    const int MAX_ARRAY = 5;
+    int a[MAX_ARRAY];
+    int b[MAX_ARRAY];
+    int c[MAX_ARRAY];
+    int index;
+    
+    // Ask users to enter values for array a[].
+    cout << "Please input 5 values for a array." << endl;
+    for (index = 0; index < MAX_ARRAY; index++)
+    {
+       cout << index+1 << ": ";
+       cin >>a[index];
+    }
+    
+    // Ask users to enters value for array b[].
+    
+    cout << "Please input 5 values for b array." << endl;;
+    
+    for (index = 0; index < MAX_ARRAY; index++)
+    {
+        cout << index+1 << ": ";
+        cin >>b[index];
+    }
+    
+    // Store the sum of array a[] and array b[] to array c[].
+    // for (index = 0; index < MAX_ARRAY; index++)
+    // {
+    //     c[index] = a[index]+ b[index];
+    // }
+    
+    // call for the function add_arrays() to add two arrays
+    add_arrays( a, b, c, MAX_ARRAY);
+    
+    //To separate the output from other stuff
     cout << endl;
-  }
-  return 0;
+    
+    // Add code to print out each of the arrays
+    for (index = 0; index < MAX_ARRAY; index++)
+    {
+        cout << "a[" << index << "] = " << a[index] << endl;
+        cout << "b[" << index << "] = " << b[index] << endl;
+        cout << "c[" << index << "] = " << c[index] << endl;
+        cout << endl;
+    }
+    return 0;
 }
 // a function adds two arrays
 
 void add_arrays(int x[], int y[], int z[], int len)
 {
-  for ( int i = 0; i < len; i++)
-  {
-    z[i] = x[i] + y[i];
-  }
-  return;
+    for ( int i = 0; i < len; i++)
+    {
+        z[i] = x[i] + y[i];
+    }
+    return;
 }
 ```
 
@@ -381,14 +379,14 @@ However, it is not a valid statement in C++.
 
 ## **7.5 Searching Arrays**
 
-**Linear search (O(n))**:
+**Linear search (`O(n)`)**:
 One of the approaches to search an array is **Linear Search**. In this
 approach you need to loop through the array and compare each element of
 the array to the value that you are looking for. This could be done by
 using count controlled while loop or for loop.
 
 For instance, if we have an array of characters and we are looking for
-the index of character 'E' in the array, one of the possible solutions
+the index of character `E` in the array, one of the possible solutions
 would be:
 
 ```cpp
@@ -414,7 +412,7 @@ int main()
 }
 ```
 
-**Binary search (O(logn))**:
+**Binary search (`O(logn)`)**:
 Another possible approach is **Binary Search** which requires the array
 to be sorted.
 
@@ -476,7 +474,7 @@ algorithms like *insertion sort*, *bubble sort*, *quick sort*. Also, there is
 a simple way to sort an array using `sort()` function which is available
 in `C++11` and higher compilers.
 
-The corresponding library to sort() function is `algorithm`. So, you
+The corresponding library to `sort()` function is `algorithm`. So, you
 would have `#include <algorithm>` at the top of your code.
 
 **About The Function**
@@ -514,7 +512,8 @@ Array Example:
 ```cpp
 // sort() Example using arrays.                                                                              
 // By Zereo 04/22/13                                   
-                                                           
+                 
+                                          
 #include <iostream>                                 
 #include <algorithm>                                
                                                            
@@ -525,16 +524,16 @@ const int SIZE = 7;
 int main()                                                                                                 
 {                                                      
                                                           
-  int intArray[SIZE] = {5, 3, 32, -1, 1, 104, 53};     
+    int intArray[SIZE] = {5, 3, 32, -1, 1, 104, 53};     
                                                             
-  //Now we call the sort function                        
-  sort(intArray, intArray + SIZE);                       
+    //Now we call the sort function                        
+    sort(intArray, intArray + SIZE);                       
                                                             
-  cout << "Sorted Array looks like this." << endl;                                                          
-  for (size_t i = 0; i != SIZE; ++i)                                                                            
-    cout << intArray[i] << " ";                    
+    cout << "Sorted Array looks like this." << endl;                                                          
+    for (size_t i = 0; i != SIZE; ++i)                                                                            
+        cout << intArray[i] << " ";                    
                                                               
-  return 0;                                                                                                          
+    return 0;                                                                                                          
 }                                                      
 ```
 
@@ -549,8 +548,8 @@ of characters (i.e., a C-string) representing the current value of the
 string object.
 
 This array includes the same sequence of characters that make up the
-value of the string object plus an additional terminating null-character
-('0') at the end. The pointer returned may be invalidated by further calls to other member
+value of the string object plus an additional terminating **null-character**
+(`0`) at the end. The pointer returned may be invalidated by further calls to other member
 functions that modify the object.
 
 **Parameters**: None
@@ -608,15 +607,15 @@ that [printf](http://www.cplusplus.com/printf) would print for the
 corresponding type:
 
 
-| **type of val**      | **printf equivalent**  | **description**
+| **type of val**      | **`printf` equivalent**  | **description**
 |----------------------|------------------------|-----------------------------
-| int                  | `%d`                   | Decimal-base representation of *val*. <br> The representations of negative values are preceded with a minus sign (-).
+| int                  | `%d`                   | Decimal-base representation of *val*. <br> The representations of negative values are preceded with a minus sign (`-`).
 | long                 | `%ld`                  |
 | long long            | `%lld`                 |
 | unsigned             | `%u`                   | Decimal-base representation of *val*.
 | unsigned long        | `%lu`                  |
 | unsigned long long   | `%llu`                 | 
-| float                | `%f`                   | As many digits are written as needed to represent the integral part, followed by the decimal-point character and six decimal digits. <br> inf (or infinity) is used to represent *infinity*. <br> nan (followed by an optional sequence of characters) to represent NaNs (*Not-a-Number*). <br> The representations of negative values are preceded with a minus sign (-). 
+| float                | `%f`                   | As many digits are written as needed to represent the integral part, followed by the decimal-point character and six decimal digits. <br> inf (or infinity) is used to represent *infinity*. <br> nan (followed by an optional sequence of characters) to represent NaNs (**Not-a-Number**). <br> The representations of negative values are preceded with a minus sign (-). 
 | double               | `%f`                   |
 | long double          | `%Lf`                  | 
 
