@@ -585,7 +585,7 @@ Increment/decrement operators increment or decrement the value of the object.
 | post-decrement      | `a--`      | Yes         |
 
 <!---
-> Examples are **Inside class definition** and **Outside class definition** respectively.
+Examples are **Inside class definition** and **Outside class definition** respectively.
 
 **NOTE**: Prefix versions of the built-in operators return references and postfix versions return values, and typical user-defined overloads follow the pattern so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type (including void).                      
 The int parameter is a dummy parameter used to differentiate between prefix and postfix versions of the operators. When the user-defined postfix operator is called, the value passed in that parameter is always zero, although it may be changed by calling the operator using function call notation (e.g., `a.operator++(2)` or `operator++(a, 2)`).
