@@ -577,12 +577,13 @@ Try it yourself:
 
 Increment/decrement operators increment or decrement the value of the object.
 
-| **Operator name**   | Syntax     | Over​load​able  | Prototype examples (for class T)                           
-|-------------------  |---------   |-------------  |------------------------------------
-| pre-increment       | `++a`      | Yes           | `T& T::operator++();`<br> `T& operator++(T& a);`     
-| pre-decrement       | `--a`      | Yes           | `T& T::operator--();`<br> `T& operator--(T& a);`
-| post-increment      | `a++`      | Yes           | `T T::operator++(int);`<br> `T operator++(T& a, int);` 
-| post-decrement      | `a--`      | Yes           | `T T::operator--(int);`<br> `T operator--(T& a, int);` 
+| **Operator name**   | Syntax     | Over​load​able|                           
+|-------------------  |---------   |-------------|
+| pre-increment       | `++a`      | Yes         |     
+| pre-decrement       | `--a`      | Yes         |
+| post-increment      | `a++`      | Yes         |
+| post-decrement      | `a--`      | Yes         |
+
 <!---
 > Examples are **Inside class definition** and **Outside class definition** respectively.
 
