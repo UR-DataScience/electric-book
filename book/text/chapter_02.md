@@ -597,10 +597,10 @@ value of the object and returns a reference to the result.
 Post-increment and post-decrement creates a copy of the object,
 increments or decrements the value of the object and returns the copy
 from before the increment or decrement.
-<!--
+<!---
 Using an lvalue of volatile-qualified non-class type as operand of
 built-in version of these operators is deprecated. (since C++20)
--->
+--->
 Built-in prefix operators
 
 The prefix increment and decrement expressions have the form
