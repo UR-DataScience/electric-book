@@ -584,12 +584,7 @@ Increment/decrement operators increment or decrement the value of the object.
 | post-increment      | `a++`      | Yes         |
 | post-decrement      | `a--`      | Yes         |
 
-<!---
-Examples are **Inside class definition** and **Outside class definition** respectively.
 
-**NOTE**: Prefix versions of the built-in operators return references and postfix versions return values, and typical user-defined overloads follow the pattern so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type (including void).                      
-The int parameter is a dummy parameter used to differentiate between prefix and postfix versions of the operators. When the user-defined postfix operator is called, the value passed in that parameter is always zero, although it may be changed by calling the operator using function call notation (e.g., `a.operator++(2)` or `operator++(a, 2)`).
---->
 ### **Explanation**
 Pre-increment and pre-decrement operators increments or decrements the
 value of the object and returns a reference to the result.
@@ -597,10 +592,7 @@ value of the object and returns a reference to the result.
 Post-increment and post-decrement creates a copy of the object,
 increments or decrements the value of the object and returns the copy
 from before the increment or decrement.
-<!---
-Using an lvalue of volatile-qualified non-class type as operand of
-built-in version of these operators is deprecated. (since C++20)
---->
+
 Built-in prefix operators
 
 The prefix increment and decrement expressions have the form
@@ -620,75 +612,6 @@ the modified operand. All arithmetic conversion rules and pointer
 arithmetic rules defined for arithmetic operators apply and determine
 the implicit conversion (if any) applied to the operand as well as the
 return type of the expression.
-<!---
-If the operand of the pre-increment operator is of type bool, it is set
-to true (deprecated). (until C++17)
-
-In overload resolution against user-defined operators, for every
-optionally volatile-qualified arithmetic type A other than bool, and for
-every optionally volatile-qualified pointer P to optionally cv-qualified
-object type, the following function signatures participate in overload
-resolution:
-
-```cpp
-A& operator++(A&)
-
-bool& operator++(bool&)
-
-(deprecated)(until C++17)
-
-P& operator++(P&)
-
-A& operator.-(A&)
-
-P& operator.-(P&)
-```
-Built-in postfix operators
-
-The postfix increment and decrement expressions have the form
-
-`expr ++`
-
-`expr .-`
-
-) postfix increment (post-increment)
-
-) postfix decrement (post-decrement)
-
-The operand expr of a built-in postfix increment or decrement operator
-must be a modifiable (non-const) lvalue of non-boolean (since C++17)
-arithmetic type or pointer to completely-defined object type. The result
-is prvalue copy of the original value of the operand. As a side-effect,
-for non-boolean operands, the expression x++ modifies the value of its
-operand as if by evaluating x += 1, and the expression x.- modifies the
-value of its operand as if by evaluating x -= 1. All arithmetic
-conversion rules and pointer arithmetic rules defined for arithmetic
-operators apply and determine the implicit conversion (if any) applied
-to the operand as well as the return type of the expression.
-
-If the operand of the post-increment operator is of type bool, it is set
-to true (deprecated). (until C++17)
-
-In overload resolution against user-defined operators, for every
-optionally volatile-qualified arithmetic type A other than bool, and for
-every optionally volatile-qualified pointer P to optionally cv-qualified
-object type, the following function signatures participate in overload
-resolution:
-
-```cpp
-A operator++(A&, int)
-
-bool operator++(bool&, int)
-
-(deprecated)(until C++17)
-
-P operator++(P&, int)
-
-A operator.-(A&, int)
-
-P operator.-(P&, int)
-```
---->
 
 ```cpp
 #include <iostream>
