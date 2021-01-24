@@ -367,21 +367,11 @@ Try it yourself:
 | **Precedence** | **Operator**          | **Description**                                            | **Associativity** 
 |----------------|-----------------------|------------------------------------------------------------|-------------------
 |     1          | `::`                  |  Scope resolution                                          |  Left-to-right 
-|     2          | `a++`, `a--`          |  Suffix/postfix increment and decrement                    |                  
-|                | `type()`, `type{}`    |  Functional cast                                           |                  
-|                | `a()`                 |  Function call                                             |                  
-|                | `a[]`                 |  Subscript                                                 |
-|                | `.`, `->`             |  Member access                                             |                  
+|     2          | `a++`, `a--`          |  Suffix/postfix increment and decrement                    |                                   
 |     3          | `++a`, `--a`          |  Prefix increment and decrement                            |  Right-to-left 
-|                | `+a`, `-a`            |  Unary plus and minus                                      |                  
-|                | `!`, `~`              |  Logical NOT and bitwise NOT                               |                  
-|                | `(type)`              |  C-style cast                                              |                  
+|                | `+a`, `-a`            |  Unary plus and minus                                      |                               
 |                | `*a`                  |  Indirection (dereference)                                 |                  
 |                | `&a`                  |  Address-of                                                |                  
-|                | `sizeof`              |  Size-of[note 1]                                           |                  
-|                | `co_await`            |  await-expression (C++20)                                  |                  
-|                | `new`, `new[]`        |  Dynamic memory allocation                                 |                  
-|                | `delete`, `delete[]`  |  Dynamic memory deallocation                               |                  
 |     4          | `.*`, `->*`           |  Pointer-to-member                                         |  Left-to-right 
 |     5          | `a*b`, `a/b`, `a%b`   |  Multiplication, division, and remainder                   |                  
 |     6          | `a+b`, `a-b`          |  Addition and subtraction                                  |                  
@@ -395,14 +385,10 @@ Try it yourself:
 |     13         | `\`                   |  Bitwise OR (inclusive or)                                 |                  
 |     14         | `&&`                  |  Logical AND                                               |                  
 |     15         | `^`                   |  Logical OR                                                |                  
-|     16         | `a?b:c`               |  Ternary conditional[note 2]                               |  Right-to-left 
-|                | `throw`               |  throw operator                                            |                  
-|                | `co_yield`            |  yield-expression (C++20)                                  |                  
+|     16         | `a?b:c`               |  Ternary conditional[note 2]                               |  Right-to-left             
 |                | `=`                   |  Direct assignment (provided by default for C++ classes)   |                  
 |                | `+=`, `-=`            |  Compound assignment by sum and difference                 |                  
-|                | `*=`, `/=`, `%=`      |  Compound assignment by product, quotient, and remainder   |                  
-|                | `<<=`, `>>=`          |  Compound assignment by bitwise left shift and right shift |               
-|                | `&=`, `^=`, `\=`      |  Compound assignment by bitwise AND, XOR, and OR           |               
+|                | `*=`, `/=`, `%=`      |  Compound assignment by product, quotient, and remainder   |                      
 |     17         | `,`                   |  Comma                                                     |  Left-to-right 
 
 
@@ -410,28 +396,30 @@ Try it yourself:
 
 Assignment operators **modify** the value of the object.
 
-| Operator name                    | Syntax     | Over​load​able  | Prototype examples (for class T)
-|----------------                  |--------    |-------------- |-----------------------------------
-| simple assignment                | `a = b`    | Yes           | `T& T::operator =(const T2& b);`<br> `N/A`
-| addition assignment              | `a += b`   | Yes           | `T& T::operator +=(const T2& b);`<br> `T& operator += (T& a, const T2& b);`
-| subtraction assignment           | `a -= b`   | Yes           | `T& T::operator -=(const T2& b);`<br> `T& operator -= (T& a, const T2& b);`
-| multiplication assignment        | `a *= b`   | Yes           | `T& T::operator *=(const T2& b);`<br> `T& operator *= (T& a, const T2& b);`
-| division assignment              | `a /= b`   | Yes           | `T& T::operator /=(const T2& b);`<br> `T& operator /= (T& a, const T2& b);`
-| modulo assignment                | `a %= b`   | Yes           | `T& T::operator %=(const T2& b);`<br> `T& operator %= (T& a, const T2& b);`
-| bitwise AND assignment           | `a &= b`   | Yes           | `T& T::operator &=(const T2& b);`<br> `T& operator &= (T& a, const T2& b);`  
-| bitwise OR assignment            | `a \= b`   | Yes           | `T& T::operator \=(const T2& b);`<br> `T& operator \= (T& a, const T2& b);` 
-| bitwise XOR assignment           | `a ^= b`   | Yes           | `T& T::operator ^=(const T2& b);`<br> `T& operator ^= (T& a, const T2& b);`  
-| bitwise left shift assignment    | `a <<= b`  | Yes           | `T& T::operator <<=(const T2& b);`<br> `T& operator <<= (T& a, const T2& b);` 
-| bitwise right shift assignment   | `a >>= b`  | Yes           | `T& T::operator >>=(const T2& b);`<br> `T& operator >>= (T& a, const T2& b);`
+| Operator name                    | Syntax     | Over​load​able  |
+|----------------                  |--------    |-------------- |
+| simple assignment                | `a = b`    | Yes           |
+| addition assignment              | `a += b`   | Yes           |
+| subtraction assignment           | `a -= b`   | Yes           |
+| multiplication assignment        | `a *= b`   | Yes           |
+| division assignment              | `a /= b`   | Yes           |
+| modulo assignment                | `a %= b`   | Yes           |
+| bitwise AND assignment           | `a &= b`   | Yes           |   
+| bitwise OR assignment            | `a \= b`   | Yes           |
+| bitwise XOR assignment           | `a ^= b`   | Yes           |
+| bitwise left shift assignment    | `a <<= b`  | Yes           | 
+| bitwise right shift assignment   | `a >>= b`  | Yes           |
+
 
 > Examples are **Inside class definition** and **Outside class definition** respectively.
-
+<!---
 > **NOTE**: 
 >
 > All built-in assignment operators return *this, and most user-defined overloads also return *this 
 > so that the user-defined operators can be used in the same manner as the built-ins. 
 > However, in a user-defined operator overload, any type can be used as return type (including void).
 > `T2` can be any type including `T`.
+--->
 
 ### Explanation
 
@@ -451,6 +439,7 @@ are referred to as **direct assignment**.
 the result of a binary operation between the previous value of a and the
 value of b.
 
+<!---
 Builtin direct assignment
 
 The direct assignment expressions have the form
@@ -531,7 +520,6 @@ function signature participates in overload resolution:
 A1& operator=(A1&, A2);
 ```
 
-
 ```cpp
 #include <iostream>
 
@@ -583,7 +571,7 @@ Try it yourself:
     sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin">
 </iframe>
 <br>
-
+--->
 
 ## 2.11 Increment and Decrement Operators
 
@@ -595,12 +583,12 @@ Increment/decrement operators increment or decrement the value of the object.
 | pre-decrement       | `--a`      | Yes           | `T& T::operator--();`<br> `T& operator--(T& a);`
 | post-increment      | `a++`      | Yes           | `T T::operator++(int);`<br> `T operator++(T& a, int);` 
 | post-decrement      | `a--`      | Yes           | `T T::operator--(int);`<br> `T operator--(T& a, int);` 
-
+<!---
 > Examples are **Inside class definition** and **Outside class definition** respectively.
 
 **NOTE**: Prefix versions of the built-in operators return references and postfix versions return values, and typical user-defined overloads follow the pattern so that the user-defined operators can be used in the same manner as the built-ins. However, in a user-defined operator overload, any type can be used as return type (including void).                      
 The int parameter is a dummy parameter used to differentiate between prefix and postfix versions of the operators. When the user-defined postfix operator is called, the value passed in that parameter is always zero, although it may be changed by calling the operator using function call notation (e.g., `a.operator++(2)` or `operator++(a, 2)`).
-
+--->
 ### **Explanation**
 Pre-increment and pre-decrement operators increments or decrements the
 value of the object and returns a reference to the result.
@@ -608,10 +596,10 @@ value of the object and returns a reference to the result.
 Post-increment and post-decrement creates a copy of the object,
 increments or decrements the value of the object and returns the copy
 from before the increment or decrement.
-
+<!--
 Using an lvalue of volatile-qualified non-class type as operand of
 built-in version of these operators is deprecated. (since C++20)
-
+-->
 Built-in prefix operators
 
 The prefix increment and decrement expressions have the form
@@ -631,7 +619,7 @@ the modified operand. All arithmetic conversion rules and pointer
 arithmetic rules defined for arithmetic operators apply and determine
 the implicit conversion (if any) applied to the operand as well as the
 return type of the expression.
-
+<!---
 If the operand of the pre-increment operator is of type bool, it is set
 to true (deprecated). (until C++17)
 
@@ -699,7 +687,7 @@ A operator.-(A&, int)
 
 P operator.-(P&, int)
 ```
-
+--->
 
 ```cpp
 #include <iostream>
@@ -784,7 +772,7 @@ and with the name of the form:
 
 3. Declares a user-defined conversion function that is **conditionally explicit**.
 
-
+<!---
 *conversion-type-id* is a *type-id* except that function and array operators
 `[]` or `()` are **not allowed** in its declarator (thus conversion to types
 such as pointer to array requires a type alias/typedef or an identity
@@ -921,7 +909,7 @@ int main()
     B& b3 = x.operator B&(); // calls X::operatorB&
 }
 ```
-
+--->
 ## 2.13 Software Development Process
 
 In software engineering, a software development process is the process
