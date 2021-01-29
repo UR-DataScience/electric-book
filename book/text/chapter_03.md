@@ -19,9 +19,6 @@ Each **bool** constant or variable contains one of two values: **true** or **fal
 -   If a testing expression is not of **bool** type, it is coerced to **bool** type automatically when it is evaluated.
 -   A nonzero value is coerced to **true** and a zero value is coerced to **false**.
 
-> <http://www.cplusplus.com/doc/boolean/>
-
-> <http://www.cs.uregina.ca/Links/class-info/110/selections/index.html>
 
 ## **3.3 if Statements**
 
@@ -112,10 +109,6 @@ if(age > 65 && gender == 'f')
     cout << "Thursday afternoons at 4:00 p.m.";
 }
 ```
-> <http://www.cplusplus.com/doc/tutorial/control/>
-
-> <http://www.cs.uregina.ca/Links/class-info/110/selections/index.html>
-
 ## **3.4 Two-Way if-else Statements**
 If you want to perform an action if a specific condition happens you could use one-way if statement. 
 For example, if you want to increment a counter when number x is an even number 
@@ -216,8 +209,6 @@ else
 cout << "You are a great person." << endl;
 ```
 
-> <http://www.cplusplus.com/forum/beginner/186223/>
-
 Another example:
 ```cpp
 #include <iostream>
@@ -248,7 +239,6 @@ int main()
 Try it yourself:
 <iframe height="400px" width="100%" src="https://repl.it/@Baranerf/Ch31?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-> <http://www.cplusplus.com/forum/beginner/186223/>
 
 ## **3.6 Common Errors and Pitfalls**
 
@@ -369,9 +359,6 @@ The secret number is lower
 Guess the number (1 to 10): 7 
 Congratulations!             
 ```
-
-> <http://www.cplusplus.com/reference/cstdlib/rand/>
-
 ## **3.8 Logical Operators**
 
 The operator `!` is the C++ operator for the
@@ -504,7 +491,6 @@ Here, the combined conditional expression would increase i by one, but
 only if the condition on the left of && is true, because otherwise,
 the condition on the right-hand side (`++i<n`) is never evaluated.
 
-> <http://www.cplusplus.com/doc/tutorial/operators/>
 
 ## **3.9 switch Statements**
 
@@ -732,9 +718,6 @@ red
 Try it yourself:
 <iframe height="400px" width="100%" src="https://repl.it/@Baranerf/Ch32?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-> <http://www.cs.uregina.ca/Links/class-info/110/loops/write-p1.html>
-
-> <https://en.cppreference.com/w/cpp/language/switch>
 
 ## **3.10 Conditional Operators**
 
@@ -859,3 +842,14 @@ using conditional statements. We have operators and Boolean variables
 that are used in an operation to specify the condition.
 --->
 In this chapter, we learned how to use if-else and switch statemenets. We leanred how to write an expression for an if-else statement using operators and Boolean variables. Also, we know there are some common errors that we could check whenever our program has some problems running properly.
+
+## **References**
+<http://www.cplusplus.com/doc/boolean/>
+<http://www.cs.uregina.ca/Links/class-info/110/selections/index.html>
+<http://www.cplusplus.com/doc/tutorial/control/>
+<http://www.cs.uregina.ca/Links/class-info/110/selections/index.html>
+<http://www.cplusplus.com/forum/beginner/186223/>
+<http://www.cplusplus.com/reference/cstdlib/rand/>
+<http://www.cplusplus.com/doc/tutorial/operators/>
+<http://www.cs.uregina.ca/Links/class-info/110/loops/write-p1.html>
+<https://en.cppreference.com/w/cpp/language/switch>
