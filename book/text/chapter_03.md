@@ -648,19 +648,14 @@ int main()
     {
         case 1: 
             std::cout << "1";
-
         case 2: 
             std::cout << "2"; //execution starts at this case label
-
         case 3: 
             std::cout << "3";
-
         case 4:
-        
         case 5: 
             std::cout << "45";
-            break; //execution of subsequent statements is terminated
-
+            break; //execution of subsequent statements is terminate
         case 6: 
             std::cout << "6";
     }
@@ -671,10 +666,8 @@ int main()
     {
         case 4: 
             std::cout << "a";
-
         default: 
             std::cout << "d"; //there are no applicable constant_expressions
-
         //therefore default is executed
     }
 
@@ -695,11 +688,9 @@ int main()
         case RED: 
             std::cout << "red\n";
             break;
-
         case GREEN: 
             std::cout << "green\n";
             break;
-
         case BLUE: 
             std::cout << "blue\n"; 
             break;
@@ -779,7 +770,6 @@ A single expression may have multiple operators. For example:
 ```cpp
 x = 5 + 7 % 2;
 ```
-
 In C++, the above expression always assigns 6 to variable x, because
 the `%` operator has a higher precedence than the `+` operator and is always
 evaluated before. Parts of the expressions can be enclosed in
@@ -794,30 +784,27 @@ x = (5 + 7) % 2; // x = 0
 From greatest to smallest priority, C++ operators are evaluated in the order of precedence (we have seen in the previous chapter)
 
 
-| **Level**  | **Precedence group**         | **Operator**                                                                                    | **Description**                                                                                                                                                                         | **Grouping**
-|------------|------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------
-|     1      | Scope                        | `::`                                                                                            | scope qualifier                                                                                                                                                                         | Left-to-right
-|     2      | Postfix (unary)              | `++`, `--`<br>`()`<br>`[]`<br>`. ->`                                                            | postfix increment / decrement <br> functional forms <br> subscript <br >member access                                                                                                   | Left-to-right
-|     3      | Prefix (unary)               | `++`, `--`<br>`~`, `!`<br>`+`, `-`<br>`&`, `*`<br> `new`, `delete` <br> `sizeof` <br> `type`    | prefix increment / decrement <br> bitwise NOT / logical NOT <br> unary prefix <br> reference / dereference <br> allocation / deallocation <br> parameter pack <br> C-style type-casting | Right-to-left
-|     4      | Pointer-to-member            | `.*`, `->*`                                                                                     | access pointer                                                                                                                                                                          | Left-to-right
-|     5      | Arithmetic: scaling          | `*`, `/`, `%`                                                                                   | multiply, divide, modulo                                                                                                                                                                | Left-to-right
-|     6      | Arithmetic: addition         | `+`, `-`                                                                                        | addition, subtraction                                                                                                                                                                   | Left-to-right
-|     7      | Bitwise shift                | `<<`, `>>`                                                                                      | shift left, shift right                                                                                                                                                                 | Left-to-right
-|     8      | Relational                   | `<`, `>`, `<=`, `>=`                                                                            | comparison operators                                                                                                                                                                    | Left-to-right
-|     9      | Equality                     | `==`, `!=`                                                                                      | equality / inequality                                                                                                                                                                   | Left-to-right
-|    10      | And                          | `&`                                                                                             | bitwise AND                                                                                                                                                                             | Left-to-right
-|    11      | Exclusive or                 | `^`                                                                                             | bitwise XOR                                                                                                                                                                             | Left-to-right
-|    12      | Inclusive or                 | &#124;                                                                                          | bitwise OR                                                                                                                                                                              | Left-to-right
-|    13      | Conjunction                  | `&&`                                                                                            | logical AND                                                                                                                                                                             | Left-to-right
-|    14      | Disjunction                  | &#124;&#124;                                                                                    | logical OR                                                                                                                                                                              | Left-to-right
-|    15      | Assignment-level expressions | `=`, `*=`, `/=`, `%=`, `+=`, `-=` <br> `>>=`, `<<=`, `&=`, `^=`, &#124;= <br> `?:`              | assignment / compound assignment <br> <br> conditional operator                                                                                                                         | Right-to-left
-|    16      | Sequencing                   | `,`                                                                                             | comma separator                                                                                                                                                                         | Left-to-right
+| **Level**  | **Precedence group**         | **Operator**                                                                                    | **Description**                                                                                                                                                                         
+|------------|------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|     1      | Scope                        | `::`                                                                                            | scope qualifier                                                                                                                                                                         
+|     2      | Postfix (unary)              | `++`, `--`<br>`()`<br>`[]`                                                            | postfix increment / decrement <br> functional forms                                                                                                   
+|     3      | Prefix (unary)               | `++`, `--`<br>`~`, `!`<br>`+`, `-`    | prefix increment / decrement <br> bitwise NOT / logical NOT <br> unary prefix                              
+|     4      | Arithmetic: scaling          | `*`, `/`, `%`                                                                                   | multiply, divide, modulo                                                                                                                                                                
+|     5      | Arithmetic: addition         | `+`, `-`                                                                                        | addition, subtraction                                                                                                                                                                                                                                                         
+|     6      | Relational                   | `<`, `>`, `<=`, `>=`                                                                            | comparison operators                                                                                                                                                                    
+|     7      | Equality                     | `==`, `!=`                                                                                      | equality / inequality                                                                                                                                                                   
+|     8      | And                          | `&`                                                                                             | bitwise AND                                                                                                                                                                             
+|    9      | Exclusive or                 | `^`                                                                                             | bitwise XOR                                                                                                                                                                             
+|    10      | Inclusive or                 | &#124;                                                                                          | bitwise OR                                                                                                                                                                              
+|    11      | Conjunction                  | `&&`                                                                                            | logical AND                                                                                                                                                                             
+|    12      | Disjunction                  | &#124;&#124;                                                                                    | logical OR                                                                                                                                                                              
+|    13      | Assignment-level expressions | `=`, `*=`, `/=`, `%=`, `+=`, `-=` <br> `>>=`, `<<=`, `&=`, `^=`, &#124;= <br> `?:`              | assignment / compound assignment <br> <br> conditional operator                                                                                                                         | Right-to-left                                                                                                                                                                         
 
-
+<!---
 >**NOTE**:  When an expression has two operators with the same precedence level, 
 *grouping(associativity)* determines which one is evaluated first: either `left-to-right` or `right-to-left`. 
 >**NOTE**:*Enclosing all sub-statements in parentheses (even those unnecessary because of their precedence) improves code readability.*
-
+--->
 
 ## **3.12 Debugging**
 
